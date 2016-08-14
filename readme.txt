@@ -108,6 +108,21 @@ More on Node Modules:
 2.Core Modules
 3.External Modules
 
+Using ext node module:
+
+use yargs node module
+it supports command line args
+
+eg: node solve-3 --l=2 --b=4
+
+npm install yargs --save
+
+--save to save dependencies in package.json file
+
+Now there is a new folder automatically added called node_modules
+there is yargs folder inside node_modules
+
+
 
 
 
