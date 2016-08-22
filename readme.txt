@@ -57,7 +57,7 @@ __________________
 
 First Class Functions: A function can be treated in same way as any other var
 Closures: A function defined inside another function has access to all the vars declared in
-          outer function (outer scope)
+          outer function or passed in as parameters(outer scope)
           The inner function will continue to have access to the vars from outer scope even
           after the outer function has returned
 
@@ -121,6 +121,113 @@ npm install yargs --save
 
 Now there is a new folder automatically added called node_modules
 there is yargs folder inside node_modules
+
+
+The HTTP Protocol
+___________________________
+
+It is a client-server communication protocol used to retrieve hypertext documents
+
+Request format:
+Request Line
+Header Fields
+Blank Line
+Body(HTML,TXT,JSON,XML, encode image/video etc)
+
+Full Request Msg eg:
+GET /index.html HTTP/1.1
+____________________________
+host:localhost:3000
+connection: keep-alive
+user-agent: Mozilla/5.0
+accept-encoding: gzip, deflate, sdch
+_____________________________________
+Blank Line
+_________________________________
+Empty Body
+________________________________
+
+
+Response Format:
+Status Line
+___________
+Headers
+___________
+Blank Line
+___________
+Response Data
+___________
+
+HTTP Request Msg Eg:
+HTTP/1.1 200 OK
+______________________
+Connection:keep-alive
+Content-Type: text/html
+Date: Sun, 21 Feb 2016 06:01:43 GMT
+Transfer Encoding: chunked
+_____________________________
+Blank Line
+____________________________
+<html>...</html>
+__________________________
+
+
+Path Module:
+Path module constructs path based on OS
+
+Windows:\
+OSx or Linux: /
+path.resolve('./public' + fileUrl) .. Gives absolute path
+path.extname(filePath)..returns extension name
+
+fs Module:
+fs.exists(filePath, function(exists){...})
+2nd param is a callback function
+if file exists, var exists=true, else false
+
+fs.createReadStream(filePath).pipe(res);
+
+Creating Simple Server
+
+node-examples
+->node-http
+  ->public
+
+
+Create file in node-http as server-1.js
+
+var http = require('http');
+var hostname = 'localhost';
+var port = 3000;
+
+var server = http.createServer(function (req, res) {
+    console.log(req.headers);
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end('<h1>Hello World</h1>');
+});
+
+server.listen(port, hostname, function () {
+    console.log("Server Running");
+});
+
+
+Start server
+
+Go to localhost:3000
+Hello World will be displayed there
+
+We can use sudo curl http://localhost:3000 to access the server too
+Or we can use POSTMAN too
+
+
+Now we want to extend our server to return HTML files from public directory
+var fs = require('fs');
+var path = require('path');
+
+If server receives GET request then a response is returned
+Else it wont handle it
+
+
 
 
 
