@@ -227,6 +227,91 @@ var path = require('path');
 If server receives GET request then a response is returned
 Else it wont handle it
 
+Read server-2.js and understand the code
+
+
+Express js
+______________________________________________
+
+It is a fast, unopinionated, minimalistic web framework for node
+
+Express has lots of middlewares which provides a lot of functionalities
+
+eg: morgan for logging info from server side
+var morgan = require('morgan')
+app.use(morgan('dev'))
+
+Serving static web resources: use middleware static (included in express)
+
+app.use(express.static(__dirname + '/public/'));
+
+In node __filename and __dirname gives us full path to the file and directory of the current module
+
+
+Create folder node-express
+
+copy public folder from node-http folder here
+create file server-1.js
+
+in the folder node-express
+
+run sudo npm init.. this creates package.json file
+
+then run sudo npm install express --save
+
+In server-1.js:
+var express = require('express'), http = require('http');
+
+var hostname = 'localhost';
+var port = 8080;
+
+var app = express();
+
+Now use app.use() function to create a middleware
+
+var app = express();
+
+// CREATE MIDDLEWARE
+app.use(function (req, res, next) {
+    console.log(req.headers);
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end('<html><body><h4>Hello Mini</h4></body></html>');
+});
+
+// CREATE SERVER
+var server = http.createServer(app);
+server.listen(port, hostname, function () {
+    console.log("Server Running at http://" + hostname + ":" + port);
+});
+
+Now use POSTMAN to send GET requests to this server
+
+Here whatever be url : say http://localhost:8080/sadada.dfgd
+
+It returns the same response as it is coded that way only
+
+Now we want to use morgan
+
+In server-2.js
+
+var express = require('express');
+var morgan = require('morgan');
+
+var hostname = 'localhost';
+var port = 8080;
+
+var app = express();
+
+app.use(morgan('dev'));
+
+// SERVING STATIC FILES
+app.use(express.static(__dirname + '/public/'));
+
+app.listen(port, hostname, function () {
+    console.log("Server Running at http://" + hostname + ":" + port);
+});
+
+
 
 
 
