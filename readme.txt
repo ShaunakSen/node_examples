@@ -312,6 +312,100 @@ app.listen(port, hostname, function () {
 });
 
 
+REST
+__________________________
+
+Web Services
+_________________
+
+A system designed to support interoperability of systems connected across a n/w
+Someone provides a service, somebody else consumes the service
+A standardized way for exchange of information
+
+2 approaches
+
+1. SOAP (Simple Object Access Protocol)
+   Uses WSDL (Web Services Description Language)
+   Uses XML
+2. REST (Representational State Transfer)
+   Uses Web standards
+   Uses either XML or JSON
+   Simpler
+
+
+REST takes a lot of stuff from HTTP
+Now what made HTTP so successful was hyperlinks. u click on a link to get another resource
+
+REST does something similar as:
+1. URI (Uniform Resource Identifier) simar to URL
+2. Uses HTTP Protocol
+3. Make a request -> Receive response -> Display response
+
+REST makes use of all the diff methods that HTTP provides
+POST, GET, PUT, DELETE
+
+REST Grammar
+_______________________
+
+Nouns - Resources: addressed using URI
+eg: http://www.conFusion.food/dishes/123
+
+Verbs - GET(Read), POST(Create), PUT(Update), DELETE(Delete)
+
+Representations - XML and JSON
+
+
+Express Router
+____________________________
+
+methods: app.all, app.get, app.post, app.put, app.delete
+
+eg:
+app.all('/dishes', function(req, res, next)
+{
+    ...
+});
+
+app.all means if u encounter any of the 4 kinds of requests for this particular URI, then apply the
+particular function specified
+
+Routes with params:
+
+app.get('/dishes/:dishId', function(req, res, next){
+    res.end("Will send u details of the dish: " + req.params.dishId);
+});
+
+
+Exercise
+___________________
+
+Setting up a REST API
+
+Copy node_express/server-2.js into a new file server-3.js
+
+We want to set up our express app to serve up our data in form of a REST API
+
+When a client is communicating with server, client may send data to server in body of msg
+which will be received as request msg on server side
+This data is in JSON
+
+When data gets to server side we want this data to be parsed and converted to a format which is
+easier to use in js code in server side
+
+To do this we use middleware body-parser
+
+body-parser parses the data and converts it to js objects
+
+var bodyParser = require('body-parser');
+
+also install body-parser
+
+app.use(bodyParser.json());
+
+body-parser also parses other kinds of data for eg if we encode form data and send it, that can also be parsed
+
+
+
 
 
 
