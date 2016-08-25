@@ -1,38 +1,39 @@
 console.log("In Module dishRouter");
 
-exports.startDishServer = function (express,bodyParser, app, hostname, port) {
-    var dishRouter = express.Router();
-    dishRouter.use(bodyParser.json());
-    dishRouter.route('/')
+
+exports.startLeaderServer = function (express,bodyParser, app, hostname, port) {
+    var leaderRouter = express.Router();
+    leaderRouter.use(bodyParser.json());
+    leaderRouter.route('/')
         .all(function (req, res, next) {
             res.writeHead(200, {"Content-Type": "text/plain"});
             next();
         })
         .get(function (req, res, next) {
-            res.end("Sending all the dishes to u!!")
+            res.end("Sending all the leaders to u!!")
         })
         .delete(function (req, res, next) {
-            res.end("Deleting all the dishes!!");
+            res.end("Deleting all the leaders!!");
         })
         .post(function (req, res, next) {
-            res.end("Will add the dish with name: " + req.body.name + " with details: " + req.body.description);
+            res.end("Will add the leader with name: " + req.body.name + " with details: " + req.body.description);
         });
-    dishRouter.route('/:dishId')
+    leaderRouter.route('/:leaderId')
         .all(function (req, res, next) {
             res.writeHead(200, {"Content-Type": "text/plain"});
             next();
         })
         .get(function (req, res, next) {
-            res.end("Sending the dish with id: " + req.params.dishId);
+            res.end("Sending the leader with id: " + req.params.leaderId);
         })
         .delete(function (req, res, next) {
-            res.end("Deleting the dish with id: " + req.params.dishId);
+            res.end("Deleting the leader with id: " + req.params.leaderId);
         })
         .put(function (req, res, next) {
-            res.write("Updating dish with id: " + req.params.dishId);
-            res.end("\nWill update the dish with name: " + req.body.name + " with details: " + req.body.description);
+            res.write("Updating leader with id: " + req.params.leaderId);
+            res.end("\nWill update the leader with name: " + req.body.name + " with details: " + req.body.description);
         });
-    app.use('/dishes', dishRouter);
+    app.use('/leadership', leaderRouter);
     // SERVING STATIC FILES
     app.use(express.static(__dirname + '/public/'));
 
