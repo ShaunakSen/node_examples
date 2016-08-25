@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3bd2106-c361-42e4-aee7-a432b6aa92f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node-express/server-3.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express/package.json" afterPath="$PROJECT_DIR$/node-express/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express/server-3.js" afterPath="$PROJECT_DIR$/node-express/server-3.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
     </list>
     <ignored path="node-examples.iws" />
@@ -25,21 +26,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/readme.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="406" column="0" selection-start-line="406" selection-start-column="0" selection-end-line="406" selection-end-column="0" />
+            <state relative-caret-position="434">
+              <caret line="440" column="0" selection-start-line="440" selection-start-column="0" selection-end-line="440" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server-3.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="server-3.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node-express/server-3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            <state relative-caret-position="504">
+              <caret line="36" column="3" selection-start-line="14" selection-start-column="0" selection-end-line="36" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -75,8 +76,8 @@
         <option value="$PROJECT_DIR$/node-http/server-2.js" />
         <option value="$PROJECT_DIR$/node-express/server-1.js" />
         <option value="$PROJECT_DIR$/node-express/server-2.js" />
-        <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/node-express/server-3.js" />
+        <option value="$PROJECT_DIR$/readme.txt" />
       </list>
     </option>
   </component>
@@ -175,10 +176,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.server-2.js (1)">
-    <configuration default="false" name="solve-3.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/solve-3.js" working-dir="$PROJECT_DIR$/node_modules">
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Node.js.server-3.js">
     <configuration default="false" name="server-1.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="server-1.js" working-dir="$PROJECT_DIR$/node-http">
       <method />
     </configuration>
@@ -189,6 +187,9 @@
       <method />
     </configuration>
     <configuration default="false" name="server-2.js (1)" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="server-2.js" working-dir="$PROJECT_DIR$/node-express">
+      <method />
+    </configuration>
+    <configuration default="false" name="server-3.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="server-3.js" working-dir="$PROJECT_DIR$/node-express">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -249,19 +250,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Node.js.simplerect.js" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.solve-3.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.server-1.js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.server-2.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.server-1.js (1)" />
-      <item index="5" class="java.lang.String" itemvalue="Node.js.server-2.js (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.server-1.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.server-2.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.server-1.js (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.server-2.js (1)" />
+      <item index="5" class="java.lang.String" itemvalue="Node.js.server-3.js" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.server-2.js (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.server-1.js (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.server-2.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.server-1.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.solve-3.js" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.server-3.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.server-2.js (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.server-1.js (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.server-2.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.server-1.js" />
       </list>
     </recent_temporary>
   </component>
@@ -293,7 +294,8 @@
       <workItem from="1471880482519" duration="9932000" />
       <workItem from="1471927549587" duration="710000" />
       <workItem from="1471951364748" duration="1517000" />
-      <workItem from="1472057814456" duration="1697000" />
+      <workItem from="1472057814456" duration="2638000" />
+      <workItem from="1472119126046" duration="3153000" />
     </task>
     <task id="LOCAL-00001" summary="creating simple modules">
       <created>1471113759365</created>
@@ -323,11 +325,18 @@
       <option name="project" value="LOCAL" />
       <updated>1471890268588</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="starting off with express REST API">
+      <created>1472059780985</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1472059780985</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46517000" />
+    <option name="totallyTimeSpent" value="50611000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="40" width="1368" height="729" extended-state="6" />
@@ -337,7 +346,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29159802" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5074135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.70016474" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -385,7 +394,8 @@
     <MESSAGE value="callbacks, error handling + ext module(yargs)" />
     <MESSAGE value="creating simple http server with appropriate error handling :)" />
     <MESSAGE value="using express" />
-    <option name="LAST_COMMIT_MESSAGE" value="using express" />
+    <MESSAGE value="starting off with express REST API" />
+    <option name="LAST_COMMIT_MESSAGE" value="starting off with express REST API" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -718,7 +728,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="3" selection-start-line="16" selection-start-column="0" selection-end-line="18" selection-end-column="3" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-express/server-2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -730,26 +746,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node-express/server-2.js">
+    <entry file="file://$PROJECT_DIR$/node-express/server-3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="504">
+          <caret line="36" column="3" selection-start-line="14" selection-start-column="0" selection-end-line="36" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="406" column="0" selection-start-line="406" selection-start-column="0" selection-end-line="406" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node-express/server-3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        <state relative-caret-position="434">
+          <caret line="440" column="0" selection-start-line="440" selection-start-column="0" selection-end-line="440" selection-end-column="0" />
           <folding />
         </state>
       </provider>
