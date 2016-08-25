@@ -438,10 +438,61 @@ app.delete('/dishes/:dishId', function (req, res, next) {
 });
 
 
+Alternative approach
+______________________
+
+create server-4.js
+
+We saw earlier that for each get,post,put,delete we had explicitly specified the url. But the chance
+of making mistakes in that case is very high
+
+Soln: use Express Router
+
+var dishRouter = express.router();
+dishRouter.use(bodyParser('json'));
+
+Think of this dishRouter as a mini express application
+
+so it supports all methods like use, get, put, post etc
+
+Also it supports another method called route
+
+dishRouter.route('/')
+    .all(function (req, res, next) {
+        res.writeHead(200, {'Content-Type': 'text/plain'});
+        next();
+    })
+    .get(function (req, res, next) {
+        res.end("Will send all the dishes to u!!");
+    })
+    .post(function (req, res, next) {
+        res.end("Will add the dish: " + req.body.name + " with details: " + req.body.description);
+    })
+    .delete(function (req, res, next) {
+        res.end("Deleting all the dishes!!");
+    });
 
 
+I am supporting get, post and delete on this route
 
+dishRouter.route('/:dishId')
+    .all(function (req, res, next) {
+        res.writeHead(200, {'Content-Type': 'text/plain'});
+        next();
+    })
+    .get(function (req, res, next) {
+        res.end("Will send details of dish with id: " + req.params.dishId + " to you!!");
+    })
+    .put(function (req, res, next){
+        res.write("Updating dish with id: " + req.params.dishId);
+        res.end("Will update the dish: " + req.body.name + " with details: " + req.body.description);
+    })
+    .delete(function (req, res, next) {
+        res.end("Deleting the dish with id: " + req.params.dishId);
+    });
 
+Having coded the routes attach the dishRouter to the app
 
+app.use('/dishes', dishRouter);
 
 
