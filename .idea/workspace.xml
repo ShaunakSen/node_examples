@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3bd2106-c361-42e4-aee7-a432b6aa92f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node-express/leaderRouter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node-express/promoRouter.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express/dishRouter.js" afterPath="$PROJECT_DIR$/node-express/dishRouter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express/server-5.js" afterPath="$PROJECT_DIR$/node-express/server-5.js" />
     </list>
     <ignored path="node-examples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -325,7 +321,7 @@
       <workItem from="1471951364748" duration="1517000" />
       <workItem from="1472057814456" duration="2638000" />
       <workItem from="1472119126046" duration="4699000" />
-      <workItem from="1472131581449" duration="8758000" />
+      <workItem from="1472131581449" duration="9399000" />
     </task>
     <task id="LOCAL-00001" summary="creating simple modules">
       <created>1471113759365</created>
@@ -383,11 +379,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472134967361</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="separate module + multiple resources accessed">
+      <created>1472152349910</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1472152349910</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60915000" />
+    <option name="totallyTimeSpent" value="61556000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="40" width="1368" height="729" extended-state="6" />
@@ -449,7 +452,8 @@
     <MESSAGE value="basic REST API" />
     <MESSAGE value="using express.Router() to improve the REST API" />
     <MESSAGE value="separated module :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="separated module :)" />
+    <MESSAGE value="separate module + multiple resources accessed" />
+    <option name="LAST_COMMIT_MESSAGE" value="separate module + multiple resources accessed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

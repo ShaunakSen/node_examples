@@ -496,3 +496,16 @@ Having coded the routes attach the dishRouter to the app
 app.use('/dishes', dishRouter);
 
 
+Express Generator
+___________________________
+
+
+Helps us to scaffold out an entire Express application
+
+sudo npm install express-generator -g
+
+express is now like a command available on terminal Windows
+
+express <App name> : Generates this app
+
+
