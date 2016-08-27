@@ -577,6 +577,23 @@ A welcome msg Express Welcome to Express is generated
 This msg is generated using index.jade file
 
 Now we want to use this to implement dishRouter, leaderRouter and promoRouter
+Copy those files into the routes folder
+
+Also from public folder copy aboutus and index HTML files into public folder of node-express-gen
+
+So these files will be served up by express app
+
+Fixing app.js to use these new routers
+
+Requiring the routers:
+var dishRouter = require('./routes/dishRouter');
+var promoRouter = require('./routes/promoRouter');
+var leaderRouter = require('./routes/leaderRouter');
+
+Mounting the routers:
+app.use('/dishes', dishRouter);
+app.use('/promotions', promoRouter);
+app.use('/leadership', leaderRouter);
 
 
 
