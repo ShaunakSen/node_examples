@@ -508,4 +508,77 @@ express is now like a command available on terminal Windows
 
 express <App name> : Generates this app
 
+We want to use this express generator to build the REST API which we had built earlier
+
+express node-express-gen
+
+A new folder node-express-gen is created
+Go into that folder->package.json
+It shows dependencies => we need to do npm install
+
+Go to app.js file
+This looks like a typical express application which we have seen earlier
+
+there are lots of require statements for various node modules
+
+2 extra modules are: serve-favicon and cookie-parser
+
+var routes = require('./routes/index');
+var users = require('./routes/users');
+
+This means we are requiring a file based node module that exists in routes folder
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+
+This is the view engine set up
+
+app.use('/', routes);
+app.use('/users', users);
+
+Any request ending with '/' will be handled by routes module ie /routes/index.js file will
+handle that
+
+module.exports = app;
+
+This module is used by /bin/www
+In /bin/www we have:
+
+var app = require('../app');
+So the app in app.js module is used here
+
+In package.json also:
+"start": "node ./bin/www"
+
+so this is the starting point
+
+In views there exists the jade templates
+Now go to routes/index.js
+
+var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
+
+module.exports = router;
+
+This is same router code which we did before
+
+Go to node-express-gen folder and run sudo npm install to install dependencies
+
+Next run npm start to start server
+
+Use POSTMAN to send request to localhost:3000
+A welcome msg Express Welcome to Express is generated
+This msg is generated using index.jade file
+
+Now we want to use this to implement dishRouter, leaderRouter and promoRouter
+
+
+
+
 
