@@ -596,6 +596,46 @@ app.use('/promotions', promoRouter);
 app.use('/leadership', leaderRouter);
 
 
+Introduction to MongoDB
+_____________________________________________
+
+MongoDB is a NoSQL Document Based Databse
+
+Document: self-contained piece of information
+eg: a JSON document: {"name":"...", "description": "......"}
+Collection: Set of documents
+Database: Set of collections
+
+When u retrieve data from a Mongo Database u get back JSON document
+
+Mongo stores data on disk in BSON (Binary JSON) format
+- Supports length prefix on each value (so no need to scan entire field to know length)
+- Info about type of field value
+- Addnl primitive types like UTC date time, raw binary and ObjectId
+
+ObjectId
+__________
+every doc in mongo must have _id field associated with it
+
+Default ObjectId is created by MongoDB when we insert a document
+eg:
+{
+    "_id":ObjectId("56ce76c0....."),
+    "name":"...." 
+}
+
+ObjectId is a 12 byte field
+
+TimeStamp(4)|Machine ID(3)|Proc. ID(2)|Increment(3)
+Machine ID holds info regarding machine where Database is running
+Process ID is mongo server's process ID
+Increment - TimeStamp is at the resolution of a second. SO within a second if multiple documents are stored,
+Increment field tacks that information
+
+id.getTimeStamp() returns the TimeStamp in ISO Date Format
+
+
+
 
 
 

@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3bd2106-c361-42e4-aee7-a432b6aa92f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node-express-gen/public/aboutus.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node-express-gen/public/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node-express-gen/routes/dishRouter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node-express-gen/routes/leaderRouter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node-express-gen/routes/promoRouter.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express-gen/app.js" afterPath="$PROJECT_DIR$/node-express-gen/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
     </list>
     <ignored path="node-examples.iws" />
@@ -30,21 +24,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/readme.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="595" column="37" selection-start-line="595" selection-start-column="37" selection-end-line="595" selection-end-column="37" />
+            <state relative-caret-position="542">
+              <caret line="618" column="0" selection-start-line="618" selection-start-column="0" selection-end-line="618" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node-express-gen/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="31" column="37" selection-start-line="29" selection-start-column="0" selection-end-line="31" selection-end-column="37" />
+            <state relative-caret-position="774">
+              <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -342,7 +336,7 @@
       <workItem from="1472131581449" duration="9399000" />
       <workItem from="1472190144508" duration="1422000" />
       <workItem from="1472208410953" duration="1068000" />
-      <workItem from="1472285466692" duration="3299000" />
+      <workItem from="1472285466692" duration="5390000" />
     </task>
     <task id="LOCAL-00001" summary="creating simple modules">
       <created>1471113759365</created>
@@ -414,11 +408,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472288242278</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="adding our own routes to express-gen app">
+      <created>1472288905747</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1472288905747</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67345000" />
+    <option name="totallyTimeSpent" value="69436000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="40" width="1368" height="729" extended-state="6" />
@@ -482,7 +483,8 @@
     <MESSAGE value="separated module :)" />
     <MESSAGE value="separate module + multiple resources accessed" />
     <MESSAGE value="dishRouter + leaderRouter + promoRouter fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="dishRouter + leaderRouter + promoRouter fixed" />
+    <MESSAGE value="adding our own routes to express-gen app" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding our own routes to express-gen app" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -860,14 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="595" column="37" selection-start-line="595" selection-start-column="37" selection-end-line="595" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node-express-gen/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -878,8 +872,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/node-express-gen/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="31" column="37" selection-start-line="29" selection-start-column="0" selection-end-line="31" selection-end-column="37" />
+        <state relative-caret-position="774">
+          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="618" column="0" selection-start-line="618" selection-start-column="0" selection-end-line="618" selection-end-column="0" />
           <folding />
         </state>
       </provider>
