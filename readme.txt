@@ -635,6 +635,46 @@ Increment field tacks that information
 id.getTimeStamp() returns the TimeStamp in ISO Date Format
 
 
+Create folder mongodb in node-express-gen/
+Create folder data in mongodb/
+
+Open node-express-gen/mongodb/ in terminal
+Run command: mongod --dbpath=data
+
+Mongo runs on port 27017
+
+use conFusion: creates new db conFusion
+
+db.dishes.insert({name:"Uthapizza", description:"Awesome...!!"});
+
+Here dishes is the Collection
+db.dishes.find()
+{ "_id" : ObjectId("57c2a018eb98020452a20465"), "name" : "Uthapizza", "description" : "Very nice" }
+{ "_id" : ObjectId("57c3291bd5711a550dd8203f"), "name" : "Uthapizza", "description" : "Awesome...!!" }
+
+ db.dishes.find().pretty()
+{
+        "_id" : ObjectId("57c2a018eb98020452a20465"),
+        "name" : "Uthapizza",
+        "description" : "Very nice"
+}
+{
+        "_id" : ObjectId("57c3291bd5711a550dd8203f"),
+        "name" : "Uthapizza",
+        "description" : "Awesome...!!"
+}
+
+Note how _id gets inserted automatically
+
+> var id = new ObjectId()
+> id
+ObjectId("57c33c7ad5711a550dd82040")
+> id.getTimestamp()
+ISODate("2016-08-28T19:33:14Z")
+
+
+
+
 
 
 
