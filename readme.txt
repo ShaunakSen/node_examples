@@ -672,10 +672,28 @@ ObjectId("57c33c7ad5711a550dd82040")
 > id.getTimestamp()
 ISODate("2016-08-28T19:33:14Z")
 
+Node and Mongodb
+_____________________________________
+
+Node MongoDb Driver
+-Provides high level API for Node app to interact with MongoDB Server
+Also: Mongoose
+
+npm install mongodb --save
+
+Create new folder node-mongodb
+
+sudo npm install mongodb --save in this folder
+sudo npm install assert --save
+
+A simple node-mongo app:
+___________________________________
 
 
+Create file simpleserver.js in node-mongodb
 
-
+var MongoClient = require('mongodb').MongoClient, assert = require('assert');
+we are requiring MongoClient part of mongodb module
 
 
 
