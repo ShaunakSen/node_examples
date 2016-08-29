@@ -695,5 +695,87 @@ Create file simpleserver.js in node-mongodb
 var MongoClient = require('mongodb').MongoClient, assert = require('assert');
 we are requiring MongoClient part of mongodb module
 
+See simpleserver.js for full code
+
+Now we want to create a separate module for db operations
+
+Create file operations.js
+
+var assert = require('assert');
+
+exports.findDocuments = function (db, collection, callback) {
+    // GET THE DOCUMENTS COLLECTION
+    var coll = db.collection(collection);
+    // FIND SOME DOCUMENTS
+    coll.find({}).toArray(function (err, docs) {
+        assert.equal(err, null);
+        callback(docs);
+    })
+};
+
+Note how db, collection and callback function are passed as params
+So these functions would work for any db, any collection
+
+exports.insertDocument = function (db, document, collection, callback) {
+    // GET THE DOCUMENTS COLLECTION
+    var coll = db.collection(collection);
+    // INSERT SOME DOCUMENTS
+    coll.insert(document, function (err, result) {
+        assert.equal(err, null);
+        console.log("Inserted " + result.result.n + " documents into the documents collection " + collection);
+        callback(result);
+    });
+};
+
+
+exports.removeDocument = function (db, document, collection, callback) {
+    // GET THE DOCUMENTS COLLECTION
+    var coll = db.collection(collection);
+
+    coll.deleteOne(document, function (err, result) {
+        assert.equal(err, null);
+        console.log("Removed The Document " + document);
+        callback(result);
+    });
+};
+
+removeDocument takes in document. This is not an entire document but a filter for identifying a document
+coll.deleteOne(document, function (err, result) deletes first document in the collection
+which matches the criteria
+
+
+exports.updateDocument = function (db, document, update, collection, callback) {
+    // GET THE DOCUMENTS COLLECTION
+    var coll = db.collection(collection);
+
+    coll.updateOne(document, {$set: update}, null, function(err, result){
+        assert.equal(err, null);
+        console.log("Updated document with " + update);
+        callback(result);
+    });
+};
+
+Update also takes in a filter i.e part of document
+
+Create file server.js
+var MongoClient = require('mongodb').MongoClient, assert = require('assert');
+
+var dboper = require('./operations');
+
+var url = 'mongodb://localhost:27017/conFusion';
+
+MongoClient.connect(url, function (err, db) {
+    assert.equal(err, null);
+    console.log("Connected correctly to server");
+});
+
+
+Now first we want to insert... Insert also takes in a callback function as argument
+In this callback function we want to find
+
+See server.js
+
+Note the chaining of callback  functions
+
 
 
