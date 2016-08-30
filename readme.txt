@@ -873,7 +873,46 @@ Dishes.create({
 })
 
 
+Exercise Mongoose ODM
+______________________________
 
+Create folder in node-examples/ as node-mongoose
+
+In terminal do sudo npm init
+
+Now do npm install mongoose
+npm install assert
+
+Within folder node-mongoose create folder models
+In models create file dishes-1.js
+
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+// CREATE A SCHEMA
+
+var dishSchema = new Schema({
+    name: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    description: {
+        type: String,
+        required: true
+    }
+},{timestamps: true});
+
+Create the model:
+var Dishes = mongoose.model('Dish', dishSchema);
+
+Since the first parameter of model is Dish Mongoose will create a collection
+having name dishes i.e the plural of that
+
+Finally:
+module.exports = Dishes;
+
+We now need to write a node module to make use of this schema
 
 
 
