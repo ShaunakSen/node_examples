@@ -777,5 +777,103 @@ See server.js
 
 Note the chaining of callback  functions
 
+Mongoose
+______________________________________________
+
+
+Mongo stores data in form of documents
+No structure is imposed on any doc
+Any doc can be stored in any collection
+Relies on developer principles to maintain structure of documents
+
+If we want to impose structure mongoose ODM is the soln
+
+It adds structure to MongoDB documents through schema
+
+Schema Types: String, Number, Date, Buffer, Boolean, Mixed, ObjectId, Array
+
+Schema is used to create a Model function
+
+Schema example:
+
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+var dishSchema = new Schema({
+    name: {type: String, required: true, unique: true},
+    description: {type: String, required: true}},
+    {timestamps: true});
+
+var dishes = mongoose.model('Dish', dishSchema);
+
+In separate file:
+
+var Dishes = require('./models/dishes')
+
+var newDish = Dishes({name:"Uthapizza", description: "test"});
+newDish.save(function(err){
+    if(err) throw err;
+
+    Dishes.find({}, function(err, dishes){
+        if(err) throw err;
+        console.log(dishes);
+        ....
+        ....
+    })
+})
+
+
+{timestamps: true} adds 2 fields created_at and updated_at
+These 2 fields stores info in form of date time
+very useful for filtering and sorting
+
+Here we specify model name: Dish and its schema as dishSchema
+
+Mongo creates a collection.  The name of the collection will be the plural of model name
+i.e dishes
+
+
+Embedded Documents Schema
+___________________________
+
+Mongoose allows us to embed one or many docs inside another
+
+These embedded docs are referred to as sub docs
+
+var commentSchema = new Schema({
+    rating: {type: Number, min:1, max:5, required:true},
+    comment: {type: String, required: true},
+    author: {type: String, required: true},
+}, {timestamps: true});
+
+var dishSchema = new Schema({
+    name: {type: String, required: true, unique: true},
+    description: {type: String, required: true}
+    comments:[commentSchema] },         // ---- NOTE THIS LINE
+    {timestamps: true});
+
+var dishes = mongoose.model('Dish', dishSchema);
+
+In mongoose when we insert a sub doc each sub doc also gets a MongoDB ID
+So they can also be identified
+
+In the earlier eg we created a doc and called save()
+
+We can directly do create() on the model and pass the document in as a parameter
+
+Dishes.create({
+    name:"",
+    description:"",
+    comments: [
+        {rating: 3, comment:"", author:"MINI"},
+        {rating: 2, comment:"", author:"SHONA"}
+    ]
+}, function(err, dish){
+    ...
+})
+
+
+
+
 
 
