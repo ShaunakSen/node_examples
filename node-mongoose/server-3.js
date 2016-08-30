@@ -1,6 +1,6 @@
 var mongoose = require('mongoose'), assert = require('assert');
 
-var Dishes = require('./models/dishes-1');
+var Dishes = require('./models/dishes-2');
 
 var url = 'mongodb://localhost:27017/conFusion';
 
@@ -12,7 +12,14 @@ db.once('open', function () {
     console.log('Connected correctly to server');
     Dishes.create({
         name: "UthaPizza",
-        description: "Test"
+        description: "Test",
+        comments: [
+            {
+                rating: 3,
+                comment: "Awesome Dish !!",
+                author: "Budhhu Mini"
+            }
+        ]
     }, function (err, dish) {
         if (err) throw err;
         console.log(dish);
@@ -28,14 +35,28 @@ db.once('open', function () {
                 new: true
             })
                 .exec(function (err, dish) {
-                    if(err) throw err;
+                    if (err) throw err;
                     console.log("Updated Dish!!");
                     console.log(dish);
 
-                    // SET DATABASE TO PRISTINE CONDITION
-                    db.collection('dishes').drop(function () {
-                        db.close();
+                    // UPDATING COMMENTS
+                    dish.comments.push({
+                        rating: 5,
+                        comment: 'I\'m loving It!!',
+                        author: "Shona"
                     });
+
+                    dish.save(function (err, dish) {
+                        console.log("Updated Comments !!");
+                        console.log(dish);
+                        
+                        // SET DATABASE TO PRISTINE CONDITION
+                        db.collection('dishes').drop(function () {
+                            db.close();
+                        });
+                    })
+
+
                 });
         }, 3000);
 

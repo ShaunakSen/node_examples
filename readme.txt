@@ -967,3 +967,164 @@ db.once('open', function () {
 
     // CHANGE CODE HERE
 });
+
+
+
+db.once('open', function () {
+    console.log('Connected correctly to server');
+    Dishes.create({
+        name: "UthaPizza",
+        description: "Test"
+    }, function (err, dish) {
+        if (err) throw err;
+        console.log(dish);
+        // CAPTURE ID OF THE DISH
+        var id = dish._id;
+        //DELAY
+        setTimeout(function () {
+            Dishes.findByIdAndUpdate(id, {
+                $set: {
+                    description: "Updated Test"
+                }
+            }, {
+                new: true
+            })
+                .exec(function (err, dish) {
+                    if(err) throw err;
+                    console.log("Updated Dish!!");
+                    console.log(dish);
+
+                    db.collection('dishes').drop(function () {
+                        db.close();;
+                    });
+                });
+        }, 3000);
+
+
+    });
+
+});
+
+findByIdAndUpdate: this is method supported by mongoose
+
+Then we introduce a delay. This is done so that there is a difference(3 secs) bw created_at
+and updated_at fields
+
+findByIdAndUpdate takes as first param the id of the dish which we have already found out
+
+2nd param: what to update
+
+3rd param: option specifying new:true
+new: true => return the updated dish
+
+.exec() -> executes the query
+
+It takes callback as parameter
+
+When we run this :
+dish gets created ... 3 secs ... updated and updated dish is returned... collection is dropped
+
+
+Sub Documents:
+___________________
+
+In models create dishes-2.js
+
+We want to introduce comments as part of the dishes document
+
+var commentSchema = new Schema({
+    rating: {
+        type: Number,
+        min: 1,
+        max: 5,
+        required: true
+    },
+    comment: {
+        type: String,
+        required: true
+    },
+    author: {
+        type: String,
+        required: true
+    }
+}, {timestamps: true});
+
+
+We have created comment schema. We now want to add it as a sub doc in dishes schema
+
+comments: [commentSchema]
+
+note: [] ensures that it accepts an array of objects each of which which satisfy commentSchema
+
+
+Create a new server file i.e server-3.js
+
+copy code from server-2
+
+require dishes-2 module
+var Dishes = require('./models/dishes-2');
+
+Dishes.create({
+        name: "UthaPizza",
+        description: "Test"
+        ...
+})
+
+Now i would like to insert a comment here as well
+
+comments: [
+            {
+                rating: 3,
+                comment: "Awesome Dish !!",
+                author: "Budhhu Mini"
+            }
+        ]
+
+Now we want to insert a new comment into an existing dish:
+
+We can use push() method of mongoose for this
+
+
+.exec(function (err, dish) {
+                    if (err) throw err;
+                    console.log("Updated Dish!!");
+                    console.log(dish);
+
+                    // UPDATING COMMENTS
+                    dish.comments.push({
+                        rating: 5,
+                        comment: 'I\'m loving It!!',
+                        author: "Shona"
+                    });
+
+                    dish.save(function (err, dish) {
+                        console.log("Updated Comments !!");
+                        console.log(dish);
+
+                        // SET DATABASE TO PRISTINE CONDITION
+                        db.collection('dishes').drop(function () {
+                            db.close();
+                        });
+                    })
+
+
+                });
+
+Data:
+
+{ __v: 0,
+  updatedAt: Wed Aug 31 2016 01:38:19 GMT+0530 (IST),
+  createdAt: Wed Aug 31 2016 01:38:19 GMT+0530 (IST),
+  name: 'UthaPizza',
+  description: 'Test',
+  _id: 57c5e7b31bdb82f2261c3770,
+  comments:
+   [ { updatedAt: Wed Aug 31 2016 01:38:19 GMT+0530 (IST),
+       createdAt: Wed Aug 31 2016 01:38:19 GMT+0530 (IST),
+       rating: 3,
+       comment: 'Awesome Dish !!',
+       author: 'Budhhu Mini',
+       _id: 57c5e7b31bdb82f2261c3771 } ] }
+
+Note how each comment also has updatedAt and createdAt fields and each comment has its own _id field
+
