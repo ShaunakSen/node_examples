@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3bd2106-c361-42e4-aee7-a432b6aa92f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node-mongoose/dishServer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node-mongoose/models/promotions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node-mongoose/models/leaders.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-mongoose/models/dishes-3.js" afterPath="$PROJECT_DIR$/node-mongoose/models/dishes-3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-mongoose/dishServer.js" afterPath="$PROJECT_DIR$/node-mongoose/dishServer.js" />
     </list>
     <ignored path="node-examples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,8 +38,18 @@
       <file leaf-file-name="dishServer.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/node-mongoose/dishServer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+            <state relative-caret-position="38">
+              <caret line="114" column="32" selection-start-line="114" selection-start-column="32" selection-end-line="114" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="leaders.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node-mongoose/models/leaders.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -61,8 +70,8 @@
       <file leaf-file-name="promotions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node-mongoose/models/promotions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+            <state relative-caret-position="470">
+              <caret line="30" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -149,6 +158,7 @@
         <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/node-mongoose/models/dishes-3.js" />
         <option value="$PROJECT_DIR$/node-mongoose/models/promotions.js" />
+        <option value="$PROJECT_DIR$/node-mongoose/models/leaders.js" />
         <option value="$PROJECT_DIR$/node-mongoose/dishServer.js" />
       </list>
     </option>
@@ -417,7 +427,7 @@
       <workItem from="1472576253674" duration="5308000" />
       <workItem from="1472585888825" duration="2356000" />
       <workItem from="1472624747110" duration="1844000" />
-      <workItem from="1472751063624" duration="5322000" />
+      <workItem from="1472751063624" duration="6619000" />
     </task>
     <task id="LOCAL-00001" summary="creating simple modules">
       <created>1471113759365</created>
@@ -566,15 +576,22 @@
       <option name="project" value="LOCAL" />
       <updated>1472753757967</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="created promotionSchema + set up server to use this model">
+      <created>1472756597121</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1472756597121</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100712000" />
+    <option name="totallyTimeSpent" value="102009000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="40" width="1368" height="729" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24925596" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -644,7 +661,8 @@
     <MESSAGE value="CRUD + Sub Documents and Schemas :)" />
     <MESSAGE value="created updated dishSchema" />
     <MESSAGE value="created promotionSchema + set up server to use this model" />
-    <option name="LAST_COMMIT_MESSAGE" value="created promotionSchema + set up server to use this model" />
+    <MESSAGE value="created all models + server coded" />
+    <option name="LAST_COMMIT_MESSAGE" value="created all models + server coded" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -653,13 +671,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/solve-1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="16" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rectangle-1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -994,14 +1005,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node-mongoose/models/promotions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node-mongoose/server-2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-124">
@@ -1010,10 +1013,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node-mongoose/models/promotions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="30" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-mongoose/models/leaders.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/node-mongoose/dishServer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        <state relative-caret-position="38">
+          <caret line="114" column="32" selection-start-line="114" selection-start-column="32" selection-end-line="114" selection-end-column="32" />
           <folding />
         </state>
       </provider>

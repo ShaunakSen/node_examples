@@ -2,6 +2,7 @@ var mongoose = require('mongoose'), assert = require('assert');
 
 var Dishes = require('./models/dishes-3');
 var Promotions = require('./models/promotions');
+var Leaders = require('./models/leaders');
 
 var url = 'mongodb://localhost:27017/conFusion';
 
@@ -94,7 +95,37 @@ function promotionOperation() {
                     if (err) throw err;
                     console.log("Updated Promotions!!");
                     console.log(promotion);
+                    leadersOperation();
+                })
+        }, 3000)
+    })
+}
+function leadersOperation() {
+    Leaders.create({
+        name: "Peter Pan",
+        image: "images/alberto.png",
+        designation: "Chief Epicurious Officer",
+        abbr: "CEO",
+        description: "Our CEO, Peter, . . ."
+    }, function (err, leader) {
+        if (err) throw err;
+        console.log(leader);
+
+        var id = leader._id;
+        setTimeout(function () {
+            Leaders.findByIdAndUpdate(id, {
+                $set: {
+                    description: "Updated Leader description"
+                }
+            }, {new: true})
+                .exec(function (err, leader) {
+                    if (err) throw err;
+                    console.log("Updated Leaders!!");
+                    console.log(leader);
                     // SET DATABASE TO PRISTINE CONDITION
+                    db.collection('leaders').drop(function () {
+                        db.close();
+                    });
                     db.collection('promotions').drop(function () {
                         db.close();
                     });
@@ -105,4 +136,3 @@ function promotionOperation() {
         }, 3000)
     })
 }
-
