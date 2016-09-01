@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3bd2106-c361-42e4-aee7-a432b6aa92f6" name="Default" comment="created updated dishSchema">
+    <list default="true" id="a3bd2106-c361-42e4-aee7-a432b6aa92f6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node-mongoose/dishServer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node-mongoose/models/promotions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-mongoose/models/dishes-3.js" afterPath="$PROJECT_DIR$/node-mongoose/models/dishes-3.js" />
     </list>
     <ignored path="node-examples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,21 +36,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server-3.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node-mongoose/server-3.js">
+      <file leaf-file-name="dishServer.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/node-mongoose/dishServer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-90">
-              <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+            <state relative-caret-position="234">
+              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server-2.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/node-mongoose/server-2.js">
+      <file leaf-file-name="dishes-3.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node-mongoose/models/dishes-3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-124">
-              <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+            <state relative-caret-position="594">
+              <caret line="48" column="6" selection-start-line="45" selection-start-column="4" selection-end-line="48" selection-end-column="6" />
+              <folding>
+                <marker date="1472754722482" expanded="true" signature="846:853" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="promotions.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node-mongoose/models/promotions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -58,16 +73,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="398">
               <caret line="33" column="23" selection-start-line="22" selection-start-column="0" selection-end-line="33" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dishes-3.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node-mongoose/models/dishes-3.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -143,6 +148,8 @@
         <option value="$PROJECT_DIR$/node-mongoose/server-3.js" />
         <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/node-mongoose/models/dishes-3.js" />
+        <option value="$PROJECT_DIR$/node-mongoose/models/promotions.js" />
+        <option value="$PROJECT_DIR$/node-mongoose/dishServer.js" />
       </list>
     </option>
   </component>
@@ -216,6 +223,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-mongoose" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -260,10 +285,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.server-3.js">
-    <configuration default="false" name="simpleserver.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="simpleserver.js" working-dir="$PROJECT_DIR$/node-mongodb">
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Node.js.dishServer.js">
     <configuration default="false" name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="server.js" working-dir="$PROJECT_DIR$/node-mongodb">
       <method />
     </configuration>
@@ -274,6 +296,9 @@
       <method />
     </configuration>
     <configuration default="false" name="server-3.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="server-3.js" working-dir="$PROJECT_DIR$/node-mongoose">
+      <method />
+    </configuration>
+    <configuration default="false" name="dishServer.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="dishServer.js" working-dir="$PROJECT_DIR$/node-mongoose">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -334,19 +359,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Node.js.simplerect.js" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.simpleserver.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.server.js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.server-1.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.server-2.js" />
-      <item index="5" class="java.lang.String" itemvalue="Node.js.server-3.js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.server.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.server-1.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.server-2.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.server-3.js" />
+      <item index="5" class="java.lang.String" itemvalue="Node.js.dishServer.js" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.server-3.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.server-2.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.server-1.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.server.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.simpleserver.js" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.dishServer.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.server-3.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.server-2.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.server-1.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.server.js" />
       </list>
     </recent_temporary>
   </component>
@@ -392,7 +417,7 @@
       <workItem from="1472576253674" duration="5308000" />
       <workItem from="1472585888825" duration="2356000" />
       <workItem from="1472624747110" duration="1844000" />
-      <workItem from="1472751063624" duration="2484000" />
+      <workItem from="1472751063624" duration="5322000" />
     </task>
     <task id="LOCAL-00001" summary="creating simple modules">
       <created>1471113759365</created>
@@ -534,20 +559,27 @@
       <option name="project" value="LOCAL" />
       <updated>1472753469430</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="created updated dishSchema">
+      <created>1472753757967</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1472753757967</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97874000" />
+    <option name="totallyTimeSpent" value="100712000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="40" width="1368" height="729" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24925596" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6985173" sideWeight="0.5029762" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32784185" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784185" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63261944" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47775948" sideWeight="0.49702382" order="8" side_tool="false" content_ui="tabs" />
@@ -611,44 +643,16 @@
     <MESSAGE value="more on mongoose" />
     <MESSAGE value="CRUD + Sub Documents and Schemas :)" />
     <MESSAGE value="created updated dishSchema" />
-    <option name="LAST_COMMIT_MESSAGE" value="created updated dishSchema" />
+    <MESSAGE value="created promotionSchema + set up server to use this model" />
+    <option name="LAST_COMMIT_MESSAGE" value="created promotionSchema + set up server to use this model" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/solve-1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="16" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rectangle-1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simplerect.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/solve-1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -932,18 +936,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="1130" column="0" selection-start-line="1130" selection-start-column="0" selection-end-line="1130" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node-mongoose/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-mongoose/node_modules/mongoose/lib/error/validation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-mongoose/server-3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-mongoose/node_modules/mongoose/lib/schematype.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="709" column="18" selection-start-line="709" selection-start-column="18" selection-end-line="709" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="1130" column="0" selection-start-line="1130" selection-start-column="0" selection-end-line="1130" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -958,16 +986,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/node-mongoose/models/dishes-3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
-          <folding />
+        <state relative-caret-position="594">
+          <caret line="48" column="6" selection-start-line="45" selection-start-column="4" selection-end-line="48" selection-end-column="6" />
+          <folding>
+            <marker date="1472754722482" expanded="true" signature="846:853" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node-mongoose/server-3.js">
+    <entry file="file://$PROJECT_DIR$/node-mongoose/models/promotions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+        <state relative-caret-position="540">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -976,6 +1006,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-124">
           <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-mongoose/dishServer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
           <folding />
         </state>
       </provider>
