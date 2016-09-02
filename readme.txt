@@ -1128,3 +1128,44 @@ Data:
 
 Note how each comment also has updatedAt and createdAt fields and each comment has its own _id field
 
+
+
+REST API WITH EXPRESS, MONGO AND MONGOOSE
+_________________________________________________________
+
+Now we have built a REST API using Express
+Also we have built a MongoDB database using mongoose
+
+We have to combine these together to build a full fledged REST API
+
+For eg GET operation on REST API would trigger a QUERY on Database
+POST operation on REST API would trigger a CREATE on Database
+
+Thus an HTTP request has to be mapped to Database Operation
+
+Create a new Express app
+run: express rest-server
+
+A new Express app called rest-server is now created
+
+We have already built express REST API.. We will use that code
+
+Go to node-express-gen/
+Copy app.js
+replace app.js file in rest-server/
+
+Next: copy in the routes we developed
+
+Copy dishRouter, leaderRouter and promoRouter
+
+Next: Setting up the Mongoose models
+
+Copy models/ folder from node-mongoose folder into rest-server
+
+
+
+
+
+
+
+

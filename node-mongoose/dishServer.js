@@ -95,6 +95,7 @@ function promotionOperation() {
                     if (err) throw err;
                     console.log("Updated Promotions!!");
                     console.log(promotion);
+                    console.log("Now working on Leadership...");
                     leadersOperation();
                 })
         }, 3000)
