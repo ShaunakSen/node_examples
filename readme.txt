@@ -1163,9 +1163,60 @@ Next: Setting up the Mongoose models
 Copy models/ folder from node-mongoose folder into rest-server
 
 
+In app.js:
+
+Here we want to initiate connection to mongodb server
+
+var mongoose = require('mongoose');
+var url = 'mongodb://localhost:27107/conFusion';
+mongoose.connect(url);
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error: '));
+db.once('open', function () {
+  console.log('Connected correctly to server');
+});
+
+Now we want to make the dishRouter work in communicating with the mongoDB Server
+
+Open dishRouter.js
+
+Require mongoose and dishes model
+
+var mongoose = require('mongoose');
+var Dishes = require('../models/dishes');
+
+Now we need to configure GET, POST, PUT, DELETE methods
+
+Remove the .all() part
+
+.get(function (req, res, next) {
+        Dishes.find({}, function (err, dish) {
+            if(err) throw err;
+            res.json(dish);
+        });
+    })
 
 
+res.json() is a method on response msg that we are gonna send back. It converts js object to JSON
 
+Note: status code 200 and content-type: application/json will be set automatically
+
+Now we will update post() method
+
+When we POST body of msg will contain new dish to be posted into the dishes collection
+Also remember that the request's body will be converted in JSON by body-parser
+
+Dishes.create(req.body, function (err, dish) {
+            if(err) throw err;
+            console.log('Dish created');
+            var id = dish._id;
+            res.writeHead(200, {'Content-Type': 'text/plain'});
+            res.end('Added the dish with id: ', id);
+        });
+
+
+req.body is the dish to be added in JSON. In addition to adding the dish we are also
+sending a reply back to the client
 
 
 

@@ -1,21 +1,31 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var Dishes = require('../models/dishes');
+
 
 var dishRouter = express.Router();
 dishRouter.use(bodyParser.json());
 dishRouter.route('/')
-    .all(function (req, res, next) {
-        res.writeHead(200, {"Content-Type": "text/plain"});
-        next();
-    })
     .get(function (req, res, next) {
-        res.end("Sending all the dishes to u!!")
+        Dishes.find({}, function (err, dish) {
+            if(err) throw err;
+            res.json(dish);
+        });
     })
     .delete(function (req, res, next) {
         res.end("Deleting all the dishes!!");
     })
     .post(function (req, res, next) {
-        res.end("Will add the dish with name: " + req.body.name + " with details: " + req.body.description);
+        // res.end("Will add the dish with name: " + req.body.name + " with details: " + req.body.description);
+
+        Dishes.create(req.body, function (err, dish) {
+            if(err) throw err;
+            console.log('Dish created');
+            var id = dish._id;
+            res.writeHead(200, {'Content-Type': 'text/plain'});
+            res.end('Added the dish with id: ', id);
+        });
     });
 dishRouter.route('/:dishId')
     .all(function (req, res, next) {
