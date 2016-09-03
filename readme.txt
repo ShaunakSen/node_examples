@@ -1218,5 +1218,55 @@ Dishes.create(req.body, function (err, dish) {
 req.body is the dish to be added in JSON. In addition to adding the dish we are also
 sending a reply back to the client
 
+DELETE
+
+.delete(function (req, res) {
+        // res.end("Deleting all the dishes!!");
+        Dishes.remove({}, function (err, resp) {
+            if(err) throw err;
+            res.json(resp);
+        });
+    })
+
+resp -> response.. It is a js object indicating how many objects are deleted
+
+Next we have to take care of those operations which require the parameters
+
+We delete the all() part
+
+.get(function (req, res, next) {
+        // res.end("Sending the dish with id: " + req.params.dishId);
+        Dishes.findById(req.params.dishId, function (err, dish) {
+            if(err) throw err;
+            res.json(dish);
+        })
+    })
 
 
+.put(function (req, res) {
+        Dishes.findByIdAndUpdate(req.params.dishId, {$set: req.body}, {new: true}, function (err, dish) {
+            if(err) throw err;
+            res.json(dish);
+        });
+    });
+
+.delete(function (req, res, next) {
+
+        Dishes.findByIdAndRemove(req.params.dishId, function (err, resp) {
+            if(err) throw err;
+            res.json(resp);
+        });
+    })
+
+Handling Comments
+______________________
+
+Handling comments is a special case as comments are embedded inside the dish documents themselves
+
+dishRouter.route('/:dishId/comments')
+    .get(function (req, res) {
+        Dishes.findById(req.params.dishId, function (err, dish) {
+            if(err) throw err;
+            res.json(dish.comments);
+        });
+    })
