@@ -18,8 +18,8 @@ db.once('open', function () {
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var dishRouter = require('./routes/dishRouter');
-// var promoRouter = require('./routes/promoRouter');
-// var leaderRouter = require('./routes/leaderRouter');
+var promoRouter = require('./routes/promoRouter');
+var leaderRouter = require('./routes/leaderRouter');
 
 var app = express();
 
@@ -35,11 +35,11 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/', routes);
-// app.use('/users', users);
+app.use('/', routes);
+app.use('/users', users);
 app.use('/dishes', dishRouter);
-// app.use('/promotions', promoRouter);
-// app.use('/leadership', leaderRouter);
+app.use('/promotions', promoRouter);
+app.use('/leadership', leaderRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

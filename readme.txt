@@ -1302,3 +1302,63 @@ get():
 
 For put() we delete the existing comment and insert updated comment as a new comment
 
+Testing the API
+___________________
+
+Open POSTMAN
+
+POST on http://localhost:3000/dishes/
+
+{
+    "name": "Uthapizza",
+    "image": "images/uthapizza.png",
+    "category": "mains",
+    "label": "Hot",
+    "price": "4.99",
+    "description": "ok"
+}
+This data is sent in body of request msg
+
+GET http://localhost:3000/dishes/
+GET http://localhost:3000/dishes/57cbe3eb5aed752011b98e0e to GET dish with specific id
+
+PUT http://localhost:3000/dishes/57cbe3eb5aed752011b98e0e
+msg:
+{"label": "New"}
+
+The label will be updated
+
+POST A COMMENT:
+
+POST http://localhost:3000/dishes/57cbe3eb5aed752011b98e0e/comments
+
+msg:
+{
+  "rating": 5,
+  "comment": "Imagine all the eatables, living in conFusion!",
+  "author": "John Lemon"
+}
+
+GET all comments: http://localhost:3000/dishes/57cbe3eb5aed752011b98e0e/comments
+
+GET particular comment http://localhost:3000/dishes/[dishId]/comments/[commentId]
+
+
+Updating a Specific comment:
+
+PUT http://localhost:3000/dishes/57cbe3eb5aed752011b98e0e/comments/57cc04be76cd31d817990f0a
+
+msg: updated comment object
+
+{
+  "rating": 5,
+  "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+  "author": "Paul McVites"
+}
+
+
+Also note id of that comment would be changed
+
+DELETE first comment
+
+DELETE http://localhost:3000/dishes/57cbe3eb5aed752011b98e0e/comments/57cc048776cd31d817990f09
