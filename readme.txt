@@ -1270,3 +1270,35 @@ dishRouter.route('/:dishId/comments')
             res.json(dish.comments);
         });
     })
+
+.delete(function (req, res) {
+        Dishes.findById(req.params.dishId, function (err, dish) {
+            if (err) throw err;
+            for (var i = dish.comments.length; i >= 0; i--) {
+                dish.comments.id(dish.comments[i]._id).remove();
+            }
+            dish.save(function (err, result) {
+                if (err) throw err;
+                res.writeHead(200, {'Content-Type': 'text/plain'});
+                res.end('Deleted all comments!!');
+            });
+        });
+    })
+
+
+For specific comments:
+
+dishRouter.route('/:dishId/comments/:commentId')
+
+get():
+
+.get(function (req, res) {
+        Dishes.findById(req.params.dishId, function (err, dish) {
+            if(err) throw err;
+            res.json(dish.comments.id(req.params.commentId));
+        });
+    })
+
+
+For put() we delete the existing comment and insert updated comment as a new comment
+

@@ -42,7 +42,7 @@ dishRouter.route('/:dishId')
     .delete(function (req, res, next) {
         // res.end("Deleting the dish with id: " + req.params.dishId);
         Dishes.findByIdAndRemove(req.params.dishId, function (err, resp) {
-            if(err) throw err;
+            if (err) throw err;
             res.json(resp);
         });
     })
@@ -51,7 +51,7 @@ dishRouter.route('/:dishId')
          res.end("\nWill update the dish with name: " + req.body.name + " with details: " + req.body.description);*/
 
         Dishes.findByIdAndUpdate(req.params.dishId, {$set: req.body}, {new: true}, function (err, dish) {
-            if(err) throw err;
+            if (err) throw err;
             res.json(dish);
         });
     });
@@ -60,22 +60,70 @@ dishRouter.route('/:dishId')
 dishRouter.route('/:dishId/comments')
     .get(function (req, res) {
         Dishes.findById(req.params.dishId, function (err, dish) {
-            if(err) throw err;
+            if (err) throw err;
             res.json(dish.comments);
         });
     })
     .post(function (req, res) {
         Dishes.findById(req.params.dishId, function (err, dish) {
-            if(err) throw err;
+            if (err) throw err;
             dish.comments.push(req.body);
 
             dish.save(function (err, dish) {
-                if(err) throw err;
+                if (err) throw err;
                 console.log('Updated Comments!!');
-                console.log(dish);
                 res.json(dish);
             })
         });
     })
+    .delete(function (req, res) {
+        Dishes.findById(req.params.dishId, function (err, dish) {
+            if (err) throw err;
+            for (var i = dish.comments.length; i >= 0; i--) {
+                dish.comments.id(dish.comments[i]._id).remove();
+            }
+            dish.save(function (err, result) {
+                if (err) throw err;
+                res.writeHead(200, {'Content-Type': 'text/plain'});
+                res.end('Deleted all comments!!');
+            });
+        });
+    });
+// HANDLING SPECIFIC COMMENTS
+
+dishRouter.route('/:dishId/comments/:commentId')
+    .get(function (req, res) {
+        Dishes.findById(req.params.dishId, function (err, dish) {
+            if(err) throw err;
+            res.json(dish.comments.id(req.params.commentId));
+        });
+    })
+    .put(function (req, res) {
+        //delete existing comment and insert updated comment as a new comment
+        Dishes.findById(req.params.dishId, function (err, dish) {
+            if(err) throw err;
+            dish.comments.id(dish.comments.req.params.commentId).remove();
+            dish.comments.push(req.body);
+
+            dish.save(function (err, dish) {
+                if(err) throw err;
+
+                console.log('Updated Comments!!');
+                res.json(dish);
+            });
+        });
+    })
+    .delete(function (req, res) {
+        Dishes.findById(req.params.dishId, function (err, dish) {
+            if(err) throw err;
+            dish.comments.id(dish.comments.req.params.commentId).remove();
+            
+            dish.save(function (err, resp) {
+                if(err) throw err;
+
+                res.json(resp);
+            });
+        });
+    });
 
 module.exports = dishRouter;
