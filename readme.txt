@@ -227,7 +227,7 @@ var path = require('path');
 If server receives GET request then a response is returned
 Else it wont handle it
 
-Read server-2.js and understand the code
+Read server.js and understand the code
 
 
 Express js
@@ -292,7 +292,7 @@ It returns the same response as it is coded that way only
 
 Now we want to use morgan
 
-In server-2.js
+In server.js
 
 var express = require('express');
 var morgan = require('morgan');
@@ -381,7 +381,7 @@ ___________________
 
 Setting up a REST API
 
-Copy node_express/server-2.js into a new file server-3.js
+Copy node_express/server.js into a new file server-3.js
 
 We want to set up our express app to serve up our data in form of a REST API
 
@@ -960,7 +960,7 @@ db.once('open', function () {
     });
 });
 
-Create another file server-2.js
+Create another file server.js
 
 db.once('open', function () {
     console.log('Connected correctly to server');
@@ -1400,3 +1400,117 @@ ___________
 
 Create folder basic-auth
 
+From node-express/ copy server.js and public folder and package.json and paste into basic-auth/
+
+do sudo npm install
+
+Here we want to do authentication on the entire application i.e whenever u access server u need to
+authenticate yourself
+
+We are going to create a specific middleware called auth and inside this we will insert the code that
+does the basic authentication
+
+We expect username and password to be passed in as basic authentication from the client side
+That will come in as request message in request authentication field
+
+function auth(req, res, next) {
+    console.log(req.headers);
+    var authHeader = req.headers.authorization;
+    if(!authHeader){
+        var err = new Error('You are not authenticated!!');
+        err.status = 401;
+        next(err);
+        return;
+    }
+}
+
+status code 401 means authorization has failed
+
+note the calling of next() with err as parameter:
+
+this automatically raises the error
+So as we go down the chain of middlewares only the function that takes the error and
+then uses it will be triggered. The remaining ones will be bypassed!!
+
+If authorization header is set we need to parse out authorization header to extract
+out username and password
+
+var auth = new Buffer(authHeader.split(' ')[1], 'base64').toString().split(':');
+var user = auth[0];
+var pass = auth[1];
+if(user == "admin" && pass == "password"){
+    next();
+}
+else {
+    var error = new Error('You are not authenticated!!');
+    error.status = 401;
+    next(error);
+}
+
+
+next() -> if authenticated correctly continue on to the next middleware
+
+Note: next middleware is app.use(express.static(__dirname + '/public/'));
+
+Finally this auth() function is a middleware
+We need to use it
+
+app.use(auth);
+
+
+Order of middlewares:
+_________________________
+
+Middlewares are applied to any incoming requests in the order specified in the application
+
+1. app.use(morgan('dev'));
+2. app.use(auth);
+3. app.use(express.static(__dirname + '/public/'));
+
+So first it will do the logging
+Then it will apply auth function
+Then it will do static serving of files
+
+We now need a middleware to handle error
+
+app.use(function (err, req, res, next) {
+    ...
+});
+
+so next(err) drops into this middleware
+
+app.use(function (err, req, res, next) {
+    res.writeHead(err.status || 500, {
+        'WWW-Authenticate': 'Basic',
+        'Content-Type': 'text/plain'
+    });
+    res.end(err.message);
+});
+
+'WWW-Authenticate': 'Basic',
+'Content-Type': 'text/plain'
+
+We are sending this as a response to client to remind them that basic authentication is needed
+
+err.message will be var error = new Error('You are not authenticated!!'); i.e You are not authenticated!!
+
+Run app..
+
+Since we did console.log(req.headers); a bunch of info is printed into the console
+
+GET /aboutus.html 304 1.143 ms - -
+{ host: 'localhost:8080',
+  connection: 'keep-alive',
+  authorization: 'Basic YWRtaW46cGFzc3dvcmQ=',
+  'upgrade-insecure-requests': '1',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36',
+  accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,ru;q=0.6',
+  cookie: 'csrftoken=QuMmkiwwrYQHqfCGBDqV3k54e78KwFrZ; _ga=GA1.1.417615266.1469763276',
+  'if-none-match': 'W/"9b-1568a776258"',
+  'if-modified-since': 'Sun, 14 Aug 2016 19:11:35 GMT' }
+
+authorization: 'Basic YWRtaW46cGFzc3dvcmQ=',
+
+This is username and password encoded in base64
