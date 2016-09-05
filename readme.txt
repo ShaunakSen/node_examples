@@ -337,7 +337,7 @@ REST takes a lot of stuff from HTTP
 Now what made HTTP so successful was hyperlinks. u click on a link to get another resource
 
 REST does something similar as:
-1. URI (Uniform Resource Identifier) simar to URL
+1. URI (Uniform Resource Identifier) similar to URL
 2. Uses HTTP Protocol
 3. Make a request -> Receive response -> Display response
 
@@ -629,7 +629,7 @@ ObjectId is a 12 byte field
 TimeStamp(4)|Machine ID(3)|Proc. ID(2)|Increment(3)
 Machine ID holds info regarding machine where Database is running
 Process ID is mongo server's process ID
-Increment - TimeStamp is at the resolution of a second. SO within a second if multiple documents are stored,
+Increment - TimeStamp is at the resolution of a second. So within a second if multiple documents are stored,
 Increment field tacks that information
 
 id.getTimeStamp() returns the TimeStamp in ISO Date Format
@@ -1362,3 +1362,41 @@ Also note id of that comment would be changed
 DELETE first comment
 
 DELETE http://localhost:3000/dishes/57cbe3eb5aed752011b98e0e/comments/57cc048776cd31d817990f09
+
+
+BASIC AUTHENTICATION
+_______________________________
+
+When a client initiates a request server may respond back with HTTP 401 i.e unauthorized user
+
+Reply from server:
+HTTP/1.1 401 Unauthorized
+WWW-Authenticate: Basic
+
+WWW-Authenticate: Basic is header field. It specifies that basic access authentication is to
+be performed by the client
+
+In response to this the client will request for user to type in username and password
+It will take this username and password and encode it in the next outgoing request:
+
+GET /index.html HTTP/1.1
+Authorization: Basic QWxhZGRpbjpvcGVUIHNIc2FtZQ==
+Host: www.cse.ust.hk
+
+QWxhZGRpbjpvcGVUIHNIc2FtZQ is a base64 encoded string
+
+Authorization Header:
+
+1. Username and password are combined into a string "username:password"
+2. The resulting string literal is then encoded using base64
+3. Authorization method and a space is put b4 encoded string:
+Authorization: Basic QWxhZGRpbjpvcGVUIHNIc2FtZQ==
+
+Using express we can require authentication at various levels: for entire app, for specific route or
+for specific operation on a given route
+
+Exercise
+___________
+
+Create folder basic-auth
+
