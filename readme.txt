@@ -1514,3 +1514,98 @@ GET /aboutus.html 304 1.143 ms - -
 authorization: 'Basic YWRtaW46cGFzc3dvcmQ=',
 
 This is username and password encoded in base64
+
+
+Cookies and Express Sessions
+___________________________________________________________
+
+Cookies: way for a server to track clients. Also client can send small pieces of info in the header
+so that the server can track the clients. Cookie is included in the request header
+
+Sessions: way of managing user sessions. HTTP is a state less protocol. So every request coming in
+from the client is a new request. This is for the sake of scalability
+But we need server to remember something about the client. Cookies and sessions help us here
+
+When server wants client to set a cookie, it sends a header:
+HTTP/1.1 401 Unauthorized
+Set-Cookie: xxx...
+
+Client remembers this cookie and all subsequent request from client will include a header field as:
+GET /index.html HTTP/1.1
+Cookie: xxx...
+Host: abc.xyz
+
+Server extracts this cookie and identifies client
+
+Express Cookies:
+____________________
+
+Express server can send a cookie on client side by using cookie method on response msg
+res.cookie(name, value, options)
+
+Cookies are parsed using cookie-parser which is a middleware
+
+Cookie-parser parses incoming cookies and attaches them to request msg:
+req.cookies.name
+
+Cookies can be forged from Client side. To avoid this server can set a Signed Cookie on client side
+Signed cookie: cookie signed with a secret key on server side. Only server knows this
+
+In cookie, server includes a digital signature with a key-hash msg authentication code
+This sign is included in cookie and available for client
+If Client or any other man-in-the-middle tries to modify cookie, when cookie is received by server
+it will recognize this tamperance
+
+In option specify sign = true
+Client side:
+app.use(cookieParser('secret key');
+cookieParser requires secret key so that it can ensure that icoming cookie has not been tampered with
+
+If cookie is valid, signed cookie is made available in request object on server side as:
+req.signedCookie.name
+
+Express Sessions
+___________________
+
+Cookies suitable for small info only
+
+Express sessions is a middleware
+
+It enables us to track user on server side using 2 pieces of info:
+
+-Combination of cookie where session-id is set. This session-id is used
+as a key to access storage on server side. This storage can track a lot more info about
+the session b/w client and server. Session info is stored in memory in server side.
+So if server is restarted this memory is wiped out. So info will be lost if server restarts.
+If we need to access info across server restarts we need some kind of permanent storage on server side:
+- use either local store or mongoose store
+Also we can have multiple replicated servers. All these servers have distributed session store.
+So any of them has session info. This is also supported through express sessions
+
+Express session Middleware:
+
+var session = require('express-session');
+var FileStore = require('session-file-store')(session);
+
+app.use(session({
+name: 'session-id',
+secret: '12345-67890-09876-54321',
+saveUninitialized: true,
+resave: true,
+store: new FileStore()
+}));
+
+var FileStore = require('session-file-store')(session); => We are using local file store
+
+name, secret, etc are set of options
+secret is the secret key for signing the cookie
+store: what is being used to store the info permanently
+default:info will be tracked in-memory in server side
+
+When a client req comes, cookie is parsed and session info is made available as:
+req.session.name
+
+
+
+
+
