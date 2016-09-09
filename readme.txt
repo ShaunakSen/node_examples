@@ -1605,6 +1605,141 @@ default:info will be tracked in-memory in server side
 When a client req comes, cookie is parsed and session info is made available as:
 req.session.name
 
+Exercise: Using cookies
+_____________________________
+
+install cookie-parser: sudo npm install cookie-parser --save
+
+Go into server.js
+var cookieParser = require('cookie-parser');
+
+Now we need to have our express app use this
+Declare this as a middleware
+
+app.use(cookieParser('12345-67890-09876-54321')); // SECRET KEY
+
+If a client sends back a cookie in the client request then the cookie info will be
+parsed and made available as js object on my request object
+
+From server side we need to sign the cookie and send it so that client cant modify the cookie
+
+If client modifies the cookie that cookie will no longer be valid
+
+12345-67890-09876-54321 is the secret signing key
+
+When we wrote the auth() function we were checking the authHeader to check user
+
+We expect authHeader to be included when user first signs in. At that point we include a cookie
+from server side and in all subsequent requests we are going to be checking for that cookie
+
+So basically now every time client communicates back to server request will include a cookie. This cookie
+will be available as an object on the request thanks to cookie-parser
+
+We are going to send a cookie with name "user".. We will do this later
+
+function auth(req, res, next) {
+    console.log(req.headers);
+
+    // CHECK FOR SIGNED COOKIE
+    if(!req.signedCookies.user)
+    {
+        var authHeader = req.headers.authorization;
+        if(!authHeader){
+            var err = new Error('You are not authenticated!!');
+            err.status = 401;
+            next(err);
+            return;
+        }
+        var test = Buffer(authHeader.split(' ')[1], 'base64');
+        console.log("Un encoded string is", test.toString());
+        var auth = new Buffer(authHeader.split(' ')[1], 'base64').toString().split(':');
+        var user = auth[0];
+        var pass = auth[1];
+        if(user == "admin" && pass == "password"){
+            next();
+        }
+        else {
+            var error = new Error('You are not authenticated!!');
+            error.status = 401;
+            next(error);
+        }
+    }
+
+}
+
+
+Basically here first we are checking if the cookie exists in the request msg or not
+
+If not, that means user has not been verified yet and we expect them to type in username and password
+
+Now where to set up the cookie? When we know user has typed in correct username and password
+
+if (user == "admin" && pass == "password") {
+    // AUTHORIZED SO SET COOKIE NOW
+    res.cookie('user', 'admin', {signed: true});
+    next();
+}
+
+res.cookie() takes 3 params: name of cookie, value of cookie, additional options
+
+if signed: true, the cookie will be signed from server side using secret key supplied in cookie-parser
+
+When this cookie is sent to client side, the client will have to send back the cookie on each subsequent
+request. If cookie gets modified, signature will become invalid.
+
+function auth(req, res, next) {
+    console.log(req.headers);
+
+    // CHECK FOR SIGNED COOKIE
+    if (!req.signedCookies.user) {
+        ...
+        ...
+    }
+    else{
+
+    }
+}
+
+The else { } part is for when the cookie is included in the header of request
+
+else {
+    if (req.signedCookies.user === 'admin') {
+        console.log(req.signedCookies);
+        next();
+    }
+    else {
+        var err = new Error('You are not authenticated!!');
+        err.status = 401;
+        next(err);
+    }
+}
+
+Start the server
+
+Go to localhost:8080
+
+Initially a prompt for username and password comes
+Then when we type in correct username and password index.html is displayed
+
+Look at info printed out on console in server side
+
+Initially server sent 401 saying not authorized. so client was asked to input
+username and password.
+On typing  correct username and password 200 status code is generated
+
+
+Note in console how cookie is being set . It looks something like this:
+cookie: user=s%3Aadmin.JcV7NX1Ag7X8eh7Qf%2FeHKf78cwDGDhH%2Bh0bM2yXAIQc'
+
+If we restart browser we need to authenticate ourselves again
+This is browser session based cookie
+As soon as we close our browser the cookie will be deleted
+
+There are ways to specify cookies for a certain duration
+
+
+
+
 
 
 
