@@ -1559,7 +1559,7 @@ it will recognize this tamperance
 In option specify sign = true
 Client side:
 app.use(cookieParser('secret key');
-cookieParser requires secret key so that it can ensure that icoming cookie has not been tampered with
+cookieParser requires secret key so that it can ensure that incoming cookie has not been tampered with
 
 If cookie is valid, signed cookie is made available in request object on server side as:
 req.signedCookie.name
@@ -1736,6 +1736,72 @@ This is browser session based cookie
 As soon as we close our browser the cookie will be deleted
 
 There are ways to specify cookies for a certain duration
+
+
+Express Sessions Exercise
+_______________________________
+
+
+npm install express-session session-file-store --save
+
+express-session and session-file-store are 2 separate modules. We are simply installing them at once
+
+Express session by default uses in memory storage to track sessions
+
+Create file server-2.js and copy all the code from server.js
+
+var session = require('express-session');
+var FileStore = require('session-file-store')(session);
+
+We do not need to use cookie-parser anymore. Cookie will be set by express session
+
+We had:
+app.use(cookieParser('12345-67890-09876-54321')); // SECRET KEY
+
+Replace to use sessions
+
+app.use(session({
+    name: 'session-id',
+    secret: '12345-67890-09876-54321',
+    saveUninitialized: true,
+    resave: true,
+    store: new FileStore()
+}));
+
+In case incoming request has the cookie in there, this will add a session object to request object
+
+so req.session will be available to us
+
+We had:
+if (!req.signedCookies.user)
+
+Replace with:
+if (!req.session.user)
+
+
+Earlier when user was authorized we were setting cookie as follows:
+if (user == "admin" && pass == "password") {
+    // AUTHORIZED SO SET COOKIE NOW
+    res.cookie('user', 'admin', {signed: true});
+    next();
+}
+
+instead, we are now going to do:
+if (user == "admin" && pass == "password") {
+    req.session.user = 'admin';
+    next();
+}
+
+Also:
+
+if (req.session.user === 'admin') {
+    console.log('req.session:', req.session);
+    next();
+}
+
+Run this app
+Open POSTMAN
+
 
 
 
