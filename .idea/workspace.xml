@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3bd2106-c361-42e4-aee7-a432b6aa92f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-auth/server-2.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-auth/package.json" afterPath="$PROJECT_DIR$/basic-auth/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-auth/server-2.js" afterPath="$PROJECT_DIR$/basic-auth/server-2.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
     </list>
     <ignored path="node-examples.iws" />
@@ -26,21 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/readme.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-160">
-              <caret line="1790" column="31" selection-start-line="1790" selection-start-column="31" selection-end-line="1790" selection-end-column="31" />
+            <state relative-caret-position="363">
+              <caret line="1946" column="0" selection-start-line="1946" selection-start-column="0" selection-end-line="1946" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server-2.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="server-2.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basic-auth/server-2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="828">
+              <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -106,8 +105,8 @@
         <option value="$PROJECT_DIR$/final-project/app.js" />
         <option value="$PROJECT_DIR$/final-project/package.json" />
         <option value="$PROJECT_DIR$/basic-auth/server.js" />
-        <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/basic-auth/server-2.js" />
+        <option value="$PROJECT_DIR$/readme.txt" />
       </list>
     </option>
   </component>
@@ -118,10 +117,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="40" />
-    <option name="width" value="1368" />
-    <option name="height" value="729" />
+    <option name="y" value="29" />
+    <option name="width" value="1366" />
+    <option name="height" value="739" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -148,7 +146,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -181,27 +179,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node-examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node-examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic-auth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sessions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -392,7 +372,9 @@
       <workItem from="1473409823931" duration="594000" />
       <workItem from="1473419080227" duration="3114000" />
       <workItem from="1473441001492" duration="782000" />
-      <workItem from="1473442069214" duration="2656000" />
+      <workItem from="1473442069214" duration="6151000" />
+      <workItem from="1473487346553" duration="3213000" />
+      <workItem from="1473496124329" duration="3326000" />
     </task>
     <task id="LOCAL-00001" summary="creating simple modules">
       <created>1471113759365</created>
@@ -618,32 +600,39 @@
       <option name="project" value="LOCAL" />
       <updated>1473421280432</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="sessions part 1">
+      <created>1473444726014</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1473444726014</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156245000" />
+    <option name="totallyTimeSpent" value="166279000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="40" width="1368" height="729" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="29" width="1366" height="739" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.68585527" sideWeight="0.5119048" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784185" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6243822" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.68585527" sideWeight="0.48809522" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6853377" sideWeight="0.48809522" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6243822" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -692,13 +681,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node-mongoose/models/dishes-3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="48" column="6" selection-start-line="45" selection-start-column="4" selection-end-line="48" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node-mongoose/server-2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-124">
@@ -1011,7 +993,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1019,38 +1000,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="543">
           <caret line="63" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-auth/sessions/ZFgDiPauQpqFIPkg2gIunhDynSPHiNhz.json" />
+    <entry file="file://$PROJECT_DIR$/basic-auth/sessions/_BCD9vv9xGeEd2iM2MxsqdYsK60ZtWxW.json" />
+    <entry file="file://$PROJECT_DIR$/basic-auth/sessions/8MCA3RUyKbxMtvZ01XBT2VONCcLEBNKo.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-160">
-          <caret line="1790" column="31" selection-start-line="1790" selection-start-column="31" selection-end-line="1790" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-auth/sessions/_BCD9vv9xGeEd2iM2MxsqdYsK60ZtWxW.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-auth/sessions/ZFgDiPauQpqFIPkg2gIunhDynSPHiNhz.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="363">
+          <caret line="1946" column="0" selection-start-line="1946" selection-start-column="0" selection-end-line="1946" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/basic-auth/server-2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="828">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
           <folding />
         </state>
       </provider>

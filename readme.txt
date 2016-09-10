@@ -1802,6 +1802,164 @@ if (req.session.user === 'admin') {
 Run this app
 Open POSTMAN
 
+test app
+
+Token Based Authentication
+____________________________
+
+Cookie + session based auth do not scale very well
+
+Steps:
+1. User requests access with username and password
+2. Server validates credentials
+3. Server creates a signed token and sends it to user. Nothing is stored on server
+4. All subsequent requests from client should include the token
+5. Server verifies the token and responds with data if validated
+
+There is a specific token standard: JSON Web Tokens (JWT)
+-standard based: IETF RFC 7519*
+-self-contained: carry all info necessary within itself
+-sharable: Can share it with other apps to act on your behalf
+
+JWT Structure:
+
+HEADER      |       PAYLOAD     |      SIGNATURE
+
+{
+"typ":"JWT",                            HMACSHA256(base64UrlEncode(header) + "." + base64UrlEncode(payload), secret)
+"alg":"HS256"
+}
+
+The header carries info about how the JWT is encoded
+HS256: algo used for encryption
+
+Payload: Carries info. We can encode and put some info into the payload.
+This can be decoded on server side and this info can be used on the server side and be
+used to identify some info about the client
+
+Signature: Used to encapsulate and validate the token. Server uses secret key. This is known to server only
+That secret along with additional info from other parts of JWT is taken together abd encoded and that
+encoded info is put in signature
+
+If a malicious user messes with ANY part of the JWT, the signature will no longer hold
+
+we need to install module jsonwebtoken
+
+sudo npm install jsonwebtoken --save
+
+jsonwebtoken provides methods:
+
+- sign() : takes user info and encodes that together with secret key and create the JWT. Then from server side
+u will ship this to the client and subsequently client keeps sending this token with every request
+
+- verify() : incoming token can be verified. We will verify the token and then decide if the user is
+authorized or not. It will then make it available on the request property in Express
+
+
+PASSPORT
+_____________________
+
+
+Passport is an authentication middleware for node
+
+Strategies:
+- Local Strategy: manage our own user accounts with username and password
+- OpenID
+- Oauth (Facebook, Twitter, Google+)
+
+sudo npm install passport --save
+
+passport supports a method called passport.authenticate('local')
+
+local-> strategy used for authentication
+We can apply this functionality to any route or location within our app
+
+example 1:
+app.post('/login', passport.authenticate('local'), function(req, res){
+    //If this function gets called authentication was successful
+    // 'req.user' contains authenticated user
+
+    res.redirect('/users/' + req.user.username)
+})
+
+example 2:
+
+we can also specify a custom callback function
+
+passport has built in methods like req.login() and req.logout()
+
+app.post('/login', function(req, res, next){
+    passport.authenticate('local', function(err, user, info){
+        if(err){ return next(err); }
+        if(!user){ return res.json({...}) }
+
+        req.login(user, function(err){
+            if(err){ return next(err); }
+            return res.json({...});
+        });
+    })(req, res, next);
+});
+
+Passport-Local:
+
+Strategy for authenticating user locally with username and password
+
+sudo npm install passport-local --save
+
+passport.use(new LocalStorage(function(username, password, done)){
+    User.findOne({ username: username }, function(err, user){
+        if(err){ return done(err); }
+
+        if(!user){ return done(null, false); }
+
+        if(!user.verifyPassword(password){ return done(null, false); })
+
+        return done(null, user);
+    });
+});
+
+Passport-Local-Mongoose:
+
+Passport Local Strategy can be used with Mongoose in an even easer manner
+with help of Passport-Local-Mongoose
+
+sudo npm install passport-local-mongoose
+
+This makes available Mongoose schema for managing users
+
+var mongoose = require('mongoose'),
+Schema = mongoose.Schema,
+passportLocalMongoose = require('passport-local-mongoose');
+
+var User = new Schema({});
+
+User.plugin(passportLocalMongoose);
+
+module.exports = mongoose.model('User', User);
+
+Note:
+var User = new Schema({});
+We dont need to specify anything within the schema. passport-local-mongoose automatically
+assumes 2 fields: username: String, unique and password: String
+
+This password is not stored directly but stored in an encrypted form using salt and hashing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
