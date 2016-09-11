@@ -1831,7 +1831,8 @@ HEADER      |       PAYLOAD     |      SIGNATURE
 }
 
 The header carries info about how the JWT is encoded
-HS256: algo used for encryption
+HS256: algorithm
+ used for encryption
 
 Payload: Carries info. We can encode and put some info into the payload.
 This can be decoded on server side and this info can be used on the server side and be
@@ -1920,7 +1921,7 @@ passport.use(new LocalStorage(function(username, password, done)){
 
 Passport-Local-Mongoose:
 
-Passport Local Strategy can be used with Mongoose in an even easer manner
+Passport Local Strategy can be used with Mongoose in an even easier manner
 with help of Passport-Local-Mongoose
 
 sudo npm install passport-local-mongoose
@@ -2024,7 +2025,7 @@ if (app.get('env') === 'development') {
   });
 }
 
-So if error occurs instead odf sending HTML we are sending error as JSON
+So if error occurs instead of sending HTML we are sending error as JSON
 This is bcoz our clients will be angular or ionic apps
 If we return HTML they wont understand
 
@@ -2220,15 +2221,157 @@ Verify.verifyOrdinaryUser middleware is applied before next middleware is applie
 
 when GET request comes in first verification is done, thereafter rest
 
+Start the server
+Open up POSTMAN
+
+Testing the app:
+
+GET localhost:3000/dishes/
+
+{
+  "message": "No token provided",
+  "error": {
+    "status": 403
+  }
+}
+
+Similarly if we want to POST or DELETE we will get the same response
+
+Register a user:
+
+POST on localhost:3000/users/register
+
+Body of request:
+{"username":"mini", "password":"southpointdps"}
+
+Response:
+
+{
+  "status": "Registration Successful!"
+}
+
+
+If we try to register same user again:
+
+{
+  "err": {
+    "name": "UserExistsError",
+    "message": "A user with the given username is already registered"
+  }
+}
+
+So we can use this data to notify users better
+
+Login:
+
+POST localhost:3000/users/login
+Body of request:
+{"username":"mini", "password":"southpointdps"}
+
+Response:
+
+{
+  "status": "Login successful!",
+  "success": true,
+  "token": huge string...
+}
+
+say this token = token1
+
+copy token1
+
+GET localhost:3000/dishes/ without token
+
+Response:
+
+{
+  "message": "No token provided",
+  "error": {
+    "status": 403
+  }
+}
+
+Now in header set up a field called x-access-token and set its value to token1
+
+Response:
+
+[
+  {
+    "_id": "57cbe3eb5aed752011b98e0e",
+    "updatedAt": "2016-09-04T11:39:44.138Z",
+    "createdAt": "2016-09-04T09:05:47.832Z",
+    "name": "Uthapizza",
+    "image": "images/uthapizza.png",
+    "category": "mains",
+    "price": 499,
+    "description": "ok",
+    "__v": 4,
+    "comments": [
+      {
+        "updatedAt": "2016-09-04T11:36:16.000Z",
+        "createdAt": "2016-09-04T11:36:16.000Z",
+        "rating": 5,
+        "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+        "author": "Paul McVites",
+        "_id": "57cc072f12cbaf1e1a505ac5"
+      }
+    ],
+    "label": "New"
+  },
+  {
+    "_id": "57d52f78ec371d278bb98658",
+    "updatedAt": "2016-09-11T10:18:32.307Z",
+    "createdAt": "2016-09-11T10:18:32.307Z",
+    "name": "Zucchipakoda",
+    "image": "images/zucchipakoda.png",
+    "category": "appetizer",
+    "price": 199,
+    "description": "Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce",
+    "__v": 0,
+    "comments": [],
+    "label": ""
+  }
+]
+
+If we change or mess with token value:
+
+{
+  "message": "You are not authenticated",
+  "error": {
+    "status": 401
+  }
+}
 
 
 
+Now we can POST and DELETE using same method also
 
 
+Note:
 
+In verify.js we had:
 
+exports.verifyOrdinaryUser = function (req, res, next) {
 
+// CHECK HEADER OR URL PARAMS OR POST PARAMS FOR TOKENS
+var token = req.body.token || req.query.token || req.headers['x-access-token'];
+....
+}
 
+So  while issuing POST req we can send token value in body also
+POST localhost:3000/dishes/
+
+{
+    "token": "...."
+	"name": "Vadonut",
+	"image": "images/vadonut.png",
+	"category": "appetizer",
+	"label": "New",
+	"price": "1.99",
+	"description": "A quintessential ConFusion experience, is it a vada or is it a donut?"
+}
+
+Now when we issue GET request with that token value in header we get back that dish also
 
 
 

@@ -2,62 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3bd2106-c361-42e4-aee7-a432b6aa92f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/bin/www" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/db.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/models/dishes-1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/models/dishes-2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/models/dishes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/models/leaders.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/models/promotions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/models/user.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/.bin/acorn" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/.bin/jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/.bin/mime" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/.bin/semver" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/css/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/css/History.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/css/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/css/Readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/css/benchmark.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/css/component.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/css/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/css/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/css/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/ms/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/ms/History.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/ms/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/ms/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/ms/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/ms/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/qs/.eslintignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/qs/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/qs/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/qs/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/qs/CONTRIBUTING.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/qs/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/qs/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/qs/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/qs/lib/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/qs/lib/parse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/qs/lib/stringify.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/qs/lib/utils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/qs/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/qs/test/parse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/qs/test/stringify.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/node_modules/qs/test/utils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/public/stylesheets/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/routes/dishRouter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/routes/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/routes/leaderRouter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/routes/promoRouter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/routes/users.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/routes/verify.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/views/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/views/index.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/views/layout.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
     </list>
@@ -80,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/readme.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="2222" column="0" selection-start-line="2222" selection-start-column="0" selection-end-line="2222" selection-end-column="0" />
+            <state relative-caret-position="1820">
+              <caret line="2380" column="0" selection-start-line="2380" selection-start-column="0" selection-end-line="2380" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -93,8 +37,8 @@
       <file leaf-file-name="www" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest-server-passport/bin/www">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+            <state relative-caret-position="270">
+              <caret line="15" column="22" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -103,8 +47,20 @@
       <file leaf-file-name="db.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest-server-passport/db.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="44" column="0" selection-start-line="38" selection-start-column="5" selection-end-line="44" selection-end-column="0" />
+            <state relative-caret-position="144">
+              <caret line="78" column="92" selection-start-line="72" selection-start-column="4" selection-end-line="78" selection-end-column="92" />
+              <folding>
+                <element signature="e#20#1118#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/users.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="684">
+              <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -120,21 +76,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="verify.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="verify.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/verify.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+            <state relative-caret-position="288">
+              <caret line="16" column="83" selection-start-line="13" selection-start-column="1" selection-end-line="16" selection-end-column="83" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/users.js">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rest-server-passport/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1206">
-              <caret line="67" column="3" selection-start-line="61" selection-start-column="0" selection-end-line="67" selection-end-column="3" />
+            <state relative-caret-position="432">
+              <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -145,16 +101,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
               <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rest-server-passport/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-325">
-              <caret line="6" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -314,74 +260,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node-examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node-examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest-server-passport" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node-examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node-examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest-server-passport" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node-examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node-examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest-server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node-examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node-examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest-server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="bin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -432,9 +310,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Node.js.www">
-    <configuration default="false" name="www (2)" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="www" working-dir="$PROJECT_DIR$/final-project/bin">
-      <method />
-    </configuration>
     <configuration default="false" name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="server.js" working-dir="$PROJECT_DIR$/basic-auth">
       <method />
     </configuration>
@@ -445,6 +320,9 @@
       <method />
     </configuration>
     <configuration default="false" name="www" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="www" working-dir="$PROJECT_DIR$/rest-server-passport/bin">
+      <method />
+    </configuration>
+    <configuration default="false" name="www (1)" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="www" working-dir="$PROJECT_DIR$/rest-server/bin">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -505,19 +383,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Node.js.simplerect.js" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.www (2)" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.server.js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.server-2.js (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.app.js" />
-      <item index="5" class="java.lang.String" itemvalue="Node.js.www" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.server.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.server-2.js (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.app.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.www" />
+      <item index="5" class="java.lang.String" itemvalue="Node.js.www (1)" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Node.js.www" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.app.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.server-2.js (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.server.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.www (2)" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.www (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.app.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.server-2.js (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.server.js" />
       </list>
     </recent_temporary>
   </component>
@@ -584,7 +462,8 @@
       <workItem from="1473502863482" duration="35000" />
       <workItem from="1473518246013" duration="3243000" />
       <workItem from="1473533340919" duration="2893000" />
-      <workItem from="1473568846225" duration="7977000" />
+      <workItem from="1473568846225" duration="8678000" />
+      <workItem from="1473600545261" duration="5613000" />
     </task>
     <task id="LOCAL-00001" summary="creating simple modules">
       <created>1471113759365</created>
@@ -824,21 +703,28 @@
       <option name="project" value="LOCAL" />
       <updated>1473500440663</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="USER AUTHENTICATION USING JSON WEB TOKENS + PASSPORT :)">
+      <created>1473589358902</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1473589358902</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181106000" />
+    <option name="totallyTimeSpent" value="187420000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1366" height="739" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.68585527" sideWeight="0.5119048" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784185" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6215781" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6199678" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.68488747" sideWeight="0.48809522" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -864,7 +750,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="separated module :)" />
     <MESSAGE value="separate module + multiple resources accessed" />
     <MESSAGE value="dishRouter + leaderRouter + promoRouter fixed" />
     <MESSAGE value="adding our own routes to express-gen app" />
@@ -889,7 +774,8 @@
     <MESSAGE value="understanding cookies with user authentication" />
     <MESSAGE value="sessions part 1" />
     <MESSAGE value="JSON Web Tokens + Passportjs intro" />
-    <option name="LAST_COMMIT_MESSAGE" value="JSON Web Tokens + Passportjs intro" />
+    <MESSAGE value="USER AUTHENTICATION USING JSON WEB TOKENS + PASSPORT :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="USER AUTHENTICATION USING JSON WEB TOKENS + PASSPORT :)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -898,6 +784,38 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest-server-passport/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest-server-passport/db.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="44" column="0" selection-start-line="38" selection-start-column="5" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/dishRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="37332">
@@ -1004,10 +922,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rest-server/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rest-server-passport/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-325">
-          <caret line="6" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        <state relative-caret-position="432">
+          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -1020,42 +946,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1206">
-          <caret line="67" column="3" selection-start-line="61" selection-start-column="0" selection-end-line="67" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="2222" column="0" selection-start-line="2222" selection-start-column="0" selection-end-line="2222" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest-server/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rest-server-passport/db.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="44" column="0" selection-start-line="38" selection-start-column="5" selection-end-line="44" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="144">
+          <caret line="78" column="92" selection-start-line="72" selection-start-column="4" selection-end-line="78" selection-end-column="92" />
+          <folding>
+            <element signature="e#20#1118#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rest-server-passport/bin/www">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+        <state relative-caret-position="270">
+          <caret line="15" column="22" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1068,10 +972,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/verify.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        <state relative-caret-position="288">
+          <caret line="16" column="83" selection-start-line="13" selection-start-column="1" selection-end-line="16" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1820">
+          <caret line="2380" column="0" selection-start-line="2380" selection-start-column="0" selection-end-line="2380" selection-end-column="0" />
           <folding />
         </state>
       </provider>
