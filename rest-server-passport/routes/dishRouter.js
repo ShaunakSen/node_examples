@@ -7,20 +7,21 @@ var Verify = require('./verify');
 var dishRouter = express.Router();
 dishRouter.use(bodyParser.json());
 dishRouter.route('/')
-    .get(Verify.verifyOrdinaryUser, function (req, res) {
+    .get(Verify.verifyOrdinaryUser, Verify.verifyAdmin, function (req, res) {
+        console.log(req.decoded);
         Dishes.find({}, function (err, dish) {
             if (err) throw err;
             res.json(dish);
         });
     })
-    .delete(Verify.verifyOrdinaryUser, function (req, res) {
+    .delete(Verify.verifyOrdinaryUser, Verify.verifyAdmin, function (req, res) {
         // res.end("Deleting all the dishes!!");
         Dishes.remove({}, function (err, resp) {
             if (err) throw err;
             res.json(resp);
         });
     })
-    .post(Verify.verifyOrdinaryUser, function (req, res) {
+    .post(Verify.verifyOrdinaryUser, Verify.verifyAdmin, function (req, res) {
         // res.end("Will add the dish with name: " + req.body.name + " with details: " + req.body.description);
 
         Dishes.create(req.body, function (err, dish) {

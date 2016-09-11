@@ -2373,6 +2373,72 @@ POST localhost:3000/dishes/
 
 Now when we issue GET request with that token value in header we get back that dish also
 
+Assignment
+________________________
+
+Admin functionality:
+
+If admin flag is set to true, that user will have additional privileges
+
+Create new function within verify.js to check whether user is admin or not
+
+Register user
+In mongo repl set admin flag to true for that user
+
+MongoDB shell version: 2.6.12
+connecting to: test
+> use conFusion
+switched to db conFusion
+> db.users.find({}).pretty()
+
+The users will be returned
+
+Note: The users have fields: _id, salt, hash, username, admin, __v
+
+So the password is NOT stored directly. it is stored in salt and hash form separately
+So even the db administrator cant find out the passwords!!
+
+passport-local-mongoose takes care of all that for us
+
+
+> db.users.update({username: "admin"}, {$set: {admin: true}})
+
+Set users permission now
+
+Now we can test for both ordinary and admin user
+
+verifyAdmin will be an additional middleware
+When we are authenticating users we will first check to make sure if user is an ordinary user
+Thereafter if user needs to perform certain operations we will check for admin
+
+GET: any verified user
+
+POST and DELETE: verified user && admin
+
+For ordinary user:
+
+DELETE localhost:3000/dishes/
+
+response:
+{
+    "message": "You are not authorized to perform this operation!",
+    "error": {
+        "status": 403
+    }
+}
+
+Login as admin and u can do all these operations
+
+DELETE localhost:3000/dishes/[id]
+
+Query of users by Admin:
+
+GET localhost:3000/users/
+
+
+
+
+
 
 
 
