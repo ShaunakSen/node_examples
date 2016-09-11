@@ -1944,6 +1944,288 @@ assumes 2 fields: username: String, unique and password: String
 
 This password is not stored directly but stored in an encrypted form using salt and hashing
 
+Exercise
+____________________
+
+For our express app we want some routes to be authenticated and restricted only
+for certain users
+
+For eg we may allow GET request for all users but POST and DELETE should be restricted to admins only
+
+Make a copy of rest-server/ and call it rest-server-passport
+
+sudo npm istall
+
+sudo npm install passport passport-local passport-local-mongoose --save
+
+sudo npm install jsonwebtoken --save
+
+Create a file config.js
+
+Here we want to store some configuration information
+
+module.exports = {
+    'secretKey': '12345-67890-09876-54321',
+    'mongoUrl': 'mongodb://localhost:27017/conFusion'
+};
+
+Adv : Only 1 single location to update configurations
+
+In app.js
+
+var config = require('./config');
+mongoose.connect(config.mongoUrl);
+
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+
+
+// PASSPORT CONFIGURATION
+var User = require('./models/user');
+app.use(passport.initialize());
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+These are the configurations for passport
+
+app.use(passport.initialize()); : Used to initialize Passport
+
+passport.use(new LocalStrategy(User.authenticate())); : User.authenticate() will be a
+strategy that will be exported by User model in which we will use passport-local-mongoose plugin
+
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+These are 2 methods that passport-local-mongoose support
+
+Previously we had:
+
+if (app.get('env') === 'development') {
+  app.use(function (err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+      message: err.message,
+      error: err
+    });
+  });
+}
+
+
+Change to:
+if (app.get('env') === 'development') {
+  app.use(function (err, req, res, next) {
+    res.status(err.status || 500);
+    res.json({
+      message: err.message,
+      error: err
+    });
+  });
+}
+
+So if error occurs instead odf sending HTML we are sending error as JSON
+This is bcoz our clients will be angular or ionic apps
+If we return HTML they wont understand
+
+Same for production error handler
+
+Setting up User Schema and Model:
+
+Create file user.js in models/
+
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+var passportLocalMongoose = require('passport-local-mongoose');
+
+
+var User = new Schema({
+    username: String,
+    password: String,
+    admin: {
+        type: Boolean,
+        default: false
+    }
+});
+
+User.plugin(passportLocalMongoose);
+
+module.exports = mongoose.model('User', User);
+
+
+User.plugin(passportLocalMongoose);: This is a mongoose supported plugin that we are going to use
+This provides a lot of interesting features
+
+Open routes/users.js:
+
+We want to change this file to include code to add features like login and logout for users
+
+var express = require('express');
+var router = express.Router();
+var passport = require('passport');
+var User = require('../models/user');
+var Verify = require('./verify');
+
+This verify model will be created later
+It will contain everything related to managing json web tokens and verifying user identities
+
+Register:
+When we register a new user, POST operation on REST end point will be issued.
+We assume username and password is available in the body of the msg
+
+router.post('/register', function (req, res) {
+  User.register(new User({username: req.body.username}), req.body.password, function (err, user) {
+    if(err){
+      return res.status(500).json({err: err});
+    }
+
+    // CROSS CHECK IF REGISTRATION WAS SUCCESSFUL
+    passport.authenticate('local')(req, res, function () {
+      return res.status(200).json({status: 'Registration Successful!'});
+    });
+  });
+});
+
+Login:
+Here also we assume username and password will be set on the body of the msg
+
+
+router.post('/login', function (req, res, next) {
+  // req.body will contain username and password
+  passport.authenticate('local', function (err, user, info) {
+    if(err){
+      return next(err);
+    }
+    if(!user){
+      // IF USER IS NOT VALID OR WRONG PASSWORD OR DUPLICATE USER ETC
+      return res.status(401).json({ err: info});
+    }
+    // PASSPORT LOGIN METHOD
+    req.logIn(user, function (err) {
+      if(err){
+        return res.status(500).json({ err: 'Could not log in user'});
+      }
+
+      // VALID USER
+      console.log('User in users: ', user);
+
+      // GENERATE TOKEN
+      var token = Verify.getToken(user); // RETURNS A TOKEN
+
+      res.status(200).json({
+        status: 'Login successful!',
+        success: true,
+        token: token
+      });
+    })
+  })(req, res, next);
+});
+
+
+Read the comments carefully
+
+If user is authenticated server sends back a token
+Now client should send back the token as part of every single request coming in
+
+Logout:
+
+router.get('/logout', function (req, res) {
+  req.logout(); // PASSPORT METHOD
+
+  // ALSO TOKEN WILL BE DESTROYED HERE
+
+  res.status(200).json({ status: 'Bye!' });
+});
+
+
+Create a new file in routes/ called verify.js
+
+Here we will create a functionality that allows us to supply a validated user with a JWT
+and also verify the JWT
+
+Entire JWT methods will be here
+
+var User = require('../models/user');
+var jwt = require('jsonwebtoken');
+var config = require('../config');
+
+// SEND TOKEN TO VALIDATED USER
+
+exports.getToken = function (user) {
+    return jwt.sign(user, config.secretKey, { expiresIn: 3600});
+};
+
+Secret key is used in generating the jwt
+
+expiresIn: 3600 : This jwt will be valid for 1 hr
+
+// VERIFY AN ORDINARY USER
+
+
+exported.verifyOrdinaryUser = function (req, res, next) {
+
+    // CHECK HEADER OR URL PARAMS OR POST PARAMS FOR TOKENS
+    var token = req.body.token || req.query.token || req.headers['x-access-token'];
+
+    // DECODE TOKEN
+
+    if (token) {
+        // VERIFY SECRET AND CHECK EXPIRY
+        jwt.verify(token, config.secretKey, function (err, decoded) {
+            if (err) {
+                var error = new Error('You are not authenticated');
+                error.status = 401;
+                return next(error);
+            }
+            else {
+                // IF EVERYTHING IS GOOD SAVE TO REQUEST OBJECT FOR USE IN OTHER ROUTES
+                req.decoded = decoded;
+                next()
+            }
+        });
+    }
+    else {
+        // IF THERE IS NO TOKEN RETURN AN ERROR
+        var err = new Error('No token provided');
+        err.status = 403;
+        return next(err);
+    }
+};
+
+How to use this method?
+Any route that we want to control, we can use verifyOrdinaryUser method to check user
+
+
+Open dishRouter.js:
+
+var Verify = require('./verify');
+
+Now we can do verification for any route
+
+
+dishRouter.route('/')
+    .get(Verify.verifyOrdinaryUser, function (req, res) {
+        Dishes.find({}, function (err, dish) {
+            if (err) throw err;
+            res.json(dish);
+        });
+    })
+
+Do same for post and delete
+
+.get(Verify.verifyOrdinaryUser, function (req, res)
+
+
+Verify.verifyOrdinaryUser middleware is applied before next middleware is applied
+
+when GET request comes in first verification is done, thereafter rest
+
+
+
+
+
+
+
 
 
 
