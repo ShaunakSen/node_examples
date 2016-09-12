@@ -2435,13 +2435,143 @@ Query of users by Admin:
 
 GET localhost:3000/users/
 
+Soln:
+Protected routes: accessible only to admins:
+
+exports.verifyAdmin = function (req, res, next) {
+
+    // CHECK HEADER OR URL PARAMS OR POST PARAMS FOR TOKENS
+    var token = req.body.token || req.query.token || req.headers['x-access-token'];
+
+    // DECODE TOKEN
+
+    if (token) {
+        // VERIFY SECRET AND CHECK EXPIRY
+        jwt.verify(token, config.secretKey, function (err, decoded) {
+            if (err) {
+                var error = new Error('You are not authenticated');
+                error.status = 401;
+                return next(error);
+            }
+            else {
+                // IF EVERYTHING IS GOOD SAVE TO REQUEST OBJECT FOR USE IN OTHER ROUTES
+                req.decoded = decoded;
+                // NOW CHECK FOR ADMIN
+                var isAdmin = req.decoded._doc.admin;
+                if (isAdmin) {
+                    next();
+                }
+                else {
+                    var err = new Error('Not a privileged user');
+                    err.status = 403;
+                    return next(err);
+                }
+            }
+        });
+    }
+    else {
+        // IF THERE IS NO TOKEN RETURN AN ERROR
+        var err = new Error('No token provided');
+        err.status = 403;
+        return next(err);
+    }
+};
+
+verifyAdmin() is quite similar to verifyOrdinaryUser() except
 
 
+req.decoded = decoded;
+// NOW CHECK FOR ADMIN
+var isAdmin = req.decoded._doc.admin;
+if (isAdmin) {
+    next();
+}
+else {
+    var err = new Error('Not a privileged user');
+    err.status = 403;
+    return next(err);
+}
+
+The info about users is stored in decoded object
+
+In dishRouter.js:
+
+dishRouter.route('/')
+.get(Verify.verifyOrdinaryUser, Verify.verifyAdmin, function (req, res) {
+    console.log(req.decoded);
+    Dishes.find({}, function (err, dish) {
+        if (err) throw err;
+        res.json(dish);
+    });
+})
 
 
+First we apply verifyOrdinaryUser. If all goes well here next() will be called hence verifyAdmin()
+Similarly from verifyAdmin() if prob occurs:
+
+var err = new Error('Not a privileged user');
+err.status = 403;
+return next(err);
+
+To display users list for admin on GET localhost:3000/users/:
+
+In users.js
+
+var mongoose = require('mongoose');
+
+router.get('/', Verify.verifyOrdinaryUser, Verify.verifyAdmin, function (req, res, next) {
+    // res.send('respond with a resource');
+    User.find({}, function (err, users) {
+        res.json(users);
+    });
+});
 
 
+Mongoose Population
+__________________________
 
+
+NoSQL databases like MongoDB do not explicitly support relations like SQL databases
+
+All documents are normally expected to be self contained
+
+We CAN store references to other documents by using ObjectIds
+
+Mongoose does not have joins
+
+eg: we have a document which stores a list of posts by users
+Within each post we might have reference to user document where users info is stored
+This is done using ObjectIds
+
+Prob: consider the prob of storing comments
+For a comment instead of storing the author's name store a reference to users through ObjectId of user
+
+So we have to extend our comment schema
+
+We include a filed called postedBy
+
+postedBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+}
+
+So when we are inserting a comment into the document we should also include the user's id
+
+Population in mongoose is the feature by which we replace the reference to a collection by the document itself
+from that other collection
+
+Dishes.find({})
+.populate('comments.postedBy')
+.exec(function(err, dish){
+    if(err) throw err;
+    res.json(dish);
+});
+
+.populate('comments.postedBy') : Mongoose automatically fetches info from users document and inserts
+it into the comments document before constructing overall reply and then sends the reply
+
+This .populate() causes query to take longer time
+Where possible AVOID doing the population
 
 
 

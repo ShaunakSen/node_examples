@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3bd2106-c361-42e4-aee7-a432b6aa92f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest-server-passport/token" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/routes/users.js" afterPath="$PROJECT_DIR$/rest-server-passport/routes/users.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/routes/verify.js" afterPath="$PROJECT_DIR$/rest-server-passport/routes/verify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
     </list>
     <ignored path="node-examples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/readme.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43812">
-              <caret line="2434" column="0" selection-start-line="2434" selection-start-column="0" selection-end-line="2434" selection-end-column="0" />
+            <state relative-caret-position="538">
+              <caret line="2575" column="0" selection-start-line="2575" selection-start-column="0" selection-end-line="2575" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -39,9 +37,11 @@
       <file leaf-file-name="verify.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/verify.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="484">
+              <caret line="84" column="2" selection-start-line="47" selection-start-column="0" selection-end-line="84" selection-end-column="2" />
+              <folding>
+                <element signature="e#1338#2512#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,14 +49,14 @@
       <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="www" pinned="false" current-in-tab="true">
+      <file leaf-file-name="www" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest-server-passport/bin/www">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
@@ -69,8 +69,8 @@
       <file leaf-file-name="dishRouter.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/dishRouter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+            <state relative-caret-position="270">
+              <caret line="15" column="6" selection-start-line="8" selection-start-column="0" selection-end-line="15" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -138,11 +138,11 @@
         <option value="$PROJECT_DIR$/rest-server-passport/config.js" />
         <option value="$PROJECT_DIR$/rest-server-passport/app.js" />
         <option value="$PROJECT_DIR$/rest-server-passport/models/user.js" />
-        <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/rest-server-passport/routes/dishRouter.js" />
         <option value="$PROJECT_DIR$/rest-server-passport/token" />
         <option value="$PROJECT_DIR$/rest-server-passport/routes/verify.js" />
         <option value="$PROJECT_DIR$/rest-server-passport/routes/users.js" />
+        <option value="$PROJECT_DIR$/readme.txt" />
       </list>
     </option>
   </component>
@@ -435,7 +435,7 @@
       <workItem from="1473568846225" duration="8678000" />
       <workItem from="1473600545261" duration="15108000" />
       <workItem from="1473625443878" duration="1916000" />
-      <workItem from="1473689608827" duration="637000" />
+      <workItem from="1473689608827" duration="6338000" />
     </task>
     <task id="LOCAL-00001" summary="creating simple modules">
       <created>1471113759365</created>
@@ -696,11 +696,18 @@
       <option name="project" value="LOCAL" />
       <updated>1473619143036</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="route: /users/ done">
+      <created>1473690271237</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1473690271237</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199468000" />
+    <option name="totallyTimeSpent" value="205169000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1366" height="739" extended-state="6" />
@@ -710,7 +717,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.68585527" sideWeight="0.5119048" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784185" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6045016" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6038647" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.68438005" sideWeight="0.48809522" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -736,8 +743,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adding our own routes to express-gen app" />
-    <MESSAGE value="mongo intro" />
     <MESSAGE value="simple mongo operations using node" />
     <MESSAGE value="separate module for db operations" />
     <MESSAGE value="mongoose intro" />
@@ -761,7 +766,9 @@
     <MESSAGE value="USER AUTHENTICATION USING JSON WEB TOKENS + PASSPORT :)" />
     <MESSAGE value="testing the app" />
     <MESSAGE value="admin functionality basics" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin functionality basics" />
+    <MESSAGE value="route: /users/ done" />
+    <MESSAGE value="documenting admin functions + understanding mongoose populate" />
+    <option name="LAST_COMMIT_MESSAGE" value="documenting admin functions + understanding mongoose populate" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -798,7 +805,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1278">
           <caret line="71" column="62" selection-start-line="71" selection-start-column="62" selection-end-line="71" selection-end-column="62" />
-          <folding />
+          <folding>
+            <element signature="e#1338#2512#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -983,6 +992,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -993,42 +1003,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
+    <entry file="file://$PROJECT_DIR$/rest-server-passport/bin/www">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43812">
-          <caret line="2434" column="0" selection-start-line="2434" selection-start-column="0" selection-end-line="2434" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/verify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="10" column="3" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/dishRouter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        <state relative-caret-position="270">
+          <caret line="15" column="6" selection-start-line="8" selection-start-column="0" selection-end-line="15" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/verify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="84" column="2" selection-start-line="47" selection-start-column="0" selection-end-line="84" selection-end-column="2" />
+          <folding>
+            <element signature="e#1338#2512#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest-server-passport/bin/www">
+    <entry file="file://$PROJECT_DIR$/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="3" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="538">
+          <caret line="2575" column="0" selection-start-line="2575" selection-start-column="0" selection-end-line="2575" selection-end-column="0" />
           <folding />
         </state>
       </provider>
