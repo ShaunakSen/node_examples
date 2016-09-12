@@ -65,7 +65,7 @@ exports.verifyAdmin = function (req, res, next) {
                 req.decoded = decoded;
                 // NOW CHECK FOR ADMIN
                 var isAdmin = req.decoded._doc.admin;
-                if(isAdmin){
+                if (isAdmin) {
                     next();
                 }
                 else {
