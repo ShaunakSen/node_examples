@@ -59,6 +59,7 @@ dishRouter.route('/:dishId')
 
 // HANDLING COMMENTS
 dishRouter.route('/:dishId/comments')
+    .all(Verify.verifyOrdinaryUser)
     .get(function (req, res) {
         Dishes.findById(req.params.dishId, function (err, dish) {
             if (err) throw err;
@@ -68,6 +69,10 @@ dishRouter.route('/:dishId/comments')
     .post(function (req, res) {
         Dishes.findById(req.params.dishId, function (err, dish) {
             if (err) throw err;
+            
+            // REFERENCE TO USER 
+            req.body.postedBy = req.decoded._doc._id;
+
             dish.comments.push(req.body);
 
             dish.save(function (err, dish) {
@@ -77,7 +82,7 @@ dishRouter.route('/:dishId/comments')
             })
         });
     })
-    .delete(function (req, res) {
+    .delete(Verify.verifyAdmin, function (req, res) {
         Dishes.findById(req.params.dishId, function (err, dish) {
             if (err) throw err;
             for (var i = dish.comments.length; i >= 0; i--) {
@@ -93,6 +98,7 @@ dishRouter.route('/:dishId/comments')
 // HANDLING SPECIFIC COMMENTS
 
 dishRouter.route('/:dishId/comments/:commentId')
+    .all(Verify.verifyOrdinaryUser)
     .get(function (req, res) {
         Dishes.findById(req.params.dishId, function (err, dish) {
             if (err) throw err;
@@ -105,6 +111,9 @@ dishRouter.route('/:dishId/comments/:commentId')
             if (err) throw err;
             console.log(dish.comments.id(req.params.commentId));
             dish.comments.id(req.params.commentId).remove();
+
+            // REFERENCE TO USER
+            req.body.postedBy = req.decoded._doc._id;
             dish.comments.push(req.body);
 
             dish.save(function (err, dish) {
@@ -118,6 +127,15 @@ dishRouter.route('/:dishId/comments/:commentId')
     .delete(function (req, res) {
         Dishes.findById(req.params.dishId, function (err, dish) {
             if (err) throw err;
+
+            // CHECK IF USER WHO CREATED COMMENT IS DELETING IT
+
+            if(dish.comments.id(req.params.commentId).postedBy != req.decoded._doc._id){
+                var error = new Error('You are not authorized to perform this operation!');
+                error.status = 403;
+                return next(error);
+            }
+
             dish.comments.id(req.params.commentId).remove();
 
             dish.save(function (err, resp) {

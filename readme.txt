@@ -2573,6 +2573,168 @@ it into the comments document before constructing overall reply and then sends t
 This .populate() causes query to take longer time
 Where possible AVOID doing the population
 
+Exercise
+___________________
+
+Open models/user.js
+
+We want to introduce fields: firstname and lastname
+
+firstname: {
+    type: String,
+    default: ''
+},
+lastname: {
+    type: String,
+    default: ''
+}
+
+
+In addition we are going to introduce ab instance method for this schema
+Instance method is a method which we can define for an instance of the schema
+
+Go to dishes schema in models/dishes
+
+Previously we had
+
+var commentSchema = new Schema({
+    rating: {
+        type: Number,
+        min: 1,
+        max: 5,
+        required: true
+    },
+    comment: {
+        type: String,
+        required: true
+    },
+    author: {
+        type: String,
+        required: true
+    }
+}, {timestamps: true});
+
+
+Replace author field by:
+
+postedBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+}
+
+So now in the postedBy field we are tracking id of user also
+So when user inserts a comment we will track their user Id also
+
+Adv: If user wants to delete or modify a comment we can cross check to make sure if the user is the one who
+submitted the comment
+
+Go to dishRouter.js
+
+we already have user info in req.decoded._doc
+
+So while POST in comment we can add the user id
+
+In route : dishRouter.route('/:dishId/comments')
+
+.post(function (req, res) {
+    Dishes.findById(req.params.dishId, function (err, dish) {
+        if (err) throw err;
+
+        // REFERENCE TO USER
+        req.body.postedBy = req.decoded._doc._id;
+
+        dish.comments.push(req.body);
+
+        dish.save(function (err, dish) {
+            if (err) throw err;
+            console.log('Updated Comments!!');
+            res.json(dish);
+        })
+    });
+})
+
+
+req.body.postedBy = req.decoded._doc._id; : req.body already contains rating and comment. In addition to that
+we are adding the postedBy property also
+
+Now that we are storing the user's id while storing the comment, later when user wants to update or delete
+the comment we can cross check that the user is only updating or deleting his/her own comment
+
+In PUT in route: dishRouter.route('/:dishId/comments/:commentId')
+
+Here previously we were deleting the previous comment and re inserting the new comment
+
+before re inserting insert the postedBy field so that we can keep track of user
+
+.put(function (req, res) {
+//delete existing comment and insert updated comment as a new comment
+Dishes.findById(req.params.dishId, function (err, dish) {
+    if (err) throw err;
+    console.log(dish.comments.id(req.params.commentId));
+    dish.comments.id(req.params.commentId).remove();
+
+    // REFERENCE TO USER
+    req.body.postedBy = req.decoded._doc._id;
+    dish.comments.push(req.body);
+
+    dish.save(function (err, dish) {
+        if (err) throw err;
+
+        console.log('Updated Comments!!');
+        res.json(dish);
+    });
+});
+
+Now for DELETE: we have to check that user who inserted the comment is the one trying to delete it
+
+.delete(function (req, res) {
+    Dishes.findById(req.params.dishId, function (err, dish) {
+        if (err) throw err;
+
+        // CHECK IF USER WHO CREATED COMMENT IS DELETING IT
+
+        if(dish.comments.id(req.params.commentId).postedBy != req.decoded._doc._id){
+            var error = new Error('You are not authorized to perform this operation!');
+            error.status = 403;
+            return next(error);
+        }
+
+        dish.comments.id(req.params.commentId).remove();
+
+        dish.save(function (err, resp) {
+            if (err) throw err;
+
+            res.json(resp);
+        });
+    });
+});
+
+
+Now we want that deleting, put and post of comment can be allowed by ordinary user
+But delete of all comments is to be allowed only for admins
+
+dishRouter.route('/:dishId/comments')
+    .all(Verify.verifyOrdinaryUser)
+
+for all operations in this route only verified user will be allowed
+
+For delete:
+
+.delete(Verify.verifyAdmin, function (req, res) : This delete operation is to delete all the comments
+
+
+Similarly for route: dishRouter.route('/:dishId/comments/:commentId')
+
+dishRouter.route('/:dishId/comments/:commentId')
+    .all(Verify.verifyOrdinaryUser)
+
+We check for registered user
+
+Also we have ensured that delete operation can be done by user who had
+inserted the comment in the first place
+
+When we do GET on comments we also want to populate data about users who submitted the comment
+before sending the data back to the client
 
 
 
