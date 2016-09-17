@@ -15,7 +15,7 @@ mongoose.connect(config.mongoUrl);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error: '));
 db.once('open', function () {
-  console.log('Connected correctly to server');
+    console.log('Connected correctly to server');
 });
 
 var routes = require('./routes/index');
@@ -25,6 +25,17 @@ var promoRouter = require('./routes/promoRouter');
 var leaderRouter = require('./routes/leaderRouter');
 
 var app = express();
+
+
+// FIRST MIDDLEWARE TO INTERCEPT INCOMING TRAFFIC
+
+app.all('*', function (req, res, next) {
+    if(req.secure){
+        return next();
+    }
+    console.log(req.url);
+    res.redirect('https://' + req.hostname + ':' + app.get('secPort') + req.url);
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -54,9 +65,9 @@ app.use('/leadership', leaderRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
 });
 
 // error handlers
@@ -64,23 +75,23 @@ app.use(function (req, res, next) {
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-  app.use(function (err, req, res, next) {
-    res.status(err.status || 500);
-    res.json({
-      message: err.message,
-      error: err
+    app.use(function (err, req, res, next) {
+        res.status(err.status || 500);
+        res.json({
+            message: err.message,
+            error: err
+        });
     });
-  });
 }
 
 // production error handler
 // no stacktraces leaked to user
 app.use(function (err, req, res, next) {
-  res.status(err.status || 500);
-  res.json({
-    message: err.message,
-    error: {}
-  });
+    res.status(err.status || 500);
+    res.json({
+        message: err.message,
+        error: {}
+    });
 });
 
 

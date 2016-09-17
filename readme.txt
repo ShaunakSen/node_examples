@@ -3037,6 +3037,85 @@ var secureServer = https.createServer(options, app);
 Also we want to redirect incoming traffic that comes to our insecure server to our secure server
 
 
+Exercise:
+
+We want to update our REST server so that it uses HTTPS
+
+In bin/www.js
+
+var https = require('https');
+var fs = require('fs');
+
+Standard web servers run on port 80
+HTTPS Servers run on Port 443
+
+We are going to use port 3443 to run HTTP server
+
+app.set('secPort', port + 443);
+
+We want to set up our HTTPS server together with the HTTP server. We will run 2 servers
+We will redirect any traffic that comes to HTTP Server to HTTPS server
+
+// SET UP PRIVATE KEY AND CERTIFICATES
+
+var options = {
+    key: fs.readFileSync(__dirname + '/private.key'),
+    cert: fs.readFileSync(__dirname + '/certificate.pem')
+};
+
+
+We will use our own self generated certificates and keys for testing
+
+var secureServer = https.createServer(options, app);
+secureServer.listen(app.get('secPort'), function () {
+    console.log('Secure Server running on port', app.get('secPort'));
+});
+
+secureServer.on('error', onError);
+secureServer.on('listening', onListening);
+
+Now we need to modify app.js to redirect traffic from insecure server to secure server
+
+
+In app.js
+
+var app = express();
+
+
+// FIRST MIDDLEWARE TO INTERCEPT INCOMING TRAFFIC
+
+app.all('*', function (req, res, next) {
+    if(req.secure){
+        return next();
+    }
+    res.redirect('https://' + req.hostname + ':' + app.get('secPort') + req.url);
+});
+
+if incoming request is coming to secure server then there will be property secure in
+incoming req object
+
+if we receive request for insecure server then we redirect
+
+req.hostname: localhost
+
+req.url: it gives the url
+
+
+Generate self signed private key and certificate:
+
+Go to bin/
+
+openssl genrsa 1024 > private.key
+openssl req -new -key private.key -out cert.csr
+openssl x509 -req -in cert.csr -signkey private.key -out certificate.pem
+
+
+Go to https://localhost:3443 to test this
+
+
+
+
+
 
 
 
