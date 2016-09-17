@@ -21,10 +21,21 @@ router.post('/register', function (req, res) {
             return res.status(500).json({err: err});
         }
 
-        // CROSS CHECK IF REGISTRATION WAS SUCCESSFUL
-        passport.authenticate('local')(req, res, function () {
-            return res.status(200).json({status: 'Registration Successful!'});
+        if(req.body.firstname){
+            user.firstname = req.body.firstname;
+        }
+        if(req.body.lastname){
+            user.lastname = req.body.lastname;
+        }
+
+        user.save(function (err, user) {
+            // CROSS CHECK IF REGISTRATION WAS SUCCESSFUL
+            passport.authenticate('local')(req, res, function () {
+                return res.status(200).json({status: 'Registration Successful!'});
+            });
         });
+
+
     });
 });
 

@@ -2590,8 +2590,12 @@ lastname: {
 }
 
 
-In addition we are going to introduce ab instance method for this schema
+In addition we are going to introduce an instance method for this schema
 Instance method is a method which we can define for an instance of the schema
+
+User.methods.getName = function () {
+    return (this.firstname + ' ' + this.lastname);
+};
 
 Go to dishes schema in models/dishes
 
@@ -2735,19 +2739,219 @@ inserted the comment in the first place
 
 When we do GET on comments we also want to populate data about users who submitted the comment
 before sending the data back to the client
+We can use populate() function for this.
+
+Previously we had:
+dishRouter.route('/')
+.get(Verify.verifyOrdinaryUser, Verify.verifyAdmin, function (req, res) {
+    console.log(req.decoded);
+    Dishes.find({}, function (err, dish) {
+        if (err) throw err;
+        res.json(dish);
+    });
+})
+
+now before returning the dishes we want to return the users for comments as well
+
+dishRouter.route('/')
+    .get(Verify.verifyOrdinaryUser, Verify.verifyAdmin, function (req, res) {
+        console.log(req.decoded);
+        Dishes.find({})
+            .populate('comments.postedBy')
+            .exec(function (err, dish) {
+                if(err) throw err;
+                res.json(dish);
+            })
+    })
+
+We have to do same for individual dish request
+
+Similarly for individual dish:
+
+dishRouter.route('/:dishId')
+    .get(Verify.verifyOrdinaryUser, function (req, res) {
+        // res.end("Sending the dish with id: " + req.params.dishId);
+        Dishes.findById(req.params.dishId)
+            .populate('comments.postedBy')
+            .exec(function (err, dish) {
+                if(err) throw err;
+                res.json(dish);
+            })
+    })
+
+For comments of a dish
+
+dishRouter.route('/:dishId/comments')
+    .all(Verify.verifyOrdinaryUser)
+    .get(function (req, res) {
+        Dishes.findById(req.params.dishId)
+            .populate('comments.postedBy')
+            .exec(function (err, dish) {
+                if(err) throw err;
+                res.json(dish.comments);
+            });
+    })
+
+For specific comments:
+
+dishRouter.route('/:dishId/comments/:commentId')
+    .all(Verify.verifyOrdinaryUser)
+    .get(function (req, res) {
+        Dishes.findById(req.params.dishId)
+            .populate('comments.postedBy')
+            .exec(function (err, dish) {
+                if(err) throw err;
+                res.json(dish.comments.id(req.params.commentId));
+            });
+    })
 
 
+Now go to routes/users.js
+
+Here we had Register Code as:
+
+router.post('/register', function (req, res) {
+    User.register(new User({username: req.body.username}), req.body.password, function (err, user) {
+        if (err) {
+            return res.status(500).json({err: err});
+        }
+
+        // CROSS CHECK IF REGISTRATION WAS SUCCESSFUL
+        passport.authenticate('local')(req, res, function () {
+            return res.status(200).json({status: 'Registration Successful!'});
+        });
+    });
+});
 
 
+Here we did not track remaining info about users like firstname and lastname
+
+In the function we see that when the registration is done the registered user info comes back as user
+So then we need to push in firstname and lastname info
+
+router.post('/register', function (req, res) {
+    User.register(new User({username: req.body.username}), req.body.password, function (err, user) {
+        if (err) {
+            return res.status(500).json({err: err});
+        }
+        if(req.body.firstname){
+            user.firstname = req.body.firstname;
+        }
+        if(req.body.lastname){
+            user.lastname = req.body.lastname;
+        }
+        user.save(function (err, user) {
+            // CROSS CHECK IF REGISTRATION WAS SUCCESSFUL
+            passport.authenticate('local')(req, res, function () {
+                return res.status(200).json({status: 'Registration Successful!'});
+            });
+        });
+    });
+});
 
 
+Start the app:
+
+Register a couple of users: MiniNormal and MiniAdmin
+
+Next in mongo REPL update MiniAdmin to set admin: true
+
+Log in As MiniAdmin
+
+Clear out all dishes by sending DELETE request to localhost:3000/dishes/
+
+Now POST dishes
+
+POST a couple of dishes
+
+Now we want to comment as a Normal User
+Log in as miniNormal
+
+GET the dishes
+
+there will be 2 dishes
+Comment on first dish
+
+57dd225d1c751b2ad26dde65: id of 1st dish
+
+POST to localhost:3000/dishes/57dd225d1c751b2ad26dde65/comments
+{
+	"rating": 5,
+	"comment": "Imagine all the eatables, living in conFusion!"
+}
+
+The response:
+
+{
+  "_id": "57dd225d1c751b2ad26dde65",
+  "updatedAt": "2016-09-17T11:10:46.681Z",
+  "createdAt": "2016-09-17T11:00:45.872Z",
+  "name": "Uthapizza",
+  "image": "images/uthapizza.png",
+  "category": "mains",
+  "price": 499,
+  "description": "A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.",
+  "__v": 1,
+  "comments": [
+    {
+      "updatedAt": "2016-09-17T11:10:46.680Z",
+      "createdAt": "2016-09-17T11:10:46.680Z",
+      "rating": 5,
+      "comment": "Imagine all the eatables, living in conFusion!",
+      "postedBy": "57dd1fdc30a0fd284edaba37",
+      "_id": "57dd24b66d9a0f2ba74afb36"
+    }
+  ],
+  "label": "Hot"
+}
+
+Note how user info is automatically added in postedBy field
+
+Now do GET localhost:3000/dishes/ to test populate()
+
+The dish is returned as:
+
+{
+    "_id": "57dd225d1c751b2ad26dde65",
+    "updatedAt": "2016-09-17T11:10:46.681Z",
+    "createdAt": "2016-09-17T11:00:45.872Z",
+    "name": "Uthapizza",
+    "image": "images/uthapizza.png",
+    "category": "mains",
+    "price": 499,
+    "description": "A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.",
+    "__v": 1,
+    "comments": [
+      {
+        "updatedAt": "2016-09-17T11:10:46.680Z",
+        "createdAt": "2016-09-17T11:10:46.680Z",
+        "rating": 5,
+        "comment": "Imagine all the eatables, living in conFusion!",
+        "postedBy": {
+          "_id": "57dd1fdc30a0fd284edaba37",
+          "username": "miniNormal",
+          "__v": 0,
+          "admin": false,
+          "lastname": "Sen",
+          "firstname": "MiniNormal"
+        },
+        "_id": "57dd24b66d9a0f2ba74afb36"
+      }
+    ],
+    "label": "Hot"
+  }
 
 
+So postedBy is populated
+"postedBy": {
+             "_id": "57dd1fdc30a0fd284edaba37",
+             "username": "miniNormal",
+             "__v": 0,
+             "admin": false,
+             "lastname": "Sen",
+             "firstname": "MiniNormal"
+           }
 
-
-
-
-
-
+Thus cross referencing across 2 documents is done: dishes and users
 
 
