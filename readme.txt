@@ -2954,4 +2954,132 @@ So postedBy is populated
 
 Thus cross referencing across 2 documents is done: dishes and users
 
+Also check that only the user who entered the comment can delete the comment
+
+
+HTTPS And Secure Communication
+_____________________________________________
+
+
+We have seen that whenever we want to do user auth, username and password needs to be submitted to server
+If this info is communicated over standard http protocol it is insecure
+This is because all the info is transmitted in plain text format. So any intruder can catch
+that information
+
+This is where HTTPS comes in
+
+Symmetric Encryption:
+
+Both sender and receiver share a single secret key
+Intruder does not have key so cant decrypt msg
+
+Prob: both sides need to agree on this key
+
+This is not possible always over the internet
+
+Asymmetric Encryption:
+
+2 diff keys: public and private
+
+When someone wants to send us msg they will encrypt msg using our public key
+This encrypted msg can be decrypted using private key only
+
+Public key cryptography is expensive computation wise so we dont use it everywhere
+
+So we use Public key cryptography between sender and receiver initially to agree on a secret key
+Both sides now have shared secret key so they can now use Symmetric Encryption
+
+SSL Protocol uses this approach
+
+Secure Socket Layer(SSL)/Transport Layer Security(TLS):
+
+These are cryptographic protocols that ensure secure communication of sender and receiver over
+an insecure network like the internet
+
+It uses public key + symmetric key cryptography
+
+Privacy + Integrity is maintained
+
+Privacy: No malicious third party can extract the msg
+Integrity: Receiver will be assured that msg has not been tampered with
+
+SSL/TSL Handshake:
+
+1. Client indicates to server its intention to communicate
+2. Server sends to client a certificate. This contains public key of server. This public key is certified
+by a certification authority (CA)
+3. Once this key is certified client gets assured that it is communicating with the real server
+4. Client receives certificate. Extracts info and verifies authenticity and extracts public key
+5. Client generates a Pre Master Secret. This is something both server and client use to generate a Session Key
+Client generates a Pre Master Secret. Client encrypts the Pre Master Secret using server's public key and
+then sends secret across to server. Now nobody other than server can extract encrypted  msg
+6. Server extracts Pre Master Secret from encrypted msg. Both client and server have same Pre Master Secret
+7.Both client and server use the same set of algorithms to generate a Session key
+8. Symmetric key Encryption can now be done using the Session Key
+
+HTTPS:
+
+If we run HTTP on top of SSL, when client sends HTTP msg, it will be encrypted by SSL layer and on receiver side
+the server will be able to decrypt msg and pass it on to HTTP layer
+
+Node supports https as a core module
+
+var https = require('https');
+var fs = require('fs');
+
+var options = {
+    key: fs.readFileSync(__dirname + '/private.key');
+    cert: fs.readFileSync(__dirname + '/certificate.pem');
+};
+
+var secureServer = https.createServer(options, app);
+
+Also we want to redirect incoming traffic that comes to our insecure server to our secure server
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
