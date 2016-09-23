@@ -7,7 +7,7 @@ var Verify = require('./verify');
 var dishRouter = express.Router();
 dishRouter.use(bodyParser.json());
 dishRouter.route('/')
-    .get(Verify.verifyOrdinaryUser, function (req, res) {
+    .get(function (req, res) {
         console.log(req.decoded);
         Dishes.find({})
             .populate('comments.postedBy')

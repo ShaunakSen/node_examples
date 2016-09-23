@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a3bd2106-c361-42e4-aee7-a432b6aa92f6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/app.js" afterPath="$PROJECT_DIR$/rest-server-passport/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/bin/www" afterPath="$PROJECT_DIR$/rest-server-passport/bin/www" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/routes/dishRouter.js" afterPath="$PROJECT_DIR$/rest-server-passport/routes/dishRouter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/token" afterPath="$PROJECT_DIR$/rest-server-passport/token" />
     </list>
     <ignored path="node-examples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,31 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readme.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="3112" column="41" selection-start-line="3112" selection-start-column="41" selection-end-line="3112" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rest-server-passport/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rest-server-passport/db.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="49" column="9" selection-start-line="45" selection-start-column="8" selection-end-line="49" selection-end-column="9" />
+            <state relative-caret-position="471">
+              <caret line="3164" column="0" selection-start-line="3164" selection-start-column="0" selection-end-line="3164" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -59,8 +38,28 @@
       <file leaf-file-name="www" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest-server-passport/bin/www">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="52" selection-end-column="42" />
+            <state relative-caret-position="431">
+              <caret line="52" column="42" selection-start-line="40" selection-start-column="0" selection-end-line="52" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rest-server-passport/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="37" column="3" selection-start-line="31" selection-start-column="0" selection-end-line="37" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="verify.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/verify.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="47" column="19" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -69,8 +68,8 @@
       <file leaf-file-name="token" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest-server-passport/token">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="2761" selection-start-line="18" selection-start-column="2761" selection-end-line="18" selection-end-column="2761" />
+            <state relative-caret-position="486">
+              <caret line="27" column="2743" selection-start-line="27" selection-start-column="2743" selection-end-line="27" selection-end-column="2743" />
               <folding />
             </state>
           </provider>
@@ -79,8 +78,28 @@
       <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="39" column="3" selection-start-line="17" selection-start-column="0" selection-end-line="39" selection-end-column="3" />
+            <state relative-caret-position="144">
+              <caret line="8" column="61" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rest-server-passport/models/user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="18" column="19" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rest-server-passport/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="52" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -89,18 +108,8 @@
       <file leaf-file-name="dishRouter.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/dishRouter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2013">
-              <caret line="18" column="58" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dishes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rest-server-passport/models/dishes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+            <state relative-caret-position="450">
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -168,11 +177,11 @@
         <option value="$PROJECT_DIR$/rest-server-passport/models/user.js" />
         <option value="$PROJECT_DIR$/rest-server-passport/models/dishes.js" />
         <option value="$PROJECT_DIR$/rest-server-passport/routes/users.js" />
-        <option value="$PROJECT_DIR$/rest-server-passport/token" />
-        <option value="$PROJECT_DIR$/rest-server-passport/routes/dishRouter.js" />
-        <option value="$PROJECT_DIR$/rest-server-passport/app.js" />
-        <option value="$PROJECT_DIR$/rest-server-passport/bin/www" />
         <option value="$PROJECT_DIR$/readme.txt" />
+        <option value="$PROJECT_DIR$/rest-server-passport/routes/dishRouter.js" />
+        <option value="$PROJECT_DIR$/rest-server-passport/token" />
+        <option value="$PROJECT_DIR$/rest-server-passport/bin/www" />
+        <option value="$PROJECT_DIR$/rest-server-passport/app.js" />
       </list>
     </option>
   </component>
@@ -212,6 +221,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -300,8 +311,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -508,7 +517,8 @@
       <workItem from="1474007103960" duration="185000" />
       <workItem from="1474097429613" duration="312000" />
       <workItem from="1474104234484" duration="5533000" />
-      <workItem from="1474127434819" duration="10641000" />
+      <workItem from="1474127434819" duration="11536000" />
+      <workItem from="1474650921397" duration="2949000" />
     </task>
     <task id="LOCAL-00001" summary="creating simple modules">
       <created>1471113759365</created>
@@ -804,21 +814,28 @@
       <option name="project" value="LOCAL" />
       <updated>1474133158930</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="creating a development HTTPS Secure Server">
+      <created>1474145592566</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1474145592566</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230346000" />
+    <option name="totallyTimeSpent" value="234190000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1366" height="739" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6028939" sideWeight="0.5029762" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784185" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.60225445" sideWeight="0.49702382" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6012862" sideWeight="0.49702382" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8808374" sideWeight="0.48809522" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -844,7 +861,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="first mongo schema" />
     <MESSAGE value="more on mongoose" />
     <MESSAGE value="CRUD + Sub Documents and Schemas :)" />
     <MESSAGE value="created updated dishSchema" />
@@ -869,7 +885,8 @@
     <MESSAGE value="improving routes + tracking user on comments" />
     <MESSAGE value="enhancing REST API using mongoose populate()" />
     <MESSAGE value="understanding HTTPS" />
-    <option name="LAST_COMMIT_MESSAGE" value="understanding HTTPS" />
+    <MESSAGE value="creating a development HTTPS Secure Server" />
+    <option name="LAST_COMMIT_MESSAGE" value="creating a development HTTPS Secure Server" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -882,7 +899,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -921,7 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1130,13 +1145,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest-server-passport/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/promoRouter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1151,17 +1159,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/verify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="84" column="2" selection-start-line="47" selection-start-column="0" selection-end-line="84" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rest-server-passport/models/dishes-2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest-server-passport/bin/cert.csr">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest-server-passport/bin/private.key">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest-server-passport/bin/certificate.pem">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="3164" column="0" selection-start-line="3164" selection-start-column="0" selection-end-line="3164" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest-server-passport/db.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="49" column="9" selection-start-line="45" selection-start-column="8" selection-end-line="49" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1174,89 +1211,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest-server-passport/models/user.js">
+    <entry file="file://$PROJECT_DIR$/rest-server-passport/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="36">
+          <caret line="2" column="52" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/users.js">
+    <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/verify.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="39" column="3" selection-start-line="17" selection-start-column="0" selection-end-line="39" selection-end-column="3" />
+        <state relative-caret-position="252">
+          <caret line="47" column="19" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest-server-passport/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/dishRouter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2013">
-          <caret line="18" column="58" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="58" />
+        <state relative-caret-position="450">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest-server-passport/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="61" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rest-server-passport/token">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="2761" selection-start-line="18" selection-start-column="2761" selection-end-line="18" selection-end-column="2761" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest-server-passport/bin/cert.csr">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest-server-passport/bin/private.key">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest-server-passport/bin/certificate.pem">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="486">
+          <caret line="27" column="2743" selection-start-line="27" selection-start-column="2743" selection-end-line="27" selection-end-column="2743" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rest-server-passport/bin/www">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="52" selection-end-column="42" />
+        <state relative-caret-position="431">
+          <caret line="52" column="42" selection-start-line="40" selection-start-column="0" selection-end-line="52" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rest-server-passport/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest-server-passport/db.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="49" column="9" selection-start-line="45" selection-start-column="8" selection-end-line="49" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="3112" column="41" selection-start-line="3112" selection-start-column="41" selection-end-line="3112" selection-end-column="41" />
+        <state relative-caret-position="288">
+          <caret line="37" column="3" selection-start-line="31" selection-start-column="0" selection-end-line="37" selection-end-column="3" />
           <folding />
         </state>
       </provider>
