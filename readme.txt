@@ -3113,6 +3113,111 @@ openssl x509 -req -in cert.csr -signkey private.key -out certificate.pem
 Go to https://localhost:3443 to test this
 
 
+Oauth and User Authentication
+_______________________________________
+
+Oauth Providers: Facebook, Google, Github etc
+We can authorize ourselves using these
+
+OAuth1 and OAuth2
+___________________
+
+Authorization framework based on open standards for Internet users to log into third party
+websites/apps using their Social Network accounts
+
+OAuth2 Roles:
+There are 4 different roles:
+
+1. Resource owner: The user who has a social nw account and wants to authorize another app i.e a client
+app the account to get some info
+
+2. Client Application: Application that wants to access resource server to obtain info about us. It wants access to
+our info from an OAuth Service Provider like Facebook
+
+3. Resource Server: Server hosting protected data like personal info that client app wants to access
+
+4. Authorization Server: This is server that issues access token to client app upon authorization by
+resource owner to be allowed to access resource server to retrieve profile info
+
+Authorization server issues access token to client app which it can use to access resource server
+
+Here our server is the client application
+So a user who wants to get access to info stored in our MongoDB server will have to authorize client app to go
+to the OAuth Service Provider like Facebook and retrieve information, thereby confirming identity and then allow
+access to REST API
+
+OAuth 2 Tokens:
+
+Access token: is issued by Authorization Server. When client app approaches OAuth2 Service provider, upon the
+user's authorization, the authorization server issues access token to client app. The client app can then
+make use of access token to access server to retrieve info about user's profile
+
+How does client App get access to OAuth Service Provider?
+
+Every client App has to register themselves to OAuth Service Provider
+After registering we need to obtain:
+-Client App ID
+-Cleent Secret
+-Redirect URL : This will be the URL which will be called back when authorization server returns info after
+we have been authorized by resource owner to get access to the resources
+
+Authorization Code Grant Approach:
+
+Client app approaches server and server returns long lived access token
+
+Steps:
+
+Resource Owner                      Authorization Server
+(User)
+
+
+Client App                          Resource Server
+(REST API SERVER)
+
+
+1. Client app sends a user auth request to auth server.
+2. Say resource owner is Facebook. Facebook runs auth server and resource server. Auth server verifies
+Facebook credentials and allows client apps to get Info. Resource server serves restricted profile info to
+client app when resource owner authorizes it
+3. When sends a user auth request to auth server, resource owner is redirected to Facebook and
+expect resource owner to authenticate themselves and ALLOW the client app access to Authorization Server
+3. Auth server returns an auth code to client app.
+4. Here it sends Client app id and client secret. Client app then exchanges this auth code for
+an access token from auth server.
+5. Client app uses access token to access resource server to get profile info
+
+Now we have access to access token and resource owner's id. We will use these info to create local user account
+for resource owner but without password.
+
+Client app issues a JWT to resource owner. The resource owner can use JWT to access REST API
+
+We will use passport facebook module to implement this
+This is passport strategy which uses OAuth 2.0 API
+
+npm install passport-facebook --save
+
+Now some of the steps described earlier will be taken care of by this module automatically
+
+var FacebookStrategy = require('passport-facebook').Strategy;
+
+Setting up facebook strategy:
+
+passport.use(new FacebookStrategy({
+    clientID: config.facebook.clientID,
+    clientSecret: config.facebook.clientSecret,
+    callbackURL: config.facebook.callbackURL
+},
+    function(accessToken, refreshToken, profile, done){
+    ...
+    Check if user corresponding to profile already exists in local db
+    }
+))
+
+
+
+
+
+
 
 
 
