@@ -68,7 +68,7 @@ Rectangle Module:
 
 module.exports = function(x, y, callback){
 try{
-        if(x<0||t<0){
+        if(x<0||y<0){
         throw new Error("....");
         }
     }
@@ -158,7 +158,8 @@ ___________
 Response Data
 ___________
 
-HTTP Request Msg Eg:
+HTTP Response
+ Msg Eg:
 HTTP/1.1 200 OK
 ______________________
 Connection:keep-alive
@@ -233,7 +234,7 @@ Read server.js and understand the code
 Express js
 ______________________________________________
 
-It is a fast, unopinionated, minimalistic web framework for node
+It is a fast, un-opinionated, minimalistic web framework for node
 
 Express has lots of middlewares which provides a lot of functionalities
 
@@ -3163,6 +3164,7 @@ we have been authorized by resource owner to get access to the resources
 
 Authorization Code Grant Approach:
 
+This is very much useful when our client app is a server
 Client app approaches server and server returns long lived access token
 
 Steps:
@@ -3179,12 +3181,12 @@ Client App                          Resource Server
 2. Say resource owner is Facebook. Facebook runs auth server and resource server. Auth server verifies
 Facebook credentials and allows client apps to get Info. Resource server serves restricted profile info to
 client app when resource owner authorizes it
-3. When sends a user auth request to auth server, resource owner is redirected to Facebook and
-expect resource owner to authenticate themselves and ALLOW the client app access to Authorization Server
-3. Auth server returns an auth code to client app.
-4. Here it sends Client app id and client secret. Client app then exchanges this auth code for
+3. When client app sends a user auth request to auth server, resource owner is redirected to Facebook and
+expects resource owner to authenticate themselves and ALLOW the client app access to Authorization Server
+4. Auth server returns an auth code to client app.
+5. Here it sends Client app id and client secret. Client app then exchanges this auth code for
 an access token from auth server.
-5. Client app uses access token to access resource server to get profile info
+6. Client app uses access token to access resource server to get profile info
 
 Now we have access to access token and resource owner's id. We will use these info to create local user account
 for resource owner but without password.
@@ -3213,13 +3215,137 @@ passport.use(new FacebookStrategy({
     }
 ))
 
+After user is authenticated we will grant the JWT
+
+Exercise:
+_________________
 
 
 
+Install passport-facebook module
+npm install passport-facebook --save
+
+Now we need to go to fb and register ourselves as an app
+
+Before that we want to move all our auth part of code from app.js to authenticate.js
+
+In app.js we had:
+
+var LocalStrategy = require('passport-local').Strategy;
+
+Instead
+var authenticate = require('./authenticate');
 
 
+In authenticate.js:
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+var User = require('./models/user');
+var config = require('./config');
 
 
+Now we want to move all local-strategy related code here and make the module export the local strategy
+
+
+exports.local = passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+In app.js:
+
+Comment out the above code as it is already included in authenticate module
+
+Also comment out var User = require('./models/user');
+
+Save and test app
+
+It runs like before
+
+We now want to configure for fb auth
+
+Open config.js:
+
+module.exports = {
+    'secretKey': '12345-67890-09876-54321',
+    'mongoUrl': 'mongodb://localhost:27017/conFusion',
+    'facebook': {
+        clientID: 'YOUR FACEBOOK APP ID',
+        clientSecret: 'YOUR FACEBOOK SECRET',
+        callbackURL: 'https://localhost:3443/users/facebook/callback'
+    }
+};
+
+Go to models/user.js:
+
+In the User schema we want to add 2 fields:
+oauthId and oauth token which will keep track of oauth id and token which we are going to
+obtain when user authenticates with fb. We will save that info in our db
+
+var User = new Schema({
+    username: String,
+    password: String,
+    OauthId: String,
+    OauthToken: String,
+    firstname: {
+        type: String,
+        default: ''
+    },
+    lastname: {
+        type: String,
+        default: ''
+    },
+    admin: {
+        type: Boolean,
+        default: false
+    }
+});
+
+
+For users that r registered as local users these 2 will be empty
+but those who use oauth providers these wont be empty
+
+Go to authenticate.js:
+
+
+var FacebookStrategy = require('passport-facebook').Strategy;
+
+Facebook auth strategy:
+
+exports.facebook = passport.use(new FacebookStrategy({
+    clientID: config.facebook.clientID,
+    clientSecret: config.facebook.clientSecret,
+    callbackURL: config.facebook.callbackURL
+}, function (accessToken, refreshToken, profile, done) {
+    console.log(profile);
+    // Look for the user in our local db
+    User.findOne({OauthId: profile.id}, function (err, user) {
+        if (err) {
+            console.log(err);
+        }
+        if (!err && user != null) {
+            // user exists in our local db
+            done(null, user);
+        }
+        else {
+            // Create the user
+            user = new User({
+                username: profile.displayName
+            });
+            user.OauthId = profile.id;
+            user.OauthToken = accessToken;
+            user.save(function (err) {
+                if (err) {
+                    console.log(err);
+                }
+                else {
+                    console.log("Saving user...");
+                    done(null, user);
+                }
+            })
+        }
+    });
+
+}));
 
 
 

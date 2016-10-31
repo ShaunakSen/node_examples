@@ -8,6 +8,7 @@ exports.insertDocument = function (db, document, collection, callback) {
         assert.equal(err, null);
         console.log("Inserted " + result.result.n + " documents into the documents collection " + collection);
         callback(result);
+        // Note how callback function is applied on result not on initial document
     });
 };
 
