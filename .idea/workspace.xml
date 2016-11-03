@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3bd2106-c361-42e4-aee7-a432b6aa92f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/final-project/authenticate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/final-project/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/final-project/models/user.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/final-project/routes/verify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/final-project/models/reviews.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/final-project/review.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final-project/app.js" afterPath="$PROJECT_DIR$/final-project/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final-project/bin/www" afterPath="$PROJECT_DIR$/final-project/bin/www" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final-project/models/dishes.js" afterPath="$PROJECT_DIR$/final-project/models/dishes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final-project/package.json" afterPath="$PROJECT_DIR$/final-project/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final-project/routes/dishRouter.js" afterPath="$PROJECT_DIR$/final-project/routes/dishRouter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final-project/routes/users.js" afterPath="$PROJECT_DIR$/final-project/routes/users.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/config.js" afterPath="$PROJECT_DIR$/rest-server-passport/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/routes/users.js" afterPath="$PROJECT_DIR$/rest-server-passport/routes/users.js" />
     </list>
     <ignored path="node-examples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,11 +35,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="www" pinned="false" current-in-tab="true">
+      <file leaf-file-name="www" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/final-project/bin/www">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
+            <state relative-caret-position="576">
               <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dishRouter.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/final-project/routes/dishRouter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reviews.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/final-project/models/reviews.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="review.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/final-project/review.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -72,7 +91,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/rectangle-2.js" />
         <option value="$PROJECT_DIR$/node-http/server-3.js" />
         <option value="$PROJECT_DIR$/node-http/server-1.js" />
         <option value="$PROJECT_DIR$/node-http/server-2.js" />
@@ -123,6 +141,7 @@
         <option value="$PROJECT_DIR$/final-project/package.json" />
         <option value="$PROJECT_DIR$/final-project/bin/www" />
         <option value="$PROJECT_DIR$/final-project/app.js" />
+        <option value="$PROJECT_DIR$/final-project/models/reviews.js" />
       </list>
     </option>
   </component>
@@ -277,6 +296,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="final-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -526,7 +563,7 @@
       <workItem from="1477889157219" duration="3374000" />
       <workItem from="1477923628114" duration="1877000" />
       <workItem from="1478064333095" duration="764000" />
-      <workItem from="1478191792187" duration="403000" />
+      <workItem from="1478191792187" duration="2959000" />
     </task>
     <task id="LOCAL-00001" summary="creating simple modules">
       <created>1471113759365</created>
@@ -850,11 +887,18 @@
       <option name="project" value="LOCAL" />
       <updated>1477890906069</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="updated project structure">
+      <created>1478192238001</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1478192238001</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280271000" />
+    <option name="totallyTimeSpent" value="282827000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1366" height="739" extended-state="6" />
@@ -890,7 +934,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created promotionSchema + set up server to use this model" />
     <MESSAGE value="created all models + server coded" />
     <MESSAGE value="setting up project structure and dependencies for REST server app" />
     <MESSAGE value="GET POST in rest-api" />
@@ -915,7 +958,8 @@
     <MESSAGE value="testing done" />
     <MESSAGE value="Understanding Oauth 2" />
     <MESSAGE value="working on fb auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on fb auth" />
+    <MESSAGE value="updated project structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated project structure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -924,20 +968,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rest-server-passport/bin/certificate.pem">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest-server-passport/db.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="49" column="9" selection-start-line="45" selection-start-column="8" selection-end-line="49" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rest-server-passport/token">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -1250,14 +1280,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/final-project/models/dishes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/final-project/models/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1274,14 +1296,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/final-project/routes/dishRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
@@ -1292,8 +1306,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/final-project/bin/www">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
+        <state relative-caret-position="576">
           <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/final-project/models/dishes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="57" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/final-project/routes/dishRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/final-project/review.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/final-project/models/reviews.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
