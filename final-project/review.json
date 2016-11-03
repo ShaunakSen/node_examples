@@ -1,0 +1,32 @@
+{
+  "mcq": [
+    {
+      "questionNo": 1,
+      "title": "How is the AC working?",
+      "optionValues": [0, 1, 2, 3, 4],
+      "optionTitles": [
+        "Very poor",
+        "Poor",
+        "Ok",
+        "Good",
+        "Very Good"
+      ],
+      "importance": 6,
+      "thoughtProvoking": 1
+    },
+    {
+      "questionNo": 1,
+      "title": "How is the Computer working?",
+      "optionValues": [0, 1, 2, 3, 4],
+      "optionTitles": [
+        "Very poor",
+        "Poor",
+        "Ok",
+        "Good",
+        "Very Good"
+      ],
+      "importance": 6,
+      "thoughtProvoking": 1
+    }
+  ]
+}

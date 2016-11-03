@@ -35,9 +35,8 @@ var mcqSchema = new Schema({
     },
     timeSpent: {
         type: String
-    },
-    updated_at: Date
-});
+    }
+}, {timestamps: true});
 
 
 var reviewSchema = new Schema({
@@ -46,7 +45,7 @@ var reviewSchema = new Schema({
         name: String,
         email: String
     }
-});
+}, {timestamps: true});
 
 var Reviews = mongoose.model('Review', reviewSchema);
 module.exports = Reviews;

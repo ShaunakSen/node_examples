@@ -23,6 +23,7 @@ var users = require('./routes/users');
 var dishRouter = require('./routes/dishRouter');
 var promoRouter = require('./routes/promoRouter');
 var leaderRouter = require('./routes/leaderRouter');
+var reviewRouter = require('./routes/reviewRouter');
 
 var app = express();
 
@@ -47,6 +48,7 @@ app.use(passport.initialize());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/reviews', reviewRouter);
 app.use('/users', users);
 app.use('/dishes', dishRouter);
 app.use('/promotions', promoRouter);
