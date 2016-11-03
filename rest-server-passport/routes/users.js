@@ -82,4 +82,40 @@ router.get('/logout', function (req, res) {
     res.status(200).json({status: 'Bye!'});
 });
 
+router.get('/facebook', passport.authenticate('facebook'), function (req, res) {
+    // Here user will be sent to fb for authentication
+});
+
+
+router.get('/facebook/callback', function (req, res, next) {
+    passport.authenticate('facebook', function (err, user, info) {
+        if(err){
+            return next(err);
+        }
+        if(!user){
+            return res.status(401).json({
+                err: info
+            });
+        }
+        // Log in the user
+        req.logIn(user, function (err) {
+            if(err){
+                return res.status(500).json({
+                    err: 'Could not log in user'
+                });
+            }
+            // Issue own token from server side
+
+            var token = Verify.getToken(user);
+
+            res.status(200).json({
+                status: 'Login Successful!!',
+                success: true,
+                token: token
+            });
+        });
+    })(req, res, next);
+});
+
+
 module.exports = router;

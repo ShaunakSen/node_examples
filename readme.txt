@@ -3348,6 +3348,75 @@ exports.facebook = passport.use(new FacebookStrategy({
 }));
 
 
+Now go to routes/users.js
+
+
+We will set up the authentication for when user tries to use fb
+
+/users/facebook : user redirected to fb to login and then comes back in. fb return accessID and accessToken
+and profile. Then another callback function will be called /users/facebook/callback
+
+router.get('/facebook', passport.authenticate('facebook'), function (req, res) {
+    // Here user will be sent to fb for authentication
+});
+
+
+router.get('/facebook/callback', function (req, res, next) {
+    passport.authenticate('facebook', function (err, user, info) {
+        if(err){
+            return next(err);
+        }
+        if(!user){
+            return res.status(401).json({
+                err: info
+            });
+        }
+        // Log in the user
+        req.logIn(user, function (err) {
+            if(err){
+                return res.status(500).json({
+                    err: 'Could not log in user'
+                });
+            }
+            // Issue own token from server side
+
+            var token = Verify.getToken(user);
+
+            res.status(200).json({
+                status: 'Login Successful!!',
+                success: true,
+                token: token
+            });
+        });
+    })(req, res, next);
+});
+
+
+Go to fb and setup our app:
+
+In config.js:
+
+module.exports = {
+    'secretKey': '12345-67890-09876-54321',
+    'mongoUrl': 'mongodb://localhost:27017/conFusion',
+    'facebook': {
+        clientID: '1813756962236479',
+        clientSecret: '4283077317b5808a20191d79223c4d68',
+        callbackURL: 'https://localhost:3443/users/facebook/callback'
+    }
+};
+
+Test the app
+
+Go to https://localhost:3443/users/facebook
+
+
+Authenticate the app
+
+We will get the token
+
+
+
 
 
 
