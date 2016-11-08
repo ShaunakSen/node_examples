@@ -59,4 +59,15 @@ a:hover {
 .main-content{
   height: 700px;
   background-color: $lighter;
+
+  .item{
+    padding:20px;
+    //background-color: $medium;
+    .row{
+      padding: 20px;
+    }
+    .radio{
+      margin-left: 20px;
+    }
+  }
 }
