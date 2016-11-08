@@ -1,0 +1,62 @@
+//Color Schemes
+
+$lighter: #FFA9E7;
+$light: #FF84E8;
+$medium: #7F2CCB;
+$dark: #414361;
+$darker: #2A2D43;
+
+//Font
+
+$lato: 'Lato', sans-serif;
+
+//General Styles
+
+body {
+  font-family: $lato;
+  font-size: 14px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar-default{
+  font-family: $lato;
+  background-color: $light;
+  color: $dark;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.sidebar{
+  height: 700px;
+  background-color: $medium;
+}
+
+.main-content{
+  height: 700px;
+  background-color: $lighter;
+}

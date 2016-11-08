@@ -1,0 +1,16 @@
+Create a separate route called response
+
+
+GET /response/
+
+return all responses
+
+
+Post /response/[review_id]/
+
+post a new response for that review
+
+Think how to build this
+
+
+
