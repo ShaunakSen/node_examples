@@ -4,8 +4,7 @@
     <list default="true" id="a3bd2106-c361-42e4-aee7-a432b6aa92f6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app/index.html" afterPath="$PROJECT_DIR$/client-app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app/scss/style.scss" afterPath="$PROJECT_DIR$/client-app/scss/style.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final-project/crazy_ideas" afterPath="$PROJECT_DIR$/final-project/crazy_ideas" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app/js/script.js" afterPath="$PROJECT_DIR$/client-app/js/script.js" />
     </list>
     <ignored path="node-examples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,14 +25,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1422">
-              <caret line="79" column="73" selection-start-line="79" selection-start-column="73" selection-end-line="79" selection-end-column="73" />
+            <state relative-caret-position="673">
+              <caret line="99" column="6" selection-start-line="99" selection-start-column="6" selection-end-line="99" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client-app/js/script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -43,16 +52,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1044">
               <caret line="76" column="27" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-app/js/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="41" column="69" selection-start-line="41" selection-start-column="69" selection-end-line="41" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -141,10 +140,10 @@
         <option value="$PROJECT_DIR$/client-app/js/service.js" />
         <option value="$PROJECT_DIR$/final-project/review.json" />
         <option value="$PROJECT_DIR$/client-app/data.json" />
-        <option value="$PROJECT_DIR$/client-app/js/script.js" />
         <option value="$PROJECT_DIR$/final-project/crazy_ideas" />
-        <option value="$PROJECT_DIR$/client-app/index.html" />
         <option value="$PROJECT_DIR$/client-app/scss/style.scss" />
+        <option value="$PROJECT_DIR$/client-app/index.html" />
+        <option value="$PROJECT_DIR$/client-app/js/script.js" />
       </list>
     </option>
   </component>
@@ -155,9 +154,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="30" />
+    <option name="y" value="29" />
     <option name="width" value="1366" />
-    <option name="height" value="738" />
+    <option name="height" value="739" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -449,14 +448,7 @@
       <workItem from="1478583707067" duration="1015000" />
       <workItem from="1478612832409" duration="14199000" />
       <workItem from="1478671345370" duration="5435000" />
-      <workItem from="1478705915998" duration="6167000" />
-    </task>
-    <task id="LOCAL-00005" summary="starting off with express REST API">
-      <created>1472059780985</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1472059780985</updated>
+      <workItem from="1478705915998" duration="9288000" />
     </task>
     <task id="LOCAL-00006" summary="basic REST API">
       <created>1472122292343</created>
@@ -794,18 +786,26 @@
       <option name="project" value="LOCAL" />
       <updated>1478694249804</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="ui fixes + emoticon functionality added">
+      <created>1478712417095</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1478712417109</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="314191000" />
+    <option name="totallyTimeSpent" value="317312000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="30" width="1366" height="738" extended-state="0" />
+    <frame x="0" y="29" width="1366" height="739" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6028939" sideWeight="0.5029762" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3268921" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784185" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -834,7 +834,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="basic auth + express middlewares" />
     <MESSAGE value="understanding express cookie and sessions" />
     <MESSAGE value="understanding cookies with user authentication" />
     <MESSAGE value="sessions part 1" />
@@ -859,7 +858,8 @@
     <MESSAGE value="fetching questions from ext json + displaying using ng-repeat" />
     <MESSAGE value="button functionality corrected + extracted data :)" />
     <MESSAGE value="ui fixes + emoticon functionality added" />
-    <option name="LAST_COMMIT_MESSAGE" value="ui fixes + emoticon functionality added" />
+    <MESSAGE value="basic validation added" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic validation added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1200,22 +1200,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-app/data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-app/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="41" column="69" selection-start-line="41" selection-start-column="69" selection-end-line="41" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-app/scss/style.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1044">
@@ -1224,13 +1208,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client-app/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client-app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1422">
-          <caret line="79" column="73" selection-start-line="79" selection-start-column="73" selection-end-line="79" selection-end-column="73" />
+        <state relative-caret-position="673">
+          <caret line="99" column="6" selection-start-line="99" selection-start-column="6" selection-end-line="99" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-app/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>

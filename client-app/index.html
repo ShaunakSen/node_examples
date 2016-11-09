@@ -69,15 +69,15 @@
                                     <img src="img/sad.png" alt="" ng-if="$index==1">
                                     <img src="img/very_sad.png" alt="" ng-if="$index==0">
                                     <div class="radio">
-                                        <input type="radio" data-text="{{option}}" name="optionsRadios" id="option-{{question.questionNo}}{{$index}}" value="{{$index}}">
+                                        <input type="radio" data-text="{{option}}" name="optionsRadios" id="option-{{question.questionNo}}{{$index}}" ng-click="radioButtonClicked()" value="{{$index}}">
                                     </div> <!-- /ng-repeat="option in question.optionTitles"-->
                                 </div>
                             </div>
                             <br><br>
                             <div class="row text-center">
                                 <div class="btn btn-primary prev-button" href="#carousel-example-generic" role="button" data-slide="prev" ng-if="!$first" >Prev</div>
-                                <div class="btn btn-primary next-button" href="#carousel-example-generic" role="button" data-slide="next" ng-if="!$last" ng-click="storeResponse(question.questionNo)">Next</div>
-                                <div class="btn btn-primary submit-button" ng-if="$last">Submit</div>
+                                <div class="btn btn-primary next-button" id="next-button" role="button"  ng-if="!$last" ng-disabled="nextButtonDisabled" ng-click="nextButtonDisabled || storeResponse(question.questionNo)" disabled>Next</div>
+                                <div class="btn btn-primary submit-button" ng-if="$last" ng-disabled="nextButtonDisabled">Submit</div>
                             </div>
                         </div>
                     </div>
