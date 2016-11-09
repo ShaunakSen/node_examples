@@ -8,12 +8,13 @@ $darker: #2A2D43;
 
 //Font
 
-$lato: 'Lato', sans-serif;
+$font: 'Lato', sans-serif;
+$font2: 'Montserrat', sans-serif;
 
 //General Styles
 
 body {
-  font-family: $lato;
+  font-family: $font;
   font-size: 14px;
 }
 
@@ -42,8 +43,43 @@ a:hover {
   color: inherit;
 }
 
+//Buttons
+.btn-primary{
+  border-radius: 0;
+  border:none;
+}
+
+.prev-button{
+  border-radius: 0;
+  background-color: #b66474;
+  color: $font2;
+}
+.prev-button:hover{
+  background-color: #9c5663;
+
+}
+
+.next-button{
+  border-radius: 0;
+  background-color: #7d78b6;
+  color: $font2;
+}
+.next-button:hover{
+  background-color: #6f6aa1;
+
+}
+.submit-button{
+  border-radius: 0;
+  background-color: #85b66e;
+  color: $font2;
+}
+.submit-button:hover{
+  background-color: #739e5f;
+
+}
+
 .navbar-default{
-  font-family: $lato;
+  font-family: $font;
   background-color: $light;
   color: $dark;
   border: none;
@@ -61,7 +97,19 @@ a:hover {
   background-color: $lighter;
 
   .item {
-    height: 200px;
+    .question-title{
+      font-family: $font2;
+      color:$dark;
+      margin-left: 20px;
+    }
+    .options-row{
+      margin-left: 20px;
+      margin-top: 10px;
+      font-size: 1.2em;
+      font-weight: 700;
+      font-family: $font2;
+      color: $dark;
+    }
 
     .radio input[type=radio], .radio-inline input[type=radio] {
       position: absolute;
