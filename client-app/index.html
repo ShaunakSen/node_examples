@@ -63,11 +63,11 @@
                             <div class="row options-row">
                                 <div class="col-xs-2" style="width: 20%" ng-repeat="option in question.optionTitles">
                                     {{option}}
-                                    <img src="img/very_happy.png" alt="" ng-if="$index==4">
-                                    <img src="img/happy.png" alt="" ng-if="$index==3">
-                                    <img src="img/ok.png" alt="" ng-if="$index==2">
-                                    <img src="img/sad.png" alt="" ng-if="$index==1">
-                                    <img src="img/very_sad.png" alt="" ng-if="$index==0">
+                                    <img src="img/very_happy.png" alt="" ng-if="$index==4 && question.displayEmotion">
+                                    <img src="img/happy.png" alt="" ng-if="$index==3 && question.displayEmotion">
+                                    <img src="img/ok.png" alt="" ng-if="$index==2 && question.displayEmotion">
+                                    <img src="img/sad.png" alt="" ng-if="$index==1 && question.displayEmotion">
+                                    <img src="img/very_sad.png" alt="" ng-if="$index==0 && question.displayEmotion">
                                     <div class="radio">
                                         <input type="radio" data-text="{{option}}" name="optionsRadios" id="option-{{question.questionNo}}{{$index}}" ng-click="radioButtonClicked()" value="{{$index}}">
                                     </div> <!-- /ng-repeat="option in question.optionTitles"-->

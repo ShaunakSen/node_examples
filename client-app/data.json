@@ -12,7 +12,8 @@
         "Very Good"
       ],
       "importance": 10,
-      "thoughtProvoking": 3
+      "thoughtProvoking": 3,
+      "displayEmotion": true
     },
     {
       "questionNo": 2,
@@ -26,7 +27,8 @@
         "Very Good"
       ],
       "importance": 10,
-      "thoughtProvoking": 3
+      "thoughtProvoking": 3,
+      "displayEmotion": true
     },
     {
       "questionNo": 3,
@@ -40,7 +42,8 @@
         "A lot"
       ],
       "importance": 7,
-      "thoughtProvoking": 2
+      "thoughtProvoking": 2,
+      "displayEmotion": true
     },
     {
       "questionNo": 4,
@@ -54,7 +57,8 @@
         "A lot"
       ],
       "importance": 7,
-      "thoughtProvoking": 4
+      "thoughtProvoking": 4,
+      "displayEmotion": false
     }
   ]
 }

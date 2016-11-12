@@ -4,7 +4,7 @@ myApp.controller('MainController', ['$scope', 'mainFactory', function ($scope, m
     console.log("Inside MainController");
     $scope.noOfQuestions = 0;
     $scope.questions = [];
-    $scope.response = [];
+    $scope.responses = [];
     $scope.nextButtonDisabled = true;
     mainFactory.getQuestions().then(
         function (response) {
@@ -39,6 +39,7 @@ myApp.controller('MainController', ['$scope', 'mainFactory', function ($scope, m
     };
 
     $scope.storeResponse = function (questionNo) {
+        // stop clock for this question
         // Get array of possible ids of radio buttons based on that question no
         var ids = $scope.getIdsOfRadioButtons(questionNo);
         console.log(ids);
@@ -50,20 +51,45 @@ myApp.controller('MainController', ['$scope', 'mainFactory', function ($scope, m
             }
         }
         // store that damn result
-        $scope.storeResult(questionNo, selectedRadioButton.value)
+        $scope.storeResult(selectedRadioButton.value, questionNo);
 
 
         // change to next slide
         $("#carousel-example-generic").carousel("next");
         // disable the next button again
         $scope.nextButtonDisabled = true;
+        // start clock for next question
     };
 
     $scope.storeResult = function (response, questionNo) {
         console.log(response, questionNo);
         console.log($scope.questions);
         var responseObject = {};
+        responseObject.questionNo = questionNo;
+        responseObject.response = parseInt(response);
+        for(var i=0; i<$scope.questions.length; ++i){
+            if($scope.questions[i].questionNo === questionNo){
+                responseObject.responseText = $scope.questions[i].optionTitles[parseInt(response)];
+            }
+        }
+        console.log(responseObject);
+        $scope.pushIntoResponses(responseObject);
+        console.log("Finally", $scope.responses);
+
     };
+
+    $scope.pushIntoResponses = function (responseObject) {
+        for(var i=0; i< $scope.responses.length; ++i){
+            // check if response for that question no already exists
+            if($scope.responses[i].questionNo === responseObject.questionNo){
+                // Update and return
+                $scope.responses[i] = responseObject;
+                return;
+            }
+        }
+        // New response.. So push
+        $scope.responses.push(responseObject);
+    }
 
 
 }]);
