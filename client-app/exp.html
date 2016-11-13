@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clock</title>
+    <style>
+        body {
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+<div id="clock">
+<button id="start">start</button>
+<button id="stop">stop</button>
+</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script>
+    $('#start').click(startClock);
+    $('#stop').click(stopClock);
+    var startTime = 0;
+    var endTime = 0;
+    function startClock() {
+        console.log("here");
+        var start = Date.now();
+        startTime = start
+    }
+    function stopClock() {
+        var end = Date.now();
+        endTime = end;
+        var duration = endTime - startTime;
+        console.log(duration);
+    }
+</script>
+</html>

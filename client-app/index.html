@@ -51,6 +51,12 @@
 <div class="row">
     <div class="col-sm-4 sidebar"></div>
     <div class="col-sm-8 main-content">
+        <!--<div class="row">
+            <div class="col-xs-4 col-xs-offset-6">
+                <button id="clock-start" class="btn btn-primary" ng-click="startClock(2)">Start</button>
+                <button id="clock-stop" class="btn btn-primary" ng-click="stopClock(2)">Stop</button>
+            </div>
+        </div>-->
         <br><br>
         <div class="row">
             <div class="col-xs-12">
@@ -75,7 +81,7 @@
                             </div>
                             <br><br>
                             <div class="row text-center">
-                                <div class="btn btn-primary prev-button" href="#carousel-example-generic" role="button" data-slide="prev" ng-if="!$first" >Prev</div>
+                                <div class="btn btn-primary prev-button" id="prev-button" role="button" ng-if="!$first" ng-click="previousButtonClicked(question.questionNo)" >Prev</div>
                                 <div class="btn btn-primary next-button" id="next-button" role="button"  ng-if="!$last" ng-disabled="nextButtonDisabled" ng-click="nextButtonDisabled || storeResponse(question.questionNo)" disabled>Next</div>
                                 <div class="btn btn-primary submit-button" ng-if="$last" ng-disabled="nextButtonDisabled">Submit</div>
                             </div>
