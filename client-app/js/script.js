@@ -11,7 +11,7 @@ myApp.controller('MainController', ['$scope', 'mainFactory', function ($scope, m
     $scope.finishTime = [];
 
 
-    // CLOCK FUNCTIONS
+    // CLOCK FUNCTIONS -> CHANGE TO FACTORY LATER MAYBE?
 
     $scope.startClock = function (questionNo) {
         console.info("Starting clock for question", questionNo);
@@ -87,11 +87,15 @@ myApp.controller('MainController', ['$scope', 'mainFactory', function ($scope, m
         $scope.storeResult(selectedRadioButton.value, questionNo);
 
 
-        // change to next slide
-        $("#carousel-example-generic").carousel("next");
-        // disable the next button again
-        $scope.nextButtonDisabled = true;
-        $scope.startClock(questionNo + 1);
+
+        if(questionNo != $scope.questions.length){
+            // change to next slide
+            $("#carousel-example-generic").carousel("next");
+            // disable the next button again
+            $scope.nextButtonDisabled = true;
+            $scope.startClock(questionNo + 1);
+        }
+
     };
 
     $scope.storeResult = function (response, questionNo) {
@@ -107,8 +111,6 @@ myApp.controller('MainController', ['$scope', 'mainFactory', function ($scope, m
         }
         console.log(responseObject);
         $scope.pushIntoResponses(responseObject);
-        console.log("Finally", $scope.responses);
-
     };
 
     $scope.pushIntoResponses = function (responseObject) {
@@ -134,6 +136,16 @@ myApp.controller('MainController', ['$scope', 'mainFactory', function ($scope, m
         $("#carousel-example-generic").carousel("prev");
 
     };
+    
+    
+    $scope.submitButtonClicked = function () {
+
+        $scope.storeResponse($scope.questions.length);
+
+        console.log("Data we have...");
+        console.log($scope.responses);
+        console.log($scope.recordedTimes);
+    }
 
 
 }]);

@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3bd2106-c361-42e4-aee7-a432b6aa92f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app/exp.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/final-project/exp.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app/index.html" afterPath="$PROJECT_DIR$/client-app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app/js/script.js" afterPath="$PROJECT_DIR$/client-app/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final-project/crazy_ideas" afterPath="$PROJECT_DIR$/final-project/crazy_ideas" />
     </list>
     <ignored path="node-examples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="74" column="111" selection-start-line="74" selection-start-column="111" selection-end-line="74" selection-end-column="111" />
+            <state relative-caret-position="309">
+              <caret line="77" column="148" selection-start-line="77" selection-start-column="148" selection-end-line="77" selection-end-column="148" />
               <folding>
                 <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -41,21 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client-app/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="133" column="53" selection-start-line="133" selection-start-column="53" selection-end-line="133" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="exp.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-app/exp.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+            <state relative-caret-position="-1132">
+              <caret line="61" column="27" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -166,8 +153,8 @@
         <option value="$PROJECT_DIR$/final-project/crazy_ideas" />
         <option value="$PROJECT_DIR$/final-project/exp.html" />
         <option value="$PROJECT_DIR$/client-app/exp.html" />
-        <option value="$PROJECT_DIR$/client-app/index.html" />
         <option value="$PROJECT_DIR$/client-app/js/script.js" />
+        <option value="$PROJECT_DIR$/client-app/index.html" />
       </list>
     </option>
   </component>
@@ -489,14 +476,7 @@
       <workItem from="1478705915998" duration="15193000" />
       <workItem from="1478929071638" duration="2270000" />
       <workItem from="1478978929470" duration="4121000" />
-      <workItem from="1479020720558" duration="3483000" />
-    </task>
-    <task id="LOCAL-00008" summary="separated module :)">
-      <created>1472134967360</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1472134967361</updated>
+      <workItem from="1479020720558" duration="7820000" />
     </task>
     <task id="LOCAL-00009" summary="separate module + multiple resources accessed">
       <created>1472152349910</created>
@@ -834,11 +814,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478930721868</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="timer done!! :D">
+      <created>1479025373796</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1479025373797</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="333091000" />
+    <option name="totallyTimeSpent" value="337428000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1366" height="739" extended-state="6" />
@@ -875,7 +862,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="understanding cookies with user authentication" />
     <MESSAGE value="sessions part 1" />
     <MESSAGE value="JSON Web Tokens + Passportjs intro" />
     <MESSAGE value="USER AUTHENTICATION USING JSON WEB TOKENS + PASSPORT :)" />
@@ -900,7 +886,8 @@
     <MESSAGE value="ui fixes + emoticon functionality added" />
     <MESSAGE value="basic validation added" />
     <MESSAGE value="display emotion conditionally + storing responses&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="display emotion conditionally + storing responses&#10;" />
+    <MESSAGE value="timer done!! :D" />
+    <option name="LAST_COMMIT_MESSAGE" value="timer done!! :D" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1214,6 +1201,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1257,22 +1245,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-app/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="133" column="53" selection-start-line="133" selection-start-column="53" selection-end-line="133" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="74" column="111" selection-start-line="74" selection-start-column="111" selection-end-line="74" selection-end-column="111" />
+        <state relative-caret-position="309">
+          <caret line="77" column="148" selection-start-line="77" selection-start-column="148" selection-end-line="77" selection-end-column="148" />
           <folding>
             <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-app/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1132">
+          <caret line="61" column="27" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
