@@ -75,7 +75,7 @@
                                     <img src="img/sad.png" alt="" ng-if="$index==1 && question.displayEmotion">
                                     <img src="img/very_sad.png" alt="" ng-if="$index==0 && question.displayEmotion">
                                     <div class="radio">
-                                        <input type="radio" data-text="{{option}}" name="optionsRadios" id="option-{{question.questionNo}}{{$index-1}}" ng-click="radioButtonClicked()" value="{{$index}}">
+                                        <input type="radio" data-text="{{option}}" name="optionsRadios" id="option-{{question.questionNo}}{{$index}}" ng-click="radioButtonClicked()" value="{{$index}}">
                                     </div> <!-- /ng-repeat="option in question.optionTitles"-->
                                 </div>
                             </div>

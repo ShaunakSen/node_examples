@@ -35,6 +35,10 @@ var mcqSchema = new Schema({
     },
     timeSpent: {
         type: String
+    },
+    displayEmotion: {
+        type: Boolean,
+        default: true
     }
 }, {timestamps: true});
 

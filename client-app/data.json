@@ -26,6 +26,12 @@
         "Good",
         "Very Good"
       ],
+      "relatedTo": [
+        {
+          "questionNo": 1,
+          "relatedHow": "direct"
+        }
+      ],
       "importance": 10,
       "thoughtProvoking": 3,
       "displayEmotion": true
@@ -55,6 +61,27 @@
         "Average",
         "More than Average",
         "A lot"
+      ],
+      "importance": 7,
+      "thoughtProvoking": 4,
+      "displayEmotion": false
+    },
+    {
+      "questionNo": 5,
+      "title": "To what extent do you feel that the topics covered in class are relevant and up to date in today's scenario?",
+      "optionValues": [0, 1, 2, 3, 4],
+      "optionTitles": [
+        "Very Less",
+        "Not a lot",
+        "Average",
+        "More than Average",
+        "A lot"
+      ],
+      "relatedTo": [
+        {
+          "questionNo": 4,
+          "relatedHow": "direct"
+        }
       ],
       "importance": 7,
       "thoughtProvoking": 4,

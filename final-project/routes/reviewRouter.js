@@ -34,6 +34,19 @@ reviewRouter.route('/:reviewId/mcq')
             }
             res.json(review.mcq);
         });
+    })
+    .post(function (req, res) {
+        Reviews.findById(req.params.reviewId, function (err, review) {
+            if (err) throw err;
+
+            review.mcq.push(req.body);
+
+            review.save(function (err, review) {
+                if (err) throw err;
+                console.log('Updated review mcq!!');
+                res.json(review);
+            })
+        });
     });
 
 module.exports = reviewRouter;

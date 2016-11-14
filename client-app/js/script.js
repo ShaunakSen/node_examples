@@ -1,6 +1,10 @@
 var myApp = angular.module('clientApp', []);
+myApp.config(function($httpProvider) {
+    //Enable cross domain calls
+    $httpProvider.defaults.useXDomain = true;
+});
 
-myApp.controller('MainController', ['$scope', 'mainFactory', function ($scope, mainFactory) {
+myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function ($scope, mainFactory, $http) {
     console.log("Inside MainController");
     $scope.noOfQuestions = 0;
     $scope.questions = [];
@@ -29,18 +33,17 @@ myApp.controller('MainController', ['$scope', 'mainFactory', function ($scope, m
         $scope.recordedTimes[questionIndex] += duration;
         console.log("Duration computted for question no:", questionNo, "is", $scope.recordedTimes[questionIndex]);
     };
-
     mainFactory.getQuestions().then(
         function (response) {
             console.log(response);
-            $scope.questions = response;
-            $scope.noOfQuestions = response.data.mcq.length;
+            // $scope.questions = response;
+            $scope.noOfQuestions = response.data[0].mcq.length;
             for (var i = 0; i < $scope.noOfQuestions; ++i) {
                 $scope.recordedTimes.push(0);
                 $scope.startTime.push(0);
                 $scope.finishTime.push(0);
             }
-            $scope.useData($scope.questions);
+            $scope.useData(response);
             // start clock for 1st question
             $scope.startClock(1)
         },
@@ -53,7 +56,7 @@ myApp.controller('MainController', ['$scope', 'mainFactory', function ($scope, m
         console.log(data);
         // $scope.noOfQuestions = data.data.mcq.length;
         console.log("No of questions:", $scope.noOfQuestions);
-        $scope.questions = data.data.mcq;
+        $scope.questions = data.data[0].mcq;
         console.log("Questions are:", $scope.questions);
     };
 
@@ -75,9 +78,10 @@ myApp.controller('MainController', ['$scope', 'mainFactory', function ($scope, m
         $scope.stopClock(questionNo);
         // Get array of possible ids of radio buttons based on that question no
         var ids = $scope.getIdsOfRadioButtons(questionNo);
-        console.log(ids);
+        console.log("ids of radio buttons are", ids);
         // check if any one of them is selected
         for (var i = 0; i < ids.length; ++i) {
+            // console.log(document.getElementById(ids[i]).checked);
             if (document.getElementById(ids[i]).checked) {
                 var selectedRadioButton = document.getElementById(ids[i]);
                 // console.log("Value: ", selectedRadioButton.value, "Text:", selectedRadioButton.getAttribute('data-text'));
