@@ -26,5 +26,14 @@ reviewRouter.route('/')
             res.end('Added the review with id: ', id);
         });
     });
+reviewRouter.route('/:reviewId/mcq')
+    .get(function (req, res) {
+        Reviews.findById(req.params.reviewId, function (err, review) {
+            if(err){
+                throw err;
+            }
+            res.json(review.mcq);
+        });
+    });
 
 module.exports = reviewRouter;

@@ -87,8 +87,7 @@ myApp.controller('MainController', ['$scope', 'mainFactory', function ($scope, m
         $scope.storeResult(selectedRadioButton.value, questionNo);
 
 
-
-        if(questionNo != $scope.questions.length){
+        if (questionNo != $scope.questions.length) {
             // change to next slide
             $("#carousel-example-generic").carousel("next");
             // disable the next button again
@@ -136,8 +135,8 @@ myApp.controller('MainController', ['$scope', 'mainFactory', function ($scope, m
         $("#carousel-example-generic").carousel("prev");
 
     };
-    
-    
+
+
     $scope.submitButtonClicked = function () {
 
         $scope.storeResponse($scope.questions.length);
@@ -145,6 +144,13 @@ myApp.controller('MainController', ['$scope', 'mainFactory', function ($scope, m
         console.log("Data we have...");
         console.log($scope.responses);
         console.log($scope.recordedTimes);
+
+        // add the recorded times data to main responses data
+
+        for (var i = 0; i < $scope.recordedTimes.length; ++i) {
+            $scope.responses[i].timeSpent = $scope.recordedTimes[i];
+        }
+        console.log($scope.responses);
     }
 
 
