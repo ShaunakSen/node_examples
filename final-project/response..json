@@ -1,0 +1,11 @@
+{
+  "mcqResponse": [
+    {
+      "questionNo": 1,
+      "title": "How is the quality of lectures?",
+      "response": 2,
+      "responseText": "Ok",
+      "timeSpent": 4000
+    }
+  ]
+}
