@@ -1,0 +1,68 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 14px; }
+
+a:link {
+  text-decoration: none; }
+
+a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+a:active {
+  text-decoration: none; }
+
+a {
+  color: inherit; }
+
+a:hover {
+  text-decoration: none;
+  color: inherit; }
+
+.btn-primary {
+  border-radius: 0;
+  border: none; }
+
+.prev-button {
+  border-radius: 0;
+  background-color: #b66474;
+  color: "Montserrat", sans-serif; }
+
+.prev-button:hover {
+  background-color: #9c5663; }
+
+.next-button {
+  border-radius: 0;
+  background-color: #7d78b6;
+  color: "Montserrat", sans-serif; }
+
+.next-button:hover {
+  background-color: #6f6aa1; }
+
+.submit-button {
+  border-radius: 0;
+  background-color: #85b66e;
+  color: "Montserrat", sans-serif; }
+
+.submit-button:hover {
+  background-color: #739e5f; }
+
+.navbar-default {
+  font-family: "Lato", sans-serif;
+  background-color: #FF84E8;
+  color: #414361;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0; }
+
+.sidebar {
+  height: 700px;
+  background-color: #7F2CCB; }
+
+.main-content {
+  height: 700px;
+  background-color: #FFA9E7; }
+
+/*# sourceMappingURL=style.css.map */
