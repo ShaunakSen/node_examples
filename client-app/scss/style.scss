@@ -118,4 +118,19 @@ a:hover {
       /* margin-left: -20px; */
     }
   }
+
+  .results-row{
+    //background-color: $darker;
+    height: 300px;
+    margin-top: 20px;
+    padding:20px;
+    font-family:$font2;
+
+    .results-data-container{
+      height: 70px;
+      background: $light;
+      .results-data{}
+      .results-visual-feedback{}
+    }
+  }
 }

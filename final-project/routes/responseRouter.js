@@ -26,29 +26,34 @@ responseRouter.route('/')
             res.end('Added the response with id: ', id);
         });
     });
-/*
-reviewRouter.route('/:reviewId/mcq')
+responseRouter.route('/:responseId/mcqResponse')
     .get(function (req, res) {
-        Reviews.findById(req.params.reviewId, function (err, review) {
-            if(err){
+        Responses.findById(req.params.responseId, function (err, response) {
+            if (err) {
                 throw err;
             }
-            res.json(review.mcq);
+            res.json(response.mcqResponse);
         });
     })
     .post(function (req, res) {
-        Reviews.findById(req.params.reviewId, function (err, review) {
+        Responses.findById(req.params.responseId, function (err, response) {
             if (err) throw err;
 
-            review.mcq.push(req.body);
+            response.mcqResponse.push(req.body);
 
-            review.save(function (err, review) {
+            response.save(function (err, response) {
                 if (err) throw err;
-                console.log('Updated review mcq!!');
-                res.json(review);
+                console.log('Updated response!!');
+                res.json(response);
             })
         });
+    })
+    .delete(function (req, res, next) {
+        // res.end("Deleting the dish with id: " + req.params.dishId);
+        Responses.findByIdAndRemove(req.params.responseId, function (err, resp) {
+            if (err) throw err;
+            res.json(resp);
+        });
     });
-*/
 
 module.exports = responseRouter;

@@ -1,11 +1,108 @@
-{
-  "mcqResponse": [
-    {
-      "questionNo": 1,
-      "title": "How is the quality of lectures?",
-      "response": 2,
-      "responseText": "Ok",
-      "timeSpent": 4000
-    }
-  ]
-}
+[
+  {
+    "_id": "582a1543c9c95c3021eb9d45",
+    "updatedAt": "2016-11-14T19:49:23.796Z",
+    "createdAt": "2016-11-14T19:49:23.796Z",
+    "__v": 0,
+    "mcqResponse": [
+      {
+        "updatedAt": "2016-11-14T19:49:23.792Z",
+        "createdAt": "2016-11-14T19:49:23.792Z",
+        "questionNo": 1,
+        "response": 0,
+        "responseText": "Very poor",
+        "timeSpent": 1508,
+        "_id": "582a1543c9c95c3021eb9d4a"
+      },
+      {
+        "updatedAt": "2016-11-14T19:49:23.793Z",
+        "createdAt": "2016-11-14T19:49:23.793Z",
+        "questionNo": 2,
+        "response": 1,
+        "responseText": "Poor",
+        "timeSpent": 2140,
+        "_id": "582a1543c9c95c3021eb9d49"
+      },
+      {
+        "updatedAt": "2016-11-14T19:49:23.793Z",
+        "createdAt": "2016-11-14T19:49:23.793Z",
+        "questionNo": 3,
+        "response": 2,
+        "responseText": "Average",
+        "timeSpent": 1875,
+        "_id": "582a1543c9c95c3021eb9d48"
+      },
+      {
+        "updatedAt": "2016-11-14T19:49:23.794Z",
+        "createdAt": "2016-11-14T19:49:23.794Z",
+        "questionNo": 4,
+        "response": 3,
+        "responseText": "More than Average",
+        "timeSpent": 2437,
+        "_id": "582a1543c9c95c3021eb9d47"
+      },
+      {
+        "updatedAt": "2016-11-14T19:49:23.795Z",
+        "createdAt": "2016-11-14T19:49:23.795Z",
+        "questionNo": 5,
+        "response": 4,
+        "responseText": "A lot",
+        "timeSpent": 2107,
+        "_id": "582a1543c9c95c3021eb9d46"
+      }
+    ]
+  },
+  {
+    "_id": "582aad6f92c5770eb1faafab",
+    "updatedAt": "2016-11-15T06:38:39.964Z",
+    "createdAt": "2016-11-15T06:38:39.964Z",
+    "__v": 0,
+    "mcqResponse": [
+      {
+        "updatedAt": "2016-11-15T06:38:39.959Z",
+        "createdAt": "2016-11-15T06:38:39.959Z",
+        "questionNo": 1,
+        "response": 4,
+        "responseText": "Very Good",
+        "timeSpent": 11714,
+        "_id": "582aad6f92c5770eb1faafb0"
+      },
+      {
+        "updatedAt": "2016-11-15T06:38:39.961Z",
+        "createdAt": "2016-11-15T06:38:39.961Z",
+        "questionNo": 2,
+        "response": 4,
+        "responseText": "Very Good",
+        "timeSpent": 3852,
+        "_id": "582aad6f92c5770eb1faafaf"
+      },
+      {
+        "updatedAt": "2016-11-15T06:38:39.962Z",
+        "createdAt": "2016-11-15T06:38:39.962Z",
+        "questionNo": 3,
+        "response": 2,
+        "responseText": "Average",
+        "timeSpent": 10729,
+        "_id": "582aad6f92c5770eb1faafae"
+      },
+      {
+        "updatedAt": "2016-11-15T06:38:39.962Z",
+        "createdAt": "2016-11-15T06:38:39.962Z",
+        "questionNo": 4,
+        "response": 3,
+        "responseText": "More than Average",
+        "timeSpent": 4852,
+        "_id": "582aad6f92c5770eb1faafad"
+      },
+      {
+        "updatedAt": "2016-11-15T06:38:39.963Z",
+        "createdAt": "2016-11-15T06:38:39.963Z",
+        "questionNo": 5,
+        "response": 3,
+        "responseText": "More than Average",
+        "timeSpent": 7387,
+        "_id": "582aad6f92c5770eb1faafac"
+      }
+    ]
+  }
+]

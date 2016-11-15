@@ -28,3 +28,9 @@ set displayEmotion flag to true by default in the schema
 build an algo on how much response time is appropriate based on:
 1. characters in question
 2. thought provoking nature of question
+
+
+
+Now from response object generate data
+messages = [] which will contain msgs to display in view
+visualFeedback = [] which contain ok or not ok

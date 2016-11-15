@@ -6,10 +6,10 @@ var mcqResponseSchema = new Schema({
         type: Number,
         required: true
     },
-    title: {
-        type: String,
-        required: true
-    },
+    // title: {
+    //     type: String,
+    //     required: true
+    // },
     response: {
         type: Number,
         required: true

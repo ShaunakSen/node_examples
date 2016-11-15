@@ -1,5 +1,5 @@
 var myApp = angular.module('clientApp', []);
-myApp.config(function($httpProvider) {
+myApp.config(function ($httpProvider) {
     //Enable cross domain calls
     $httpProvider.defaults.useXDomain = true;
 });
@@ -13,6 +13,11 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
     $scope.recordedTimes = [];
     $scope.startTime = [];
     $scope.finishTime = [];
+    $scope.reviewId = "";
+    $scope.responseData = [];
+    $scope.messages = [];
+    $scope.visualFeedback = [];
+    $scope.timeAnalyzer = [];
 
 
     // CLOCK FUNCTIONS -> CHANGE TO FACTORY LATER MAYBE?
@@ -57,6 +62,8 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
         // $scope.noOfQuestions = data.data.mcq.length;
         console.log("No of questions:", $scope.noOfQuestions);
         $scope.questions = data.data[0].mcq;
+        $scope.reviewId = data.data[0]._id;
+        console.log("The id is", $scope.reviewId);
         console.log("Questions are:", $scope.questions);
     };
 
@@ -155,6 +162,74 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
             $scope.responses[i].timeSpent = $scope.recordedTimes[i];
         }
         console.log($scope.responses);
+        var responseData = {
+            mcqResponse: []
+        };
+        for (var x = 0; x < $scope.responses.length; ++x) {
+            responseData.mcqResponse.push($scope.responses[x]);
+        }
+        console.log(responseData);
+
+        // POST the response
+
+        var postReq = {
+            method: 'POST',
+            url: 'http://localhost:3000/responses/',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: responseData
+        };
+
+        $http(postReq).then(
+            function (response) {
+                console.log("Ok..", response);
+
+                // Now that response has been posted we can fetch and analyze the data
+                $scope.fetchResponseData();
+            },
+            function (response) {
+                console.log("Not Ok..", response);
+            }
+        );
+    };
+
+
+    $scope.fetchResponseData = function () {
+        $http.get('http://localhost:3000/responses').then(
+            function (response) {
+                // console.log("Response data:", response.data);
+                // last one will be the most recent response
+                var lastResponse = response.data[response.data.length - 1];
+                $scope.useResponseData(lastResponse);
+            },
+            function (response) {
+                console.log(response);
+                $scope.message = "Error: " + response.status + " " + response.statusText;
+            }
+        )
+    };
+
+
+    $scope.useResponseData = function (responseData) {
+
+        $scope.responseData = responseData.mcqResponse;
+        $scope.analyzeResponseForTime($scope.questions, $scope.responseData);
+    };
+
+    $scope.analyzeResponseForTime = function (questions, responses) {
+        console.log("Questions were:", questions);
+        console.log("The response is:", responses);
+        for (var i = 0; i < responses.length; ++i) {
+            $scope.timeAnalyzer.push(responses[i]);
+        }
+        for (var x = 0; x < questions.length; ++x) {
+            $scope.timeAnalyzer[x].relatedTo = questions[x].relatedTo;
+            $scope.timeAnalyzer[x].title = questions[x].title;
+            $scope.timeAnalyzer[x].thoughtProvoking = questions[x].thoughtProvoking;
+        }
+
+        console.info("Unified data is", $scope.timeAnalyzer);
     }
 
 
