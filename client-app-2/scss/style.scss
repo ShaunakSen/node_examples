@@ -99,4 +99,37 @@ a:hover {
 .main-content {
   height: 700px;
   background-color: $lighter;
+
+  .results-row{
+    //background-color: $darker;
+    height: 300px;
+    margin-top: 20px;
+    padding:20px;
+    font-family:$font2;
+
+    .results-data-container{
+      margin-top:10px;
+      height: 70px;
+      background: $light;
+      .results-data{
+        height: inherit;
+        background-color: whitesmoke;
+        padding: 20px;
+      }
+      .results-visual-feedback{
+        height: inherit;
+        background-color: #cecece;
+        padding: 20px;
+        i{
+          font-size: 2em;
+          .fa-check{
+            background-color: greenyellow!important;
+          }
+          .error{
+            color: darkred;
+          }
+        }
+      }
+    }
+  }
 }

@@ -64,5 +64,28 @@ a:hover {
 .main-content {
   height: 700px;
   background-color: #FFA9E7; }
+  .main-content .results-row {
+    height: 300px;
+    margin-top: 20px;
+    padding: 20px;
+    font-family: "Montserrat", sans-serif; }
+    .main-content .results-row .results-data-container {
+      margin-top: 10px;
+      height: 70px;
+      background: #FF84E8; }
+      .main-content .results-row .results-data-container .results-data {
+        height: inherit;
+        background-color: whitesmoke;
+        padding: 20px; }
+      .main-content .results-row .results-data-container .results-visual-feedback {
+        height: inherit;
+        background-color: #cecece;
+        padding: 20px; }
+        .main-content .results-row .results-data-container .results-visual-feedback i {
+          font-size: 2em; }
+          .main-content .results-row .results-data-container .results-visual-feedback i .fa-check {
+            background-color: greenyellow !important; }
+          .main-content .results-row .results-data-container .results-visual-feedback i .error {
+            color: darkred; }
 
 /*# sourceMappingURL=style.css.map */

@@ -13,7 +13,7 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
     $scope.messages = [];
     $scope.visualFeedback = [];
     $scope.timeAnalyzer = [];
-
+    $scope.linkedMessage = [];
 
 
     mainFactory.getQuestions().then(
@@ -58,10 +58,10 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
     $scope.useResponseData = function (responseData) {
 
         $scope.responseData = responseData.mcqResponse;
-        $scope.analyzeResponseForTime($scope.questions, $scope.responseData);
+        $scope.createUnifiedObject($scope.questions, $scope.responseData);
     };
 
-    $scope.analyzeResponseForTime = function (questions, responses) {
+    $scope.createUnifiedObject = function (questions, responses) {
         console.log("Questions were:", questions);
         console.log("The response is:", responses);
         for (var i = 0; i < responses.length; ++i) {
@@ -75,8 +75,77 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
 
         console.info("Unified data is", $scope.timeAnalyzer);
 
-        
+        $scope.analyzeResponses();
+        $scope.analyzeResponseForLinks();
 
     };
     $scope.fetchResponseData();
+
+    $scope.analyzeResponses = function () {
+        for (var i = 0; i < $scope.timeAnalyzer.length; ++i) {
+            var newObject = {};
+            newObject.timeMessage = "Time spent on question: " + (i + 1) + " is " + $scope.timeAnalyzer[i].timeSpent;
+            newObject.timeOk = $scope.timeAnalyzer[i].timeSpent >= 2000;
+            $scope.messages.push(newObject);
+            console.log("Messages:", $scope.messages);
+        }
+    };
+
+    $scope.analyzeResponseForLinks = function () {
+        var localArray = [];
+        for (var i = 0; i < $scope.timeAnalyzer.length; ++i) {
+            if ($scope.timeAnalyzer[i].relatedTo.length > 0) {
+                var newObj = {};
+                newObj.questionNo = $scope.timeAnalyzer[i].questionNo;
+                newObj.relatedTo = $scope.timeAnalyzer[i].relatedTo;
+                newObj.response = $scope.timeAnalyzer[i].response;
+                localArray.push(newObj);
+            }
+        }
+
+        console.log("Local array is:", localArray);
+
+        // Now i have data of questions related to another question
+
+
+        for (var x = 0; x < localArray.length; ++x) {
+            var currentObject = localArray[x];
+            var thisQuestionNo = currentObject.questionNo;
+            var thisQuestionResponse = currentObject.response;
+            var relatedQuestionNo = currentObject.relatedTo[0].questionNo;
+            var relatedHow = currentObject.relatedTo[0].relatedHow;
+
+            // find response that user gave on the related question
+
+            var relatedQuestionResponse = $scope.timeAnalyzer[relatedQuestionNo - 1].response;
+            $scope.checkIfResponseIsOk(thisQuestionNo, thisQuestionResponse, relatedQuestionNo, relatedQuestionResponse, relatedHow);
+        }
+    };
+
+    $scope.checkIfResponseIsOk = function (thisQuestionNo, thisQuestionResponse, relatedQuestionNo, relatedQuestionResponse, relatedHow) {
+        var newObj = {};
+        var diff = thisQuestionResponse - relatedQuestionResponse;
+        if (diff < 0) {
+            diff = -diff;
+        }
+        newObj.questionNo = thisQuestionNo;
+        newObj.relatedTo = relatedQuestionNo;
+        newObj.relatedHow = relatedHow;
+        newObj.thisResponse = thisQuestionResponse;
+        newObj.relatedQuestionResponse = relatedQuestionResponse;
+        newObj.message = "User response on question: " + thisQuestionNo + " is " + thisQuestionResponse;
+        newObj.message += " User response on question: " + relatedQuestionNo + " was " + relatedQuestionResponse;
+        newObj.message += " Relationship was " + relatedHow;
+        if (relatedHow == "direct") {
+            newObj.correct = diff <= 2;
+        }
+        else {
+            newObj.correct = diff >= 2;
+        }
+
+        $scope.linkedMessage.push(newObj);
+
+        console.log("Linked msg is:", $scope.linkedMessage);
+    }
+
 }]);
