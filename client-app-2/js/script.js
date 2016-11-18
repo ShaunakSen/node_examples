@@ -85,7 +85,7 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
         for (var i = 0; i < $scope.timeAnalyzer.length; ++i) {
             var newObject = {};
             newObject.timeMessage = "Time spent on question: " + (i + 1) + " is " + $scope.timeAnalyzer[i].timeSpent;
-            newObject.timeOk = $scope.timeAnalyzer[i].timeSpent >= 2000;
+            newObject.timeOk = $scope.timeAnalyzer[i].timeSpent >= 3000;
             $scope.messages.push(newObject);
             console.log("Messages:", $scope.messages);
         }
