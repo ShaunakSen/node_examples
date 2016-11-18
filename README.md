@@ -1,4 +1,4 @@
-# Project setup instructions
+# Project setup instructions for Ubunt 14.04
 
 ### Step 1: Installing NODE.JS :
 
@@ -7,6 +7,7 @@ Install Nodejs by running the following commands in your terminal
 ```sh
 sudo apt-get update
 sudo apt-get install nodejs
+sudo apt-get install nodejs-legacy
 ```
 
 Now that nodejs is set up you can open your terminal and type:
@@ -59,6 +60,40 @@ Now we can install the MongoDB package itself.
 sudo apt-get install -y mongodb-org
 ```
 
+A problem might occur for few users. You might see a message like:
+
+```sh
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+E: Unable to locate package mongodb-org
+```
+
+If this happens run:
+
+```sh
+sudo apt-get install -y mongodb
+```
+For more information, visit [this link](http://stackoverflow.com/questions/28945921/e-unable-to-locate-package-mongodb-org)
+
+Now that MongoDB is set up run the following in the terminal:
+
+```sh
+service mongo status
+```
+
+You will see something like this
+
+![](mongo.png)
+
+Then run
+```sh
+mongo
+```
+
+The output should be as shown above
+
+
 ### Step 3: Install and Download Robomongo
 
 Robomongo is a software which will help us in interacting with our MongoDB database through a simple GUI
@@ -68,6 +103,8 @@ Download Robomongo from [here](https://download.robomongo.org/0.8.5/linux/robomo
 Install this .deb file and run it
 
 You should see a window open as shown under
+
+
 
 Click on the **Create** option and save changes as displayed below
 
@@ -94,7 +131,11 @@ In the `final-project` directory there is a file called `package.json`
 This file stores the list of dependencies that our web app needs and some other valuable information also.
 So when we run `sudo npm install`  **all** dependencies are installed and taken care of
 
-Now ensuring that
+Now run the command
+```sh
+npm start
+```
+
 
 
 
