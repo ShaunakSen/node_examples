@@ -171,6 +171,8 @@ In the space provide for url type in our REST API endpoint:
 
 From the HTTP methods dropdown select POST(be default it is set to GET)
 
+![](post1.png)
+
 Now click on the Body Tab and select JSON(application/json) from the dropdown as shown below:
 
 This indicates that we will be posting JSON data to our API
@@ -273,12 +275,33 @@ Now paste in the JSON code below into the space provided
 
 The above code is nothing but a set of questions
 
+![](post2.png)
+
+
 Click on **Send**
+
+
+This results in the document being **INSERTED** into our Mongo Database
+
+Now to verify this issue a **GET** request to `localhost:3000/reviews`
+
+Output will be like:
+
+![](post3.png)
+
 
 Now that the data has been posted go to
 `/Documents/node-examples/client-app/`
 
 Open file `index.html` in your browser
+
+![](app.png)
+
+That's It !!
+
+
+> Please remember to keep the server running at all times while using the app
+> To stop server press `Ctrl+C` in the terminal
 
 
 
