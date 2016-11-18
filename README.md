@@ -104,9 +104,17 @@ Install this .deb file and run it
 
 You should see a window open as shown under
 
-
+![](https://github.com/ShaunakSen/node_examples/blob/master/robo1.png?raw=true)
 
 Click on the **Create** option and save changes as displayed below
+
+![](https://github.com/ShaunakSen/node_examples/blob/master/robo2.png?raw=true)
+
+Click on **Save**
+
+Then in the window shown below click on **Connect**
+
+![](https://github.com/ShaunakSen/node_examples/blob/master/robo3.png?raw=true)
 
 _Now we have successfully connected to MongoDB!!_
 
@@ -118,7 +126,7 @@ Extract the folder to any suitable working directory
 
 For purpose of the rest of the article let us assume your project folder is
 
-`/home/node-examples`
+`/Documents/node-examples`
 
 Open your terminal in your project directory and then type in the following commands
 
@@ -135,6 +143,146 @@ Now run the command
 ```sh
 npm start
 ```
+
+You should see the output as shown below
+
+Note that the message `Connected correctly to server` is being displayed
+
+
+### Step 5: Testing the project
+
+Now that our server is up and running go to the url:
+`localhost:3000/reviews/`
+
+You should see `[]` as output
+
+This is because our database has no data so our REST API fetches an empty array
+
+To interact with the API we need to **POST** data
+
+To POST the data we need to install a software called **POSTMAN**
+
+You can get it [here](https://www.getpostman.com/)
+
+Download the Chrome App and open it
+
+In the space provide for url type in our REST API endpoint:
+`localhost:3000/reviews`
+
+From the HTTP methods dropdown select POST(be default it is set to GET)
+
+Now click on the Body Tab and select JSON(application/json) from the dropdown as shown below:
+
+This indicates that we will be posting JSON data to our API
+
+Now paste in the JSON code below into the space provided
+
+```javascript
+[{
+  "mcq": [
+    {
+      "questionNo": 1,
+      "title": "How is the quality of lectures?",
+      "optionValues": [0, 1, 2, 3, 4],
+      "optionTitles": [
+        "Very poor",
+        "Poor",
+        "Ok",
+        "Good",
+        "Very Good"
+      ],
+      "importance": 10,
+      "thoughtProvoking": 3,
+      "displayEmotion": true
+    },
+    {
+      "questionNo": 2,
+      "title": "How is the quality of explanation of the topics?",
+      "optionValues": [0, 1, 2, 3, 4],
+      "optionTitles": [
+        "Very poor",
+        "Poor",
+        "Ok",
+        "Good",
+        "Very Good"
+      ],
+      "relatedTo": [
+        {
+          "questionNo": 1,
+          "relatedHow": "direct"
+        }
+      ],
+      "importance": 10,
+      "thoughtProvoking": 3,
+      "displayEmotion": true
+    },
+    {
+      "questionNo": 3,
+      "title": "To what extent has visual presentations been used while explaining the topics?",
+      "optionValues": [0, 1, 2, 3, 4],
+      "optionTitles": [
+        "Very Less",
+        "Less",
+        "Average",
+        "More than Average",
+        "A lot"
+      ],
+      "importance": 7,
+      "thoughtProvoking": 2,
+      "displayEmotion": true
+    },
+    {
+      "questionNo": 4,
+      "title": "To what extent do you feel that the topics covered in class has use to you in life outside college?",
+      "optionValues": [0, 1, 2, 3, 4],
+      "optionTitles": [
+        "Very Less",
+        "Not a lot",
+        "Average",
+        "More than Average",
+        "A lot"
+      ],
+      "importance": 7,
+      "thoughtProvoking": 4,
+      "displayEmotion": false
+    },
+    {
+      "questionNo": 5,
+      "title": "To what extent do you feel that the topics covered in class are relevant and up to date in today's scenario?",
+      "optionValues": [0, 1, 2, 3, 4],
+      "optionTitles": [
+        "Very Less",
+        "Not a lot",
+        "Average",
+        "More than Average",
+        "A lot"
+      ],
+      "relatedTo": [
+        {
+          "questionNo": 4,
+          "relatedHow": "direct"
+        }
+      ],
+      "importance": 7,
+      "thoughtProvoking": 4,
+      "displayEmotion": false
+    }
+  ]
+}]
+```
+
+The above code is nothing but a set of questions
+
+Click on **Send**
+
+Now that the data has been posted go to
+`/Documents/node-examples/client-app/`
+
+Open file `index.html` in your browser
+
+
+
+
 
 
 
