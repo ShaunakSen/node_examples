@@ -166,14 +166,14 @@ You can get it [here](https://www.getpostman.com/)
 
 Download the Chrome App and open it
 
-In the space provide for url type in our REST API endpoint:
+In the space provide for url type in our **REST API endpoint**:
 `localhost:3000/reviews`
 
-From the HTTP methods dropdown select POST(be default it is set to GET)
+From the HTTP methods dropdown select **POST(be default it is set to GET)**
 
 ![](post1.png)
 
-Now click on the Body Tab and select JSON(application/json) from the dropdown as shown below:
+Now click on the Body Tab and select **JSON(application/json)** from the dropdown as shown below:
 
 This indicates that we will be posting JSON data to our API
 
