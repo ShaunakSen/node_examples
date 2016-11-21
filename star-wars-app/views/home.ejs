@@ -4,8 +4,22 @@
     <% include partials/head.ejs %>
 </head>
 <body>
-<h1>Hello, world!</h1>
 
-    <% include partials/scripts.ejs %>
+<div id="hero-image">
+    <h1 id="hero-title">
+        <%= title %>
+    </h1>
+</div>
+<div id="posters-wrapper" class="content-padding clearfix">
+
+    <% for(var i = 0; i < movies.length; ++i) { %>
+    <div class="poster">
+        <img src="/images/<%= movies[i].poster %>" class="img-responsive">
+    </div>
+    <% } %>
+
+</div>
+
+<% include partials/scripts.ejs %>
 </body>
 </html>

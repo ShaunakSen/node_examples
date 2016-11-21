@@ -9,6 +9,15 @@ var app = express();
 app.set('view engine', 'ejs');
 
 var routes = require('./routes');
+
+// Specify directory of static assets
+
+var path = require('path');
+
+// This tells express that static assets are in the public path directory
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Specifying our routes
 
 // Routes -> binding certain functionality when user requests certain address

@@ -1,10 +1,19 @@
+// Requiring the data
+
+var moviesJSON = require('../movies.json');
+
 exports.home = function (req, res) {
 
     // We are rendering the home template here
     // By default express looks in views/ for template
     // Also we do not need to specify the extension: .ejs
+
+
+    var movies = moviesJSON.movies;
+
     res.render('home', {
-        title: "Star Wars Movies"
+        title: "Star Wars Movies",
+        movies: movies
     });
     // Here we are passing info from our route
 };
