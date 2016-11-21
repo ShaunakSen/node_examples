@@ -4,6 +4,9 @@ var app = express();
 
 // app now has all methods of express
 
+// Setting our view engine
+
+app.set('view engine', 'ejs');
 // Specifying our routes
 
 // Routes -> binding certain functionality when user requests certain address
@@ -11,7 +14,14 @@ var app = express();
 // HOME ROUTE
 
 app.get('/', function (req, res) {
-   res.send("This is server's response on Home Page");
+
+    // We are rendering the home template here
+    // By default express looks in views/ for template
+    // Also we do not need to specify the extension: .ejs
+    res.render('home', {
+        title: "Star Wars Movies"
+    });
+    // Here we are passing info from our route
 });
 
 // movie_single
@@ -29,8 +39,6 @@ app.get('*', function (req, res) {
 // Note the sequence of route '*'.. Actually the route functions run in sequential order
 
 // This is the basic characteristics of express middlewares
-
-
 
 
 app.listen(3000, function () {
