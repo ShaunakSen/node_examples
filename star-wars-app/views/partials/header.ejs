@@ -6,7 +6,8 @@
                     Movies <i class="fa fa-chevron-down"></i>
                     <ul class="dropdown-menu">
                         <% for(var i = 0; i < movies.length; ++i){ %>
-                        <li><a href="#" class="episode_link"><%= movies[i].title %></a></li>
+                        <li><a href="/star_wars_episode/<%= i + 1 %>" class="episode_link"><%= movies[i].title %></a>
+                        </li>
                         <% } %>
                     </ul>
                 </a></li>

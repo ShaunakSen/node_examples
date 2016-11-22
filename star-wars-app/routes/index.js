@@ -31,15 +31,21 @@ exports.movie_single = function (req, res) {
 
         var title = movie.title;
 
+        var main_characters = movie.main_characters;
+
         res.render('movie_single', {
             movies: movies,
             title: title,
-            movie: movie
+            movie: movie,
+            main_characters: main_characters
         });
     }
     else {
         // Render 404 template
-        res.send("<h4>This is not the page you are looking for</h4>")
+        res.render('notFound', {
+            movies: movies,
+            title: "This is not the page you are looking for"
+        });
     }
 
 
@@ -47,7 +53,11 @@ exports.movie_single = function (req, res) {
 
 // NOT FOUND
 exports.notFound = function (req, res) {
-    res.send("This is not the page you are looking for");
+    var movies = moviesJSON.movies;
+    res.render('notFound', {
+        movies: movies,
+        title: "This is not the page you are looking for"
+    });
 };
 
 // Note the sequence of route '*'.. Actually the route functions run in sequential order
