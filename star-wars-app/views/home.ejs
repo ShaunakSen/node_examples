@@ -15,6 +15,11 @@
     <% for(var i = 0; i < movies.length; ++i) { %>
     <div class="poster">
         <img src="/images/<%= movies[i].poster %>" class="img-responsive">
+
+        <div class="poster-info-overlay">
+            <h3><%= movies[i].title %></h3>
+            <h4>View More <i class="fa fa-arrow-right"></i></h4>
+        </div>
     </div>
     <% } %>
 

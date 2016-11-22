@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head.ejs %>
+</head>
+<body>
+<% include partials/header.ejs %>
+<div id="hero-image-single">
+    <h1 id="hero-title">
+        <%= title %>
+    </h1>
+</div>
+
+<div class="content-padding clearfix">
+    <div class="poster-wrapper">
+        <img src="/images/<%= movie.poster %>" alt="" class="img-responsive">
+    </div>
+</div>
+
+
+<% include partials/scripts.ejs %>
+</body>
+</html>
