@@ -38,6 +38,4 @@ app.get('*', routes.notFound);
 // This is the basic characteristics of express middlewares
 
 
-app.listen(3000, function () {
-    console.log("The app is running on localhost:3000");
-});
+app.listen(process.env.PORT || 3000);
