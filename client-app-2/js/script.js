@@ -176,18 +176,18 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
                         reviewResponse.overallScore = 0;
 
                         // evaluate relationship
-                        if(reviewResponse.mcqResponse[i].relatedTo.length > 0){
+                        if (reviewResponse.mcqResponse[i].relatedTo.length > 0) {
                             var relatedQuestionNo = reviewResponse.mcqResponse[i].relatedTo[0].questionNo;
                             var relatedHow = reviewResponse.mcqResponse[i].relatedTo[0].relatedHow;
                             var thisQuestionResponse = reviewResponse.mcqResponse[i].response;
-                            var relatedQuestionResponse = reviewResponse.mcqResponse[relatedQuestionNo-1].response;
+                            var relatedQuestionResponse = reviewResponse.mcqResponse[relatedQuestionNo - 1].response;
 
                             var diff = thisQuestionResponse - relatedQuestionResponse;
-                            if(diff < 0){
-                                diff = - diff;
+                            if (diff < 0) {
+                                diff = -diff;
                             }
 
-                            if(relatedHow == "direct"){
+                            if (relatedHow == "direct") {
                                 reviewResponse.mcqResponse[i].correct = diff <= 2;
                             } else {
                                 reviewResponse.mcqResponse[i].correct = diff >= 2;
@@ -197,13 +197,48 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
                 });
 
                 console.log("All response data is now ", $scope.allResponseData);
+
+                $scope.filterData();
             },
             function (response) {
                 console.log(response);
                 $scope.message = "Error: " + response.status + " " + response.statusText;
             }
         )
-    }
+    };
+
+    $scope.filterData = function () {
+
+        // we have a set of reviews
+        // for each review give them a score
+
+        // score = (time spent * 2 (if correct relationship))/3000 * thoughtProvoking * 2
+
+        $scope.allResponseData.forEach(function (reviewResponse) {
+            var mcqResponses = reviewResponse.mcqResponse;
+            for (var i = 0; i < mcqResponses.length; ++i) {
+
+                // check if the response has correct property
+                if (mcqResponses[i].hasOwnProperty("correct")) {
+                    if (mcqResponses[i].correct === true) {
+                        mcqResponses[i].score = (mcqResponses[i].timeSpent * 2) /
+                            (3000 * mcqResponses[i].thoughtProvoking * 2);
+                    } else {
+                        mcqResponses[i].score = (mcqResponses[i].timeSpent) /
+                            (3000 * mcqResponses[i].thoughtProvoking * 2);
+                    }
+                } else {
+                    // response does not have correct property
+                    mcqResponses[i].score = (mcqResponses[i].timeSpent) /
+                        (3000 * mcqResponses[i].thoughtProvoking);
+                }
+            }
+        });
+
+
+        console.info("Filtered data: ", $scope.allResponseData);
+
+    };
 
 
 }]);

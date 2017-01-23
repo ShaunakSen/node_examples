@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3bd2106-c361-42e4-aee7-a432b6aa92f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simple-social-network/app/angular.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2/index.html" afterPath="$PROJECT_DIR$/client-app-2/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2/js/script.js" afterPath="$PROJECT_DIR$/client-app-2/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app/js/script.js" afterPath="$PROJECT_DIR$/client-app/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-social-network/app/index.html" afterPath="$PROJECT_DIR$/simple-social-network/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-social-network/server/server.js" afterPath="$PROJECT_DIR$/simple-social-network/server/server.js" />
     </list>
     <ignored path="node-examples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,8 +57,8 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client-app-2/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="192" column="82" selection-start-line="192" selection-start-column="82" selection-end-line="192" selection-end-column="82" />
+            <state relative-caret-position="50">
+              <caret line="222" column="59" selection-start-line="222" selection-start-column="59" selection-end-line="222" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -488,14 +482,7 @@
       <workItem from="1484820160783" duration="2739000" />
       <workItem from="1484972356644" duration="70000" />
       <workItem from="1485155923060" duration="7379000" />
-      <workItem from="1485180181029" duration="2317000" />
-    </task>
-    <task id="LOCAL-00031" summary="understanding express cookie and sessions">
-      <created>1473155223714</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1473155223714</updated>
+      <workItem from="1485180181029" duration="5467000" />
     </task>
     <task id="LOCAL-00032" summary="understanding cookies with user authentication">
       <created>1473421280432</created>
@@ -833,11 +820,18 @@
       <option name="project" value="LOCAL" />
       <updated>1482048505358</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="preparing data for filtering">
+      <created>1485192715020</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1485192715021</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="430479000" />
+    <option name="totallyTimeSpent" value="433629000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1366" height="739" extended-state="6" />
@@ -845,6 +839,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5797101" sideWeight="0.5089286" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32741934" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5748792" sideWeight="0.49107143" order="2" side_tool="false" content_ui="tabs" />
@@ -853,7 +848,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -893,7 +887,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="basic validation added" />
     <MESSAGE value="display emotion conditionally + storing responses&#10;" />
     <MESSAGE value="timer done!! :D" />
     <MESSAGE value="few bug fixes" />
@@ -918,7 +911,8 @@
     <MESSAGE value="wiring up + 404 custom template" />
     <MESSAGE value="finished star wars app" />
     <MESSAGE value="setting up dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="setting up dependencies" />
+    <MESSAGE value="preparing data for filtering" />
+    <option name="LAST_COMMIT_MESSAGE" value="preparing data for filtering" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1274,8 +1268,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client-app-2/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="192" column="82" selection-start-line="192" selection-start-column="82" selection-end-line="192" selection-end-column="82" />
+        <state relative-caret-position="50">
+          <caret line="222" column="59" selection-start-line="222" selection-start-column="59" selection-end-line="222" selection-end-column="59" />
           <folding />
         </state>
       </provider>
