@@ -15,6 +15,10 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
     $scope.timeAnalyzer = [];
     $scope.linkedMessage = [];
 
+    // FILTER VARS
+
+    $scope.allResponseData = [];
+
 
     mainFactory.getQuestions().then(
         function (response) {
@@ -87,8 +91,9 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
             newObject.timeMessage = "Time spent on question: " + (i + 1) + " is " + $scope.timeAnalyzer[i].timeSpent;
             newObject.timeOk = $scope.timeAnalyzer[i].timeSpent >= 3000;
             $scope.messages.push(newObject);
-            console.log("Messages:", $scope.messages);
+
         }
+        console.log("Messages:", $scope.messages);
     };
 
     $scope.analyzeResponseForLinks = function () {
@@ -146,6 +151,78 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
         $scope.linkedMessage.push(newObj);
 
         console.log("Linked msg is:", $scope.linkedMessage);
+    };
+
+
+    // ==============================
+    // FILTERING FUNCTIONS
+    // ==============================
+
+    $scope.prepareFiltering = function () {
+        console.info("Inside prepareFiltering function");
+        $http.get('http://localhost:3000/responses').then(
+            function (response) {
+                $scope.allResponseData = response.data;
+                $scope.allResponseData.forEach(function (reviewResponse) {
+                    for (var i = 0; i < reviewResponse.mcqResponse.length; ++i) {
+                        var importance = $scope.questions[i].importance;
+                        var thoughtProvoking = $scope.questions[i].thoughtProvoking;
+                        var relatedTo = $scope.questions[i].relatedTo;
+
+                        reviewResponse.mcqResponse[i].importance = importance;
+                        reviewResponse.mcqResponse[i].thoughtProvoking = thoughtProvoking;
+                        reviewResponse.mcqResponse[i].relatedTo = relatedTo;
+                        reviewResponse.mcqResponse[i].score = 0;
+                        reviewResponse.overallScore = 0;
+
+                        // evaluate relationship
+                        if(reviewResponse.mcqResponse[i].relatedTo.length > 0){
+                            var relatedQuestionNo = reviewResponse.mcqResponse[i].relatedTo[0].questionNo;
+                            var relatedHow = reviewResponse.mcqResponse[i].relatedTo[0].relatedHow;
+                            var thisQuestionResponse = reviewResponse.mcqResponse[i].response;
+                            var relatedQuestionResponse = reviewResponse.mcqResponse[relatedQuestionNo-1].response;
+
+                            var diff = thisQuestionResponse - relatedQuestionResponse;
+                            if(diff < 0){
+                                diff = - diff;
+                            }
+
+                            if(relatedHow == "direct"){
+                                reviewResponse.mcqResponse[i].correct = diff <= 2;
+                            } else {
+                                reviewResponse.mcqResponse[i].correct = diff >= 2;
+                            }
+                        }
+                    }
+                });
+
+                console.log("All response data is now ", $scope.allResponseData);
+            },
+            function (response) {
+                console.log(response);
+                $scope.message = "Error: " + response.status + " " + response.statusText;
+            }
+        )
     }
 
+
 }]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

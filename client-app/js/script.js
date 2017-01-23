@@ -36,11 +36,10 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
         console.log("Finish times:", $scope.finishTime);
         var duration = $scope.finishTime[questionIndex] - $scope.startTime[questionIndex];
         $scope.recordedTimes[questionIndex] += duration;
-        console.log("Duration computted for question no:", questionNo, "is", $scope.recordedTimes[questionIndex]);
+        console.log("Duration computed for question no:", questionNo, "is", $scope.recordedTimes[questionIndex]);
     };
     mainFactory.getQuestions().then(
         function (response) {
-            console.log(response);
             // $scope.questions = response;
             $scope.noOfQuestions = response.data[0].mcq.length;
             for (var i = 0; i < $scope.noOfQuestions; ++i) {
