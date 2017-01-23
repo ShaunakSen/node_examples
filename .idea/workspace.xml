@@ -57,8 +57,8 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client-app-2/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="222" column="59" selection-start-line="222" selection-start-column="59" selection-end-line="222" selection-end-column="59" />
+            <state relative-caret-position="442">
+              <caret line="251" column="11" selection-start-line="251" selection-start-column="11" selection-end-line="251" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -482,14 +482,7 @@
       <workItem from="1484820160783" duration="2739000" />
       <workItem from="1484972356644" duration="70000" />
       <workItem from="1485155923060" duration="7379000" />
-      <workItem from="1485180181029" duration="5467000" />
-    </task>
-    <task id="LOCAL-00032" summary="understanding cookies with user authentication">
-      <created>1473421280432</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1473421280432</updated>
+      <workItem from="1485180181029" duration="6742000" />
     </task>
     <task id="LOCAL-00033" summary="sessions part 1">
       <created>1473444726014</created>
@@ -827,11 +820,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485192715021</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="score evaluation :)">
+      <created>1485195809462</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1485195809462</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="433629000" />
+    <option name="totallyTimeSpent" value="434904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1366" height="739" extended-state="6" />
@@ -887,7 +887,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="display emotion conditionally + storing responses&#10;" />
     <MESSAGE value="timer done!! :D" />
     <MESSAGE value="few bug fixes" />
     <MESSAGE value="created response schema for mcq + initialized route /:reviewId/mcq" />
@@ -912,7 +911,8 @@
     <MESSAGE value="finished star wars app" />
     <MESSAGE value="setting up dependencies" />
     <MESSAGE value="preparing data for filtering" />
-    <option name="LAST_COMMIT_MESSAGE" value="preparing data for filtering" />
+    <MESSAGE value="score evaluation :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="score evaluation :)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1268,8 +1268,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client-app-2/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="222" column="59" selection-start-line="222" selection-start-column="59" selection-end-line="222" selection-end-column="59" />
+        <state relative-caret-position="442">
+          <caret line="251" column="11" selection-start-line="251" selection-start-column="11" selection-end-line="251" selection-end-column="11" />
           <folding />
         </state>
       </provider>

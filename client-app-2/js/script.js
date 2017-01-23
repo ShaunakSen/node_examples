@@ -215,9 +215,12 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
         // score = (time spent * 2 (if correct relationship))/3000 * thoughtProvoking * 2
 
         $scope.allResponseData.forEach(function (reviewResponse) {
+            var importanceList = [];
+            var overallScore = 0;
             var mcqResponses = reviewResponse.mcqResponse;
             for (var i = 0; i < mcqResponses.length; ++i) {
 
+                importanceList.push(mcqResponses[i].importance);
                 // check if the response has correct property
                 if (mcqResponses[i].hasOwnProperty("correct")) {
                     if (mcqResponses[i].correct === true) {
@@ -233,6 +236,19 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
                         (3000 * mcqResponses[i].thoughtProvoking);
                 }
             }
+
+            // now that we have score for each question, evaluate overall score for the review
+
+            var sumOfImportance = importanceList.reduce(function (prev, next) {
+                return prev + next;
+            }, 0);
+
+            for (var x = 0; x < mcqResponses.length; ++x) {
+                overallScore += (mcqResponses[x].score * mcqResponses[x].importance)/sumOfImportance;
+            }
+
+            reviewResponse.overallScore = overallScore;
+
         });
 
 
