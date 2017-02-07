@@ -1,0 +1,141 @@
+/* 1 */
+{
+  "_id" : ObjectId("5829cc362d9a160e07f921e4"),
+  "updatedAt" : ISODate("2016-11-14T14:40:34.013Z"),
+  "createdAt" : ISODate("2016-11-14T14:37:42.551Z"),
+  "mcq" : [
+    {
+      "updatedAt" : ISODate("2016-11-14T14:37:42.548Z"),
+      "createdAt" : ISODate("2016-11-14T14:37:42.548Z"),
+      "questionNo" : 1,
+      "title" : "How is the quality of lectures?",
+      "importance" : 10,
+      "thoughtProvoking" : 3,
+      "_id" : ObjectId("5829cc362d9a160e07f921e9"),
+      "relatedTo" : [],
+      "optionTitles" : [
+        "Very poor",
+        "Poor",
+        "Ok",
+        "Good",
+        "Very Good"
+      ],
+      "optionValues" : [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "updatedAt" : ISODate("2016-11-14T14:37:42.549Z"),
+      "createdAt" : ISODate("2016-11-14T14:37:42.549Z"),
+      "questionNo" : 2,
+      "title" : "How is the quality of explanation of the topics?",
+      "importance" : 10,
+      "thoughtProvoking" : 3,
+      "_id" : ObjectId("5829cc362d9a160e07f921e7"),
+      "relatedTo" : [
+        {
+          "questionNo" : 1,
+          "relatedHow" : "direct",
+          "_id" : ObjectId("5829cc362d9a160e07f921e8")
+        }
+      ],
+      "optionTitles" : [
+        "Very poor",
+        "Poor",
+        "Ok",
+        "Good",
+        "Very Good"
+      ],
+      "optionValues" : [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "updatedAt" : ISODate("2016-11-14T14:37:42.550Z"),
+      "createdAt" : ISODate("2016-11-14T14:37:42.550Z"),
+      "questionNo" : 3,
+      "title" : "To what extent has visual presentations been used while explaining the topics?",
+      "importance" : 7,
+      "thoughtProvoking" : 2,
+      "_id" : ObjectId("5829cc362d9a160e07f921e6"),
+      "relatedTo" : [],
+      "optionTitles" : [
+        "Very Less",
+        "Less",
+        "Average",
+        "More than Average",
+        "A lot"
+      ],
+      "optionValues" : [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "updatedAt" : ISODate("2016-11-14T14:37:42.551Z"),
+      "createdAt" : ISODate("2016-11-14T14:37:42.551Z"),
+      "questionNo" : 4,
+      "title" : "To what extent do you feel that the topics covered in class has use to you in life outside college?",
+      "importance" : 7,
+      "thoughtProvoking" : 4,
+      "_id" : ObjectId("5829cc362d9a160e07f921e5"),
+      "relatedTo" : [],
+      "optionTitles" : [
+        "Very Less",
+        "Not a lot",
+        "Average",
+        "More than Average",
+        "A lot"
+      ],
+      "optionValues" : [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "updatedAt" : ISODate("2016-11-14T14:40:34.011Z"),
+      "createdAt" : ISODate("2016-11-14T14:40:34.011Z"),
+      "questionNo" : 5,
+      "title" : "To what extent do you feel that the topics covered in class are relevant and up to date in today's scenario?",
+      "importance" : 7,
+      "thoughtProvoking" : 4,
+      "_id" : ObjectId("5829cce22d9a160e07f921ea"),
+      "relatedTo" : [
+        {
+          "questionNo" : 4,
+          "relatedHow" : "direct",
+          "_id" : ObjectId("5829cce22d9a160e07f921eb")
+        }
+      ],
+      "optionTitles" : [
+        "Very Less",
+        "Not a lot",
+        "Average",
+        "More than Average",
+        "A lot"
+      ],
+      "optionValues" : [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "__v" : 1
+}
