@@ -93,7 +93,7 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
                 // console.log("Value: ", selectedRadioButton.value, "Text:", selectedRadioButton.getAttribute('data-text'));
             }
         }
-        // store that damn result
+        // store that result
         $scope.storeResult(selectedRadioButton.value, questionNo);
 
 

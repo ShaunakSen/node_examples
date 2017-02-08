@@ -7,7 +7,7 @@ var cors = require('cors');
 
 var reviewRoute = require('./routes/reviews');
 var responseRoute = require('./routes/responses');
-
+var newResponseRoute = require('./routes/responses_new');
 
 
 var app = express();
@@ -30,6 +30,7 @@ app.use(cors());
 
 app.use(reviewRoute);
 app.use(responseRoute);
+app.use(newResponseRoute);
 
 // Start server
 
