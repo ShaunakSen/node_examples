@@ -4,7 +4,6 @@ var mongoose = require('mongoose');
 var logger = require('morgan');
 var cors = require('cors');
 
-// TODO: require routes
 
 var reviewRoute = require('./routes/reviews');
 var responseRoute = require('./routes/responses');
@@ -30,7 +29,7 @@ app.use(cors());
 // use the routes
 
 app.use(reviewRoute);
-// app.use(responseRoute);
+app.use(responseRoute);
 
 // Start server
 
