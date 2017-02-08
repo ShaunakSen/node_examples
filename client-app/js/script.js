@@ -78,7 +78,9 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
         // change disabled state of next button now
         $scope.nextButtonDisabled = false;
     };
-
+    
+    
+    // happens every time next button is clicked
     $scope.storeResponse = function (questionNo) {
         // stop clock for this question
         $scope.stopClock(questionNo);
@@ -118,8 +120,28 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
                 responseObject.responseText = $scope.questions[i].optionTitles[parseInt(response)];
             }
         }
-        console.log(responseObject);
+
+        responseObject = $scope.addAdditionalData(responseObject, questionNo);
+        console.log("Response object: " + responseObject);
         $scope.pushIntoResponses(responseObject);
+    };
+
+
+    $scope.addAdditionalData = function (responseObject, questionNo) {
+        for(var i=0; i<$scope.questions.length; ++i){
+            if($scope.questions[i].questionNo === questionNo){
+                var importance = $scope.questions[i].importance;
+                var thoughtProvoking = $scope.questions[i].thoughtProvoking;
+                var title = $scope.questions[i].title;
+                var relatedTo = $scope.questions[i].relatedTo;
+            }
+        }
+        responseObject.importance = importance;
+        responseObject.thoughtProvoking = thoughtProvoking;
+        responseObject.title = title;
+        responseObject.relatedTo = relatedTo;
+        
+        return responseObject;
     };
 
     $scope.pushIntoResponses = function (responseObject) {
@@ -162,6 +184,7 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
         }
         console.log($scope.responses);
         var responseData = {
+            reviewId: $scope.reviewId,
             mcqResponse: []
         };
         for (var x = 0; x < $scope.responses.length; ++x) {
@@ -173,7 +196,7 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
 
         var postReq = {
             method: 'POST',
-            url: 'http://localhost:3000/responses/',
+            url: 'http://localhost:3000/responses_new/',
             headers: {
                 'Content-Type': 'application/json'
             },
