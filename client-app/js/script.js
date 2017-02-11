@@ -171,6 +171,7 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
 
     $scope.submitButtonClicked = function () {
 
+        // store the last response
         $scope.storeResponse($scope.questions.length);
 
         console.log("Data we have...");
@@ -187,6 +188,33 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
             reviewId: $scope.reviewId,
             mcqResponse: []
         };
+
+        // EVALUATE RELATIONSHIP
+
+        for(var k=0; k<$scope.responses.length; ++k){
+            if ($scope.responses[k].relatedTo.length > 0) {
+                var relatedQuestionNo = $scope.responses[k].relatedTo[0].questionNo;
+                var relatedHow = $scope.responses[k].relatedTo[0].relatedHow;
+                var thisQuestionResponse = $scope.responses[k].response;
+                var relatedQuestionResponse = $scope.responses[relatedQuestionNo - 1].response;
+
+                var diff = thisQuestionResponse - relatedQuestionResponse;
+                if (diff < 0) {
+                    diff = -diff;
+                }
+
+                if (relatedHow == "direct") {
+                    $scope.responses[k].correct = diff <= 2;
+                } else {
+                    $scope.responses[k].correct = diff >= 2;
+                }
+            }
+        }
+
+        // EVALUATE RELATIONSHIP ENDS
+
+        console.log("After evaluating relationships:", $scope.responses);
+
         for (var x = 0; x < $scope.responses.length; ++x) {
             responseData.mcqResponse.push($scope.responses[x]);
         }
