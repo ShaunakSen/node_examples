@@ -113,39 +113,31 @@
         <div class="row analysis-container">
             <div class="col-xs-8 col-xs-offset-2 analysis-card">
                 <h4>Important Analysis</h4>
-                <hr style="margin-top: 0; margin-bottom: 0">
-                <div class="row analysis-row">
-                    <div class="col-xs-12 analysis-main">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <p>User No: </p>
-                                <p>User response on question 1 was 2 but...</p>
-                            </div>
-                            <div class="col-md-2">
-                                <button class="btn btn-success custom-button">Flag</button>
-                            </div>
-                            <div class="col-md-2">
-                                <button class="btn btn-danger custom-button">Delete</button>
-                            </div>
+                <div class="row inner-analysis-card" ng-repeat="analysis in importantAnalysyis">
+                    <p><span class="bold-text">Question No {{analysis.question_no}}:</span> {{analysis.question_title}}</p>
+                    <p><span class="bold-text">Question No {{analysis.related_question_no}}:</span> {{analysis.related_question_title}}</p>
+                    <p><span class="bold-text">Conclusion:</span>
+                        User responded with '<span class="bold-text emphasis-text">{{analysis.question_text}}</span>'
+                        on question no: <span class="bold-text">{{analysis.question_no}}</span>
+                        but responded with '<span class="bold-text emphasis-text">{{analysis.related_question_text}}</span>'
+                        on question no: <span class="bold-text">{{analysis.related_question_no}}</span>
+                        and the relationship was <span class="bold-text emphasis-text">{{analysis.related_how}}</span>
+                    </p>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-2 col-xs-offset-7">
+                            <button class="btn btn-sm btn-success custom-button">
+                                <i class="fa fa-flag-o"></i>&nbsp;Flag User
+                            </button>
                         </div>
-                        <hr>
-                    </div>
-                    <div class="col-xs-12 analysis-main">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <p>User No: </p>
-                                <p>User response on question 1 was 2 but...</p>
-                            </div>
-                            <div class="col-md-2">
-                                <button class="btn btn-success custom-button">Flag</button>
-                            </div>
-                            <div class="col-md-2">
-                                <button class="btn btn-danger custom-button">Delete</button>
-                            </div>
+                        <div class="col-xs-2">
+                            <button class="btn btn-sm btn-danger custom-button">
+                                <i class="fa fa-trash-o"></i>&nbsp;Delete Review
+                            </button>
                         </div>
-                        <hr>
                     </div>
                 </div>
+
             </div>
         </div>
 

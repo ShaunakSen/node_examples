@@ -39,7 +39,7 @@ a:hover {
   background-color: #c7b2f6; }
 
 .main-content {
-  height: 1000px;
+  height: auto;
   background-color: #f9efff; }
   .main-content .stats-container {
     padding: 10px 5px;
@@ -59,13 +59,20 @@ a:hover {
         .main-content .stats-container .stats-card-1 .chart-row .chart-main {
           border-left: 1px solid #f9efff; }
   .main-content .analysis-container {
-    padding: 10px 5px;
     color: #3b3555;
     margin-top: 20px; }
     .main-content .analysis-container .analysis-card {
       background: #c7b2f6; }
-      .main-content .analysis-container .analysis-card .analysis-row {
-        padding: 10px 0; }
+      .main-content .analysis-container .analysis-card .inner-analysis-card {
+        padding: 20px;
+        border: 1px solid #f9efff;
+        border-radius: 5px;
+        margin: 10px 0; }
+        .main-content .analysis-container .analysis-card .inner-analysis-card .bold-text {
+          font-weight: bold; }
+        .main-content .analysis-container .analysis-card .inner-analysis-card .emphasis-text {
+          font-weight: bold;
+          text-decoration: underline; }
 
 .custom-button {
   border: none;

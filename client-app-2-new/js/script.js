@@ -91,10 +91,12 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
                             question_no: thisQuestionNo,
                             question_title: thisQuestionTitle,
                             question_response: thisResponse,
+                            question_text: thisQuestionText,
                             related_question_no: relatedQuestionNo,
                             related_question_title: relatedQuestionTitle,
                             related_how: relatedHow,
                             related_question_response: relatedQuestionResponse,
+                            related_question_text: relatedQuestionText,
                             text: text
                         }
                     );
