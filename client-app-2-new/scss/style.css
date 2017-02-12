@@ -35,11 +35,11 @@ a:hover {
     color: #332d46; }
 
 .sidebar {
-  height: 700px;
+  height: 1000px;
   background-color: #c7b2f6; }
 
 .main-content {
-  height: 700px;
+  height: 1000px;
   background-color: #f9efff; }
   .main-content .stats-container {
     padding: 10px 5px;
@@ -53,7 +53,22 @@ a:hover {
           border: none;
           border-radius: 0;
           box-shadow: none; }
+        .main-content .stats-container .stats-card-1 .chart-row .icons-row i {
+          margin-left: 5px;
+          font-size: 20px; }
         .main-content .stats-container .stats-card-1 .chart-row .chart-main {
           border-left: 1px solid #f9efff; }
+  .main-content .analysis-container {
+    padding: 10px 5px;
+    color: #3b3555;
+    margin-top: 20px; }
+    .main-content .analysis-container .analysis-card {
+      background: #c7b2f6; }
+      .main-content .analysis-container .analysis-card .analysis-row {
+        padding: 10px 0; }
+
+.custom-button {
+  border: none;
+  border-radius: 0; }
 
 /*# sourceMappingURL=style.css.map */
