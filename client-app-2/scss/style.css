@@ -51,19 +51,19 @@ a:hover {
 
 .navbar-default {
   font-family: "Lato", sans-serif;
-  background-color: #FF84E8;
-  color: #414361;
+  background-color: #cbc6d0;
+  color: #332d46;
   border: none;
   border-radius: 0;
   margin-bottom: 0; }
 
 .sidebar {
   height: 700px;
-  background-color: #7F2CCB; }
+  background-color: #97bdcb; }
 
 .main-content {
   height: 700px;
-  background-color: #FFA9E7; }
+  background-color: #f9efff; }
   .main-content .results-row {
     height: 300px;
     margin-top: 20px;
@@ -72,7 +72,7 @@ a:hover {
     .main-content .results-row .results-data-container {
       margin-top: 10px;
       height: 70px;
-      background: #FF84E8; }
+      background: #cbc6d0; }
       .main-content .results-row .results-data-container .results-data {
         height: inherit;
         background-color: whitesmoke;
