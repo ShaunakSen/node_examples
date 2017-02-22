@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <link rel="stylesheet" href="scss/style.css">
 </head>
 <body ng-controller="MainController">
@@ -59,12 +60,8 @@
                 <div class="row chart-row">
                     <div class="col-md-4">
                         <p>Select Question number</p>
-                        <select class="form-control custom-select">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                        <select class="form-control custom-select" ng-model="selectedQuestion"
+                                ng-options="questionNo for questionNo in questionNos">
                         </select>
                         <div class="row icons-row" style="margin-top: 10px">
                             <div class="col-md-12">
@@ -75,7 +72,7 @@
                         </div>
                     </div>
                     <div class="col-md-8 chart-main">
-                        <img src="http://placehold.it/350x150" alt="">
+                        <canvas id="myChart" width="400" height="400"></canvas>
                     </div>
                 </div>
             </div>
@@ -88,6 +85,7 @@
                 <div class="row chart-row">
                     <div class="col-md-4">
                         <p>Select Question number</p>
+
                         <select class="form-control custom-select">
                             <option>1</option>
                             <option>2</option>
@@ -153,5 +151,8 @@
 <script src="js/angular.js"></script>
 <script src="js/script.js"></script>
 <script src="js/service.js"></script>
+<script type="text/javascript">
+
+</script>
 </body>
 </html>
