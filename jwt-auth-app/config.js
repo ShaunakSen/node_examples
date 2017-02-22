@@ -1,3 +1,7 @@
-/**
- * Created by shaunak on 22/2/17.
- */
+// CONFIG FILE
+
+
+module.exports = {
+    'secret': 'ilovelittlemini',
+    'database': 'mongodb://localhost:27017/jwtAuthApp'
+};
