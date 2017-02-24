@@ -1,0 +1,60 @@
+//Color Schemes
+
+$lighter: #FFA9E7;
+$light: #FF84E8;
+$medium: #7F2CCB;
+$dark: #414361;
+$darker: #2A2D43;
+
+//Font
+
+$font: 'Lato', sans-serif;
+$font2: 'Montserrat', sans-serif;
+
+//General Styles
+
+body {
+  font-family: $font;
+  font-size: 14px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+//NAVBAR STYLES
+
+.custom-navbar{
+  background-color: rgba(0, 183, 255, 0)!important;
+  border: none;
+  border-radius: 0;
+}
+
+.header-row{
+  background: url("../img/header.jpg") center/cover no-repeat;
+  height: 400px;
+  position: relative;
+  top:-20px;
+}

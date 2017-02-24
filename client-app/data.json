@@ -1,91 +1,154 @@
-[{
-  "mcq": [
-    {
-      "questionNo": 1,
-      "title": "How is the quality of lectures?",
-      "optionValues": [0, 1, 2, 3, 4],
-      "optionTitles": [
-        "Very poor",
-        "Poor",
-        "Ok",
-        "Good",
-        "Very Good"
-      ],
-      "importance": 10,
-      "thoughtProvoking": 3,
-      "displayEmotion": true
-    },
-    {
-      "questionNo": 2,
-      "title": "How is the quality of explanation of the topics?",
-      "optionValues": [0, 1, 2, 3, 4],
-      "optionTitles": [
-        "Very poor",
-        "Poor",
-        "Ok",
-        "Good",
-        "Very Good"
-      ],
-      "relatedTo": [
-        {
-          "questionNo": 1,
-          "relatedHow": "direct"
-        }
-      ],
-      "importance": 10,
-      "thoughtProvoking": 3,
-      "displayEmotion": true
-    },
-    {
-      "questionNo": 3,
-      "title": "To what extent has visual presentations been used while explaining the topics?",
-      "optionValues": [0, 1, 2, 3, 4],
-      "optionTitles": [
-        "Very Less",
-        "Less",
-        "Average",
-        "More than Average",
-        "A lot"
-      ],
-      "importance": 7,
-      "thoughtProvoking": 2,
-      "displayEmotion": true
-    },
-    {
-      "questionNo": 4,
-      "title": "To what extent do you feel that the topics covered in class has use to you in life outside college?",
-      "optionValues": [0, 1, 2, 3, 4],
-      "optionTitles": [
-        "Very Less",
-        "Not a lot",
-        "Average",
-        "More than Average",
-        "A lot"
-      ],
-      "importance": 7,
-      "thoughtProvoking": 4,
-      "displayEmotion": false
-    },
-    {
-      "questionNo": 5,
-      "title": "To what extent do you feel that the topics covered in class are relevant and up to date in today's scenario?",
-      "optionValues": [0, 1, 2, 3, 4],
-      "optionTitles": [
-        "Very Less",
-        "Not a lot",
-        "Average",
-        "More than Average",
-        "A lot"
-      ],
-      "relatedTo": [
-        {
-          "questionNo": 4,
-          "relatedHow": "direct"
-        }
-      ],
-      "importance": 7,
-      "thoughtProvoking": 4,
-      "displayEmotion": false
-    }
-  ]
-}]
+
+[
+  {
+    "_id": "5829cc362d9a160e07f921e4",
+    "updatedAt": "2016-11-14T14:40:34.013Z",
+    "createdAt": "2016-11-14T14:37:42.551Z",
+    "__v": 1,
+    "mcq": [
+      {
+        "updatedAt": "2016-11-14T14:37:42.548Z",
+        "createdAt": "2016-11-14T14:37:42.548Z",
+        "questionNo": 1,
+        "title": "How is the quality of lectures?",
+        "importance": 10,
+        "thoughtProvoking": 3,
+        "_id": "5829cc362d9a160e07f921e9",
+        "displayEmotion": true,
+        "relatedTo": [
+
+        ],
+        "optionTitles": [
+          "Very poor",
+          "Poor",
+          "Ok",
+          "Good",
+          "Very Good"
+        ],
+        "optionValues": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "updatedAt": "2016-11-14T14:37:42.549Z",
+        "createdAt": "2016-11-14T14:37:42.549Z",
+        "questionNo": 2,
+        "title": "How is the quality of explanation of the topics?",
+        "importance": 10,
+        "thoughtProvoking": 3,
+        "_id": "5829cc362d9a160e07f921e7",
+        "displayEmotion": true,
+        "relatedTo": [
+          {
+            "questionNo": 1,
+            "relatedHow": "direct",
+            "_id": "5829cc362d9a160e07f921e8"
+          }
+        ],
+        "optionTitles": [
+          "Very poor",
+          "Poor",
+          "Ok",
+          "Good",
+          "Very Good"
+        ],
+        "optionValues": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "updatedAt": "2016-11-14T14:37:42.550Z",
+        "createdAt": "2016-11-14T14:37:42.550Z",
+        "questionNo": 3,
+        "title": "To what extent has visual presentations been used while explaining the topics?",
+        "importance": 7,
+        "thoughtProvoking": 2,
+        "_id": "5829cc362d9a160e07f921e6",
+        "displayEmotion": true,
+        "relatedTo": [
+
+        ],
+        "optionTitles": [
+          "Very Less",
+          "Less",
+          "Average",
+          "More than Average",
+          "A lot"
+        ],
+        "optionValues": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "updatedAt": "2016-11-14T14:37:42.551Z",
+        "createdAt": "2016-11-14T14:37:42.551Z",
+        "questionNo": 4,
+        "title": "To what extent do you feel that the topics covered in class has use to you in life outside college?",
+        "importance": 7,
+        "thoughtProvoking": 4,
+        "_id": "5829cc362d9a160e07f921e5",
+        "displayEmotion": true,
+        "relatedTo": [
+
+        ],
+        "optionTitles": [
+          "Very Less",
+          "Not a lot",
+          "Average",
+          "More than Average",
+          "A lot"
+        ],
+        "optionValues": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "updatedAt": "2016-11-14T14:40:34.011Z",
+        "createdAt": "2016-11-14T14:40:34.011Z",
+        "questionNo": 5,
+        "title": "To what extent do you feel that the topics covered in class are relevant and up to date in today's scenario?",
+        "importance": 7,
+        "thoughtProvoking": 4,
+        "_id": "5829cce22d9a160e07f921ea",
+        "displayEmotion": true,
+        "relatedTo": [
+          {
+            "questionNo": 4,
+            "relatedHow": "direct",
+            "_id": "5829cce22d9a160e07f921eb"
+          }
+        ],
+        "optionTitles": [
+          "Very Less",
+          "Not a lot",
+          "Average",
+          "More than Average",
+          "A lot"
+        ],
+        "optionValues": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,661 @@
+
+[
+  {
+    "_id": "58a025faa9e69a0c5003936d",
+    "updatedAt": "2017-02-12T09:08:10.168Z",
+    "createdAt": "2017-02-12T09:08:10.168Z",
+    "reviewId": "5829cc362d9a160e07f921e4",
+    "__v": 0,
+    "mcqResponse": [
+      {
+        "updatedAt": "2017-02-12T09:08:10.133Z",
+        "createdAt": "2017-02-12T09:08:10.133Z",
+        "questionNo": 1,
+        "response": 0,
+        "responseText": "Very poor",
+        "importance": 10,
+        "thoughtProvoking": 3,
+        "title": "How is the quality of lectures?",
+        "timeSpent": 6798,
+        "_id": "58a025faa9e69a0c50039372",
+        "relatedTo": [
+
+        ]
+      },
+      {
+        "updatedAt": "2017-02-12T09:08:10.133Z",
+        "createdAt": "2017-02-12T09:08:10.133Z",
+        "questionNo": 2,
+        "response": 4,
+        "responseText": "Very Good",
+        "importance": 10,
+        "thoughtProvoking": 3,
+        "title": "How is the quality of explanation of the topics?",
+        "timeSpent": 2883,
+        "correct": false,
+        "_id": "58a025faa9e69a0c50039371",
+        "relatedTo": [
+          {
+            "questionNo": 1,
+            "relatedHow": "direct",
+            "_id": "5829cc362d9a160e07f921e8"
+          }
+        ]
+      },
+      {
+        "updatedAt": "2017-02-12T09:08:10.166Z",
+        "createdAt": "2017-02-12T09:08:10.166Z",
+        "questionNo": 3,
+        "response": 2,
+        "responseText": "Average",
+        "importance": 7,
+        "thoughtProvoking": 2,
+        "title": "To what extent has visual presentations been used while explaining the topics?",
+        "timeSpent": 2277,
+        "_id": "58a025faa9e69a0c50039370",
+        "relatedTo": [
+
+        ]
+      },
+      {
+        "updatedAt": "2017-02-12T09:08:10.167Z",
+        "createdAt": "2017-02-12T09:08:10.167Z",
+        "questionNo": 4,
+        "response": 3,
+        "responseText": "More than Average",
+        "importance": 7,
+        "thoughtProvoking": 4,
+        "title": "To what extent do you feel that the topics covered in class has use to you in life outside college?",
+        "timeSpent": 3342,
+        "_id": "58a025faa9e69a0c5003936f",
+        "relatedTo": [
+
+        ]
+      },
+      {
+        "updatedAt": "2017-02-12T09:08:10.167Z",
+        "createdAt": "2017-02-12T09:08:10.167Z",
+        "questionNo": 5,
+        "response": 1,
+        "responseText": "Not a lot",
+        "importance": 7,
+        "thoughtProvoking": 4,
+        "title": "To what extent do you feel that the topics covered in class are relevant and up to date in today's scenario?",
+        "timeSpent": 5378,
+        "correct": true,
+        "_id": "58a025faa9e69a0c5003936e",
+        "relatedTo": [
+          {
+            "questionNo": 4,
+            "relatedHow": "direct",
+            "_id": "5829cce22d9a160e07f921eb"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "58a14f66113a140d6259a8f6",
+    "updatedAt": "2017-02-13T06:17:10.803Z",
+    "createdAt": "2017-02-13T06:17:10.803Z",
+    "reviewId": "5829cc362d9a160e07f921e4",
+    "__v": 0,
+    "mcqResponse": [
+      {
+        "updatedAt": "2017-02-13T06:17:10.800Z",
+        "createdAt": "2017-02-13T06:17:10.800Z",
+        "questionNo": 1,
+        "response": 3,
+        "responseText": "Good",
+        "importance": 10,
+        "thoughtProvoking": 3,
+        "title": "How is the quality of lectures?",
+        "timeSpent": 4131,
+        "_id": "58a14f66113a140d6259a8fb",
+        "relatedTo": [
+
+        ]
+      },
+      {
+        "updatedAt": "2017-02-13T06:17:10.801Z",
+        "createdAt": "2017-02-13T06:17:10.801Z",
+        "questionNo": 2,
+        "response": 4,
+        "responseText": "Very Good",
+        "importance": 10,
+        "thoughtProvoking": 3,
+        "title": "How is the quality of explanation of the topics?",
+        "timeSpent": 3668,
+        "correct": true,
+        "_id": "58a14f66113a140d6259a8fa",
+        "relatedTo": [
+          {
+            "questionNo": 1,
+            "relatedHow": "direct",
+            "_id": "5829cc362d9a160e07f921e8"
+          }
+        ]
+      },
+      {
+        "updatedAt": "2017-02-13T06:17:10.802Z",
+        "createdAt": "2017-02-13T06:17:10.802Z",
+        "questionNo": 3,
+        "response": 3,
+        "responseText": "More than Average",
+        "importance": 7,
+        "thoughtProvoking": 2,
+        "title": "To what extent has visual presentations been used while explaining the topics?",
+        "timeSpent": 7488,
+        "_id": "58a14f66113a140d6259a8f9",
+        "relatedTo": [
+
+        ]
+      },
+      {
+        "updatedAt": "2017-02-13T06:17:10.802Z",
+        "createdAt": "2017-02-13T06:17:10.802Z",
+        "questionNo": 4,
+        "response": 3,
+        "responseText": "More than Average",
+        "importance": 7,
+        "thoughtProvoking": 4,
+        "title": "To what extent do you feel that the topics covered in class has use to you in life outside college?",
+        "timeSpent": 5512,
+        "_id": "58a14f66113a140d6259a8f8",
+        "relatedTo": [
+
+        ]
+      },
+      {
+        "updatedAt": "2017-02-13T06:17:10.802Z",
+        "createdAt": "2017-02-13T06:17:10.802Z",
+        "questionNo": 5,
+        "response": 2,
+        "responseText": "Average",
+        "importance": 7,
+        "thoughtProvoking": 4,
+        "title": "To what extent do you feel that the topics covered in class are relevant and up to date in today's scenario?",
+        "timeSpent": 6031,
+        "correct": true,
+        "_id": "58a14f66113a140d6259a8f7",
+        "relatedTo": [
+          {
+            "questionNo": 4,
+            "relatedHow": "direct",
+            "_id": "5829cce22d9a160e07f921eb"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "58a14f8e113a140d6259a8fc",
+    "updatedAt": "2017-02-13T06:17:50.461Z",
+    "createdAt": "2017-02-13T06:17:50.461Z",
+    "reviewId": "5829cc362d9a160e07f921e4",
+    "__v": 0,
+    "mcqResponse": [
+      {
+        "updatedAt": "2017-02-13T06:17:50.458Z",
+        "createdAt": "2017-02-13T06:17:50.458Z",
+        "questionNo": 1,
+        "response": 1,
+        "responseText": "Poor",
+        "importance": 10,
+        "thoughtProvoking": 3,
+        "title": "How is the quality of lectures?",
+        "timeSpent": 2799,
+        "_id": "58a14f8e113a140d6259a901",
+        "relatedTo": [
+
+        ]
+      },
+      {
+        "updatedAt": "2017-02-13T06:17:50.458Z",
+        "createdAt": "2017-02-13T06:17:50.458Z",
+        "questionNo": 2,
+        "response": 1,
+        "responseText": "Poor",
+        "importance": 10,
+        "thoughtProvoking": 3,
+        "title": "How is the quality of explanation of the topics?",
+        "timeSpent": 2827,
+        "correct": true,
+        "_id": "58a14f8e113a140d6259a900",
+        "relatedTo": [
+          {
+            "questionNo": 1,
+            "relatedHow": "direct",
+            "_id": "5829cc362d9a160e07f921e8"
+          }
+        ]
+      },
+      {
+        "updatedAt": "2017-02-13T06:17:50.460Z",
+        "createdAt": "2017-02-13T06:17:50.460Z",
+        "questionNo": 3,
+        "response": 1,
+        "responseText": "Less",
+        "importance": 7,
+        "thoughtProvoking": 2,
+        "title": "To what extent has visual presentations been used while explaining the topics?",
+        "timeSpent": 1685,
+        "_id": "58a14f8e113a140d6259a8ff",
+        "relatedTo": [
+
+        ]
+      },
+      {
+        "updatedAt": "2017-02-13T06:17:50.460Z",
+        "createdAt": "2017-02-13T06:17:50.460Z",
+        "questionNo": 4,
+        "response": 1,
+        "responseText": "Not a lot",
+        "importance": 7,
+        "thoughtProvoking": 4,
+        "title": "To what extent do you feel that the topics covered in class has use to you in life outside college?",
+        "timeSpent": 1917,
+        "_id": "58a14f8e113a140d6259a8fe",
+        "relatedTo": [
+
+        ]
+      },
+      {
+        "updatedAt": "2017-02-13T06:17:50.461Z",
+        "createdAt": "2017-02-13T06:17:50.461Z",
+        "questionNo": 5,
+        "response": 1,
+        "responseText": "Not a lot",
+        "importance": 7,
+        "thoughtProvoking": 4,
+        "title": "To what extent do you feel that the topics covered in class are relevant and up to date in today's scenario?",
+        "timeSpent": 2205,
+        "correct": true,
+        "_id": "58a14f8e113a140d6259a8fd",
+        "relatedTo": [
+          {
+            "questionNo": 4,
+            "relatedHow": "direct",
+            "_id": "5829cce22d9a160e07f921eb"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "58a0192da9e69a0c50039361",
+    "updatedAt": "2017-02-12T08:13:33.937Z",
+    "createdAt": "2017-02-12T08:13:33.937Z",
+    "reviewId": "5829cc362d9a160e07f921e4",
+    "__v": 0,
+    "mcqResponse": [
+      {
+        "updatedAt": "2017-02-12T08:13:33.934Z",
+        "createdAt": "2017-02-12T08:13:33.934Z",
+        "questionNo": 1,
+        "response": 3,
+        "responseText": "Good",
+        "importance": 10,
+        "thoughtProvoking": 3,
+        "title": "How is the quality of lectures?",
+        "timeSpent": 1979,
+        "_id": "58a0192da9e69a0c50039366",
+        "relatedTo": [
+
+        ]
+      },
+      {
+        "updatedAt": "2017-02-12T08:13:33.935Z",
+        "createdAt": "2017-02-12T08:13:33.935Z",
+        "questionNo": 2,
+        "response": 4,
+        "responseText": "Very Good",
+        "importance": 10,
+        "thoughtProvoking": 3,
+        "title": "How is the quality of explanation of the topics?",
+        "timeSpent": 2890,
+        "correct": true,
+        "_id": "58a0192da9e69a0c50039365",
+        "relatedTo": [
+          {
+            "questionNo": 1,
+            "relatedHow": "direct",
+            "_id": "5829cc362d9a160e07f921e8"
+          }
+        ]
+      },
+      {
+        "updatedAt": "2017-02-12T08:13:33.936Z",
+        "createdAt": "2017-02-12T08:13:33.936Z",
+        "questionNo": 3,
+        "response": 1,
+        "responseText": "Less",
+        "importance": 7,
+        "thoughtProvoking": 2,
+        "title": "To what extent has visual presentations been used while explaining the topics?",
+        "timeSpent": 5254,
+        "_id": "58a0192da9e69a0c50039364",
+        "relatedTo": [
+
+        ]
+      },
+      {
+        "updatedAt": "2017-02-12T08:13:33.936Z",
+        "createdAt": "2017-02-12T08:13:33.936Z",
+        "questionNo": 4,
+        "response": 2,
+        "responseText": "Average",
+        "importance": 7,
+        "thoughtProvoking": 4,
+        "title": "To what extent do you feel that the topics covered in class has use to you in life outside college?",
+        "timeSpent": 5820,
+        "_id": "58a0192da9e69a0c50039363",
+        "relatedTo": [
+
+        ]
+      },
+      {
+        "updatedAt": "2017-02-12T08:13:33.936Z",
+        "createdAt": "2017-02-12T08:13:33.936Z",
+        "questionNo": 5,
+        "response": 1,
+        "responseText": "Not a lot",
+        "importance": 7,
+        "thoughtProvoking": 4,
+        "title": "To what extent do you feel that the topics covered in class are relevant and up to date in today's scenario?",
+        "timeSpent": 7446,
+        "correct": true,
+        "_id": "58a0192da9e69a0c50039362",
+        "relatedTo": [
+          {
+            "questionNo": 4,
+            "relatedHow": "direct",
+            "_id": "5829cce22d9a160e07f921eb"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "58a0194ca9e69a0c50039367",
+    "updatedAt": "2017-02-12T08:14:04.941Z",
+    "createdAt": "2017-02-12T08:14:04.941Z",
+    "reviewId": "5829cc362d9a160e07f921e4",
+    "__v": 0,
+    "mcqResponse": [
+      {
+        "updatedAt": "2017-02-12T08:14:04.940Z",
+        "createdAt": "2017-02-12T08:14:04.940Z",
+        "questionNo": 1,
+        "response": 0,
+        "responseText": "Very poor",
+        "importance": 10,
+        "thoughtProvoking": 3,
+        "title": "How is the quality of lectures?",
+        "timeSpent": 5488,
+        "_id": "58a0194ca9e69a0c5003936c",
+        "relatedTo": [
+
+        ]
+      },
+      {
+        "updatedAt": "2017-02-12T08:14:04.940Z",
+        "createdAt": "2017-02-12T08:14:04.940Z",
+        "questionNo": 2,
+        "response": 4,
+        "responseText": "Very Good",
+        "importance": 10,
+        "thoughtProvoking": 3,
+        "title": "How is the quality of explanation of the topics?",
+        "timeSpent": 3804,
+        "correct": false,
+        "_id": "58a0194ca9e69a0c5003936b",
+        "relatedTo": [
+          {
+            "questionNo": 1,
+            "relatedHow": "direct",
+            "_id": "5829cc362d9a160e07f921e8"
+          }
+        ]
+      },
+      {
+        "updatedAt": "2017-02-12T08:14:04.941Z",
+        "createdAt": "2017-02-12T08:14:04.941Z",
+        "questionNo": 3,
+        "response": 0,
+        "responseText": "Very Less",
+        "importance": 7,
+        "thoughtProvoking": 2,
+        "title": "To what extent has visual presentations been used while explaining the topics?",
+        "timeSpent": 4105,
+        "_id": "58a0194ca9e69a0c5003936a",
+        "relatedTo": [
+
+        ]
+      },
+      {
+        "updatedAt": "2017-02-12T08:14:04.941Z",
+        "createdAt": "2017-02-12T08:14:04.941Z",
+        "questionNo": 4,
+        "response": 4,
+        "responseText": "A lot",
+        "importance": 7,
+        "thoughtProvoking": 4,
+        "title": "To what extent do you feel that the topics covered in class has use to you in life outside college?",
+        "timeSpent": 2557,
+        "_id": "58a0194ca9e69a0c50039369",
+        "relatedTo": [
+
+        ]
+      },
+      {
+        "updatedAt": "2017-02-12T08:14:04.941Z",
+        "createdAt": "2017-02-12T08:14:04.941Z",
+        "questionNo": 5,
+        "response": 1,
+        "responseText": "Not a lot",
+        "importance": 7,
+        "thoughtProvoking": 4,
+        "title": "To what extent do you feel that the topics covered in class are relevant and up to date in today's scenario?",
+        "timeSpent": 2662,
+        "correct": false,
+        "_id": "58a0194ca9e69a0c50039368",
+        "relatedTo": [
+          {
+            "questionNo": 4,
+            "relatedHow": "direct",
+            "_id": "5829cce22d9a160e07f921eb"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "58a14fb2113a140d6259a902",
+    "updatedAt": "2017-02-13T06:18:26.315Z",
+    "createdAt": "2017-02-13T06:18:26.315Z",
+    "reviewId": "5829cc362d9a160e07f921e4",
+    "__v": 0,
+    "mcqResponse": [
+      {
+        "updatedAt": "2017-02-13T06:18:26.313Z",
+        "createdAt": "2017-02-13T06:18:26.313Z",
+        "questionNo": 1,
+        "response": 2,
+        "responseText": "Ok",
+        "importance": 10,
+        "thoughtProvoking": 3,
+        "title": "How is the quality of lectures?",
+        "timeSpent": 2336,
+        "_id": "58a14fb2113a140d6259a907",
+        "relatedTo": [
+
+        ]
+      },
+      {
+        "updatedAt": "2017-02-13T06:18:26.313Z",
+        "createdAt": "2017-02-13T06:18:26.313Z",
+        "questionNo": 2,
+        "response": 2,
+        "responseText": "Ok",
+        "importance": 10,
+        "thoughtProvoking": 3,
+        "title": "How is the quality of explanation of the topics?",
+        "timeSpent": 2310,
+        "correct": true,
+        "_id": "58a14fb2113a140d6259a906",
+        "relatedTo": [
+          {
+            "questionNo": 1,
+            "relatedHow": "direct",
+            "_id": "5829cc362d9a160e07f921e8"
+          }
+        ]
+      },
+      {
+        "updatedAt": "2017-02-13T06:18:26.313Z",
+        "createdAt": "2017-02-13T06:18:26.313Z",
+        "questionNo": 3,
+        "response": 2,
+        "responseText": "Average",
+        "importance": 7,
+        "thoughtProvoking": 2,
+        "title": "To what extent has visual presentations been used while explaining the topics?",
+        "timeSpent": 1846,
+        "_id": "58a14fb2113a140d6259a905",
+        "relatedTo": [
+
+        ]
+      },
+      {
+        "updatedAt": "2017-02-13T06:18:26.314Z",
+        "createdAt": "2017-02-13T06:18:26.314Z",
+        "questionNo": 4,
+        "response": 2,
+        "responseText": "Average",
+        "importance": 7,
+        "thoughtProvoking": 4,
+        "title": "To what extent do you feel that the topics covered in class has use to you in life outside college?",
+        "timeSpent": 1634,
+        "_id": "58a14fb2113a140d6259a904",
+        "relatedTo": [
+
+        ]
+      },
+      {
+        "updatedAt": "2017-02-13T06:18:26.314Z",
+        "createdAt": "2017-02-13T06:18:26.314Z",
+        "questionNo": 5,
+        "response": 2,
+        "responseText": "Average",
+        "importance": 7,
+        "thoughtProvoking": 4,
+        "title": "To what extent do you feel that the topics covered in class are relevant and up to date in today's scenario?",
+        "timeSpent": 1636,
+        "correct": true,
+        "_id": "58a14fb2113a140d6259a903",
+        "relatedTo": [
+          {
+            "questionNo": 4,
+            "relatedHow": "direct",
+            "_id": "5829cce22d9a160e07f921eb"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "58a18e7b738d5d0da46dd24b",
+    "updatedAt": "2017-02-13T10:46:19.027Z",
+    "createdAt": "2017-02-13T10:46:19.027Z",
+    "reviewId": "5829cc362d9a160e07f921e4",
+    "__v": 0,
+    "mcqResponse": [
+      {
+        "updatedAt": "2017-02-13T10:46:19.023Z",
+        "createdAt": "2017-02-13T10:46:19.023Z",
+        "questionNo": 1,
+        "response": 2,
+        "responseText": "Ok",
+        "importance": 10,
+        "thoughtProvoking": 3,
+        "title": "How is the quality of lectures?",
+        "timeSpent": 322214,
+        "_id": "58a18e7b738d5d0da46dd250",
+        "relatedTo": [
+
+        ]
+      },
+      {
+        "updatedAt": "2017-02-13T10:46:19.025Z",
+        "createdAt": "2017-02-13T10:46:19.025Z",
+        "questionNo": 2,
+        "response": 2,
+        "responseText": "Ok",
+        "importance": 10,
+        "thoughtProvoking": 3,
+        "title": "How is the quality of explanation of the topics?",
+        "timeSpent": 3531,
+        "correct": true,
+        "_id": "58a18e7b738d5d0da46dd24f",
+        "relatedTo": [
+          {
+            "questionNo": 1,
+            "relatedHow": "direct",
+            "_id": "5829cc362d9a160e07f921e8"
+          }
+        ]
+      },
+      {
+        "updatedAt": "2017-02-13T10:46:19.026Z",
+        "createdAt": "2017-02-13T10:46:19.026Z",
+        "questionNo": 3,
+        "response": 2,
+        "responseText": "Average",
+        "importance": 7,
+        "thoughtProvoking": 2,
+        "title": "To what extent has visual presentations been used while explaining the topics?",
+        "timeSpent": 4055,
+        "_id": "58a18e7b738d5d0da46dd24e",
+        "relatedTo": [
+
+        ]
+      },
+      {
+        "updatedAt": "2017-02-13T10:46:19.026Z",
+        "createdAt": "2017-02-13T10:46:19.026Z",
+        "questionNo": 4,
+        "response": 2,
+        "responseText": "Average",
+        "importance": 7,
+        "thoughtProvoking": 4,
+        "title": "To what extent do you feel that the topics covered in class has use to you in life outside college?",
+        "timeSpent": 2715,
+        "_id": "58a18e7b738d5d0da46dd24d",
+        "relatedTo": [
+
+        ]
+      },
+      {
+        "updatedAt": "2017-02-13T10:46:19.026Z",
+        "createdAt": "2017-02-13T10:46:19.026Z",
+        "questionNo": 5,
+        "response": 2,
+        "responseText": "Average",
+        "importance": 7,
+        "thoughtProvoking": 4,
+        "title": "To what extent do you feel that the topics covered in class are relevant and up to date in today's scenario?",
+        "timeSpent": 2653,
+        "correct": true,
+        "_id": "58a18e7b738d5d0da46dd24c",
+        "relatedTo": [
+          {
+            "questionNo": 4,
+            "relatedHow": "direct",
+            "_id": "5829cce22d9a160e07f921eb"
+          }
+        ]
+      }
+    ]
+  }
+]

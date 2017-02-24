@@ -41,6 +41,7 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
     mainFactory.getQuestions().then(
         function (response) {
             // $scope.questions = response;
+            console.log(response);
             $scope.noOfQuestions = response.data[0].mcq.length;
             for (var i = 0; i < $scope.noOfQuestions; ++i) {
                 $scope.recordedTimes.push(0);
