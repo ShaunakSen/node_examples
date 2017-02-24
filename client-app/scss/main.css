@@ -1,0 +1,35 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 14px; }
+
+a:link {
+  text-decoration: none; }
+
+a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+a:active {
+  text-decoration: none; }
+
+a {
+  color: inherit; }
+
+a:hover {
+  text-decoration: none;
+  color: inherit; }
+
+.custom-navbar {
+  background-color: rgba(0, 183, 255, 0) !important;
+  border: none;
+  border-radius: 0; }
+
+.header-row {
+  background: url("../img/header.jpg") center/cover no-repeat;
+  height: 400px;
+  position: relative;
+  top: -20px; }
+
+/*# sourceMappingURL=main.css.map */
