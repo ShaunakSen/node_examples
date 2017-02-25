@@ -44,7 +44,7 @@ a:hover {
 }
 
 .custom-button{
-  background: $lighter;
+
   border:none;
   border-radius: 0;
 }
@@ -89,5 +89,35 @@ a:hover {
   }
   blockquote{
     border-left: 5px solid #70b458;
+  }
+}
+
+
+.custom-modal{
+  border-radius: 0;
+  font-family: $font2;
+  .modal-header{
+    background-color: $lighter;
+    color: $darker;
+    h4{
+      //font-weight: bold;
+      font-family: $font2;
+      font-size: 18px;
+    }
+
+  }
+  .modal-body{
+    .row{
+      margin-top: 10px;
+      input{
+        border-radius: 0;
+      }
+      p{
+        //font-weight: bold;
+        color: $dark;
+        font-size: 17px;
+        margin-top: 4px;
+      }
+    }
   }
 }

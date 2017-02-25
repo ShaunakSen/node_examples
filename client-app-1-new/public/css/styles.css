@@ -22,7 +22,6 @@ a:hover {
   color: inherit; }
 
 .custom-button {
-  background: #888dff;
   border: none;
   border-radius: 0; }
 
@@ -55,5 +54,23 @@ a:hover {
     color: #343435; }
   .jumbotron blockquote {
     border-left: 5px solid #70b458; }
+
+.custom-modal {
+  border-radius: 0;
+  font-family: "Montserrat", sans-serif; }
+  .custom-modal .modal-header {
+    background-color: #888dff;
+    color: #343435; }
+    .custom-modal .modal-header h4 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 18px; }
+  .custom-modal .modal-body .row {
+    margin-top: 10px; }
+    .custom-modal .modal-body .row input {
+      border-radius: 0; }
+    .custom-modal .modal-body .row p {
+      color: #4e4d4f;
+      font-size: 17px;
+      margin-top: 4px; }
 
 /*# sourceMappingURL=styles.css.map */

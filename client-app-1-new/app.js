@@ -20,7 +20,7 @@ var indexRoutes = require('./routes/index');
 
 var app = express();
 
-mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect("mongodb://localhost/conFusion");
 
 app.use(bodyParser.urlencoded({extended: true}));
 

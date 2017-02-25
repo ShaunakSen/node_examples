@@ -1,0 +1,19 @@
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script>
+    window.onscroll = function () {
+        myFunction()
+    };
+
+    function myFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            $('#custom-navbar').addClass('scrolled');
+        } else {
+            $('#custom-navbar').removeClass('scrolled');
+        }
+    }
+</script>
+
+</body>
+</html>

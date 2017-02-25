@@ -1,50 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="/js/angular.js"></script>
-</head>
-<body>
+<% include ./partials/header.ejs %>
 
-<nav class="navbar navbar-inverse navbar-fixed-top custom-navbar" id="custom-navbar">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand">Smart Feedback System</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <div class="navbar-right" style="padding: 10px">
-                <button class="btn btn-primary custom-button">Register</button>
-                <button class="btn btn-success custom-button" style="margin-left: 10px">Login</button>
-            </div>
-        </div><!--/.navbar-collapse -->
-    </div>
-</nav>
-
-
-<div class="jumbotron">
-    <div class="container">
-        <h1>Smart Feedback System</h1>
-        <blockquote>
-            <p>This is a template for a simple marketing or informational website.
-                <br>
-                It includes a large callout called a jumbotron and three supporting pieces of content.
-                <br>
-                Use it as a starting point to create something more unique.</p>
-            <p>NIT Durgapur</p>
-        </blockquote>
-
-    </div>
-</div>
 
 <div class="container">
     <!-- Example row of columns -->
@@ -79,16 +34,6 @@
             {{n}}
         </div>
     </div>
-
-    <div class="row">
-        <button class="btn btn-primary" data-toggle="modal" data-target="#registration-modal">
-            Register
-        </button>
-    </div>
-
-    <footer>
-        <p>&copy; 2016 Company, Inc.</p>
-    </footer>
 </div> <!-- /container -->
 
 
@@ -96,42 +41,62 @@
 
 <div class="modal fade" id="registration-modal" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
+        <div class="modal-content custom-modal">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
+                <h4 class="modal-title text-center" id="gridSystemModalLabel">Register</h4>
             </div>
             <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-4">.col-md-4</div>
-                    <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
-                    <div class="col-md-2 col-md-offset-4">.col-md-2 .col-md-offset-4</div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-9">
-                        Level 1: .col-sm-9
-                        <div class="row">
-                            <div class="col-xs-8 col-sm-6">
-                                Level 2: .col-xs-8 .col-sm-6
-                            </div>
-                            <div class="col-xs-4 col-sm-6">
-                                Level 2: .col-xs-4 .col-sm-6
-                            </div>
+                <form action="/register" method="post">
+                    <div class="row">
+                        <div class="col-sm-5 col-sm-offset-1">
+                            <input type="text" class="form-control" name="full_name">
+                        </div>
+                        <div class="col-sm-4">
+                            <p>Enter Full name</p>
                         </div>
                     </div>
-                </div>
+                    <div class="row">
+                        <div class="col-sm-5 col-sm-offset-1">
+                            <input type="text" class="form-control" name="username">
+                        </div>
+                        <div class="col-sm-4">
+                            <p>Enter Username</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5 col-sm-offset-1">
+                            <input type="email" class="form-control" name="email">
+                        </div>
+                        <div class="col-sm-4">
+                            <p>Enter Email</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5 col-sm-offset-1">
+                            <input type="password" class="form-control" name="password">
+                        </div>
+                        <div class="col-sm-4">
+                            <p>Enter Password</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5 col-sm-offset-1">
+                            <input type="text" class="form-control" name="roll_number">
+                        </div>
+                        <div class="col-sm-4">
+                            <p>Enter Roll Number</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default custom-button" data-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-primary custom-button" value="Register">
+                    </div>
+                </form>
+
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
@@ -139,22 +104,43 @@
 <!--/REGISTRATION MODAL-->
 
 
-<script src="/js/jquery.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
+<!--LOGIN MODAL-->
 
-<script>
-    window.onscroll = function () {
-        myFunction()
-    };
 
-    function myFunction() {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            $('#custom-navbar').addClass('scrolled');
-        } else {
-            $('#custom-navbar').removeClass('scrolled');
-        }
-    }
-</script>
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content custom-modal">
+            <div class="modal-header" style="background: #70bb6f">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title text-center" id="gridSystemModalLabel">Login</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-5 col-sm-offset-1">
+                        <input type="email" class="form-control">
+                    </div>
+                    <div class="col-sm-4">
+                        <p>Enter Email</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5 col-sm-offset-1">
+                        <input type="password" class="form-control">
+                    </div>
+                    <div class="col-sm-4">
+                        <p>Enter Password</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default custom-button" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success custom-button">Login</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
 
-</body>
-</html>
+<!--/LOGIN MODAL-->
+
+<% include ./partials/footer.ejs %>
