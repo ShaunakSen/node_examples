@@ -1,10 +1,10 @@
 //Color Schemes
 
-$lighter: #FFA9E7;
-$light: #FF84E8;
+$lighter: #888dff;
+$light: #79b06d;
 $medium: #7F2CCB;
-$dark: #414361;
-$darker: #2A2D43;
+$dark: #4e4d4f;
+$darker: #343435;
 
 //Font
 
@@ -43,6 +43,24 @@ a:hover {
   color: inherit;
 }
 
+.custom-button{
+  background: $lighter;
+  border:none;
+  border-radius: 0;
+}
+
+.btn-primary{
+  background-color: $light;
+}
+
+.btn-success{
+  background-color: #41ac42;
+}
+
+.bold-text{
+  font-weight: bold;
+}
+
 
 //NAVBAR STYLES
 
@@ -50,11 +68,22 @@ a:hover {
   background-color: rgba(0, 183, 255, 0)!important;
   border: none;
   border-radius: 0;
+  color: $darker;
+
+  .navbar-brand{
+    color: $darker;
+  }
 }
 
-.header-row{
+.jumbotron{
   background: url("../img/header.jpg") center/cover no-repeat;
-  height: 400px;
-  position: relative;
-  top:-20px;
+  height: 450px;
+  padding: 80px 40px;
+  p{
+    font-weight: bold;
+    color: $darker;
+  }
+  blockquote{
+    border-left: 5px solid $light;
+  }
 }

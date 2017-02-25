@@ -21,15 +21,36 @@ a:hover {
   text-decoration: none;
   color: inherit; }
 
-.custom-navbar {
-  background-color: rgba(0, 183, 255, 0) !important;
+.custom-button {
+  background: #888dff;
   border: none;
   border-radius: 0; }
 
-.header-row {
+.btn-primary {
+  background-color: #79b06d; }
+
+.btn-success {
+  background-color: #41ac42; }
+
+.bold-text {
+  font-weight: bold; }
+
+.custom-navbar {
+  background-color: rgba(0, 183, 255, 0) !important;
+  border: none;
+  border-radius: 0;
+  color: #343435; }
+  .custom-navbar .navbar-brand {
+    color: #343435; }
+
+.jumbotron {
   background: url("../img/header.jpg") center/cover no-repeat;
-  height: 400px;
-  position: relative;
-  top: -20px; }
+  height: 450px;
+  padding: 80px 40px; }
+  .jumbotron p {
+    font-weight: bold;
+    color: #343435; }
+  .jumbotron blockquote {
+    border-left: 5px solid #79b06d; }
 
 /*# sourceMappingURL=styles.css.map */

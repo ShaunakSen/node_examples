@@ -64,5 +64,5 @@ app.use(indexRoutes);
 
 
 app.listen(3000, function () {
-    console.log("YelpCamp has Started!!");
+    console.log("Client App 1 has Started!!");
 });
