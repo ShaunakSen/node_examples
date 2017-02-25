@@ -27,7 +27,7 @@ a:hover {
   border-radius: 0; }
 
 .btn-primary {
-  background-color: #79b06d; }
+  background-color: #5660ff; }
 
 .btn-success {
   background-color: #41ac42; }
@@ -36,12 +36,15 @@ a:hover {
   font-weight: bold; }
 
 .custom-navbar {
-  background-color: rgba(0, 183, 255, 0) !important;
+  background-color: rgba(0, 183, 255, 0);
   border: none;
   border-radius: 0;
   color: #343435; }
   .custom-navbar .navbar-brand {
     color: #343435; }
+
+.custom-navbar.scrolled {
+  background-color: whitesmoke; }
 
 .jumbotron {
   background: url("../img/header.jpg") center/cover no-repeat;
@@ -51,6 +54,6 @@ a:hover {
     font-weight: bold;
     color: #343435; }
   .jumbotron blockquote {
-    border-left: 5px solid #79b06d; }
+    border-left: 5px solid #70b458; }
 
 /*# sourceMappingURL=styles.css.map */

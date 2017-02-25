@@ -1,7 +1,7 @@
 //Color Schemes
 
 $lighter: #888dff;
-$light: #79b06d;
+$light: #5660ff;
 $medium: #7F2CCB;
 $dark: #4e4d4f;
 $darker: #343435;
@@ -65,7 +65,7 @@ a:hover {
 //NAVBAR STYLES
 
 .custom-navbar{
-  background-color: rgba(0, 183, 255, 0)!important;
+  background-color: rgba(0, 183, 255, 0);
   border: none;
   border-radius: 0;
   color: $darker;
@@ -73,6 +73,10 @@ a:hover {
   .navbar-brand{
     color: $darker;
   }
+}
+
+.custom-navbar.scrolled{
+  background-color: whitesmoke;
 }
 
 .jumbotron{
@@ -84,6 +88,6 @@ a:hover {
     color: $darker;
   }
   blockquote{
-    border-left: 5px solid $light;
+    border-left: 5px solid #70b458;
   }
 }
