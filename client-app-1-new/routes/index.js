@@ -8,6 +8,17 @@ router.get("/", function (req, res) {
 });
 
 
+// TEST ROUTES
+
+router.get("/success", function (req, res) {
+    res.send("Success!!");
+});
+
+router.get("/failed", function (req, res) {
+    res.send("Failure!!");
+});
+
+
 router.post("/register", function (req, res) {
     var newUser = new User({username: req.body.username, roll_number:req.body.roll_number, email: req.body.email, full_name: req.body.full_name});
     User.register(newUser, req.body.password, function (err, user) {
@@ -21,6 +32,25 @@ router.post("/register", function (req, res) {
         });
     });
 });
+
+// handle login logic
+
+// the middleware uses authenticate method which authenticates user..if it works it redirects somewhere else somewhere else
+
+router.post("/login", passport.authenticate("local",
+    {successRedirect: "/success", failureRedirect: "/failed"}), function (req, res) {
+});
+
+// logout
+
+router.get("/logout", function (req, res) {
+    req.logout();
+    // flash message
+
+    // req.flash("success", "Logout successful");
+    res.redirect("/success");
+});
+
 
 
 module.exports = router;

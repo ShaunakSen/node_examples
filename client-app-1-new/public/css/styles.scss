@@ -6,6 +6,9 @@ $medium: #7F2CCB;
 $dark: #4e4d4f;
 $darker: #343435;
 
+$utility1: #c174cb;
+$utility2: #7bcb5d;
+
 //Font
 
 $font: 'Lato', sans-serif;
@@ -126,7 +129,8 @@ a:hover {
 }
 
 .feedback-card{
-  border: 1px solid $lighter;
+  //margin: 20px;
+  border: 1px solid $utility2;
   outline: 2px solid $medium;
   outline-offset: 5px;
   padding: 15px 30px;
