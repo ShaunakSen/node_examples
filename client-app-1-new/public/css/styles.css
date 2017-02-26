@@ -50,10 +50,11 @@ a:hover {
   height: 450px;
   padding: 80px 40px; }
   .jumbotron p {
-    font-weight: bold;
     color: #343435; }
   .jumbotron blockquote {
     border-left: 5px solid #70b458; }
+    .jumbotron blockquote p {
+      font-family: "Montserrat", sans-serif; }
 
 .custom-modal {
   border-radius: 0;
@@ -72,5 +73,14 @@ a:hover {
       color: #4e4d4f;
       font-size: 17px;
       margin-top: 4px; }
+
+.feedback-card {
+  border: 1px solid #888dff;
+  outline: 2px solid #7F2CCB;
+  outline-offset: 5px;
+  padding: 15px 30px; }
+  .feedback-card p {
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif; }
 
 /*# sourceMappingURL=styles.css.map */
