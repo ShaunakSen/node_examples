@@ -60,8 +60,10 @@
                 <div class="row chart-row">
                     <div class="col-md-4">
                         <p>Select Question number</p>
-                        <select class="form-control custom-select" ng-model="selectedQuestion"
-                                ng-options="questionNo for questionNo in questionNos">
+                        <select class="form-control custom-select" name="repeatSelect" id="select-question-1"
+                                ng-model="selectedQuestionNo"
+                                ng-change="prepareChartData(selectedQuestionNo)">
+                            <option ng-repeat="questionNo in questionNos" value="{{questionNo}}">{{questionNo}}</option>
                         </select>
                         <div class="row icons-row" style="margin-top: 10px">
                             <div class="col-md-12">
@@ -71,7 +73,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-8 chart-main">
+                    <div class="col-md-8 chart-main" id="chart-container">
                         <canvas id="myChart" width="400" height="400"></canvas>
                     </div>
                 </div>
@@ -112,12 +114,15 @@
             <div class="col-xs-8 col-xs-offset-2 analysis-card">
                 <h4>Important Analysis</h4>
                 <div class="row inner-analysis-card" ng-repeat="analysis in importantAnalysyis">
-                    <p><span class="bold-text">Question No {{analysis.question_no}}:</span> {{analysis.question_title}}</p>
-                    <p><span class="bold-text">Question No {{analysis.related_question_no}}:</span> {{analysis.related_question_title}}</p>
+                    <p><span class="bold-text">Question No {{analysis.question_no}}:</span> {{analysis.question_title}}
+                    </p>
+                    <p><span class="bold-text">Question No {{analysis.related_question_no}}:</span>
+                        {{analysis.related_question_title}}</p>
                     <p><span class="bold-text">Conclusion:</span>
                         User responded with '<span class="bold-text emphasis-text">{{analysis.question_text}}</span>'
                         on question no: <span class="bold-text">{{analysis.question_no}}</span>
-                        but responded with '<span class="bold-text emphasis-text">{{analysis.related_question_text}}</span>'
+                        but responded with '<span
+                                class="bold-text emphasis-text">{{analysis.related_question_text}}</span>'
                         on question no: <span class="bold-text">{{analysis.related_question_no}}</span>
                         and the relationship was <span class="bold-text emphasis-text">{{analysis.related_how}}</span>
                     </p>

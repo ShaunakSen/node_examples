@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3bd2106-c361-42e4-aee7-a432b6aa92f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/img/happy.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/img/ok.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/img/sad.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/img/very_happy.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/img/very_sad.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/css/feedback_form_style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/css/feedback_form_style.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/css/feedback_form_style.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/js/script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/js/service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/views/feedback_form.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-1-new/public/css/styles.css" afterPath="$PROJECT_DIR$/client-app-1-new/public/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-1-new/public/css/styles.scss" afterPath="$PROJECT_DIR$/client-app-1-new/public/css/styles.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-1-new/routes/index.js" afterPath="$PROJECT_DIR$/client-app-1-new/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-1-new/views/landing.ejs" afterPath="$PROJECT_DIR$/client-app-1-new/views/landing.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-1-new/views/partials/header.ejs" afterPath="$PROJECT_DIR$/client-app-1-new/views/partials/header.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/index.html" afterPath="$PROJECT_DIR$/client-app-2-new/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/js/script.js" afterPath="$PROJECT_DIR$/client-app-2-new/js/script.js" />
     </list>
     <ignored path="node-examples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,35 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-app-1-new/app.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client-app-2-new/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-app-1-new/routes/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="56" column="3" selection-start-line="56" selection-start-column="3" selection-end-line="56" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="feedback_form.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-app-1-new/views/feedback_form.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="71" column="47" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
-              <caret line="72" column="47" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
-              <caret line="73" column="47" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
-              <caret line="74" column="47" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
-              <caret line="75" column="47" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
+            <state relative-caret-position="216">
+              <caret line="64" column="78" selection-start-line="64" selection-start-column="78" selection-end-line="64" selection-end-column="78" />
               <folding>
                 <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
@@ -75,44 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client-app-1-new/public/js/script.js">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-app-2-new/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4362">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="feedback_form_style.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-app-1-new/public/css/feedback_form_style.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="landing.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-app-1-new/views/landing.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
-              <folding>
-                <element signature="e#3469#6379#0#HTML" expanded="false" />
-                <element signature="e#6447#8249#0#HTML" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-app-1-new/public/css/styles.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="139" column="3" selection-start-line="139" selection-start-column="3" selection-end-line="139" selection-end-column="3" />
+            <state relative-caret-position="392">
+              <caret line="132" column="27" selection-start-line="132" selection-start-column="11" selection-end-line="132" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -149,8 +78,6 @@
         <option value="$PROJECT_DIR$/final-project-rest-api/models/responses_new.js" />
         <option value="$PROJECT_DIR$/final-project-rest-api/app.js" />
         <option value="$PROJECT_DIR$/client-app-2/scss/style.scss" />
-        <option value="$PROJECT_DIR$/client-app-2-new/index.html" />
-        <option value="$PROJECT_DIR$/client-app-2-new/js/script.js" />
         <option value="$PROJECT_DIR$/client-app-2-new/scss/style.scss" />
         <option value="$PROJECT_DIR$/client-app-2/js/script.js" />
         <option value="$PROJECT_DIR$/REST API boilerplate/app.js" />
@@ -186,6 +113,8 @@
         <option value="$PROJECT_DIR$/client-app-1-new/views/partials/header.ejs" />
         <option value="$PROJECT_DIR$/client-app-1-new/routes/index.js" />
         <option value="$PROJECT_DIR$/client-app-1-new/views/feedback_form.ejs" />
+        <option value="$PROJECT_DIR$/client-app-2-new/js/script.js" />
+        <option value="$PROJECT_DIR$/client-app-2-new/index.html" />
       </list>
     </option>
   </component>
@@ -256,7 +185,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="client-app-1-new" />
+              <option name="myItemId" value="client-app-2-new" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -270,51 +199,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="client-app-1-new" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node-examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node-examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client-app-1-new" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="client-app-2-new" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node-examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node-examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client-app-1-new" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -615,14 +504,7 @@
       <workItem from="1488047803710" duration="599000" />
       <workItem from="1488089308492" duration="3383000" />
       <workItem from="1488099488076" duration="5460000" />
-      <workItem from="1488134085855" duration="4878000" />
-    </task>
-    <task id="LOCAL-00055" summary="basic validation added">
-      <created>1478715532926</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1478715532926</updated>
+      <workItem from="1488134085855" duration="7319000" />
     </task>
     <task id="LOCAL-00056" summary="display emotion conditionally + storing responses&#10;">
       <created>1478930721867</created>
@@ -960,11 +842,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488104522380</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="ui fixes + integrating feedback form">
+      <created>1488139008365</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1488139008366</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="533112000" />
+    <option name="totallyTimeSpent" value="535553000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1020,7 +909,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="setting up dependencies" />
     <MESSAGE value="preparing data for filtering" />
     <MESSAGE value="score evaluation :)" />
     <MESSAGE value="overall importance (alpha)" />
@@ -1045,7 +933,8 @@
     <MESSAGE value="seeding the db + users model on API side" />
     <MESSAGE value="feedback-card" />
     <MESSAGE value="login + bug fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="login + bug fixes" />
+    <MESSAGE value="ui fixes + integrating feedback form" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui fixes + integrating feedback form" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1207,13 +1096,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-2-new/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1666">
-          <caret line="165" column="40" selection-start-line="165" selection-start-column="40" selection-end-line="165" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-app/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
@@ -1270,37 +1152,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-2-new/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/final-project-rest-api/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-1-new/public/css/styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="139" column="3" selection-start-line="139" selection-start-column="3" selection-end-line="139" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-1-new/views/landing.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
-          <folding>
-            <element signature="e#3469#6379#0#HTML" expanded="false" />
-            <element signature="e#6447#8249#0#HTML" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1327,17 +1183,9 @@
         <state relative-caret-position="144">
           <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
           <folding>
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-1-new/public/css/feedback_form_style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1359,7 +1207,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client-app-1-new/views/feedback_form.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
+        <state relative-caret-position="756">
           <caret line="71" column="47" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
           <caret line="72" column="47" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
           <caret line="73" column="47" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
@@ -1373,9 +1221,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client-app-1-new/public/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4362">
+        <state relative-caret-position="479">
+          <caret line="248" column="3" selection-start-line="248" selection-start-column="3" selection-end-line="248" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-app-1-new/public/css/feedback_form_style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-app-1-new/views/landing.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+          <folding>
+            <element signature="e#3469#6379#0#HTML" expanded="false" />
+            <element signature="e#6447#8249#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-app-1-new/public/css/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="139" column="3" selection-start-line="139" selection-start-column="3" selection-end-line="139" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-app-2-new/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="132" column="27" selection-start-line="132" selection-start-column="11" selection-end-line="132" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-app-2-new/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="64" column="78" selection-start-line="64" selection-start-column="78" selection-end-line="64" selection-end-column="78" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

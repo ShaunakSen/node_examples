@@ -11,6 +11,7 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
     $scope.importantAnalysyis = [];
     $scope.noOfQuestions = 0;
     $scope.questionNos = [];
+    $scope.selectedQuestionNo = 1;
 
     $scope.getResponses = function () {
         $http.get("http://localhost:3000/responses_new").then(function (response) {
@@ -23,7 +24,7 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
             }
 
             $scope.analyzeResponseForLinks();
-            $scope.prepareChartData(1);
+            $scope.prepareChartData($scope.selectedQuestionNo);
 
         }, function (err) {
             console.log(err);
@@ -123,6 +124,12 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
         return false;
     }
 
+    $scope.handleSelectAction = function () {
+        var questionNo = document.getElementById('select-question-1').value;
+        console.log(questionNo);
+        $scope.prepareChartData(questionNo);
+    };
+
     $scope.prepareChartData = function (questionNo) {
 
         // We need 2 arrays: labels and data
@@ -157,6 +164,9 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
 
 
     $scope.generateChart = function (labels, data) {
+        // 1st 2 lines are redundant but necessary for cleaning up DOM for chartjs to work properly
+        document.getElementById('chart-container').innerHTML = "";
+        document.getElementById('chart-container').innerHTML = '<canvas id="myChart" width="400" height="400"></canvas>';
         var ctx = document.getElementById("myChart");
         var myChart = new Chart(ctx, {
             type: 'bar',
