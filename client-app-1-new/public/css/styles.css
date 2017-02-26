@@ -83,4 +83,7 @@ a:hover {
     font-size: 16px;
     font-family: "Montserrat", sans-serif; }
 
+.emphasis-text {
+  text-decoration: underline; }
+
 /*# sourceMappingURL=styles.css.map */

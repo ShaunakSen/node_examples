@@ -38,7 +38,7 @@ router.post("/register", function (req, res) {
 // the middleware uses authenticate method which authenticates user..if it works it redirects somewhere else somewhere else
 
 router.post("/login", passport.authenticate("local",
-    {successRedirect: "/success", failureRedirect: "/failed"}), function (req, res) {
+    {successRedirect: "/", failureRedirect: "/failed"}), function (req, res) {
 });
 
 // logout
@@ -48,9 +48,13 @@ router.get("/logout", function (req, res) {
     // flash message
 
     // req.flash("success", "Logout successful");
-    res.redirect("/success");
+    res.redirect("/");
 });
 
+
+router.get("/feedback", function (req, res) {
+   res.render("feedback_form");
+});
 
 
 module.exports = router;

@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/styles.css">
-    <script src="/js/angular.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 </head>
@@ -27,17 +26,22 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <div class="navbar-right" style="padding: 10px">
-                <ul class="nav navbar-nav navbar-right">
-                    <% if(currentUser){ %>
-                    <li>Hello <%= currentUser.username %></li>
-                    <% } %>
-                </ul>
+                <% if(currentUser){ %>
+
+                    <span class="bold-text" style="font-size: 18px">Hello <%= currentUser.username %></span>
+
+                <button class="btn btn-danger custom-button"
+                        style="margin-left: 10px"><a href="/logout">Logout</a>
+                </button>
+                <% } else { %>
                 <button class="btn btn-primary custom-button" data-toggle="modal" data-target="#registration-modal">
                     Register
                 </button>
                 <button class="btn btn-success custom-button" data-toggle="modal" data-target="#login-modal"
                         style="margin-left: 10px">Login
                 </button>
+                <% } %>
+
             </div>
         </div><!--/.navbar-collapse -->
     </div>
