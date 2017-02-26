@@ -25,10 +25,17 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <div class="navbar-right" style="padding: 10px">
+                <ul class="nav navbar-nav navbar-right">
+                    <% if(currentUser){ %>
+                    <li>Hello <%= currentUser.username %></li>
+                    <% } %>
+                </ul>
                 <button class="btn btn-primary custom-button" data-toggle="modal" data-target="#registration-modal">
                     Register
                 </button>
-                <button class="btn btn-success custom-button" data-toggle="modal" data-target="#login-modal" style="margin-left: 10px">Login</button>
+                <button class="btn btn-success custom-button" data-toggle="modal" data-target="#login-modal"
+                        style="margin-left: 10px">Login
+                </button>
             </div>
         </div><!--/.navbar-collapse -->
     </div>

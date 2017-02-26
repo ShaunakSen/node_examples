@@ -9,6 +9,6 @@ var UserSchema = new mongoose.Schema({
     full_name: String
 });
 
-UserSchema.plugin(passportLocalMongoose);
+UserSchema.plugin(passportLocalMongoose);   
 
 module.exports = mongoose.model("User", UserSchema);
