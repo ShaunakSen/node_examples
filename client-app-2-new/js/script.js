@@ -213,14 +213,14 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
                 {
                     data: data,
                     backgroundColor: [
-                        "#FF6384",
-                        "#36A2EB"
-
+                        "#36A2EB",
+                        "#FFCE56",
+                        "#FF6384"
                     ],
                     hoverBackgroundColor: [
-                        "#FF6384",
-                        "#36A2EB"
-
+                        "#36A2EB",
+                        "#FFCE56",
+                        "#FF6384"
                     ]
                 }]
         };
@@ -239,14 +239,21 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
         // labels: Good poor Decent
         // data: responses corresponding to labels
 
-        var labels = ["Good", "Poor"];
-        var data = [0, 0];
+        var labels = ["Good", "Decent", "Poor"];
+        var data = [0, 0, 0];
 
 
         $scope.apiResponse.forEach(function (userResponse) {
             var requiredQuestion = userResponse.mcqResponse[questionNo - 1];
             var response = requiredQuestion.response;
-            var responseIndex = response >= 2 ? 0 : 1;
+            var responseIndex;
+            if(response < 2){
+                responseIndex = 0
+            } else if (response == 2){
+                responseIndex = 1;
+            } else {
+                responseIndex = 2;
+            }
             data[responseIndex] += 1;
 
         });

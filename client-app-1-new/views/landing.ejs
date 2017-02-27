@@ -41,7 +41,11 @@
             <hr>
             <div class="row">
                 <div class="col-xs-3 col-xs-offset-4">
-                    <button class="btn btn-primary custom-button btn-sm">Fill Form Now</button>
+                    <% if(currentUser){ %>
+                    <button class="btn btn-primary custom-button btn-sm"><a href="/feedback">Fill Form Now</a></button>
+                    <% } else { %>
+                    <button class="btn btn-primary custom-button btn-sm" data-target="#login-modal" data-toggle="modal">Fill Form Now</button>
+                    <% } %>
                 </div>
                 <div class="col-xs-3 col-xs-offset-1">
                     <button class="btn btn-success custom-button btn-sm">Remind me later</button>
