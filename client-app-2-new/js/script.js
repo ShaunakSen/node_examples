@@ -12,6 +12,7 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
     $scope.noOfQuestions = 0;
     $scope.questionNos = [];
     $scope.selectedQuestionNo = 1;
+    $scope.selectedQuestionNo2 = 1;
 
     $scope.getResponses = function () {
         $http.get("http://localhost:3000/responses_new").then(function (response) {
@@ -25,6 +26,7 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
 
             $scope.analyzeResponseForLinks();
             $scope.prepareChartData($scope.selectedQuestionNo);
+            $scope.prepareChartData2($scope.selectedQuestionNo2);
 
         }, function (err) {
             console.log(err);
@@ -116,19 +118,13 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
 
 
     function isInArray(val, arr) {
-        for(var i=0; i<arr.length; ++i){
-            if (val === arr[i]){
+        for (var i = 0; i < arr.length; ++i) {
+            if (val === arr[i]) {
                 return true;
             }
         }
         return false;
     }
-
-    $scope.handleSelectAction = function () {
-        var questionNo = document.getElementById('select-question-1').value;
-        console.log(questionNo);
-        $scope.prepareChartData(questionNo);
-    };
 
     $scope.prepareChartData = function (questionNo) {
 
@@ -144,7 +140,7 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
         $scope.apiResponse.forEach(function (userResponse) {
             var requiredQuestion = userResponse.mcqResponse[questionNo - 1];
             var response = requiredQuestion.response;
-            if(isInArray(response, labels)){
+            if (isInArray(response, labels)) {
                 //increase data value for the response
                 data[response] += 1;
 
@@ -198,13 +194,64 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
                 scales: {
                     yAxes: [{
                         ticks: {
-                            beginAtZero:true
+                            beginAtZero: true
                         }
                     }]
                 }
             }
         });
-    }
+    };
+
+    $scope.generateChart2 = function (labels, data) {
+        // 1st 2 lines are redundant but necessary for cleaning up DOM for chartjs to work properly
+        document.getElementById('chart-container-2').innerHTML = "";
+        document.getElementById('chart-container-2').innerHTML = '<canvas id="myChart2" width="400" height="400"></canvas>';
+        var ctx = document.getElementById("myChart2");
+        var data_new = {
+            labels: labels,
+            datasets: [
+                {
+                    data: data,
+                    backgroundColor: [
+                        "#FF6384",
+                        "#36A2EB"
+
+                    ],
+                    hoverBackgroundColor: [
+                        "#FF6384",
+                        "#36A2EB"
+
+                    ]
+                }]
+        };
+        var myPieChart = new Chart(ctx,{
+            type: 'pie',
+            data: data_new
+
+        });
+    };
+
+
+    $scope.prepareChartData2 = function (questionNo) {
+
+        // We need 2 arrays: labels and data
+
+        // labels: Good poor Decent
+        // data: responses corresponding to labels
+
+        var labels = ["Good", "Poor"];
+        var data = [0, 0];
+
+
+        $scope.apiResponse.forEach(function (userResponse) {
+            var requiredQuestion = userResponse.mcqResponse[questionNo - 1];
+            var response = requiredQuestion.response;
+            var responseIndex = response >= 2 ? 0 : 1;
+            data[responseIndex] += 1;
+
+        });
+        $scope.generateChart2(labels, data);
+    };
 
 
 }]);
