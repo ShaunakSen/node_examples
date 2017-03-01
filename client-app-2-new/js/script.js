@@ -257,6 +257,7 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
             data[responseIndex] += 1;
 
         });
+        console.log(data);
         $scope.generateChart2(labels, data);
     };
 

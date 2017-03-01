@@ -57,4 +57,9 @@ router.get("/feedback", function (req, res) {
 });
 
 
+router.get("/test", function (req, res) {
+    res.render("test", { gameState : "mini" });
+});
+
+
 module.exports = router;
