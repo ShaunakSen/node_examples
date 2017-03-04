@@ -4,7 +4,7 @@ myApp.config(function ($httpProvider) {
     $httpProvider.defaults.useXDomain = true;
 });
 
-myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function ($scope, mainFactory, $http) {
+myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http', function ($scope, $window, mainFactory, $http) {
     console.log("Inside MainController");
     $scope.noOfQuestions = 0;
     $scope.questions = [];
@@ -19,6 +19,9 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
     $scope.visualFeedback = [];
     $scope.timeAnalyzer = [];
 
+    
+    $scope.userInfo = $window.userInfo;
+    console.log($scope.userInfo);
 
     // CLOCK FUNCTIONS -> CHANGE TO FACTORY LATER MAYBE?
 
@@ -187,7 +190,8 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
         console.log($scope.responses);
         var responseData = {
             reviewId: $scope.reviewId,
-            mcqResponse: []
+            mcqResponse: [],
+            postedBy: {}
         };
 
         // EVALUATE RELATIONSHIP
@@ -221,6 +225,13 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
         }
         console.log(responseData);
 
+        // Fill in user data
+
+        responseData.postedBy.full_name = $scope.userInfo.full_name;
+        responseData.postedBy.roll_number = $scope.userInfo.roll_number;
+        responseData.postedBy.username = $scope.userInfo.username;
+        responseData.postedBy.email = $scope.userInfo.email;
+
         // POST the response
 
         var postReq = {
@@ -237,7 +248,7 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
                 console.log("Ok..", response);
 
                 // Now that response has been posted we can fetch and analyze the data
-                $scope.fetchResponseData();
+                // $scope.fetchResponseData();
             },
             function (response) {
                 console.log("Not Ok..", response);
@@ -246,42 +257,6 @@ myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function (
     };
 
 
-    $scope.fetchResponseData = function () {
-        $http.get('http://localhost:3000/responses').then(
-            function (response) {
-                // console.log("Response data:", response.data);
-                // last one will be the most recent response
-                var lastResponse = response.data[response.data.length - 1];
-                $scope.useResponseData(lastResponse);
-            },
-            function (response) {
-                console.log(response);
-                $scope.message = "Error: " + response.status + " " + response.statusText;
-            }
-        )
-    };
-
-
-    $scope.useResponseData = function (responseData) {
-
-        $scope.responseData = responseData.mcqResponse;
-        $scope.analyzeResponseForTime($scope.questions, $scope.responseData);
-    };
-
-    $scope.analyzeResponseForTime = function (questions, responses) {
-        console.log("Questions were:", questions);
-        console.log("The response is:", responses);
-        for (var i = 0; i < responses.length; ++i) {
-            $scope.timeAnalyzer.push(responses[i]);
-        }
-        for (var x = 0; x < questions.length; ++x) {
-            $scope.timeAnalyzer[x].relatedTo = questions[x].relatedTo;
-            $scope.timeAnalyzer[x].title = questions[x].title;
-            $scope.timeAnalyzer[x].thoughtProvoking = questions[x].thoughtProvoking;
-        }
-
-        console.info("Unified data is", $scope.timeAnalyzer);
-    }
 
 
 }]);

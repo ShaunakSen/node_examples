@@ -52,7 +52,9 @@ var responseSchema = new Schema({
     filtered: {type: Boolean},
     mcqResponse: [mcqResponseSchema],
     postedBy: {
-        name: String,
+        full_name: String,
+        roll_number: String,
+        username: String,
         email: String
     }
 }, {timestamps: true});

@@ -106,14 +106,18 @@
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/angular.js"></script>
-<script src="/js/script.js"></script>
-<script src="/js/service.js"></script>
 <script>
     $(document).ready(function () {
         $('.carousel').carousel({
             interval: false
         });
     })
+
+    window.userInfo = <%- JSON.stringify(currentUser) %>;
+    console.log(userInfo);
 </script>
+<script src="/js/script.js"></script>
+<script src="/js/service.js"></script>
+
 </body>
 </html>
