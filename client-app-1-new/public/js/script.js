@@ -249,11 +249,11 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
 
                 // user has posted the response..we have user info and id of form he filled
                 // store the filled form id in users collection so that he can no longer fill it again
-
+                console.log("Review id is:" + $scope.reviewId);
                 $http({
                     method : "PUT",
                     url : 'http://localhost:8000/users/' + $scope.userInfo._id + '/filled_forms',
-                    data : angular.toJson($scope.reviewId),
+                    data : {review_id: $scope.reviewId},
                     headers : {
                         'Content-Type' : 'application/json'
                     }

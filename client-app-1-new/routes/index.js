@@ -2,6 +2,9 @@ var express = require('express');
 var router = express.Router();
 var passport = require('passport');
 var User = require('../models/user');
+var bodyParser = require('body-parser');
+
+router.use(bodyParser.json());
 
 router.get("/", function (req, res) {
     res.render("landing");
@@ -79,16 +82,21 @@ router.put("/users/:userId/filled_forms", function (req, res) {
             console.log(err);
         }
 
-        // user.filled_forms.push(req.body);
-        //
-        // user.save(function (err, user) {
-        //     if (err) throw err;
-        //
-        //     console.log('Updated filled forms!!');
-        //     res.json(user);
-        // });
-        
-        
+        // check if review_id already exists
+
+        var toAdd = true;
+
+        for(var i = 0; i< user.filled_forms.length; ++i){
+            if(user.filled_forms[i] == req.body.review_id){
+                toAdd = false;
+            }
+        }
+        if(toAdd == true){
+            user.filled_forms.push(req.body.review_id);
+        }
+        user.save(function (err, user) {
+            if (err) throw err;
+        });
     });
 });
 
