@@ -1,19 +1,15 @@
+// 20170305014036
+// http://localhost:3000/reviews/
 
 [
   {
-    "_id": "5829cc362d9a160e07f921e4",
-    "updatedAt": "2016-11-14T14:40:34.013Z",
-    "createdAt": "2016-11-14T14:37:42.551Z",
-    "__v": 1,
+    "_id": "58bb1dc4ce4b9964125725ec",
     "mcq": [
       {
-        "updatedAt": "2016-11-14T14:37:42.548Z",
-        "createdAt": "2016-11-14T14:37:42.548Z",
         "questionNo": 1,
-        "title": "How is the quality of lectures?",
+        "title": "How was the coverage of the syllabus?",
         "importance": 10,
-        "thoughtProvoking": 3,
-        "_id": "5829cc362d9a160e07f921e9",
+        "thoughtProvoking": 2,
         "displayEmotion": true,
         "relatedTo": [
 
@@ -34,13 +30,9 @@
         ]
       },
       {
-        "updatedAt": "2016-11-14T14:37:42.549Z",
-        "createdAt": "2016-11-14T14:37:42.549Z",
-        "questionNo": 2,
-        "title": "How is the quality of explanation of the topics?",
+        "title": "To what extent were the important topics covered?",
         "importance": 10,
         "thoughtProvoking": 3,
-        "_id": "5829cc362d9a160e07f921e7",
         "displayEmotion": true,
         "relatedTo": [
           {
@@ -65,13 +57,10 @@
         ]
       },
       {
-        "updatedAt": "2016-11-14T14:37:42.550Z",
-        "createdAt": "2016-11-14T14:37:42.550Z",
         "questionNo": 3,
-        "title": "To what extent has visual presentations been used while explaining the topics?",
+        "title": "To what extent was the instructor interactive with the students",
         "importance": 7,
-        "thoughtProvoking": 2,
-        "_id": "5829cc362d9a160e07f921e6",
+        "thoughtProvoking": 4,
         "displayEmotion": true,
         "relatedTo": [
 
@@ -92,13 +81,139 @@
         ]
       },
       {
-        "updatedAt": "2016-11-14T14:37:42.551Z",
-        "createdAt": "2016-11-14T14:37:42.551Z",
+        "questionNo": 4,
+        "title": "How were the quality of assignments?",
+        "importance": 9,
+        "thoughtProvoking": 3,
+        "displayEmotion": true,
+        "relatedTo": [
+
+        ],
+        "optionTitles": [
+          "Very poor",
+          "Poor",
+          "Ok",
+          "Good",
+          "Very Good"
+        ],
+        "optionValues": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "questionNo": 5,
+        "title": "To what extent was the course continously evaluated",
+        "importance": 7,
+        "thoughtProvoking": 4,
+        "displayEmotion": true,
+        "relatedTo": [
+
+        ],
+        "optionTitles": [
+          "Very Less",
+          "Not a lot",
+          "Average",
+          "More than Average",
+          "A lot"
+        ],
+        "optionValues": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "58bb1ee9ce4b99641257269f",
+    "mcq": [
+      {
+        "questionNo": 1,
+        "title": "How is the quality of lectures?",
+        "importance": 10,
+        "thoughtProvoking": 3,
+        "displayEmotion": true,
+        "relatedTo": [
+
+        ],
+        "optionTitles": [
+          "Very poor",
+          "Poor",
+          "Ok",
+          "Good",
+          "Very Good"
+        ],
+        "optionValues": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "questionNo": 2,
+        "title": "How is the quality of explanation of the topics?",
+        "importance": 10,
+        "thoughtProvoking": 3,
+        "displayEmotion": true,
+        "relatedTo": [
+          {
+            "questionNo": 1,
+            "relatedHow": "direct",
+            "_id": "5829cc362d9a160e07f921e8"
+          }
+        ],
+        "optionTitles": [
+          "Very poor",
+          "Poor",
+          "Ok",
+          "Good",
+          "Very Good"
+        ],
+        "optionValues": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "questionNo": 3,
+        "title": "To what extent has visual presentations been used while explaining the topics?",
+        "importance": 7,
+        "thoughtProvoking": 2,
+        "displayEmotion": true,
+        "relatedTo": [
+
+        ],
+        "optionTitles": [
+          "Very Less",
+          "Less",
+          "Average",
+          "More than Average",
+          "A lot"
+        ],
+        "optionValues": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
         "questionNo": 4,
         "title": "To what extent do you feel that the topics covered in class has use to you in life outside college?",
         "importance": 7,
         "thoughtProvoking": 4,
-        "_id": "5829cc362d9a160e07f921e5",
         "displayEmotion": true,
         "relatedTo": [
 
@@ -119,13 +234,10 @@
         ]
       },
       {
-        "updatedAt": "2016-11-14T14:40:34.011Z",
-        "createdAt": "2016-11-14T14:40:34.011Z",
         "questionNo": 5,
         "title": "To what extent do you feel that the topics covered in class are relevant and up to date in today's scenario?",
         "importance": 7,
         "thoughtProvoking": 4,
-        "_id": "5829cce22d9a160e07f921ea",
         "displayEmotion": true,
         "relatedTo": [
           {
