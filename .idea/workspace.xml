@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a3bd2106-c361-42e4-aee7-a432b6aa92f6" name="Default" comment="db fixes">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app/data.json" afterPath="$PROJECT_DIR$/client-app/data.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final-project-rest-api/models/reviews.js" afterPath="$PROJECT_DIR$/final-project-rest-api/models/reviews.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final-project-rest-api/routes/reviews.js" afterPath="$PROJECT_DIR$/final-project-rest-api/routes/reviews.js" />
     </list>
     <ignored path="node-examples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,30 +26,40 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/final-project-rest-api/app.js">
+        <entry file="file://$PROJECT_DIR$/client-app-1-new/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="32" column="24" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="24" />
+            <state relative-caret-position="342">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client-app/data.json">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-app-1-new/public/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="265" column="1" selection-start-line="265" selection-start-column="1" selection-end-line="265" selection-end-column="1" />
+            <state relative-caret-position="342">
+              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="reviews.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/final-project-rest-api/models/reviews.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="756">
+              <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reviews.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/final-project-rest-api/routes/reviews.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-486">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="48" column="35" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -75,9 +86,7 @@
         <option value="$PROJECT_DIR$/final-project-rest-api/package.json" />
         <option value="$PROJECT_DIR$/final-project-rest-api/data/reviews.json" />
         <option value="$PROJECT_DIR$/final-project-rest-api/data/responses.json" />
-        <option value="$PROJECT_DIR$/final-project-rest-api/models/reviews.js" />
         <option value="$PROJECT_DIR$/final-project-rest-api/models/responses.js" />
-        <option value="$PROJECT_DIR$/final-project-rest-api/routes/reviews.js" />
         <option value="$PROJECT_DIR$/final-project-rest-api/routes/responses.js" />
         <option value="$PROJECT_DIR$/final-project-rest-api/routes/responses_new.js" />
         <option value="$PROJECT_DIR$/client-app-2/scss/style.scss" />
@@ -122,6 +131,8 @@
         <option value="$PROJECT_DIR$/client-app-1-new/routes/index.js" />
         <option value="$PROJECT_DIR$/client-app-1-new/views/landing.ejs" />
         <option value="$PROJECT_DIR$/client-app/data.json" />
+        <option value="$PROJECT_DIR$/final-project-rest-api/models/reviews.js" />
+        <option value="$PROJECT_DIR$/final-project-rest-api/routes/reviews.js" />
       </list>
     </option>
   </component>
@@ -190,6 +201,56 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="final-project-rest-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="final-project-rest-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="final-project-rest-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="client-app-1-new" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -204,7 +265,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="client-app" />
+              <option name="myItemId" value="client-app-1-new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client-app-1-new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -514,14 +601,7 @@
       <workItem from="1488450396345" duration="1867000" />
       <workItem from="1488484063234" duration="503000" />
       <workItem from="1488615463558" duration="10045000" />
-      <workItem from="1488649738155" duration="4192000" />
-    </task>
-    <task id="LOCAL-00064" summary="linked questions solved + displayed results :D">
-      <created>1479282405813</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1479282405853</updated>
+      <workItem from="1488649738155" duration="5688000" />
     </task>
     <task id="LOCAL-00065" summary="documentation...">
       <created>1479468930918</created>
@@ -859,11 +939,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488656892618</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="db fixes">
+      <created>1488658251119</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1488658251119</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="561580000" />
+    <option name="totallyTimeSpent" value="563076000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="728" extended-state="0" />
@@ -919,7 +1006,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="evaluated relationship on new route" />
     <MESSAGE value="stats-card basic layout" />
     <MESSAGE value="layout done" />
     <MESSAGE value="evaluated score for responses" />
@@ -944,7 +1030,8 @@
     <MESSAGE value="linked responses to user data" />
     <MESSAGE value="working on reviews_filled" />
     <MESSAGE value="coded route: /users/:userId/filled_forms" />
-    <option name="LAST_COMMIT_MESSAGE" value="coded route: /users/:userId/filled_forms" />
+    <MESSAGE value="db fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="db fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1133,13 +1220,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/final-project-rest-api/models/reviews.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/final-project-rest-api/models/responses_new.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -1216,14 +1296,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-1-new/public/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-app-1-new/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1728">
@@ -1243,18 +1315,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-1-new/app.js">
+    <entry file="file://$PROJECT_DIR$/client-app/data.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/final-project-rest-api/routes/reviews.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-486">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="414">
+          <caret line="260" column="11" selection-start-line="260" selection-start-column="11" selection-end-line="260" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1267,10 +1331,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-app/data.json">
+    <entry file="file://$PROJECT_DIR$/client-app-1-new/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="265" column="1" selection-start-line="265" selection-start-column="1" selection-end-line="265" selection-end-column="1" />
+        <state relative-caret-position="342">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-app-1-new/public/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/final-project-rest-api/models/reviews.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/final-project-rest-api/routes/reviews.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="48" column="35" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="35" />
           <folding />
         </state>
       </provider>

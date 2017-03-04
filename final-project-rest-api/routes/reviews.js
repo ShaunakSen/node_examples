@@ -43,6 +43,23 @@ router.get("/reviews/:id", function (req, res) {
     });
 });
 
+
+// GET REVIEW BY TARGETED USERS
+
+router.get("/reviews/target/:target", function (req, res) {
+    var target = req.params.target;
+    if(target === "all"){
+        target = "All";
+    }
+    Reviews.find({"targetedUsers": target}, function (err, foundReviews) {
+        if(err){
+            console.log(err);
+        } else {
+            res.json(foundReviews);
+        }
+    })
+});
+
 // POST mcq question
 
 router.post("/reviews/:id/mcq", function (req, res) {

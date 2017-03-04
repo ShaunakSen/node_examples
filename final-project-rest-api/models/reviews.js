@@ -37,6 +37,10 @@ var mcqSchema = new Schema({
 
 var reviewSchema = new Schema({
     mcq: [mcqSchema],
+    targetedUsers: [{
+        type: String,
+        default: "All"
+    }],
     postedBy: {
         name: String,
         email: String
