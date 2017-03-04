@@ -21,7 +21,7 @@ var indexRoutes = require('./routes/index');
 
 var app = express();
 
-mongoose.connect("mongodb://localhost/conFusion");
+mongoose.connect("mongodb://localhost/client-app-1");
 
 app.use(bodyParser.urlencoded({extended: true}));
 

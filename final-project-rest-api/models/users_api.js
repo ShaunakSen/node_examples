@@ -4,3 +4,16 @@
 
 
 // scheme will be similar to that in client-app-1-new
+
+var mongoose = require('mongoose');
+
+
+var UserSchema = new mongoose.Schema({
+    username: String,
+    email: String,
+    password: String,
+    roll_number: String,
+    full_name: String
+});
+
+module.exports = mongoose.model("User_api", UserSchema);
