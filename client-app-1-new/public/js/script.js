@@ -19,7 +19,7 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
     $scope.visualFeedback = [];
     $scope.timeAnalyzer = [];
 
-    
+
     $scope.userInfo = $window.userInfo;
     console.log($scope.userInfo);
 
@@ -82,8 +82,8 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
         // change disabled state of next button now
         $scope.nextButtonDisabled = false;
     };
-    
-    
+
+
     // happens every time next button is clicked
     $scope.storeResponse = function (questionNo) {
         // stop clock for this question
@@ -144,7 +144,7 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
         responseObject.thoughtProvoking = thoughtProvoking;
         responseObject.title = title;
         responseObject.relatedTo = relatedTo;
-        
+
         return responseObject;
     };
 
@@ -247,8 +247,23 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
             function (response) {
                 console.log("Ok..", response);
 
-                // Now that response has been posted we can fetch and analyze the data
-                // $scope.fetchResponseData();
+                // user has posted the response..we have user info and id of form he filled
+                // store the filled form id in users collection so that he can no longer fill it again
+
+                $http({
+                    method : "PUT",
+                    url : 'http://localhost:8000/users/' + $scope.userInfo._id + '/filled_forms',
+                    data : angular.toJson($scope.reviewId),
+                    headers : {
+                        'Content-Type' : 'application/json'
+                    }
+                }).then( function (response) {
+                    console.log("ok...", response)
+                }, function (response) {
+                    console.log("not ok...", response)
+                } );
+
+
             },
             function (response) {
                 console.log("Not Ok..", response);

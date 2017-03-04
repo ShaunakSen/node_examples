@@ -61,5 +61,37 @@ router.get("/test", function (req, res) {
     res.render("test", { gameState : "mini" });
 });
 
+router.get("/users", function (req, res) {
+    User.find({}, function (err, foundUsers) {
+        if(err){
+            console.log(err);
+        } else {
+            res.json(foundUsers);
+        }
+    })
+});
+
+
+router.put("/users/:userId/filled_forms", function (req, res) {
+    console.log("From PUT route", req.body);
+    User.findById(req.params.userId, function (err, user) {
+        if(err){
+            console.log(err);
+        }
+
+        // user.filled_forms.push(req.body);
+        //
+        // user.save(function (err, user) {
+        //     if (err) throw err;
+        //
+        //     console.log('Updated filled forms!!');
+        //     res.json(user);
+        // });
+        
+        
+    });
+});
+
+
 
 module.exports = router;
