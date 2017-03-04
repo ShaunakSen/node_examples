@@ -3,11 +3,39 @@ var router = express.Router();
 var passport = require('passport');
 var User = require('../models/user');
 var bodyParser = require('body-parser');
+var request = require('request');
 
 router.use(bodyParser.json());
 
 router.get("/", function (req, res) {
-    res.render("landing");
+
+    
+    if(req.user){
+
+        // get dept of user
+        var dept = req.user.roll_number.slice(3,5).toLowerCase();
+        console.log(dept);
+
+        // trigger API request to fetch related forms
+
+        request('http://localhost:3000/reviews/target/' + dept, function (error, response, body) {
+            if(error){
+                console.log(error)
+            } else {
+                console.log(response.body);
+
+                var forms = JSON.parse(body);
+
+
+                
+                // TODO: filter forms based on filled_forms data
+
+                res.render("landing", {forms: forms});
+            }
+        })
+    } else {
+        res.render("landing", {forms: null});
+    }
 });
 
 

@@ -39,7 +39,7 @@ var reviewSchema = new Schema({
     mcq: [mcqSchema],
     targetedUsers: [{
         type: String,
-        default: "All"
+        default: ["it","cse","ch","ce","ece","bt","me","mme","ch"]
     }],
     postedBy: {
         name: String,

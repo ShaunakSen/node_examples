@@ -4,6 +4,27 @@ myApp.config(function ($httpProvider) {
     $httpProvider.defaults.useXDomain = true;
 });
 
+myApp.controller('FeedbackController', ['$scope', '$window', '$http', function ($scope, $window, $http) {
+
+
+    // MAYBE MOVE ALL THIS CODE TO BACK END USING request API and display using ejs?
+
+    $scope.userInfo = $window.userInfo;
+    console.log($scope.userInfo);
+    var roll = $scope.userInfo.roll_number;
+    $scope.department = roll.slice(3,5).toLowerCase();
+
+
+
+    $http.get('http://localhost:3000/reviews/target/' + $scope.department).then(function (response) {
+        console.log("Forms to be displayed are: ", response)
+    }, function (response) {
+        console.log("error:", response)
+    })
+
+    
+}]);
+
 myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http', function ($scope, $window, mainFactory, $http) {
     console.log("Inside MainController");
     $scope.noOfQuestions = 0;
@@ -45,7 +66,7 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
         function (response) {
             // $scope.questions = response;
             console.log(response);
-            $scope.noOfQuestions = response.data[0].mcq.length;
+            $scope.noOfQuestions = response.data.mcq.length;
             for (var i = 0; i < $scope.noOfQuestions; ++i) {
                 $scope.recordedTimes.push(0);
                 $scope.startTime.push(0);
@@ -64,8 +85,8 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
         console.log(data);
         // $scope.noOfQuestions = data.data.mcq.length;
         console.log("No of questions:", $scope.noOfQuestions);
-        $scope.questions = data.data[0].mcq;
-        $scope.reviewId = data.data[0]._id;
+        $scope.questions = data.data.mcq;
+        $scope.reviewId = data.data._id;
         console.log("The id is", $scope.reviewId);
         console.log("Questions are:", $scope.questions);
     };
