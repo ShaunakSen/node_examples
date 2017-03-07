@@ -4,6 +4,8 @@ var passport = require('passport');
 var User = require('../models/user');
 var bodyParser = require('body-parser');
 var request = require('request');
+var mongoose = require('mongoose');
+
 
 router.use(bodyParser.json());
 
@@ -29,6 +31,20 @@ router.get("/", function (req, res) {
 
                 
                 // TODO: filter forms based on filled_forms data
+                
+                var filledFormIds = req.user.filled_forms;
+
+                for(var i=0; i<filledFormIds.length; ++i){
+                    for(var j=0; j<forms.length; ++j){
+                        if(forms[j]._id == filledFormIds[i]){
+                        
+                            // console.log("Matched form is:" + forms[j]._id)
+                            forms.splice(j, 1);
+                        }
+                        
+                    }
+                }
+                
 
                 res.render("landing", {forms: forms});
             }
