@@ -1,5 +1,6 @@
-myApp.service('mainFactory', ['$http', function ($http) {
+myApp.service('mainFactory', ['$http', '$window', function ($http, $window) {
     this.getQuestions = function () {
-        return $http.get('http://localhost:3000/reviews/58bb1dc4ce4b9964125725ec');
+        // console.log($window.feedbackFormId);
+        return $http.get('http://localhost:3000/reviews/' + $window.feedbackFormId);
     };
 }]);

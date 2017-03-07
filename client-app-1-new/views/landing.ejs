@@ -46,7 +46,7 @@
             <div class="row">
                 <div class="col-xs-3 col-xs-offset-4">
                     <% if(currentUser){ %>
-                    <button class="btn btn-primary custom-button btn-sm"><a href="/feedback">Fill Form Now</a></button>
+                    <button class="btn btn-primary custom-button btn-sm"><a href="/feedback/<%= forms[i]._id %>">Fill Form Now</a></button>
                     <% } else { %>
                     <button class="btn btn-primary custom-button btn-sm" data-target="#login-modal" data-toggle="modal">
                         Fill Form Now

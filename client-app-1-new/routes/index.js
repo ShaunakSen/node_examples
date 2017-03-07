@@ -103,6 +103,10 @@ router.get("/feedback", function (req, res) {
    res.render("feedback_form");
 });
 
+router.get("/feedback/:id", function (req, res) {
+    res.render("feedback_form", {feedback_form_id: req.params.id});
+});
+
 
 router.get("/test", function (req, res) {
     res.render("test", { gameState : "mini" });
