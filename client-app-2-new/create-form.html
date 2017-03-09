@@ -48,7 +48,31 @@
 <div class="row">
     <div class="col-sm-4 sidebar"></div>
     <div class="col-sm-8 main-content">
-
+        <h3>Create a New Form </h3>
+        <hr>
+        <div class="row ">
+            <div class="col-xs-9 targeted-departments-container">
+                <h4>Select Targeted Departments</h4>
+                <hr>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <button class="btn btn-primary btn-sm custom-button-select">Select All</button>
+                    </div>
+                    <div class="col-xs-4">
+                        <button class="btn btn-primary btn-sm custom-button-remove">Remove All</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <form class="form-inline department-form">
+                        <div class="checkbox" ng-repeat="department in departments">
+                            <label>
+                                <input data-type="department-checkbox" type="checkbox"> {{department}}
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

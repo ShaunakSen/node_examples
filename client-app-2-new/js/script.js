@@ -6,5 +6,8 @@ myApp.config(function ($httpProvider) {
 
 
 myApp.controller('AdminController', ['$scope', '$window', '$http', function ($scope, $window, $http) {
-    $scope.testVar = "budhhu mini";
+    $scope.departments = ['IT', 'CSE', 'ECE', 'BT', 'CE', 'CHE', 'ME', 'MME'];
+    
+
+
 }]);
