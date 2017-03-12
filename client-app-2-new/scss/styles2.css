@@ -77,6 +77,12 @@ a:hover {
       margin-left: 5px;
       font-weight: bold;
       font-family: "Montserrat", sans-serif; }
+    .main-content .create-question-container .related-row .checkbox {
+      margin-left: 15px; }
+      .main-content .create-question-container .related-row .checkbox label {
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-size: 1.1em; }
     .main-content .create-question-container .related-row p {
       font-size: 17px;
       font-weight: bold;
@@ -91,6 +97,17 @@ a:hover {
   transition: all 0.5s; }
 
 .custom-input:focus {
+  outline: none;
+  border: 2px solid #3a3958; }
+
+.custom-select {
+  border-radius: 0;
+  padding: 7px;
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid #c7b2f6;
+  transition: all 0.5s; }
+
+.custom-select:focus {
   outline: none;
   border: 2px solid #3a3958; }
 

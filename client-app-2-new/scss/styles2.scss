@@ -129,6 +129,14 @@ a:hover {
       }
     }
     .related-row{
+      .checkbox {
+        margin-left: 15px;
+        label {
+          font-family: $font2;
+          font-weight: bold;
+          font-size: 1.1em;
+        }
+      }
       p{
         font-size: 17px;
         font-weight: bold;
@@ -153,6 +161,21 @@ a:hover {
   border: 2px solid $dark;
 
 }
+
+.custom-select{
+  border-radius: 0;
+  padding: 7px;
+  font-family: $font2;
+  border: 2px solid $medium;
+  transition: all 0.5s;
+}
+
+.custom-select:focus{
+  outline: none;
+  border: 2px solid $dark;
+
+}
+
 
 .custom-button-select {
   background-color: $utility2;
