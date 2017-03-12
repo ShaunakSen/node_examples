@@ -57,6 +57,42 @@ a:hover {
           font-weight: bold; }
       .main-content .targeted-departments-container .department-form .checkbox:first-child {
         margin-left: 0; }
+  .main-content .create-question-container {
+    border: 3px solid #c7b2f6; }
+    .main-content .create-question-container h4 {
+      font-family: "Montserrat", sans-serif; }
+    .main-content .create-question-container .create-question p {
+      font-size: 17px;
+      font-weight: bold;
+      font-family: "Montserrat", sans-serif;
+      margin-top: 5px; }
+    .main-content .create-question-container .question-options .row {
+      margin-top: 10px; }
+    .main-content .create-question-container .question-options p {
+      font-size: 17px;
+      font-weight: bold;
+      font-family: "Montserrat", sans-serif;
+      margin-left: 15px; }
+    .main-content .create-question-container .question-options span {
+      margin-left: 5px;
+      font-weight: bold;
+      font-family: "Montserrat", sans-serif; }
+    .main-content .create-question-container .related-row p {
+      font-size: 17px;
+      font-weight: bold;
+      font-family: "Montserrat", sans-serif;
+      margin-top: 5px;
+      margin-left: 15px; }
+
+.custom-input {
+  padding: 7px;
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid #c7b2f6;
+  transition: all 0.5s; }
+
+.custom-input:focus {
+  outline: none;
+  border: 2px solid #3a3958; }
 
 .custom-button-select {
   background-color: #7bcb5d; }
