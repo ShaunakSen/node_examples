@@ -8,6 +8,7 @@ $darker: #332d46;
 
 $utility1: #cb7371;
 $utility2: #7bcb5d;
+$utility3: #3097c0;
 
 //Font
 
@@ -146,6 +147,14 @@ a:hover {
       }
     }
   }
+  .add-question{
+    border: 3px solid $medium;
+    padding: 20px 10px;
+    h4{
+      font-family: $font2;
+      margin-top: 18px;
+    }
+  }
 
 }
 
@@ -184,6 +193,18 @@ a:hover {
 .custom-button-remove {
   background-color: $utility1;
 }
+.custom-button-add{
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  background-color: $utility3;
+  font-size: 2em;
+  font-weight: bold;
+  transition: all 0.3s;
+}
 
+.custom-button-add:hover{
+  background-color: $utility3;
+}
 
 

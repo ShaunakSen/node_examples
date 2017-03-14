@@ -89,6 +89,12 @@ a:hover {
       font-family: "Montserrat", sans-serif;
       margin-top: 5px;
       margin-left: 15px; }
+  .main-content .add-question {
+    border: 3px solid #c7b2f6;
+    padding: 20px 10px; }
+    .main-content .add-question h4 {
+      font-family: "Montserrat", sans-serif;
+      margin-top: 18px; }
 
 .custom-input {
   padding: 7px;
@@ -116,5 +122,17 @@ a:hover {
 
 .custom-button-remove {
   background-color: #cb7371; }
+
+.custom-button-add {
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  background-color: #3097c0;
+  font-size: 2em;
+  font-weight: bold;
+  transition: all 0.3s; }
+
+.custom-button-add:hover {
+  background-color: #3097c0; }
 
 /*# sourceMappingURL=styles2.css.map */
