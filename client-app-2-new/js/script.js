@@ -35,9 +35,15 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
     ];
 
     // On click of add question button push the element to $scope.questions
-
-    $scope.relatedCheckboxClicked = function (questionNo) {
+    
+    $scope.checkSelected = function (questionNo) {
         
+        if (document.getElementById('relationship-exists-' + questionNo).checked){
+            document.getElementById('related-fields-div-' + questionNo).style.display = 'block'
+        } else {
+            document.getElementById('related-fields-div-' + questionNo).style.display = 'none'
+        }
+
     };
 
 

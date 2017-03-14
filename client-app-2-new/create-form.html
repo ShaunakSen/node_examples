@@ -129,25 +129,28 @@
                 <div class="row related-row">
                     <div class="checkbox">
                         <label>
-                            <input ng-change="relatedCheckboxClicked($index+1)" type="checkbox" id="relationship-exists-{{$index + 1}}">Related Question Exists?
+                            <input checked ng-click="checkSelected($index+1)" type="checkbox" id="relationship-exists-{{$index + 1}}">Related Question Exists?
                         </label>
                     </div>
-                    <div class="row">
-                        <div class="col-xs-5"><p>Related Question No:</p></div>
-                        <div class="col-xs-5">
-                            <input type="number" id="related-question-no={{$index+1}}" class="custom-input">
+                    <div id="related-fields-div-{{$index+1}}">
+                        <div class="row">
+                            <div class="col-xs-5"><p>Related Question No:</p></div>
+                            <div class="col-xs-5">
+                                <input type="number" id="related-question-no={{$index+1}}" class="custom-input">
+                            </div>
                         </div>
-                    </div>
-                    <div class="row" style="margin-top: 10px">
-                        <div class="col-xs-5"><p>Related How?</p></div>
-                        <div class="col-xs-5">
-                            <select name="" id="" class="form-control custom-select">
-                                <option value="direct">Direct</option>
-                                <option value="inverse">Inverse</option>
-                            </select>
+                        <div class="row" style="margin-top: 10px">
+                            <div class="col-xs-5"><p>Related How?</p></div>
+                            <div class="col-xs-5">
+                                <select name="" id="" class="form-control custom-select">
+                                    <option value="direct">Direct</option>
+                                    <option value="inverse">Inverse</option>
+                                </select>
+                            </div>
                         </div>
+                        <hr>
                     </div>
-                    <hr>
+
                 </div>
                 <div class="row related-row">
                     <div class="row">
