@@ -71,9 +71,9 @@ a:hover {
 }
 
 .main-content {
-  height: 1000px;
+  height: auto;
   background-color: $lighter;
-  padding: 0 40px;
+  padding: 40px 40px;
   font-family: $font;
 
   .targeted-departments-container {
@@ -153,6 +153,7 @@ a:hover {
     h4{
       font-family: $font2;
       margin-top: 18px;
+      font-weight: bold;
     }
   }
 

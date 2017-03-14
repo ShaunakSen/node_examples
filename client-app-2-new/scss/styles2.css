@@ -39,9 +39,9 @@ a:hover {
   background-color: #c7b2f6; }
 
 .main-content {
-  height: 1000px;
+  height: auto;
   background-color: #f9efff;
-  padding: 0 40px;
+  padding: 40px 40px;
   font-family: "Lato", sans-serif; }
   .main-content .targeted-departments-container {
     border: 3px solid #c7b2f6; }
@@ -94,7 +94,8 @@ a:hover {
     padding: 20px 10px; }
     .main-content .add-question h4 {
       font-family: "Montserrat", sans-serif;
-      margin-top: 18px; }
+      margin-top: 18px;
+      font-weight: bold; }
 
 .custom-input {
   padding: 7px;

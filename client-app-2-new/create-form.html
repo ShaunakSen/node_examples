@@ -76,16 +76,17 @@
                 <hr>
             </div>
         </div>
-        <div class="row" style="margin-top: 30px">
+        <div class="row" style="margin-top: 30px" ng-repeat="question in questions track by $index">
             <div class="col-xs-9 create-question-container">
-                <h4>Create a New Question</h4>
+                <h4>Create Question No: {{$index + 1}}</h4>
                 <hr>
                 <div class="row create-question">
                     <div class="col-xs-4">
                         <p>Question Title</p>
                     </div>
                     <div class="col-xs-8">
-                        <input type="text" class="custom-input" style="width: 85%" placeholder="ENTER QUESTION TITLE">
+                        <input type="text" id="question-title-{{$index+1}}" class="custom-input" style="width: 85%"
+                               placeholder="ENTER QUESTION TITLE">
                     </div>
                 </div>
                 <hr>
@@ -94,27 +95,32 @@
                     <hr>
                     <div class="row" style="padding: 0 10px;">
                         <div class="col-xs-6">
-                            <input type="text" class="custom-input" placeholder="VERY POOR">
+                            <input type="text" id="question-option-{{$index+1}}-0" class="custom-input"
+                                   placeholder="VERY POOR" data-value="0">
                             <span>Value: 0</span>
                         </div>
                         <div class="col-xs-6">
-                            <input type="text" class="custom-input" placeholder="POOR">
+                            <input type="text" id="question-option-{{$index+1}}-1" class="custom-input"
+                                   placeholder="POOR" data-value="1">
                             <span>Value: 1</span>
                         </div>
                     </div>
                     <div class="row" style="padding: 0 10px;">
                         <div class="col-xs-6">
-                            <input type="text" class="custom-input" placeholder="OK">
+                            <input type="text" id="question-option-{{$index+1}}-2" class="custom-input" placeholder="OK"
+                                   data-value="2">
                             <span>Value: 2</span>
                         </div>
                         <div class="col-xs-6">
-                            <input type="text" class="custom-input" placeholder="GOOD">
+                            <input type="text" id="question-option-{{$index+1}}-3" class="custom-input"
+                                   placeholder="GOOD" data-value="3">
                             <span>Value: 3</span>
                         </div>
                     </div>
                     <div class="row" style="padding: 0 10px;">
                         <div class="col-xs-6">
-                            <input type="text" class="custom-input" placeholder="VERY GOOD">
+                            <input type="text" id="question-option-{{$index+1}}-4" class="custom-input"
+                                   placeholder="VERY GOOD" data-value="4">
                             <span>Value: 4</span>
                         </div>
                     </div>
@@ -123,25 +129,59 @@
                 <div class="row related-row">
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox">Related Question Exists?
+                            <input ng-change="relatedCheckboxClicked($index+1)" type="checkbox" id="relationship-exists-{{$index + 1}}">Related Question Exists?
                         </label>
                     </div>
                     <div class="row">
+                        <div class="col-xs-5"><p>Related Question No:</p></div>
+                        <div class="col-xs-5">
+                            <input type="number" id="related-question-no={{$index+1}}" class="custom-input">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 10px">
                         <div class="col-xs-5"><p>Related How?</p></div>
                         <div class="col-xs-5">
                             <select name="" id="" class="form-control custom-select">
-                                <option value="">Direct</option>
-                                <option value="">Inverse</option>
+                                <option value="direct">Direct</option>
+                                <option value="inverse">Inverse</option>
                             </select>
                         </div>
                     </div>
                     <hr>
                 </div>
+                <div class="row related-row">
+                    <div class="row">
+                        <div class="col-xs-4"><p>Importance: </p></div>
+                        <div class="col-xs-6">
+                            <input type="number" id="importance-{{$index+1}}" class="custom-input" min="0" max="10"
+                                   placeholder="MIN:0 MAX:10" style="width: 70%">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 10px">
+                        <div class="col-xs-4"><p>Thought Provoking: </p></div>
+                        <div class="col-xs-6">
+                            <input type="number" id="thought-provoking-{{$index+1}}" class="custom-input" min="0"
+                                   max="5" placeholder="MIN:0 MAX:5" style="width: 70%">
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="row related-row">
+                    <div class="col-xs-3">
+                        <button class="btn btn-primary custom-button-select" ng-click="saveQuestion($index + 1)">DONE
+                        </button>
+                    </div>
+                    <div class="col-xs-3">
+                        <button class="btn btn-primary custom-button-remove" ng-click="editQuestion($index + 1)">EDIT
+                        </button>
+                    </div>
+                </div>
+                <hr>
             </div>
 
         </div>
         <div class="row" style="margin-top: 30px">
-            <div class="col-xs-9 add-question">
+            <div class="col-xs-6 add-question">
                 <div class="row">
                     <div class="col-xs-9">
                         <h4>Add Another Question</h4>
