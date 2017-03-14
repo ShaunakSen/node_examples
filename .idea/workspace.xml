@@ -28,8 +28,8 @@
       <file leaf-file-name="create-form.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-app-2-new/create-form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="173" column="108" selection-start-line="173" selection-start-column="108" selection-end-line="173" selection-end-column="108" />
+            <state relative-caret-position="378">
+              <caret line="144" column="39" selection-start-line="144" selection-start-column="39" selection-end-line="144" selection-end-column="39" />
               <folding>
                 <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -50,8 +50,8 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client-app-2-new/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="67" column="110" selection-start-line="67" selection-start-column="110" selection-end-line="67" selection-end-column="110" />
+            <state relative-caret-position="348">
+              <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -552,14 +552,7 @@
       <workItem from="1489323936194" duration="1310000" />
       <workItem from="1489338173159" duration="7631000" />
       <workItem from="1489466915455" duration="8023000" />
-      <workItem from="1489511943680" duration="4783000" />
-    </task>
-    <task id="LOCAL-00077" summary="wiring up + 404 custom template">
-      <created>1479816412217</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1479816412217</updated>
+      <workItem from="1489511943680" duration="5889000" />
     </task>
     <task id="LOCAL-00078" summary="finished star wars app">
       <created>1482048429011</created>
@@ -897,11 +890,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489513860014</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="cleaning up data + data type fixes">
+      <created>1489517040038</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1489517040038</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="603990000" />
+    <option name="totallyTimeSpent" value="605096000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="3" width="1366" height="725" extended-state="0" />
@@ -957,7 +957,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="seeding the db + users model on API side" />
     <MESSAGE value="feedback-card" />
     <MESSAGE value="login + bug fixes" />
     <MESSAGE value="ui fixes + integrating feedback form" />
@@ -982,7 +981,8 @@
     <MESSAGE value="working on ui" />
     <MESSAGE value="working with dom" />
     <MESSAGE value="hiding/displaying related fields info" />
-    <option name="LAST_COMMIT_MESSAGE" value="hiding/displaying related fields info" />
+    <MESSAGE value="cleaning up data + data type fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaning up data + data type fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1301,8 +1301,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client-app-2-new/create-form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="173" column="108" selection-start-line="173" selection-start-column="108" selection-end-line="173" selection-end-column="108" />
+        <state relative-caret-position="378">
+          <caret line="144" column="39" selection-start-line="144" selection-start-column="39" selection-end-line="144" selection-end-column="39" />
           <folding>
             <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1321,8 +1321,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client-app-2-new/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="67" column="110" selection-start-line="67" selection-start-column="110" selection-end-line="67" selection-end-column="110" />
+        <state relative-caret-position="348">
+          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
           <folding />
         </state>
       </provider>

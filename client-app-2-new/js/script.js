@@ -47,6 +47,22 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
 
     };
 
+    $scope.disableInputs = function (questionNo) {
+        var arrayOfIds = ['question-title-' + questionNo, 'question-option-' + questionNo + '-0',
+            'question-option-' + questionNo + '-1', 'question-option-' + questionNo + '-2',
+            'question-option-' + questionNo + '-3', 'question-option-' + questionNo + '-4',
+            'importance-' + questionNo, 'thought-provoking-' + questionNo, 'relationship-exists-' + questionNo];
+
+        if (document.getElementById('relationship-exists-' + questionNo).checked) {
+            arrayOfIds.push('related-dropdown-' + questionNo);
+            arrayOfIds.push('related-question-no-' + questionNo);
+        }
+        arrayOfIds.forEach(function (id) {
+            document.getElementById(id).disabled = true;
+        });
+        
+    };
+
 
     $scope.saveQuestion = function (questionNo) {
 
@@ -101,6 +117,9 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
         } else {
             $scope.questions[questionNo - 1] = questionData;
         }
+
+        // disable the inputs for that question
+        $scope.disableInputs(questionNo);
     };
 
     $scope.editQuestion = function (questionNo) {

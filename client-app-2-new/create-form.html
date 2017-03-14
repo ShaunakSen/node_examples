@@ -129,7 +129,7 @@
                 <div class="row related-row">
                     <div class="checkbox">
                         <label>
-                            <input checked ng-click="checkSelected($index+1)" type="checkbox" id="relationship-exists-{{$index + 1}}">Related Question Exists?
+                            <input disabled checked ng-click="checkSelected($index+1)" type="checkbox" id="relationship-exists-{{$index + 1}}">Related Question Exists?
                         </label>
                     </div>
                     <div id="related-fields-div-{{$index+1}}">
@@ -142,7 +142,7 @@
                         <div class="row" style="margin-top: 10px">
                             <div class="col-xs-5"><p>Related How?</p></div>
                             <div class="col-xs-5">
-                                <select name="" id="related-dropdown-{{$index+1}}" class="form-control custom-select">
+                                <select id="related-dropdown-{{$index+1}}" class="form-control custom-select">
                                     <option value="direct">Direct</option>
                                     <option value="inverse">Inverse</option>
                                 </select>
