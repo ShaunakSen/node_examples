@@ -47,7 +47,7 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
 
     };
 
-    $scope.disableInputs = function (questionNo) {
+    $scope.disableInputs = function (questionNo, disable) {
         var arrayOfIds = ['question-title-' + questionNo, 'question-option-' + questionNo + '-0',
             'question-option-' + questionNo + '-1', 'question-option-' + questionNo + '-2',
             'question-option-' + questionNo + '-3', 'question-option-' + questionNo + '-4',
@@ -57,10 +57,17 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
             arrayOfIds.push('related-dropdown-' + questionNo);
             arrayOfIds.push('related-question-no-' + questionNo);
         }
-        arrayOfIds.forEach(function (id) {
-            document.getElementById(id).disabled = true;
-        });
-        
+        if(disable){
+            arrayOfIds.forEach(function (id) {
+                document.getElementById(id).disabled = true;
+            });
+        } else {
+            arrayOfIds.forEach(function (id) {
+                document.getElementById(id).disabled = false;
+            });
+        }
+
+
     };
 
 
@@ -119,11 +126,12 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
         }
 
         // disable the inputs for that question
-        $scope.disableInputs(questionNo);
+        $scope.disableInputs(questionNo, true);
     };
 
     $scope.editQuestion = function (questionNo) {
-
+        // enable the inputs for that question
+        $scope.disableInputs(questionNo, false);
     }
 
 
