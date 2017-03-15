@@ -6,7 +6,12 @@ myApp.config(function ($httpProvider) {
 
 
 myApp.controller('AdminController', ['$scope', '$window', '$http', function ($scope, $window, $http) {
+    
+    
+    // SETTING UP INITIAL VARS
+    
     $scope.departments = ['IT', 'CSE', 'ECE', 'BT', 'CE', 'CHE', 'ME', 'MME'];
+    $scope.selectedDepartments = [];
 
 
     $scope.dummyQuestion = {
@@ -30,12 +35,48 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
             3,
             4
         ]
-    }
-
+    };
     $scope.questions = [$scope.dummyQuestion];
 
 
-    // On click of add question button push the element to $scope.questions
+    $scope.selectAllDepartments = function (select) {
+        if (select) {
+            $scope.departments.forEach(function (department) {
+                document.getElementById('department-' + department).checked = true;
+            });
+        } else {
+            $scope.departments.forEach(function (department) {
+                document.getElementById('department-' + department).checked = false;
+            });
+        }
+    };
+    
+    $scope.departmentSelectionDone = function (done) {
+        if(done){
+            // get the values of selected depts
+            // push it into $scope.selectedDepartments
+
+            $scope.departments.forEach(function (department) {
+                if(document.getElementById('department-' + department).checked){
+                    $scope.selectedDepartments.push(document.getElementById('department-' + department).value);
+                }
+            });
+
+            // now disable the inputs
+            $scope.departments.forEach(function (department) {
+                document.getElementById('department-' + department).disabled = true;
+            });
+
+        } else {
+            $scope.departments.forEach(function (department) {
+                document.getElementById('department-' + department).disabled = false;
+            });
+        }
+
+        console.log("Department data:", $scope.selectedDepartments);
+    };
+
+
 
     $scope.checkSelected = function (questionNo) {
 
@@ -57,7 +98,7 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
             arrayOfIds.push('related-dropdown-' + questionNo);
             arrayOfIds.push('related-question-no-' + questionNo);
         }
-        if(disable){
+        if (disable) {
             arrayOfIds.forEach(function (id) {
                 document.getElementById(id).disabled = true;
             });

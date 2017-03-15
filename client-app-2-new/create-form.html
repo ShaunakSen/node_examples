@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://use.fontawesome.com/b7f499e08c.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="scss/styles2.css">
 
 </head>
@@ -58,20 +59,31 @@
                 <hr>
                 <div class="row">
                     <div class="col-xs-4">
-                        <button class="btn btn-primary btn-sm custom-button-select">Select All</button>
+                        <button class="btn btn-primary btn-sm custom-button-select" ng-click="selectAllDepartments(true)">
+                            <i class="fa fa-check-circle-o fa-1.5x"></i>&nbsp;Select All
+                        </button>
                     </div>
                     <div class="col-xs-4">
-                        <button class="btn btn-primary btn-sm custom-button-remove">Remove All</button>
+                        <button class="btn btn-primary btn-sm custom-button-remove" ng-click="selectAllDepartments(false)">Remove All</button>
                     </div>
                 </div>
                 <div class="row">
                     <form class="form-inline department-form">
                         <div class="checkbox" ng-repeat="department in departments">
                             <label>
-                                <input data-type="department-checkbox" type="checkbox"> {{department}}
+                                <input id="department-{{department}}" value="{{department.toLowerCase()}}" type="checkbox"> {{department}}
                             </label>
                         </div>
                     </form>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <button class="btn btn-primary btn-sm custom-button-select" ng-click="departmentSelectionDone(true)">DONE</button>
+                    </div>
+                    <div class="col-xs-3">
+                        <button class="btn btn-primary btn-sm custom-button-remove" ng-click="departmentSelectionDone(false)">EDIT</button>
+                    </div>
                 </div>
                 <hr>
             </div>
