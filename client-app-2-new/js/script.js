@@ -6,10 +6,10 @@ myApp.config(function ($httpProvider) {
 
 
 myApp.controller('AdminController', ['$scope', '$window', '$http', function ($scope, $window, $http) {
-    
-    
+
+
     // SETTING UP INITIAL VARS
-    
+
     $scope.departments = ['IT', 'CSE', 'ECE', 'BT', 'CE', 'CHE', 'ME', 'MME'];
     $scope.selectedDepartments = [];
 
@@ -38,6 +38,15 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
     };
     $scope.questions = [$scope.dummyQuestion];
 
+    $scope.inArray = function (array, value) {
+        for (var i = 0; i < array.length; ++i) {
+            if (array[i] == value) {
+                return i;
+            }
+        }
+        return -1;
+    };
+
 
     $scope.selectAllDepartments = function (select) {
         if (select) {
@@ -50,15 +59,27 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
             });
         }
     };
-    
+
     $scope.departmentSelectionDone = function (done) {
-        if(done){
+        if (done) {
             // get the values of selected depts
             // push it into $scope.selectedDepartments
 
             $scope.departments.forEach(function (department) {
-                if(document.getElementById('department-' + department).checked){
-                    $scope.selectedDepartments.push(document.getElementById('department-' + department).value);
+                var inputElement = document.getElementById('department-' + department);
+                if (inputElement.checked) {
+                    // if already not in array push
+
+
+                    if ($scope.inArray($scope.selectedDepartments, inputElement.value) == -1) {
+                        $scope.selectedDepartments.push(inputElement.value);
+                    }
+                } else {
+                    // not checked means u need to remove
+                    if ($scope.inArray($scope.selectedDepartments, inputElement.value) != -1) {
+                        var foundIndex = $scope.inArray($scope.selectedDepartments, inputElement.value);
+                        $scope.selectedDepartments.splice(foundIndex, 1);
+                    }
                 }
             });
 
@@ -75,7 +96,6 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
 
         console.log("Department data:", $scope.selectedDepartments);
     };
-
 
 
     $scope.checkSelected = function (questionNo) {

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a3bd2106-c361-42e4-aee7-a432b6aa92f6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/create-form.html" afterPath="$PROJECT_DIR$/client-app-2-new/create-form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/js/script.js" afterPath="$PROJECT_DIR$/client-app-2-new/js/script.js" />
     </list>
     <ignored path="node-examples.iws" />
@@ -50,10 +49,10 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client-app-2-new/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="853">
-              <caret line="75" column="68" selection-start-line="75" selection-start-column="68" selection-end-line="75" selection-end-column="68" />
+            <state relative-caret-position="439">
+              <caret line="82" column="17" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
               <folding>
-                <element signature="e#464#885#0" expanded="false" />
+                <element signature="e#452#873#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -570,14 +569,7 @@
       <workItem from="1489338173159" duration="7631000" />
       <workItem from="1489466915455" duration="8023000" />
       <workItem from="1489511943680" duration="6197000" />
-      <workItem from="1489575047591" duration="3671000" />
-    </task>
-    <task id="LOCAL-00081" summary="score evaluation :)">
-      <created>1485195809462</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1485195809462</updated>
+      <workItem from="1489575047591" duration="4580000" />
     </task>
     <task id="LOCAL-00082" summary="overall importance (alpha)">
       <created>1485197092793</created>
@@ -915,11 +907,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489577171792</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="working on department section">
+      <created>1489579270133</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1489579270133</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="609075000" />
+    <option name="totallyTimeSpent" value="609984000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -975,7 +974,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="linked bar chart to question + tricky bug fix :)" />
     <MESSAGE value="implemented pie chart" />
     <MESSAGE value="display feedback route only when logged in" />
     <MESSAGE value="accessing ejs vars rendered from server in client js logic" />
@@ -1000,7 +998,8 @@
     <MESSAGE value="disabling the inputs on Done button click :)" />
     <MESSAGE value="enabling the inputs on Edit button click" />
     <MESSAGE value="addQuestion() looks ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="addQuestion() looks ok" />
+    <MESSAGE value="working on department section" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on department section" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1339,10 +1338,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client-app-2-new/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="853">
-          <caret line="75" column="68" selection-start-line="75" selection-start-column="68" selection-end-line="75" selection-end-column="68" />
+        <state relative-caret-position="439">
+          <caret line="82" column="17" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
           <folding>
-            <element signature="e#464#885#0" expanded="false" />
+            <element signature="e#452#873#0" expanded="false" />
           </folding>
         </state>
       </provider>
