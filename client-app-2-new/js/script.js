@@ -9,30 +9,30 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
     $scope.departments = ['IT', 'CSE', 'ECE', 'BT', 'CE', 'CHE', 'ME', 'MME'];
 
 
-    $scope.questions = [
-        {
-            "questionNo": 1,
-            "title": "",
-            "importance": 10,
-            "thoughtProvoking": 2,
-            "displayEmotion": true,
-            "relatedTo": [],
-            "optionTitles": [
-                "Very poor",
-                "Poor",
-                "Ok",
-                "Good",
-                "Very Good"
-            ],
-            "optionValues": [
-                0,
-                1,
-                2,
-                3,
-                4
-            ]
-        }
-    ];
+    $scope.dummyQuestion = {
+        "questionNo": 1,
+        "title": "",
+        "importance": 10,
+        "thoughtProvoking": 2,
+        "displayEmotion": true,
+        "relatedTo": [],
+        "optionTitles": [
+            "Very poor",
+            "Poor",
+            "Ok",
+            "Good",
+            "Very Good"
+        ],
+        "optionValues": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ]
+    }
+
+    $scope.questions = [$scope.dummyQuestion];
 
 
     // On click of add question button push the element to $scope.questions
@@ -66,8 +66,6 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
                 document.getElementById(id).disabled = false;
             });
         }
-
-
     };
 
 
@@ -127,11 +125,21 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
 
         // disable the inputs for that question
         $scope.disableInputs(questionNo, true);
+
+        console.log("$scope.questions:", $scope.questions);
     };
 
     $scope.editQuestion = function (questionNo) {
         // enable the inputs for that question
         $scope.disableInputs(questionNo, false);
+    };
+
+
+    $scope.addQuestion = function () {
+        console.log("here");
+        $scope.questions.push($scope.dummyQuestion);
+
+        console.log($scope.questions);
     }
 
 

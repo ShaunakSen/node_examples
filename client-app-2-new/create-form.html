@@ -129,7 +129,7 @@
                 <div class="row related-row">
                     <div class="checkbox">
                         <label>
-                            <input disabled checked ng-click="checkSelected($index+1)" type="checkbox" id="relationship-exists-{{$index + 1}}">Related Question Exists?
+                            <input checked ng-click="checkSelected($index+1)" type="checkbox" id="relationship-exists-{{$index + 1}}">Related Question Exists?
                         </label>
                     </div>
                     <div id="related-fields-div-{{$index+1}}">
@@ -190,7 +190,7 @@
                         <h4>Add Another Question</h4>
                     </div>
                     <div class="col-xs-3">
-                        <button class="btn btn-primary custom-button-add">+</button>
+                        <button class="btn btn-primary custom-button-add" ng-click="addQuestion()">+</button>
                     </div>
                 </div>
             </div>
