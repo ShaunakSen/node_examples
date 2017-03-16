@@ -39,6 +39,12 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
     };
     $scope.questions = [$scope.dummyQuestion];
 
+    $scope.finalObject = {
+        "targetedUsers": [],
+        "mcq": []
+    };
+
+
     $scope.inArray = function (array, value) {
         for (var i = 0; i < array.length; ++i) {
             if (array[i] == value) {
@@ -180,12 +186,9 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
         questionData.optionValues = optionValues;
         console.log(questionData);
 
-        if (questionNo === 1) {
-            // First question submitted
-            $scope.questions[0] = questionData;
-        } else {
-            $scope.questions[questionNo - 1] = questionData;
-        }
+
+        $scope.questions[questionNo - 1] = questionData;
+
 
         // disable the inputs for that question
         $scope.disableInputs(questionNo, true);
@@ -200,11 +203,48 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
 
 
     $scope.addQuestion = function () {
-        console.log("here");
         $scope.questions.push($scope.dummyQuestion);
-
         console.log($scope.questions);
-    }
+    };
 
+
+    $scope.submitForm = function () {
+
+        console.log("here");
+        // click all Done buttons
+        $scope.departmentSelectionDone(true);
+
+        for (var i = 0; i < $scope.questions.length; ++i) {
+            $scope.saveQuestion(i + 1)
+        }
+
+        // build up finalObject
+
+        $scope.finalObject.targetedUsers = $scope.selectedDepartments;
+        $scope.finalObject.mcq = $scope.questions;
+
+        console.log("Final object to PUSH is", $scope.finalObject);
+
+        // POST the data
+
+        var postReq = {
+            method: 'POST',
+            url: 'http://localhost:3000/reviews/',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: $scope.finalObject
+        };
+
+        $http(postReq).then(
+            function (response) {
+                console.log("Ok..", response);
+
+            },
+            function (response) {
+                console.log("Not Ok..", response);
+            }
+        );
+};
 
 }]);

@@ -95,6 +95,14 @@ a:hover {
   .targeted-departments-container {
     border: 3px solid $medium;
 
+    .header-row{
+      background-color: $utility2;
+      color: whitesmoke;
+      font-weight: bold;
+      padding: 10px;
+      font-size: 1.3em;
+    }
+
     .department-form {
       margin-left: 25px;
       margin-top: 20px;
@@ -116,8 +124,12 @@ a:hover {
 
   .create-question-container {
     border: 3px solid $medium;
-    h4 {
-      font-family: $font2;
+    .header-row-2{
+      background-color: $utility4;
+      color: whitesmoke;
+      font-weight: bold;
+      padding: 10px;
+      font-size: 1.3em;
     }
     .create-question {
       p {

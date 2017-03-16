@@ -55,8 +55,10 @@
         <hr>
         <div class="row ">
             <div class="col-xs-9 targeted-departments-container">
-                <h4>Select Targeted Departments</h4>
-                <hr>
+                <div class="row header-row">
+                    Select Targeted Departments
+                </div>
+                <br>
                 <div class="row">
                     <div class="col-xs-4 custom-button-select-all" ng-if="!allSelected" ng-click="selectAllDepartments(true)">
                         <i class="fa fa-check-circle"></i><span>Select All</span>
@@ -88,8 +90,10 @@
         </div>
         <div class="row" style="margin-top: 30px" ng-repeat="question in questions track by $index">
             <div class="col-xs-9 create-question-container">
-                <h4>Create Question No: {{$index + 1}}</h4>
-                <hr>
+                <div class="row header-row-2">
+                    Create Question No: {{$index + 1}}
+                </div>
+                <br><br>
                 <div class="row create-question">
                     <div class="col-xs-4">
                         <p>Question Title</p>
@@ -201,6 +205,11 @@
                         <button class="btn btn-primary custom-button-add" ng-click="addQuestion()">+</button>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 30px">
+            <div class="col-xs-4 custom-button-select-all" ng-click="submitForm()">
+                <i class="fa fa-paper-plane"></i><span>Submit Form</span>
             </div>
         </div>
     </div>

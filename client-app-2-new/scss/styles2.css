@@ -45,6 +45,12 @@ a:hover {
   font-family: "Lato", sans-serif; }
   .main-content .targeted-departments-container {
     border: 3px solid #c7b2f6; }
+    .main-content .targeted-departments-container .header-row {
+      background-color: #8BC34A;
+      color: whitesmoke;
+      font-weight: bold;
+      padding: 10px;
+      font-size: 1.3em; }
     .main-content .targeted-departments-container .department-form {
       margin-left: 25px;
       margin-top: 20px; }
@@ -59,8 +65,12 @@ a:hover {
         margin-left: 0; }
   .main-content .create-question-container {
     border: 3px solid #c7b2f6; }
-    .main-content .create-question-container h4 {
-      font-family: "Montserrat", sans-serif; }
+    .main-content .create-question-container .header-row-2 {
+      background-color: #ff7a3e;
+      color: whitesmoke;
+      font-weight: bold;
+      padding: 10px;
+      font-size: 1.3em; }
     .main-content .create-question-container .create-question p {
       font-size: 17px;
       font-weight: bold;
