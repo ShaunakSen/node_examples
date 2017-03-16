@@ -58,13 +58,11 @@
                 <h4>Select Targeted Departments</h4>
                 <hr>
                 <div class="row">
-                    <div class="col-xs-4">
-                        <button class="btn btn-primary btn-sm custom-button-select" ng-click="selectAllDepartments(true)">
-                            <i class="fa fa-check-circle-o fa-1.5x"></i>&nbsp;Select All
-                        </button>
+                    <div class="col-xs-4 custom-button-select-all" ng-if="!allSelected" ng-click="selectAllDepartments(true)">
+                        <i class="fa fa-check-circle"></i><span>Select All</span>
                     </div>
-                    <div class="col-xs-4">
-                        <button class="btn btn-primary btn-sm custom-button-remove" ng-click="selectAllDepartments(false)">Remove All</button>
+                    <div class="col-xs-4 custom-button-remove-all" ng-if="allSelected" ng-click="selectAllDepartments(false)">
+                        <i class="fa fa-minus-circle"></i><span>Remove All</span>
                     </div>
                 </div>
                 <div class="row">
@@ -78,11 +76,11 @@
                 </div>
                 <hr>
                 <div class="row">
-                    <div class="col-xs-3">
-                        <button class="btn btn-primary btn-sm custom-button-select" ng-click="departmentSelectionDone(true)">DONE</button>
+                    <div class="col-xs-4 custom-button-done" ng-click="departmentSelectionDone(true)">
+                        <i class="fa fa-floppy-o"></i><span>Done</span>
                     </div>
-                    <div class="col-xs-3">
-                        <button class="btn btn-primary btn-sm custom-button-remove" ng-click="departmentSelectionDone(false)">EDIT</button>
+                    <div class="col-xs-4 custom-button-edit" ng-click="departmentSelectionDone(false)">
+                        <i class="fa fa-pencil-square-o"></i><span>Edit</span>
                     </div>
                 </div>
                 <hr>
@@ -182,13 +180,11 @@
                     <hr>
                 </div>
                 <div class="row related-row">
-                    <div class="col-xs-3">
-                        <button class="btn btn-primary custom-button-select" ng-click="saveQuestion($index + 1)">DONE
-                        </button>
+                    <div class="col-xs-4 custom-button-done" ng-click="saveQuestion($index + 1)">
+                        <i class="fa fa-floppy-o"></i><span>Done</span>
                     </div>
-                    <div class="col-xs-3">
-                        <button class="btn btn-primary custom-button-remove" ng-click="editQuestion($index + 1)">EDIT
-                        </button>
+                    <div class="col-xs-4 custom-button-edit" ng-click="editQuestion($index + 1)">
+                        <i class="fa fa-pencil-square-o"></i><span>Edit</span>
                     </div>
                 </div>
                 <hr>

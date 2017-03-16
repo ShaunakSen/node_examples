@@ -6,14 +6,30 @@ $medium: #c7b2f6;
 $dark: #3a3958;
 $darker: #332d46;
 
-$utility1: #cb7371;
-$utility2: #7bcb5d;
-$utility3: #3097c0;
+$utility1: #d14e4f;
+$utility2: #8BC34A;
+$utility3: #1E88E5;
+$utility4: #ff7a3e;
 
 //Font
 
 $font: 'Lato', sans-serif;
 $font2: 'Montserrat', sans-serif;
+
+@mixin generateButton($color, $borderWidth: 3px) {
+  font-family: $font2;
+  font-size: 1.3em;
+  color: $darker;
+  cursor: pointer;
+
+  i {
+    color: $color;
+  }
+  span {
+    margin-left: 3px;
+    border-bottom: $borderWidth solid $color;
+  }
+}
 
 //General Styles
 
@@ -100,11 +116,11 @@ a:hover {
 
   .create-question-container {
     border: 3px solid $medium;
-    h4{
+    h4 {
       font-family: $font2;
     }
-    .create-question{
-      p{
+    .create-question {
+      p {
         font-size: 17px;
         font-weight: bold;
         font-family: $font2;
@@ -112,24 +128,24 @@ a:hover {
       }
 
     }
-    .question-options{
-      .row{
+    .question-options {
+      .row {
         margin-top: 10px;
       }
-      p{
+      p {
         font-size: 17px;
         font-weight: bold;
         font-family: $font2;
         //margin-top: 5px;
         margin-left: 15px;
       }
-      span{
+      span {
         margin-left: 5px;
         font-weight: bold;
         font-family: $font2;
       }
     }
-    .related-row{
+    .related-row {
       .checkbox {
         margin-left: 15px;
         label {
@@ -138,7 +154,7 @@ a:hover {
           font-size: 1.1em;
         }
       }
-      p{
+      p {
         font-size: 17px;
         font-weight: bold;
         font-family: $font2;
@@ -147,10 +163,10 @@ a:hover {
       }
     }
   }
-  .add-question{
+  .add-question {
     border: 3px solid $medium;
     padding: 20px 10px;
-    h4{
+    h4 {
       font-family: $font2;
       margin-top: 18px;
       font-weight: bold;
@@ -159,20 +175,21 @@ a:hover {
 
 }
 
-.custom-input{
+.custom-input {
   padding: 7px;
   font-family: $font2;
   border: 2px solid $medium;
   transition: all 0.5s;
 
 }
-.custom-input:focus{
+
+.custom-input:focus {
   outline: none;
   border: 2px solid $dark;
 
 }
 
-.custom-select{
+.custom-select {
   border-radius: 0;
   padding: 7px;
   font-family: $font2;
@@ -180,12 +197,11 @@ a:hover {
   transition: all 0.5s;
 }
 
-.custom-select:focus{
+.custom-select:focus {
   outline: none;
   border: 2px solid $dark;
 
 }
-
 
 .custom-button-select {
   background-color: $utility2;
@@ -194,7 +210,8 @@ a:hover {
 .custom-button-remove {
   background-color: $utility1;
 }
-.custom-button-add{
+
+.custom-button-add {
   border-radius: 50%;
   height: 55px;
   width: 55px;
@@ -204,8 +221,24 @@ a:hover {
   transition: all 0.3s;
 }
 
-.custom-button-add:hover{
+.custom-button-add:hover {
   background-color: $utility3;
+}
+
+.custom-button-select-all {
+  @include generateButton($utility2);
+}
+
+.custom-button-remove-all {
+  @include generateButton($utility1);
+}
+
+.custom-button-done {
+  @include generateButton($utility3);
+}
+
+.custom-button-edit {
+  @include generateButton($utility4);
 }
 
 

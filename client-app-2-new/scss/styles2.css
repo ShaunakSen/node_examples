@@ -119,21 +119,65 @@ a:hover {
   border: 2px solid #3a3958; }
 
 .custom-button-select {
-  background-color: #7bcb5d; }
+  background-color: #8BC34A; }
 
 .custom-button-remove {
-  background-color: #cb7371; }
+  background-color: #d14e4f; }
 
 .custom-button-add {
   border-radius: 50%;
   height: 55px;
   width: 55px;
-  background-color: #3097c0;
+  background-color: #1E88E5;
   font-size: 2em;
   font-weight: bold;
   transition: all 0.3s; }
 
 .custom-button-add:hover {
-  background-color: #3097c0; }
+  background-color: #1E88E5; }
+
+.custom-button-select-all {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3em;
+  color: #332d46;
+  cursor: pointer; }
+  .custom-button-select-all i {
+    color: #8BC34A; }
+  .custom-button-select-all span {
+    margin-left: 3px;
+    border-bottom: 3px solid #8BC34A; }
+
+.custom-button-remove-all {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3em;
+  color: #332d46;
+  cursor: pointer; }
+  .custom-button-remove-all i {
+    color: #d14e4f; }
+  .custom-button-remove-all span {
+    margin-left: 3px;
+    border-bottom: 3px solid #d14e4f; }
+
+.custom-button-done {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3em;
+  color: #332d46;
+  cursor: pointer; }
+  .custom-button-done i {
+    color: #1E88E5; }
+  .custom-button-done span {
+    margin-left: 3px;
+    border-bottom: 3px solid #1E88E5; }
+
+.custom-button-edit {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3em;
+  color: #332d46;
+  cursor: pointer; }
+  .custom-button-edit i {
+    color: #ff7a3e; }
+  .custom-button-edit span {
+    margin-left: 3px;
+    border-bottom: 3px solid #ff7a3e; }
 
 /*# sourceMappingURL=styles2.css.map */

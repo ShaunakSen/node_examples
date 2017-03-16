@@ -12,6 +12,7 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
 
     $scope.departments = ['IT', 'CSE', 'ECE', 'BT', 'CE', 'CHE', 'ME', 'MME'];
     $scope.selectedDepartments = [];
+    $scope.allSelected = false;
 
 
     $scope.dummyQuestion = {
@@ -52,10 +53,12 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
         if (select) {
             $scope.departments.forEach(function (department) {
                 document.getElementById('department-' + department).checked = true;
+                $scope.allSelected = true;
             });
         } else {
             $scope.departments.forEach(function (department) {
                 document.getElementById('department-' + department).checked = false;
+                $scope.allSelected = false;
             });
         }
     };
