@@ -1,0 +1,256 @@
+//Color Schemes
+
+$lighter: #f9efff;
+$light: #cbc6d0;
+$medium: #c7b2f6;
+$dark: #3a3958;
+$darker: #332d46;
+
+$utility1: #d14e4f;
+$utility2: #8BC34A;
+$utility3: #1E88E5;
+$utility4: #ff7a3e;
+
+//Font
+
+$font: 'Lato', sans-serif;
+$font2: 'Montserrat', sans-serif;
+
+@mixin generateButton($color, $borderWidth: 3px) {
+  font-family: $font2;
+  font-size: 1.3em;
+  color: $darker;
+  cursor: pointer;
+
+  i {
+    color: $color;
+  }
+  span {
+    margin-left: 3px;
+    border-bottom: $borderWidth solid $color;
+  }
+}
+
+//General Styles
+
+body {
+  font-family: $font;
+  font-size: 14px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+//Buttons
+.btn-primary {
+  border-radius: 0;
+  border: none;
+}
+
+.navbar-default {
+  font-family: $font;
+  background-color: $light;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+
+  a {
+    color: $darker;
+  }
+}
+
+.sidebar {
+  height: 2000px;
+  background-color: $medium;
+}
+
+.main-content {
+  height: auto;
+  background-color: $lighter;
+  padding: 40px 40px;
+  font-family: $font;
+
+  .targeted-departments-container {
+    border: 3px solid $medium;
+
+    .header-row{
+      background-color: $utility2;
+      color: whitesmoke;
+      font-weight: bold;
+      padding: 10px;
+      font-size: 1.3em;
+    }
+
+    .department-form {
+      margin-left: 25px;
+      margin-top: 20px;
+      .checkbox {
+        margin-left: 15px;
+        label {
+          font-family: $font2;
+          font-size: 1.3em;
+          color: $dark;
+          font-weight: bold;
+        }
+      }
+      .checkbox:first-child {
+        margin-left: 0;
+      }
+
+    }
+  }
+
+  .create-question-container {
+    border: 3px solid $medium;
+    .header-row-2{
+      background-color: $utility4;
+      color: whitesmoke;
+      font-weight: bold;
+      padding: 10px;
+      font-size: 1.3em;
+    }
+    .create-question {
+      p {
+        font-size: 17px;
+        font-weight: bold;
+        font-family: $font2;
+        margin-top: 5px;
+      }
+
+    }
+    .question-options {
+      .row {
+        margin-top: 10px;
+      }
+      p {
+        font-size: 17px;
+        font-weight: bold;
+        font-family: $font2;
+        //margin-top: 5px;
+        margin-left: 15px;
+      }
+      span {
+        margin-left: 5px;
+        font-weight: bold;
+        font-family: $font2;
+      }
+    }
+    .related-row {
+      .checkbox {
+        margin-left: 15px;
+        label {
+          font-family: $font2;
+          font-weight: bold;
+          font-size: 1.1em;
+        }
+      }
+      p {
+        font-size: 17px;
+        font-weight: bold;
+        font-family: $font2;
+        margin-top: 5px;
+        margin-left: 15px;
+      }
+    }
+  }
+  .add-question {
+    border: 3px solid $medium;
+    padding: 20px 10px;
+    h4 {
+      font-family: $font2;
+      margin-top: 18px;
+      font-weight: bold;
+    }
+  }
+
+}
+
+.custom-input {
+  padding: 7px;
+  font-family: $font2;
+  border: 2px solid $medium;
+  transition: all 0.5s;
+
+}
+
+.custom-input:focus {
+  outline: none;
+  border: 2px solid $dark;
+
+}
+
+.custom-select {
+  border-radius: 0;
+  padding: 7px;
+  font-family: $font2;
+  border: 2px solid $medium;
+  transition: all 0.5s;
+}
+
+.custom-select:focus {
+  outline: none;
+  border: 2px solid $dark;
+
+}
+
+.custom-button-select {
+  background-color: $utility2;
+}
+
+.custom-button-remove {
+  background-color: $utility1;
+}
+
+.custom-button-add {
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  background-color: $utility3;
+  font-size: 2em;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.custom-button-add:hover {
+  background-color: $utility3;
+}
+
+.custom-button-select-all {
+  @include generateButton($utility2);
+}
+
+.custom-button-remove-all {
+  @include generateButton($utility1);
+}
+
+.custom-button-done {
+  @include generateButton($utility3);
+}
+
+.custom-button-edit {
+  @include generateButton($utility4);
+}
+
+
