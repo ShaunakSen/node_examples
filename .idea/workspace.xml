@@ -2,34 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3bd2106-c361-42e4-aee7-a432b6aa92f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/models/admin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/css/bootstrap.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/js/angular.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/js/script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/js/script2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/js/service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/scss/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/scss/style.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/scss/style.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/scss/styles2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/scss/styles2.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/scss/styles2.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/scss/styles_landing.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/routes/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/views/landing.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/views/partials/footer.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/views/partials/header.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/img/happy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/img/header.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/img/header2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/img/ok.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/img/sad.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/img/very_happy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/img/very_sad.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/public/css/theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/public/scss/styles_landing.scss" afterPath="$PROJECT_DIR$/client-app-2-new/public/scss/styles_landing.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/routes/index.js" afterPath="$PROJECT_DIR$/client-app-2-new/routes/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/views/landing.ejs" afterPath="$PROJECT_DIR$/client-app-2-new/views/landing.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/views/partials/header.ejs" afterPath="$PROJECT_DIR$/client-app-2-new/views/partials/header.ejs" />
     </list>
     <ignored path="node-examples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,31 +35,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-app-2-new/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-app-2-new/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="33" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+            <state relative-caret-position="450">
+              <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.ejs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client-app-2-new/views/partials/header.ejs">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client-app-2-new/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+              <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -83,8 +58,8 @@
       <file leaf-file-name="landing.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-app-2-new/views/landing.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2906">
-              <caret line="176" column="35" selection-start-line="176" selection-start-column="35" selection-end-line="176" selection-end-column="35" />
+            <state relative-caret-position="324">
+              <caret line="113" column="58" selection-start-line="113" selection-start-column="58" selection-end-line="113" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -96,8 +71,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -107,8 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/simility/scss/style.scss" />
-        <option value="$PROJECT_DIR$/simility/scss/styles.scss" />
         <option value="$PROJECT_DIR$/jwt-auth-app/package.json" />
         <option value="$PROJECT_DIR$/jwt-auth-app/models/user.js" />
         <option value="$PROJECT_DIR$/jwt-auth-app/config.js" />
@@ -153,11 +126,13 @@
         <option value="$PROJECT_DIR$/client-app-2-new/js/script.js" />
         <option value="$PROJECT_DIR$/client-app-2-new/package.json" />
         <option value="$PROJECT_DIR$/client-app-2-new/models/admin.js" />
-        <option value="$PROJECT_DIR$/client-app-2-new/views/landing.ejs" />
         <option value="$PROJECT_DIR$/client-app-2-new/scss/styles_landing.scss" />
         <option value="$PROJECT_DIR$/client-app-2-new/app.js" />
-        <option value="$PROJECT_DIR$/client-app-2-new/routes/index.js" />
+        <option value="$PROJECT_DIR$/client-app-2-new/public/css/theme.css" />
         <option value="$PROJECT_DIR$/client-app-2-new/views/partials/header.ejs" />
+        <option value="$PROJECT_DIR$/client-app-2-new/public/scss/styles_landing.scss" />
+        <option value="$PROJECT_DIR$/client-app-2-new/views/landing.ejs" />
+        <option value="$PROJECT_DIR$/client-app-2-new/routes/index.js" />
       </list>
     </option>
   </component>
@@ -305,18 +280,8 @@
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="node-examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node-examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client-app-1-new" />
+              <option name="myItemId" value="scss" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -330,33 +295,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="client-app-1-new" />
+              <option name="myItemId" value="client-app-2-new" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node-examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node-examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client-app-1-new" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -397,18 +340,19 @@
     <property name="jsx.switch.disabled" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\my_projects\node-examples\client-app-2-new\views\partials" />
-      <recent name="E:\my_projects\node-examples\client-app-2-new\public\js" />
-      <recent name="E:\my_projects\node-examples\client-app-2-new\public\scss" />
-      <recent name="E:\my_projects\node-examples\client-app-2-new\public\css" />
-      <recent name="E:\my_projects\node-examples\client-app-2-new\public\fonts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\my_projects\node-examples\client-app-2-new\public" />
       <recent name="E:\my_projects\node-examples\client-app-2-new\public\scss" />
       <recent name="$PROJECT_DIR$/client-app/img" />
       <recent name="$PROJECT_DIR$/node-express" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\my_projects\node-examples\client-app-2-new\public\img" />
+      <recent name="E:\my_projects\node-examples\client-app-2-new" />
+      <recent name="E:\my_projects\node-examples\client-app-2-new\views\partials" />
+      <recent name="E:\my_projects\node-examples\client-app-2-new\public\js" />
+      <recent name="E:\my_projects\node-examples\client-app-2-new\public\scss" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.app.js (3)">
@@ -684,14 +628,9 @@
       <workItem from="1489601900890" duration="2423000" />
       <workItem from="1489641826533" duration="9628000" />
       <workItem from="1489690557488" duration="47000" />
-      <workItem from="1489725037045" duration="2395000" />
-    </task>
-    <task id="LOCAL-00086" summary="new response model">
-      <created>1486546533193</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1486546533227</updated>
+      <workItem from="1489725037045" duration="4461000" />
+      <workItem from="1489750124070" duration="1053000" />
+      <workItem from="1489833430017" duration="1544000" />
     </task>
     <task id="LOCAL-00087" summary="client-app 1 modified to suite new responses route: except correct field">
       <created>1486577473254</created>
@@ -1029,11 +968,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489688707565</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="setting up client-app-2">
+      <created>1489728500321</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1489728500323</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="625105000" />
+    <option name="totallyTimeSpent" value="629768000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1043,7 +989,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56935483" sideWeight="0.51785713" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55482817" sideWeight="0.48214287" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5522876" sideWeight="0.48214287" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.85761046" sideWeight="0.48809522" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22767857" sideWeight="0.5147059" order="2" side_tool="true" content_ui="tabs" />
@@ -1089,7 +1035,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="linked responses to user data" />
     <MESSAGE value="working on reviews_filled" />
     <MESSAGE value="coded route: /users/:userId/filled_forms" />
     <MESSAGE value="db fixes" />
@@ -1114,7 +1059,8 @@
     <MESSAGE value="restoring deleted file" />
     <MESSAGE value="redesigning the buttons using mixins :)" />
     <MESSAGE value="POSTing data to correct API end point" />
-    <option name="LAST_COMMIT_MESSAGE" value="POSTing data to correct API end point" />
+    <MESSAGE value="setting up client-app-2" />
+    <option name="LAST_COMMIT_MESSAGE" value="setting up client-app-2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1123,7 +1069,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client-app-1-new/public/js/bootstrap.min.js" />
     <entry file="file://$PROJECT_DIR$/client-app-1-new/public/js/angular.js" />
     <entry file="file://$PROJECT_DIR$/client-app/scss/main.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -1353,7 +1298,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="25" column="3" selection-start-line="11" selection-start-column="2" selection-end-line="25" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1369,7 +1313,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1377,7 +1320,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1385,7 +1327,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1393,15 +1334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-1-new/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1409,7 +1341,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="548">
           <caret line="37" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1417,7 +1348,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="530">
           <caret line="35" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="176" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1425,7 +1355,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1381">
           <caret line="154" column="23" selection-start-line="154" selection-start-column="23" selection-end-line="154" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1433,15 +1362,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1940">
           <caret line="9" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-2-new/public/scss/styles_landing.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1449,38 +1369,57 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-2-new/app.js">
+    <entry file="file://$PROJECT_DIR$/client-app-1-new/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="548">
+          <caret line="99" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-app-2-new/public/css/theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="7675" column="1" selection-start-line="7675" selection-start-column="1" selection-end-line="7675" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-app-2-new/public/scss/styles_landing.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="87" column="13" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-app-2-new/views/partials/header.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client-app-2-new/views/landing.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2906">
-          <caret line="176" column="35" selection-start-line="176" selection-start-column="35" selection-end-line="176" selection-end-column="35" />
+        <state relative-caret-position="324">
+          <caret line="113" column="58" selection-start-line="113" selection-start-column="58" selection-end-line="113" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client-app-2-new/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="33" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+        <state relative-caret-position="450">
+          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-2-new/views/partials/header.ejs">
+    <entry file="file://$PROJECT_DIR$/client-app-2-new/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
           <folding />
         </state>
       </provider>
