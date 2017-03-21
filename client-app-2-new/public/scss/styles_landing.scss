@@ -190,6 +190,57 @@ a:hover {
   }
 }
 
+.created-forms-card{
+  @include generateBorder($utility4, 3px);
+  font-family: $font2;
+  hr{
+    margin: 0;
+    padding: 0;
+    margin-left: -5px;
+  }
+  .created-forms-card-header{
+    padding: 10px 8px;
+    @include generateBorder($utility4, 2px, "bottom");
+    background-color: $utility4;
+    h4{
+      color: $lighter;
+      font-family: $font2;
+      //font-weight: bold;
+      font-size: 1.4em;
+    }
+  }
+  .created-forms-date{
+    padding: 10px 8px;
+    color: $darker;
+    i{
+      font-size: 1.2em;
+      color: $utility3;
+    }
+    span{
+      font-size: 1.1em;
+    }
+    //@include generateBorder($utility4, 2px, "bottom");
+  }
+  .targeted-departments-header{
+    padding: 10px 8px;
+    p{
+      color: $darker;
+      font-size: 1.2em;
+    }
+    span{
+      margin-right: 8px;
+      background-color: $utility3;
+      border-radius: 15px;
+      padding: 5px 10px;
+      //font-weight: bold;
+      color: $lighter;
+    }
+  }
+  .admin-actions{
+    padding: 10px 0;
+  }
+}
+
 .emphasis-text{
   text-decoration: underline;
 }
