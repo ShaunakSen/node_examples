@@ -10,7 +10,38 @@ var mongoose = require('mongoose');
 router.use(bodyParser.json());
 
 router.get("/", function (req, res) {
-    res.render("landing", {forms: null})
+
+    if (req.user) {
+
+        // We need to pass the data of reviews to the view
+
+        var createdForms = req.user.created_forms;
+
+        var renderData = [];
+
+        // for each created form get the form data, store it in a new array
+        // render the view with that array
+
+        createdForms.forEach(function (formId, index) {
+            request('http://localhost:3000/reviews/' + formId, function (error, response, body) {
+                if (error) {
+                    console.log(error);
+                } else {
+                    renderData.push(JSON.parse(response.body));
+                    if (index == createdForms.length - 1) {
+                        // last form has been pushed
+                        // data is ready to be rendered
+                        res.render("landing", {forms: renderData})
+                    }
+                }
+            })
+        });
+
+    }
+    else {
+        res.render("landing", {forms: null});
+    }
+
 });
 
 // TEST ROUTES
@@ -26,10 +57,12 @@ router.get("/failed", function (req, res) {
 
 router.post("/register", function (req, res) {
     var newAdmin = new Admin(
-        {username: req.body.username,
-            department:req.body.department,
+        {
+            username: req.body.username,
+            department: req.body.department,
             email: req.body.email,
-            full_name: req.body.full_name}
+            full_name: req.body.full_name
+        }
     );
     Admin.register(newAdmin, req.body.password, function (err, admin) {
         // admin is newly created admin
@@ -62,10 +95,9 @@ router.get("/logout", function (req, res) {
 });
 
 
-
 router.get("/admins", function (req, res) {
     Admin.find({}, function (err, foundAdmins) {
-        if(err){
+        if (err) {
             console.log(err);
         } else {
             res.json(foundAdmins);
@@ -76,7 +108,7 @@ router.get("/admins", function (req, res) {
 router.put("/admins/:adminId/created_forms", function (req, res) {
     console.log("From PUT route", req.body);
     Admin.findById(req.params.adminId, function (err, admin) {
-        if(err){
+        if (err) {
             console.log(err);
         }
 
@@ -84,12 +116,12 @@ router.put("/admins/:adminId/created_forms", function (req, res) {
 
         var toAdd = true;
 
-        for(var i = 0; i< admin.created_forms.length; ++i){
-            if(admin.created_forms[i] == req.body.review_id){
+        for (var i = 0; i < admin.created_forms.length; ++i) {
+            if (admin.created_forms[i] == req.body.review_id) {
                 toAdd = false;
             }
         }
-        if(toAdd == true){
+        if (toAdd == true) {
             admin.created_forms.push(req.body.review_id);
         }
         admin.save(function (err, admin) {
