@@ -62,4 +62,40 @@ router.get("/logout", function (req, res) {
 });
 
 
+
+router.get("/admins", function (req, res) {
+    Admin.find({}, function (err, foundAdmins) {
+        if(err){
+            console.log(err);
+        } else {
+            res.json(foundAdmins);
+        }
+    })
+});
+
+router.put("/admins/:adminId/created_forms", function (req, res) {
+    console.log("From PUT route", req.body);
+    Admin.findById(req.params.adminId, function (err, admin) {
+        if(err){
+            console.log(err);
+        }
+
+        // check if review_id already exists
+
+        var toAdd = true;
+
+        for(var i = 0; i< admin.created_forms.length; ++i){
+            if(admin.created_forms[i] == req.body.review_id){
+                toAdd = false;
+            }
+        }
+        if(toAdd == true){
+            admin.created_forms.push(req.body.review_id);
+        }
+        admin.save(function (err, admin) {
+            if (err) throw err;
+        });
+    });
+});
+
 module.exports = router;
