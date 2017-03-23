@@ -22,7 +22,8 @@ var indexRoutes = require('./routes/index');
 
 var app = express();
 
-mongoose.connect("mongodb://localhost/client-app-1");
+// mongoose.connect("mongodb://localhost/client-app-1");
+mongoose.connect('127.0.0.1/client-app-1');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());

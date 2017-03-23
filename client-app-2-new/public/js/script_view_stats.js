@@ -4,7 +4,7 @@ myApp.config(function ($httpProvider) {
     $httpProvider.defaults.useXDomain = true;
 });
 
-myApp.controller('MainController', ['$scope', 'mainFactory', '$http', function ($scope, mainFactory, $http) {
+myApp.controller('MainController', ['$scope', '$http', function ($scope, $http) {
 
     $scope.apiResponse = [];
     $scope.noOfUsers = 0;

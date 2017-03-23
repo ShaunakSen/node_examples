@@ -42,8 +42,10 @@ var reviewSchema = new Schema({
         default: ["it","cse","ch","ce","ece","bt","me","mme","ch"]
     }],
     postedBy: {
-        name: String,
-        email: String
+        username: String,
+        department: String,
+        email: String,
+        full_name: String
     }
 }, {timestamps: true});
 

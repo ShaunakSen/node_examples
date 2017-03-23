@@ -41,7 +41,13 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
 
     $scope.finalObject = {
         "targetedUsers": [],
-        "mcq": []
+        "mcq": [],
+        "postedBy": {
+            username: "",
+            department: "",
+            email: "",
+            full_name: ""
+        }
     };
 
 
@@ -222,10 +228,18 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
 
         $scope.finalObject.targetedUsers = $scope.selectedDepartments;
         $scope.finalObject.mcq = $scope.questions;
+        $scope.finalObject.postedBy.username = $window.userInfo.username;
+        $scope.finalObject.postedBy.department = $window.userInfo.department;
+        $scope.finalObject.postedBy.email = $window.userInfo.email;
+        $scope.finalObject.postedBy.full_name = $window.userInfo.full_name;
 
         console.log("Final object to PUSH is", $scope.finalObject);
 
         // POST the data
+
+        // TODO: postedBy field
+
+
 
         var postReq = {
             method: 'POST',
@@ -239,6 +253,23 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
         $http(postReq).then(
             function (response) {
                 console.log("Ok..", response);
+
+                // TODO: created_reviews
+
+                $http({
+                    method : "PUT",
+                    url : 'http://localhost:8000/admins/' + $window.userInfo._id + '/created_forms',
+                    data : {review_id: response.data._id},
+                    headers : {
+                        'Content-Type' : 'application/json'
+                    }
+                }).then( function (response) {
+                    console.log("ok...", response)
+                }, function (response) {
+                    console.log("not ok...", response)
+                } );
+
+
 
             },
             function (response) {

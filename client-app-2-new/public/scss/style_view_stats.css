@@ -46,7 +46,7 @@ a:hover {
     color: #3b3555;
     margin-top: 20px; }
     .main-content .stats-container .stats-card-1 {
-      background: #c7b2f6; }
+      background: #f9efff; }
       .main-content .stats-container .stats-card-1 .chart-row {
         padding: 20px 0; }
         .main-content .stats-container .stats-card-1 .chart-row .custom-select {
@@ -62,7 +62,7 @@ a:hover {
     color: #3b3555;
     margin-top: 20px; }
     .main-content .analysis-container .analysis-card {
-      background: #c7b2f6; }
+      background: #f9efff; }
       .main-content .analysis-container .analysis-card .inner-analysis-card {
         padding: 20px;
         border: 1px solid #f9efff;

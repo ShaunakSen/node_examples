@@ -19,6 +19,8 @@ router.get("/", function (req, res) {
 
         var renderData = [];
 
+        console.log("im here");
+
         // for each created form get the form data, store it in a new array
         // render the view with that array
 
@@ -31,7 +33,7 @@ router.get("/", function (req, res) {
                     if (index == createdForms.length - 1) {
                         // last form has been pushed
                         // data is ready to be rendered
-                        res.render("landing", {forms: renderData})
+                        res.render("landing",   {forms: renderData})
                     }
                 }
             })
@@ -128,6 +130,14 @@ router.put("/admins/:adminId/created_forms", function (req, res) {
             if (err) throw err;
         });
     });
+});
+
+router.get("/details", function (req, res) {
+    res.render("view-stats");
+});
+
+router.get("/create_review", function (req, res) {
+    res.render("create-form");
 });
 
 module.exports = router;

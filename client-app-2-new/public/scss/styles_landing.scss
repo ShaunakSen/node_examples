@@ -227,13 +227,15 @@ a:hover {
       color: $darker;
       font-size: 1.2em;
     }
-    span{
-      margin-right: 8px;
+    .slab{
+      display: inline;
+      //margin-right: 8px;
       background-color: $utility3;
       border-radius: 15px;
       padding: 5px 10px;
       //font-weight: bold;
       color: $lighter;
+      margin-top: 5px;
     }
   }
   .admin-actions{

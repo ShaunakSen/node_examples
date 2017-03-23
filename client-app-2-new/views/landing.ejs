@@ -34,11 +34,12 @@
         </div>
     </div>
     <br>
-
-    <div class="row">
-        <div class="created-forms-card col-sm-4">
+    <% if(forms != null){ %>
+        <div class="row">
+        <% forms.forEach(function (form, index) { %>
+        <div class="created-forms-card col-sm-5 col-sm-offset-1" style="margin-top: 30px">
             <div class="row created-forms-card-header">
-                <h4>Review No: 1</h4>
+                <h4>Review No: <%= index+1 %></h4>
             </div>
             <div class="row created-forms-date">
                 <i class="fa fa-clock-o"></i>
@@ -46,24 +47,40 @@
             </div>
             <hr>
             <div class="row targeted-departments-header">
-                <p>Targeted Departments</p>
-                <span>BT</span>
-                <span>IT</span>
-                <span>CSE</span>
-                <span>ECE</span>
-                <span>MME</span>
+                <p>Targeted Departments:</p>
+                <div style="margin-top: 10px">
+                    <% form.targetedUsers.forEach(function (department) { %>
+                    <div class="slab"><%= department %></div>
+                    <% }) %>
+                </div>
             </div>
             <hr>
             <div class="row admin-actions">
                 <div class="col-xs-6 custom-button-login">
-                    <a href="/logout"><i class="fa fa-external-link"></i><span>View Details</span></a>
+                    <a href="/details
+
+
+                    "><i class="fa fa-external-link"></i><span>View Details</span></a>
                 </div>
                 <div class="col-xs-4 col-xs-offset-2 custom-button-logout">
-                    <a href="/logout"><i class="fa fa-trash"></i><span>Delete</span></a>
+                    <a href="/"><i class="fa fa-trash"></i><span>Delete</span></a>
                 </div>
             </div>
         </div>
+        <% }) %>
     </div>
+    <% }%>
+    <br><br><br>
+    <% if(currentUser){ %>
+        <div class="row">
+            <div class="col-xs-6 custom-button-login">
+                <a href="/create_review"><i class="fa fa-external-link"></i><span>Create a new Review</span></a>
+            </div>
+        </div>
+        <br>
+    <% } %>>
+
+
 
 
 </div> <!-- /container -->
@@ -71,5 +88,4 @@
 
 <% include ./partials/registration-modal.ejs %>
 <% include ./partials/login-modal.ejs %>
-
 <% include ./partials/footer.ejs %>
