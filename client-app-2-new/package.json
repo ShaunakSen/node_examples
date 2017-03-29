@@ -1,0 +1,26 @@
+{
+  "name": "client-app-2-new",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shaunak",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "connect-flash": "^0.1.1",
+    "cors": "^2.8.1",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "method-override": "^2.3.7",
+    "mongodb": "^2.2.24",
+    "mongoose": "^4.7.4",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.0.0",
+    "request": "^2.80.0"
+  }
+}

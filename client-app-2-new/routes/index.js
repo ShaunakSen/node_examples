@@ -21,23 +21,30 @@ router.get("/", function (req, res) {
 
         console.log("im here");
 
+        // TODO: handle case where createdForms is not consistent with REST API
+
         // for each created form get the form data, store it in a new array
         // render the view with that array
-
-        createdForms.forEach(function (formId, index) {
-            request('http://localhost:3000/reviews/' + formId, function (error, response, body) {
-                if (error) {
-                    console.log(error);
-                } else {
-                    renderData.push(JSON.parse(response.body));
-                    if (index == createdForms.length - 1) {
-                        // last form has been pushed
-                        // data is ready to be rendered
-                        res.render("landing",   {forms: renderData})
+        if(createdForms.length == 0){
+            res.render("landing", {forms: null});
+        } else {
+            createdForms.forEach(function (formId, index) {
+                console.log("Inside for each function");
+                request('http://localhost:3000/reviews/' + formId, function (error, response, body) {
+                    if (error) {
+                        console.log(error);
+                    } else {
+                        renderData.push(JSON.parse(response.body));
+                        if (index == createdForms.length - 1) {
+                            // last form has been pushed
+                            // data is ready to be rendered
+                            res.render("landing",   {forms: renderData})
+                        }
                     }
-                }
-            })
-        });
+                })
+            });
+        }
+        
 
     }
     else {
