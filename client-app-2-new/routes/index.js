@@ -9,6 +9,16 @@ var mongoose = require('mongoose');
 
 router.use(bodyParser.json());
 
+function inArray(array, value) {
+    for (var i = 0; i < array.length; ++i) {
+        if (array[i] == value) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+
 router.get("/", function (req, res) {
 
     if (req.user) {
@@ -16,7 +26,7 @@ router.get("/", function (req, res) {
         // We need to pass the data of reviews to the view
 
         var createdForms = req.user.created_forms;
-
+        var formsInSystem = [];
         var renderData = [];
 
         console.log("im here");
@@ -25,27 +35,58 @@ router.get("/", function (req, res) {
 
         // for each created form get the form data, store it in a new array
         // render the view with that array
-        if(createdForms.length == 0){
+
+        if (createdForms.length == 0) {
             res.render("landing", {forms: null});
         } else {
-            createdForms.forEach(function (formId, index) {
-                console.log("Inside for each function");
-                request('http://localhost:3000/reviews/' + formId, function (error, response, body) {
-                    if (error) {
-                        console.log(error);
-                    } else {
-                        renderData.push(JSON.parse(response.body));
-                        if (index == createdForms.length - 1) {
-                            // last form has been pushed
-                            // data is ready to be rendered
-                            res.render("landing",   {forms: renderData})
+            
+            // Get all reviews in system
+            
+            request('http://localhost:3000/reviews', function (error, response) {
+                if (error) {
+                    console.log(error)
+                } else {
+                    var data = JSON.parse(response.body);
+                    // Getting all forms in system
+                    for (var i = 0; i < data.length; ++i) {
+                        formsInSystem.push(data[i]._id);
+                    }
+                    console.log("forms in system:", formsInSystem);
+                    for (var x = 0; x < createdForms.length; ++x) {
+                        if (inArray(formsInSystem, createdForms[x]) == -1) {
+                            // form does not exist in system
+                            // delete it
+                            createdForms.splice(x, 1);
+                            console.log("deleted inconsistent data");
+
+                            // TODO: delete this data from database too so that next time it runs more efficiently
+                            
                         }
                     }
-                })
+                    console.log("created forms:", createdForms);
+
+                    if (createdForms.length == 0) {
+                        res.render("landing", {forms: null});
+                    } else {
+                        createdForms.forEach(function (formId, index) {
+
+                            request('http://localhost:3000/reviews/' + formId, function (error, response, body) {
+                                if (error) {
+                                    console.log(error);
+                                } else {
+                                    renderData.push(JSON.parse(response.body));
+                                    if (index == createdForms.length - 1) {
+                                        // last form has been pushed
+                                        // data is ready to be rendered
+                                        res.render("landing", {forms: renderData})
+                                    }
+                                }
+                            })
+                        });
+                    }
+                }
             });
         }
-        
-
     }
     else {
         res.render("landing", {forms: null});
