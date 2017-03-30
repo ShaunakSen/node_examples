@@ -15,9 +15,9 @@ myApp.controller('MainController', ['$scope', '$http', function ($scope, $http) 
     $scope.selectedQuestionNo2 = 1;
 
     $scope.getResponses = function () {
-        $http.get("http://localhost:3000/responses_new").then(function (response) {
+        $http.get("http://localhost:3000/responses_new/reviewId/5829cc362d9a160e07f921e4").then(function (response) {
             $scope.apiResponse = response.data;
-            console.log($scope.apiResponse);
+            console.log("api response:", $scope.apiResponse);
             $scope.noOfUsers = $scope.apiResponse.length;
             $scope.noOfQuestions = $scope.apiResponse[0].mcqResponse.length;
             for (var i = 0; i < $scope.noOfQuestions; ++i) {
@@ -128,29 +128,33 @@ myApp.controller('MainController', ['$scope', '$http', function ($scope, $http) 
 
     $scope.prepareChartData = function (questionNo) {
 
+        // This function generates the necessary data structures: labels and data for chart generation
+
         // We need 2 arrays: labels and data
 
         // labels: 0, 1, 2, 3, 4
         // data: responses corresponding to labels
-        var labels = [];
-        var data = [];
+        var labels = ["", "", "", "", ""];
+        var data = [0, 0, 0, 0, 0];
 
         console.log("here");
 
         $scope.apiResponse.forEach(function (userResponse) {
             var requiredQuestion = userResponse.mcqResponse[questionNo - 1];
             var response = requiredQuestion.response;
-            if (isInArray(response, labels)) {
-                //increase data value for the response
-                data[response] += 1;
+            labels[response] = requiredQuestion.responseText;
+            data[response] += 1;
+            /*if (isInArray(response, labels)) {
+             //increase data value for the response
+             data[response] += 1;
 
-            } else {
-                // initialize data value for that response
-                data[response] = 1;
+             } else {
+             // initialize data value for that response
+             data[response] = 1;
 
-                // initialize label value
-                labels[response] = response;
-            }
+             // initialize label value
+             labels[response] = response;
+             }*/
         });
 
         console.log(labels, data);
@@ -224,7 +228,7 @@ myApp.controller('MainController', ['$scope', '$http', function ($scope, $http) 
                     ]
                 }]
         };
-        var myPieChart = new Chart(ctx,{
+        var myPieChart = new Chart(ctx, {
             type: 'pie',
             data: data_new
 
@@ -247,9 +251,9 @@ myApp.controller('MainController', ['$scope', '$http', function ($scope, $http) 
             var requiredQuestion = userResponse.mcqResponse[questionNo - 1];
             var response = requiredQuestion.response;
             var responseIndex;
-            if(response < 2){
+            if (response < 2) {
                 responseIndex = 0
-            } else if (response == 2){
+            } else if (response == 2) {
                 responseIndex = 1;
             } else {
                 responseIndex = 2;
