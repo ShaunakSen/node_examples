@@ -155,6 +155,9 @@ myApp.controller('MainController', ['$scope', '$http', function ($scope, $http) 
              // initialize label value
              labels[response] = response;
              }*/
+
+
+            
         });
 
         console.log(labels, data);
