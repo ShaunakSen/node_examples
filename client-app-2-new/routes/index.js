@@ -184,6 +184,13 @@ router.get("/details", function (req, res) {
     res.render("view-stats");
 });
 
+
+router.get("/details/:reviewId", function (req, res) {
+    var reviewId = req.params.reviewId;
+    res.render("view-stats", {reviewId: reviewId});
+});
+
+
 router.get("/create_review", function (req, res) {
     res.render("create-form");
 });

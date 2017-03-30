@@ -46,6 +46,17 @@ router.get("/responses_new/:id", function (req, res) {
     });
 });
 
+router.get("/responses_new/reviewId/:reviewId", function (req, res) {
+    var reviewId = req.params.reviewId;
+    Responses.find({reviewId: reviewId}, function (err, foundResponse) {
+        if(err){
+            console.log(err);
+        } else {
+            res.json(foundResponse);
+        }
+    });
+});
+
 // POST mcq response
 
 router.post("/responses_new/:id/mcqResponse", function (req, res) {
