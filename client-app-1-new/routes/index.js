@@ -165,6 +165,8 @@ router.put("/users/:userId/filled_forms", function (req, res) {
         }
         user.save(function (err, user) {
             if (err) throw err;
+            console.log("saved");
+            res.send("ok");
         });
     });
 });

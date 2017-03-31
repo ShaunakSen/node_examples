@@ -279,7 +279,26 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
                         'Content-Type' : 'application/json'
                     }
                 }).then( function (response) {
-                    console.log("ok...", response)
+                    console.log("ok...", response);
+
+                    console.log("about to hit api route");
+                    
+                    // Change the filled form data for this user on API side
+
+                    $http({
+                        method: "PUT",
+                        url: "http://localhost:3000/users/" + $scope.userInfo.username + "/filled_forms",
+                        data: {review_id: $scope.reviewId},
+                        headers : {
+                            'Content-Type' : 'application/json'
+                        }
+                    }).then(function (response) {
+                        console.log("Change reflected in API side as well", response);
+
+                    }, function (response) {
+                        console.log("Not ok on API side", response);
+                    })
+                    
                 }, function (response) {
                     console.log("not ok...", response)
                 } );

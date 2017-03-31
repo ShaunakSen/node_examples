@@ -12,7 +12,7 @@ router.use(bodyParser.json());
 // GET ALL RESPONSES
 router.get("/users", function (req, res) {
     Users.find({}, function (err, foundUsers) {
-        if(err){
+        if (err) {
             console.log(err);
         } else {
             res.json(foundUsers);
@@ -24,7 +24,7 @@ router.get("/users", function (req, res) {
 
 router.post("/users", function (req, res) {
     Users.create(req.body, function (err, createduser) {
-        if(err){
+        if (err) {
             console.log(err);
         } else {
             console.log("Created a user with id: " + createduser._id);
@@ -38,7 +38,7 @@ router.post("/users", function (req, res) {
 router.get("/users/:id", function (req, res) {
     var id = req.params.id;
     Users.findById(id, function (err, fundUser) {
-        if(err){
+        if (err) {
             console.log(err);
         } else {
             res.json(fundUser);
@@ -47,6 +47,44 @@ router.get("/users/:id", function (req, res) {
 });
 
 // TODO: PUT rote for editing filled_forms
+
+
+router.put("/users/:username/filled_forms", function (req, res) {
+    var username = req.params.username;
+
+    Users.find({username: username}, function (err, foundUsers) {
+        if(err){
+            console.log(err);
+        }
+
+        var foundUser = foundUsers[0];
+
+        // check if review_id already exists
+
+        var toAdd = true;
+
+        if(typeof foundUser.filled_forms == "undefined"){
+            foundUser.filled_forms = [];
+        }
+
+
+        for(var i = 0; i< foundUser.filled_forms.length; ++i){
+            if(foundUser.filled_forms[i] == req.body.review_id){
+                toAdd = false;
+            }
+        }
+        if(toAdd == true){
+            foundUser.filled_forms.push(req.body.review_id);
+        }
+        foundUser.save(function (err, user) {
+            if (err) throw err;
+            res.json(user);
+        });
+
+
+    })
+
+});
 
 
 module.exports = router;
