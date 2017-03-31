@@ -36,7 +36,14 @@ a:hover {
 
 .sidebar {
   height: 2000px;
-  background-color: #c7b2f6; }
+  background-color: #c7b2f6;
+  font-family: "Montserrat", sans-serif;
+  padding: 40px 40px; }
+  .sidebar i {
+    font-size: 1.3em;
+    color: #3b3555; }
+  .sidebar span {
+    font-size: 1.3em; }
 
 .main-content {
   height: auto;
@@ -46,7 +53,8 @@ a:hover {
     color: #3b3555;
     margin-top: 20px; }
     .main-content .stats-container .stats-card-1 {
-      background: #f9efff; }
+      background: #f9efff;
+      border: 2px solid #c7b2f6; }
       .main-content .stats-container .stats-card-1 .chart-row {
         padding: 20px 0; }
         .main-content .stats-container .stats-card-1 .chart-row .custom-select {
@@ -78,4 +86,4 @@ a:hover {
   border: none;
   border-radius: 0; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style_view_stats.css.map */

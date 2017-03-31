@@ -6,6 +6,11 @@ $medium: #c7b2f6;
 $dark: #3b3555;
 $darker: #332d46;
 
+$utility1: #d14e4f;
+$utility2: #8BC34A;
+$utility3: #1E88E5;
+$utility4: #ff7a3e;
+
 //Font
 
 $font: 'Lato', sans-serif;
@@ -65,6 +70,15 @@ a:hover {
 .sidebar {
   height: 2000px;
   background-color: $medium;
+  font-family: $font2;
+  padding: 40px 40px;
+  i{
+    font-size: 1.3em;
+    color: $dark;
+  }
+  span{
+    font-size: 1.3em;
+  }
 }
 
 .main-content {
@@ -79,6 +93,8 @@ a:hover {
 
     .stats-card-1{
       background: $lighter;
+      border: 2px solid $medium;
+
 
       .chart-row{
         padding: 20px 0;

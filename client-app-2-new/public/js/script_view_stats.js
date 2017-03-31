@@ -4,7 +4,7 @@ myApp.config(function ($httpProvider) {
     $httpProvider.defaults.useXDomain = true;
 });
 
-myApp.controller('MainController', ['$scope', '$http', function ($scope, $http) {
+myApp.controller('MainController', ['$scope', '$http', '$window', function ($scope, $http, $window) {
 
     $scope.apiResponse = [];
     $scope.noOfUsers = 0;
@@ -13,9 +13,13 @@ myApp.controller('MainController', ['$scope', '$http', function ($scope, $http) 
     $scope.questionNos = [];
     $scope.selectedQuestionNo = 1;
     $scope.selectedQuestionNo2 = 1;
+    
+    $scope.reviewId = $window.reviewId;
+    $scope.adminInfo = $window.adminInfo;
+    
 
     $scope.getResponses = function () {
-        $http.get("http://localhost:3000/responses_new/reviewId/5829cc362d9a160e07f921e4").then(function (response) {
+        $http.get("http://localhost:3000/responses_new/reviewId/" + $scope.reviewId).then(function (response) {
             $scope.apiResponse = response.data;
             console.log("api response:", $scope.apiResponse);
             $scope.noOfUsers = $scope.apiResponse.length;
@@ -157,7 +161,7 @@ myApp.controller('MainController', ['$scope', '$http', function ($scope, $http) 
              }*/
 
 
-            
+
         });
 
         console.log(labels, data);
@@ -255,11 +259,11 @@ myApp.controller('MainController', ['$scope', '$http', function ($scope, $http) 
             var response = requiredQuestion.response;
             var responseIndex;
             if (response < 2) {
-                responseIndex = 0
+                responseIndex = 2
             } else if (response == 2) {
                 responseIndex = 1;
             } else {
-                responseIndex = 2;
+                responseIndex = 0;
             }
             data[responseIndex] += 1;
 

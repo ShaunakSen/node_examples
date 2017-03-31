@@ -50,7 +50,12 @@
 </nav>
 
 <div class="row">
-    <div class="col-sm-4 sidebar"></div>
+    <div class="col-sm-4 sidebar">
+        <p><i class="fa fa-users"></i><span>&nbsp;No of Users Reviewed: {{noOfUsers}}</span></p>
+        <p><i class="fa fa-database"></i><span>&nbsp;View Raw Statistics</span></p>
+        <p><i class="fa fa-filter"></i><span>&nbsp;View Filtered Statistics</span></p>
+
+    </div>
     <div class="col-sm-8 main-content">
 
         <div class="row stats-container">
@@ -152,6 +157,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="/js/angular.js"></script>
+<script>
+    window.adminInfo = <%- JSON.stringify(currentUser) %>;
+    window.reviewId = <%- JSON.stringify(reviewId) %>;
+</script>
 <script src="/js/script_view_stats.js"></script>
 </body>
 </html>
