@@ -75,7 +75,28 @@ router.post("/register", function (req, res) {
             return res.render("landing");
         }
         passport.authenticate("local")(req, res, function () {
-            res.redirect("/");
+
+            // New user registered
+            // So push user data to API
+            var userData = {username: req.body.username,
+                roll_number:req.body.roll_number,
+                email: req.body.email,
+                full_name: req.body.full_name};
+            
+            console.log("data to push:", userData);
+
+            request.post(
+                'http://localhost:3000/users',
+                { json: userData },
+                function (error, response, body) {
+                    if (!error && response.statusCode == 200) {
+                        console.log(body);
+                        res.redirect("/");
+                    } else if(error) {
+                        console.log(error);
+                    }
+                }
+            );
         });
     });
 });

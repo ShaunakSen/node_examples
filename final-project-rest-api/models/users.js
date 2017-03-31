@@ -21,4 +21,4 @@ var UserSchema = new mongoose.Schema({
     filled_forms: [{type: String}]
 });
 
-module.exports = mongoose.model("User", UserSchema);
+module.exports = mongoose.model("User_api", UserSchema);

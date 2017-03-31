@@ -10,71 +10,43 @@ var router = express.Router();
 router.use(bodyParser.json());
 
 // GET ALL RESPONSES
-router.get("/responses_new", function (req, res) {
-    Responses.find({}, function (err, foundResponses) {
+router.get("/users", function (req, res) {
+    Users.find({}, function (err, foundUsers) {
         if(err){
             console.log(err);
         } else {
-            res.json(foundResponses);
+            res.json(foundUsers);
         }
     })
 });
 
 // POST RESPONSES
 
-router.post("/responses_new", function (req, res) {
-    Responses.create(req.body, function (err, createdResponse) {
+router.post("/users", function (req, res) {
+    Users.create(req.body, function (err, createduser) {
         if(err){
             console.log(err);
         } else {
-            console.log("Created a responses with id: " + createdResponse._id);
-            res.json(createdResponse);
+            console.log("Created a user with id: " + createduser._id);
+            res.json(createduser);
         }
     });
 });
 
-// GET RESPONSE BY ID
+// GET USER BY ID
 
-router.get("/responses_new/:id", function (req, res) {
+router.get("/users/:id", function (req, res) {
     var id = req.params.id;
-    Responses.findById(id, function (err, foundResponse) {
+    Users.findById(id, function (err, fundUser) {
         if(err){
             console.log(err);
         } else {
-            res.json(foundResponse);
+            res.json(fundUser);
         }
     });
 });
 
-router.get("/responses_new/reviewId/:reviewId", function (req, res) {
-    var reviewId = req.params.reviewId;
-    Responses.find({reviewId: reviewId}, function (err, foundResponse) {
-        if(err){
-            console.log(err);
-        } else {
-            res.json(foundResponse);
-        }
-    });
-});
+// TODO: PUT rote for editing filled_forms
 
-// POST mcq response
-
-router.post("/responses_new/:id/mcqResponse", function (req, res) {
-    Responses.findById(req.params.id, function (err, foundResponse) {
-        if(err){
-            console.log(err);
-        } else {
-            foundResponse.mcqResponse.push(req.body);
-
-            foundResponse.save(function (err, response) {
-                if(err){
-                    console.log(err);
-                } else {
-                    res.json(response);
-                }
-            });
-        }
-    });
-});
 
 module.exports = router;
