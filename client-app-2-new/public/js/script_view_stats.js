@@ -83,6 +83,18 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         for (var i = 0; i < $scope.noOfUsers; ++i) {
             // iterate over all question reviews by current user
             var user_no = i;
+            var postedBy = {
+                email: "",
+                full_name: "",
+                roll_number: "",
+                username: ""
+            };
+
+            if($scope.apiResponse[i].hasOwnProperty("postedBy")){
+                postedBy = $scope.apiResponse[i].postedBy;
+            }
+
+
             $scope.apiResponse[i].mcqResponse.forEach(function (questionResponse) {
                 if (questionResponse.hasOwnProperty("correct") && questionResponse.correct == false) {
                     var thisQuestionNo = questionResponse.questionNo;
@@ -111,13 +123,21 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
                             related_how: relatedHow,
                             related_question_response: relatedQuestionResponse,
                             related_question_text: relatedQuestionText,
-                            text: text
+                            text: text,
+                            postedBy: postedBy
                         }
                     );
                 }
             })
         }
         console.log("Important Analysis Data:", $scope.importantAnalysyis);
+    };
+    
+    $scope.flagUser = function (username) {
+        if(username == ""){
+            return;
+        }
+        console.log("Flagging user with username: " + username);
     };
 
 

@@ -46,7 +46,7 @@ router.get("/users/:id", function (req, res) {
     });
 });
 
-// TODO: PUT rote for editing filled_forms
+// PUT rote for editing filled_forms
 
 
 router.put("/users/:username/filled_forms", function (req, res) {
@@ -55,36 +55,67 @@ router.put("/users/:username/filled_forms", function (req, res) {
     Users.find({username: username}, function (err, foundUsers) {
         if(err){
             console.log(err);
+        } else {
+            var foundUser = foundUsers[0];
+
+            // check if review_id already exists
+
+            var toAdd = true;
+
+            if(typeof foundUser.filled_forms == "undefined"){
+                foundUser.filled_forms = [];
+            }
+
+
+            for(var i = 0; i< foundUser.filled_forms.length; ++i){
+                if(foundUser.filled_forms[i] == req.body.review_id){
+                    toAdd = false;
+                }
+            }
+            if(toAdd == true){
+                foundUser.filled_forms.push(req.body.review_id);
+            }
+            foundUser.save(function (err, user) {
+                if (err) throw err;
+                res.json(user);
+            });
         }
+    })
+});
 
-        var foundUser = foundUsers[0];
-
-        // check if review_id already exists
-
-        var toAdd = true;
-
-        if(typeof foundUser.filled_forms == "undefined"){
-            foundUser.filled_forms = [];
-        }
+// PUT Route for increasing flag for user
 
 
-        for(var i = 0; i< foundUser.filled_forms.length; ++i){
-            if(foundUser.filled_forms[i] == req.body.review_id){
-                toAdd = false;
+route.put("/users/:username/flags", function (req, res) {
+    var username = req.params.username;
+
+    Users.find({username: username}, function (err, foundUsers) {
+        if(err){
+            console.log(err);
+        } else {
+            var foundUser = foundUsers[0];
+            if(foundUser.hasOwnProperty("flags")){
+                var currentFlag = foundUser.flags;
+                foundUser.flags = currentFlag + 1;
+                foundUser.save(function (err, user) {
+                    if(err){
+                        console.log(err);
+                    } else {
+                        res.json(user);
+                    }
+                })
+            } else {
+                res.json({
+                    message: "No flag data"
+                });
             }
         }
-        if(toAdd == true){
-            foundUser.filled_forms.push(req.body.review_id);
-        }
-        foundUser.save(function (err, user) {
-            if (err) throw err;
-            res.json(user);
-        });
-
-
-    })
-
+    });
 });
+
+
+
+
 
 
 module.exports = router;
