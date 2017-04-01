@@ -138,16 +138,31 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             return;
         }
         console.log("Flagging user with username: " + username);
+
+        // Trigger API PUT Request
+
+        $http({
+            method: "PUT",
+            url: "http://localhost:3000/users/" + username + "/flags",
+            data: {},
+            headers : {
+                'Content-Type' : 'application/json'
+            }
+        }).then(function (response) {
+            console.log("Flagged User:", response);
+        }, function (response) {
+            console.log("Could not Flag User:", response);
+        })
     };
 
 
     function isInArray(val, arr) {
         for (var i = 0; i < arr.length; ++i) {
             if (val === arr[i]) {
-                return true;
+                return i;
             }
         }
-        return false;
+        return -1;
     }
 
     $scope.prepareChartData = function (questionNo) {

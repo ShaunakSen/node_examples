@@ -86,7 +86,7 @@ router.put("/users/:username/filled_forms", function (req, res) {
 // PUT Route for increasing flag for user
 
 
-route.put("/users/:username/flags", function (req, res) {
+router.put("/users/:username/flags", function (req, res) {
     var username = req.params.username;
 
     Users.find({username: username}, function (err, foundUsers) {
@@ -94,7 +94,9 @@ route.put("/users/:username/flags", function (req, res) {
             console.log(err);
         } else {
             var foundUser = foundUsers[0];
-            if(foundUser.hasOwnProperty("flags")){
+            console.log(foundUser);
+            if(typeof foundUser.flags != "undefined"){
+                console.log("I have a flag");
                 var currentFlag = foundUser.flags;
                 foundUser.flags = currentFlag + 1;
                 foundUser.save(function (err, user) {
@@ -105,6 +107,7 @@ route.put("/users/:username/flags", function (req, res) {
                     }
                 })
             } else {
+                console.log("here");
                 res.json({
                     message: "No flag data"
                 });
