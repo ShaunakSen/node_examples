@@ -379,6 +379,10 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
     $scope.prepareRadarChartData = function () {
         var labels = ["Very Low", "Low", "Ok", "High", "Very High"];
         var data = [];
+        var backgroundColors = ["rgba(179,181,198,0.2)", "rgba(255,99,132,0.2)", "rgba(59, 44, 198, 0.2)",
+            "rgba(35, 198, 39, 0.2)", "rgba(198, 116, 43, 0.2)"];
+        var borderColors = ["rgba(179,181,198,1)", "rgba(255,99,132,1)", "rgba(59, 44, 198, 1)",
+            "rgba(35, 198, 39, 1)", "rgba(198, 116, 43, 1)"];
         $scope.questionScores.forEach(function (questionData) {
             var questionRatings = [0, 0, 0, 0, 0];
             for (var i = 0; i < questionData.ratings.length; ++i) {
@@ -388,47 +392,40 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         });
 
         console.log("Radar data:", labels, data);
-        $scope.generateRadarChart(labels, data);
+        $scope.generateRadarChart(labels, data, backgroundColors, borderColors);
     };
 
-        $scope.generateRadarChart = function (labels, myData) {
+    $scope.generateRadarChart = function (labels, myData, backgroundColors, borderColors) {
         // 1st 2 lines are redundant but necessary for cleaning up DOM for chartjs to work properly
         document.getElementById('chart-container-3').innerHTML = "";
         document.getElementById('chart-container-3').innerHTML = '<canvas id="myChart3" width="400" height="400"></canvas>';
         var ctx = document.getElementById("myChart3");
 
-            var data = {
-                labels: labels,
-                datasets: [
-                    {
-                        label: "My First dataset",
-                        backgroundColor: "rgba(179,181,198,0.2)",
-                        borderColor: "rgba(179,181,198,1)",
-                        pointBackgroundColor: "rgba(179,181,198,1)",
-                        pointBorderColor: "#fff",
-                        pointHoverBackgroundColor: "#fff",
-                        pointHoverBorderColor: "rgba(179,181,198,1)",
-                        data: myData[0]
-                    },
-                    {
-                        label: "My Second dataset",
-                        backgroundColor: "rgba(255,99,132,0.2)",
-                        borderColor: "rgba(255,99,132,1)",
-                        pointBackgroundColor: "rgba(255,99,132,1)",
-                        pointBorderColor: "#fff",
-                        pointHoverBackgroundColor: "#fff",
-                        pointHoverBorderColor: "rgba(255,99,132,1)",
-                        data: myData[1]
-                    }
-                ]
+        var data = {
+            labels: labels,
+            datasets: []
+        };
+
+        for (var i = 0; i < $scope.noOfQuestions; ++i) {
+            var datasetObject = {
+                label: "Dataset No " + (i + 1),
+                backgroundColor: backgroundColors[i],
+                borderColor: borderColors[i],
+                pointBackgroundColor: borderColors[i],
+                pointBorderColor: "#fff",
+                pointHoverBackgroundColor: "#fff",
+                pointHoverBorderColor: borderColors[i],
+                data: myData[i]
             };
+            console.log(datasetObject)
+            data.datasets.push(datasetObject);
+        }
 
 
-
-            var myRadarChart = new Chart(ctx, {
-                type: 'radar',
-                data: data
-            });
+        var myRadarChart = new Chart(ctx, {
+            type: 'radar',
+            data: data
+        });
     };
 
 
