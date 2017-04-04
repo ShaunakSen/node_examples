@@ -20,6 +20,8 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
     // store question wise score
     $scope.questionScores = [];
 
+    $scope.currentView = 'raw';
+
 
     $scope.getResponses = function () {
         $http.get("http://localhost:3000/responses_new/reviewId/" + $scope.reviewId).then(function (response) {
@@ -133,9 +135,8 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             questionData.averageRating = averageInArray(questionData.ratings);
             questionData.averageScore = averageInArray(questionData.scores);
         });
-
         console.log("Question wise data:", $scope.questionScores);
-
+        $scope.prepareRadarChartData();
     };
 
     $scope.analyzeResponseForLinks = function () {
@@ -228,10 +229,10 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
     function averageInArray(arr) {
         var length = arr.length;
         var total = 0;
-        for(var i=0; i<length; ++i){
+        for (var i = 0; i < length; ++i) {
             total += arr[i];
         }
-        return total/length;
+        return total / length;
     }
 
     $scope.prepareChartData = function (questionNo) {
@@ -373,6 +374,61 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         });
         console.log(data);
         $scope.generateChart2(labels, data);
+    };
+
+    $scope.prepareRadarChartData = function () {
+        var labels = ["Very Low", "Low", "Ok", "High", "Very High"];
+        var data = [];
+        $scope.questionScores.forEach(function (questionData) {
+            var questionRatings = [0, 0, 0, 0, 0];
+            for (var i = 0; i < questionData.ratings.length; ++i) {
+                questionRatings[questionData.ratings[i]]++;
+            }
+            data.push(questionRatings);
+        });
+
+        console.log("Radar data:", labels, data);
+        $scope.generateRadarChart(labels, data);
+    };
+
+        $scope.generateRadarChart = function (labels, myData) {
+        // 1st 2 lines are redundant but necessary for cleaning up DOM for chartjs to work properly
+        document.getElementById('chart-container-3').innerHTML = "";
+        document.getElementById('chart-container-3').innerHTML = '<canvas id="myChart3" width="400" height="400"></canvas>';
+        var ctx = document.getElementById("myChart3");
+
+            var data = {
+                labels: labels,
+                datasets: [
+                    {
+                        label: "My First dataset",
+                        backgroundColor: "rgba(179,181,198,0.2)",
+                        borderColor: "rgba(179,181,198,1)",
+                        pointBackgroundColor: "rgba(179,181,198,1)",
+                        pointBorderColor: "#fff",
+                        pointHoverBackgroundColor: "#fff",
+                        pointHoverBorderColor: "rgba(179,181,198,1)",
+                        data: myData[0]
+                    },
+                    {
+                        label: "My Second dataset",
+                        backgroundColor: "rgba(255,99,132,0.2)",
+                        borderColor: "rgba(255,99,132,1)",
+                        pointBackgroundColor: "rgba(255,99,132,1)",
+                        pointBorderColor: "#fff",
+                        pointHoverBackgroundColor: "#fff",
+                        pointHoverBorderColor: "rgba(255,99,132,1)",
+                        data: myData[1]
+                    }
+                ]
+            };
+
+
+
+            var myRadarChart = new Chart(ctx, {
+                type: 'radar',
+                data: data
+            });
     };
 
 
