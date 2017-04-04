@@ -13,10 +13,13 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
     $scope.questionNos = [];
     $scope.selectedQuestionNo = 1;
     $scope.selectedQuestionNo2 = 1;
-    
+
     $scope.reviewId = $window.reviewId;
     $scope.adminInfo = $window.adminInfo;
-    
+
+    // store question wise score
+    $scope.questionScores = [];
+
 
     $scope.getResponses = function () {
         $http.get("http://localhost:3000/responses_new/reviewId/" + $scope.reviewId).then(function (response) {
@@ -75,7 +78,64 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
                 }
             })
         });
+
+
+        // Calculate Overall Score
+
+
+        $scope.apiResponse.forEach(function (userResponse) {
+            userResponse.overallScore = 0;
+            var mcqResponse = userResponse.mcqResponse;
+            var totalScore = 0;
+            mcqResponse.forEach(function (questionResponse) {
+                totalScore += questionResponse.score;
+            });
+            userResponse.overallScore = totalScore / mcqResponse.length;
+        });
+
         console.log("Scored responses", $scope.apiResponse);
+
+
+        // Calculate question wise scores
+
+
+        $scope.apiResponse.forEach(function (userResponse) {
+            var mcqResponse = userResponse.mcqResponse;
+            mcqResponse.forEach(function (questionResponse) {
+                if ($scope.questionScores.length < questionResponse.questionNo) {
+                    // first time
+                    // create new object
+                    var newObject = {
+                        questionNo: 1,
+                        scores: [],
+                        averageScore: 1,
+                        ratings: [],
+                        averageRating: 1
+                    };
+                    newObject.questionNo = questionResponse.questionNo;
+                    newObject.scores.push(questionResponse.score);
+                    newObject.ratings.push(questionResponse.response);
+                    // push new object
+                    $scope.questionScores.push(newObject);
+                } else {
+                    // not first time
+                    // simply edit the appropriate object
+                    var requiredObject = $scope.questionScores[questionResponse.questionNo - 1];
+                    requiredObject.scores.push(questionResponse.score);
+                    requiredObject.ratings.push(questionResponse.response);
+                }
+            });
+        });
+        console.log("Question wise data:", $scope.questionScores);
+
+        // calculate average rating and average scores
+        $scope.questionScores.forEach(function (questionData) {
+            questionData.averageRating = averageInArray(questionData.ratings);
+            questionData.averageScore = averageInArray(questionData.scores);
+        });
+
+        console.log("Question wise data:", $scope.questionScores);
+
     };
 
     $scope.analyzeResponseForLinks = function () {
@@ -90,7 +150,7 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
                 username: ""
             };
 
-            if($scope.apiResponse[i].hasOwnProperty("postedBy")){
+            if ($scope.apiResponse[i].hasOwnProperty("postedBy")) {
                 postedBy = $scope.apiResponse[i].postedBy;
             }
 
@@ -132,9 +192,9 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         }
         console.log("Important Analysis Data:", $scope.importantAnalysyis);
     };
-    
+
     $scope.flagUser = function (username) {
-        if(username == ""){
+        if (username == "") {
             return;
         }
         console.log("Flagging user with username: " + username);
@@ -145,8 +205,8 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             method: "PUT",
             url: "http://localhost:3000/users/" + username + "/flags",
             data: {},
-            headers : {
-                'Content-Type' : 'application/json'
+            headers: {
+                'Content-Type': 'application/json'
             }
         }).then(function (response) {
             console.log("Flagged User:", response);
@@ -163,6 +223,15 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             }
         }
         return -1;
+    }
+
+    function averageInArray(arr) {
+        var length = arr.length;
+        var total = 0;
+        for(var i=0; i<length; ++i){
+            total += arr[i];
+        }
+        return total/length;
     }
 
     $scope.prepareChartData = function (questionNo) {
@@ -194,7 +263,6 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
              // initialize label value
              labels[response] = response;
              }*/
-
 
 
         });
