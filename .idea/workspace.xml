@@ -2788,6 +2788,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/node_modules/verror/tests/tst.werror.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js" afterPath="$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs" afterPath="$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/acorn" afterPath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/acorn" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/cleancss" afterPath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/cleancss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/jade" afterPath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/jade" />
@@ -2837,9 +2838,12 @@
       <file leaf-file-name="view-stats.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2322">
-              <caret line="129" column="41" selection-start-line="129" selection-start-column="41" selection-end-line="129" selection-end-column="41" />
-              <folding />
+            <state relative-caret-position="226">
+              <caret line="127" column="68" selection-start-line="127" selection-start-column="43" selection-end-line="127" selection-end-column="68" />
+              <folding>
+                <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#hr#0;n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2847,11 +2851,22 @@
       <file leaf-file-name="script_view_stats.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="293" column="37" selection-start-line="293" selection-start-column="37" selection-end-line="293" selection-end-column="37" />
+            <state relative-caret-position="372">
+              <caret line="479" column="52" selection-start-line="479" selection-start-column="52" selection-end-line="479" selection-end-column="52" />
               <folding>
-                <element signature="e#12028#12984#0" expanded="false" />
-                <element signature="e#13041#13821#0" expanded="false" />
+                <element signature="e#843#1060#0" expanded="false" />
+                <element signature="e#1089#1291#0" expanded="false" />
+                <element signature="e#2174#2359#0" expanded="false" />
+                <element signature="e#2974#3964#0" expanded="false" />
+                <element signature="e#4073#4452#0" expanded="false" />
+                <element signature="e#4634#5987#0" expanded="false" />
+                <element signature="e#6187#6366#0" expanded="false" />
+                <element signature="e#6636#9342#0" expanded="false" />
+                <element signature="e#9387#9973#0" expanded="false" />
+                <element signature="e#10010#10167#0" expanded="false" />
+                <element signature="e#10202#10378#0" expanded="false" />
+                <element signature="e#13229#14185#0" expanded="false" />
+                <element signature="e#14242#15022#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -2921,9 +2936,9 @@
         <option value="$PROJECT_DIR$/client-app-1-new/models/user.js" />
         <option value="$PROJECT_DIR$/final-project-rest-api/routes/users.js" />
         <option value="$PROJECT_DIR$/client-app-2-new/test.scss" />
-        <option value="$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs" />
         <option value="$PROJECT_DIR$/client-app-2-new/routes/index.js" />
         <option value="$PROJECT_DIR$/client-app-1-new/app.js" />
+        <option value="$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs" />
         <option value="$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js" />
       </list>
     </option>
@@ -2965,6 +2980,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -3057,7 +3073,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3407,14 +3422,8 @@
       <workItem from="1491419582459" duration="2390000" />
       <workItem from="1491487265765" duration="567000" />
       <workItem from="1491489735030" duration="3779000" />
-      <workItem from="1491551279356" duration="1661000" />
-    </task>
-    <task id="LOCAL-00107" summary="display feedback route only when logged in">
-      <created>1488181824454</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1488181824454</updated>
+      <workItem from="1491551279356" duration="2959000" />
+      <workItem from="1491556276156" duration="3997000" />
     </task>
     <task id="LOCAL-00108" summary="accessing ejs vars rendered from server in client js logic">
       <created>1488401361848</created>
@@ -3752,11 +3761,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491551411109</updated>
     </task>
-    <option name="localTasksCounter" value="156" />
+    <task id="LOCAL-00156" summary="credibility score and overall rating in radar chart">
+      <created>1491553554930</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1491553554930</updated>
+    </task>
+    <option name="localTasksCounter" value="157" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="723714000" />
+    <option name="totallyTimeSpent" value="729009000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1366" height="739" extended-state="6" />
@@ -3768,7 +3784,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3251634" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53301126" sideWeight="0.48214287" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.85597384" sideWeight="0.48809522" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8553055" sideWeight="0.48809522" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22767857" sideWeight="0.5147059" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3812,7 +3828,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="dept section done :)" />
     <MESSAGE value="restoring deleted file" />
     <MESSAGE value="redesigning the buttons using mixins :)" />
     <MESSAGE value="POSTing data to correct API end point" />
@@ -3837,11 +3852,12 @@
     <MESSAGE value="radar chart working!" />
     <MESSAGE value="radar chart for all questions" />
     <MESSAGE value="fix:  radar chart" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix:  radar chart" />
+    <MESSAGE value="credibility score and overall rating in radar chart" />
+    <option name="LAST_COMMIT_MESSAGE" value="credibility score and overall rating in radar chart" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -4151,7 +4167,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="651">
           <caret line="69" column="15" selection-start-line="69" selection-start-column="15" selection-end-line="69" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4173,7 +4188,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="48" column="47" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4194,19 +4208,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2322">
-          <caret line="129" column="41" selection-start-line="129" selection-start-column="41" selection-end-line="129" selection-end-column="41" />
-          <folding />
+        <state relative-caret-position="226">
+          <caret line="127" column="68" selection-start-line="127" selection-start-column="43" selection-end-line="127" selection-end-column="68" />
+          <folding>
+            <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#hr#0;n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="293" column="37" selection-start-line="293" selection-start-column="37" selection-end-line="293" selection-end-column="37" />
+        <state relative-caret-position="372">
+          <caret line="479" column="52" selection-start-line="479" selection-start-column="52" selection-end-line="479" selection-end-column="52" />
           <folding>
-            <element signature="e#12028#12984#0" expanded="false" />
-            <element signature="e#13041#13821#0" expanded="false" />
+            <element signature="e#843#1060#0" expanded="false" />
+            <element signature="e#1089#1291#0" expanded="false" />
+            <element signature="e#2174#2359#0" expanded="false" />
+            <element signature="e#2974#3964#0" expanded="false" />
+            <element signature="e#4073#4452#0" expanded="false" />
+            <element signature="e#4634#5987#0" expanded="false" />
+            <element signature="e#6187#6366#0" expanded="false" />
+            <element signature="e#6636#9342#0" expanded="false" />
+            <element signature="e#9387#9973#0" expanded="false" />
+            <element signature="e#10010#10167#0" expanded="false" />
+            <element signature="e#10202#10378#0" expanded="false" />
+            <element signature="e#13229#14185#0" expanded="false" />
+            <element signature="e#14242#15022#0" expanded="false" />
           </folding>
         </state>
       </provider>

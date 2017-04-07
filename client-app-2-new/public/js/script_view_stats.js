@@ -13,6 +13,7 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
     $scope.questionNos = [];
     $scope.selectedQuestionNo = 1;
     $scope.selectedQuestionNo2 = 1;
+    $scope.selectedQuestionBarScored=1;
 
     $scope.reviewId = $window.reviewId;
     $scope.adminInfo = $window.adminInfo;
@@ -21,6 +22,28 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
     $scope.questionScores = [];
 
     $scope.currentView = 'raw';
+    $scope.alreadyFiltered = false;
+
+    // Background and border colors to be used by all charts
+
+    $scope.backgroundColors = [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+        'rgba(255, 159, 64, 0.2)'
+    ];
+
+    $scope.borderColors = [
+        'rgba(255,99,132,1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)'
+    ];
+
 
 
     $scope.getResponses = function () {
@@ -46,6 +69,15 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
     // get the response from API
     $scope.getResponses();
 
+    $scope.changeView = function (view) {
+        if(view == 'scored'){
+            $scope.currentView = 'scored';
+            $scope.filterResponses();
+        } else {
+            $scope.currentView = 'raw';
+        }
+    };
+
 
     $scope.filterResponses = function () {
 
@@ -58,85 +90,89 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         // questionResponse: response of single user for single question
         // ================================================
 
-        // TODO: overall score: do we need it?
 
-        $scope.apiResponse.forEach(function (userResponse) {
-            var mcqResponses = userResponse.mcqResponse;
-            mcqResponses.forEach(function (questionResponse) {
-                var timeSpent = questionResponse.timeSpent;
-                var thoughtProvoking = questionResponse.thoughtProvoking;
-                var score = 0;
-                if (questionResponse.hasOwnProperty("correct")) {
-                    if (questionResponse.correct) {
-                        score = (timeSpent * 2) / (3000 * thoughtProvoking * 2);
-                        questionResponse.score = score;
+        if(!$scope.alreadyFiltered){
+            $scope.apiResponse.forEach(function (userResponse) {
+                var mcqResponses = userResponse.mcqResponse;
+                mcqResponses.forEach(function (questionResponse) {
+                    var timeSpent = questionResponse.timeSpent;
+                    var thoughtProvoking = questionResponse.thoughtProvoking;
+                    var score = 0;
+                    if (questionResponse.hasOwnProperty("correct")) {
+                        if (questionResponse.correct) {
+                            score = (timeSpent * 2) / (3000 * thoughtProvoking * 2);
+                            questionResponse.score = score;
+                        } else {
+                            score = (timeSpent) / (3000 * thoughtProvoking * 2);
+                            questionResponse.score = score;
+                        }
                     } else {
-                        score = (timeSpent) / (3000 * thoughtProvoking * 2);
+                        score = (timeSpent) / (3000 * thoughtProvoking);
                         questionResponse.score = score;
                     }
-                } else {
-                    score = (timeSpent) / (3000 * thoughtProvoking);
-                    questionResponse.score = score;
-                }
-            })
-        });
-
-
-        // Calculate Overall Score
-
-
-        $scope.apiResponse.forEach(function (userResponse) {
-            userResponse.overallScore = 0;
-            var mcqResponse = userResponse.mcqResponse;
-            var totalScore = 0;
-            mcqResponse.forEach(function (questionResponse) {
-                totalScore += questionResponse.score;
+                })
             });
-            userResponse.overallScore = totalScore / mcqResponse.length;
-        });
-
-        console.log("Scored responses", $scope.apiResponse);
 
 
-        // Calculate question wise scores
+            // Calculate Overall Score
 
 
-        $scope.apiResponse.forEach(function (userResponse) {
-            var mcqResponse = userResponse.mcqResponse;
-            mcqResponse.forEach(function (questionResponse) {
-                if ($scope.questionScores.length < questionResponse.questionNo) {
-                    // first time
-                    // create new object
-                    var newObject = {
-                        questionNo: 1,
-                        scores: [],
-                        averageScore: 1,
-                        ratings: [],
-                        averageRating: 1
-                    };
-                    newObject.questionNo = questionResponse.questionNo;
-                    newObject.scores.push(questionResponse.score);
-                    newObject.ratings.push(questionResponse.response);
-                    // push new object
-                    $scope.questionScores.push(newObject);
-                } else {
-                    // not first time
-                    // simply edit the appropriate object
-                    var requiredObject = $scope.questionScores[questionResponse.questionNo - 1];
-                    requiredObject.scores.push(questionResponse.score);
-                    requiredObject.ratings.push(questionResponse.response);
-                }
+            $scope.apiResponse.forEach(function (userResponse) {
+                userResponse.overallScore = 0;
+                var mcqResponse = userResponse.mcqResponse;
+                var totalScore = 0;
+                mcqResponse.forEach(function (questionResponse) {
+                    totalScore += questionResponse.score;
+                });
+                userResponse.overallScore = totalScore / mcqResponse.length;
             });
-        });
-        console.log("Question wise data:", $scope.questionScores);
 
-        // calculate average rating and average scores
-        $scope.questionScores.forEach(function (questionData) {
-            questionData.averageRating = averageInArray(questionData.ratings);
-            questionData.averageScore = averageInArray(questionData.scores);
-        });
-        console.log("Question wise data:", $scope.questionScores);
+            console.log("Scored responses", $scope.apiResponse);
+
+
+            // Calculate question wise scores
+
+
+            $scope.apiResponse.forEach(function (userResponse) {
+                var mcqResponse = userResponse.mcqResponse;
+                mcqResponse.forEach(function (questionResponse) {
+                    if ($scope.questionScores.length < questionResponse.questionNo) {
+                        // first time
+                        // create new object
+                        var newObject = {
+                            questionNo: 1,
+                            scores: [],
+                            averageScore: 1,
+                            ratings: [],
+                            averageRating: 1
+                        };
+                        newObject.questionNo = questionResponse.questionNo;
+                        newObject.scores.push(questionResponse.score);
+                        newObject.ratings.push(questionResponse.response);
+                        // push new object
+                        $scope.questionScores.push(newObject);
+                    } else {
+                        // not first time
+                        // simply edit the appropriate object
+                        var requiredObject = $scope.questionScores[questionResponse.questionNo - 1];
+                        requiredObject.scores.push(questionResponse.score);
+                        requiredObject.ratings.push(questionResponse.response);
+                    }
+                });
+            });
+            console.log("Question wise data:", $scope.questionScores);
+
+            // calculate average rating and average scores
+            $scope.questionScores.forEach(function (questionData) {
+                questionData.averageRating = averageInArray(questionData.ratings);
+                questionData.averageScore = averageInArray(questionData.scores);
+            });
+            console.log("Question wise data:", $scope.questionScores);
+
+            $scope.alreadyFiltered = true;
+        }
         $scope.prepareRadarChartData();
+        $scope.prepareBarChartDataScored(1);
     };
 
     $scope.analyzeResponseForLinks = function () {
@@ -430,6 +466,48 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
     };
 
 
+    $scope.prepareBarChartDataScored = function (questionNo) {
+        var labels = ["", "", "", "", "", ""];
+        var data = [0, 0, 0, 0, 0, 0];
+        $scope.apiResponse.forEach(function (userResponse) {
+            var requiredQuestion = userResponse.mcqResponse[questionNo - 1];
+            var response = requiredQuestion.response;
+            labels[response] = requiredQuestion.responseText;
+            data[response] += 1;
+        });
+        data[data.length - 1] = $scope.questionScores[questionNo - 1].averageScore * 10;
+        labels[labels.length - 1] = "Scaled Credibility Score";
+        $scope.generateBarChartScored(labels, data);
+    };
+        
+        $scope.generateBarChartScored = function (labels, data) {
+            // 1st 2 lines are redundant but necessary for cleaning up DOM for chartjs to work properly
+            document.getElementById('chart-container-4').innerHTML = "";
+            document.getElementById('chart-container-4').innerHTML = '<canvas id="myChart4" width="400" height="400"></canvas>';
+            var ctx = document.getElementById("myChart4");
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: '# of Reviews',
+                        data: data,
+                        backgroundColor: $scope.backgroundColors,
+                        borderColor: $scope.borderColors,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+        };
 }]);
 
 /*

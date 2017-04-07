@@ -51,16 +51,18 @@
 
 <div class="row">
     <div class="col-sm-4 sidebar">
+        <p>Current View: {{currentView}}</p>
+        <hr>
         <p><i class="fa fa-users"></i><span>&nbsp;No of Users Reviewed: {{noOfUsers}}</span></p>
-        <p><i class="fa fa-database"></i><span>&nbsp;View Raw Statistics</span></p>
-        <p><i class="fa fa-filter"></i><span>&nbsp;View Filtered Statistics</span></p>
+        <p ng-click="changeView('raw')"><i class="fa fa-database"></i><span>&nbsp;View Raw Statistics</span></p>
+        <p ng-click="changeView('scored')"><i class="fa fa-filter"></i><span>&nbsp;View Filtered Statistics</span></p>
 
     </div>
     <div class="col-sm-8 main-content">
 
-        <div class="row stats-container">
+        <div class="row stats-container" ng-show="currentView == 'raw'">
             <div class="col-xs-8 col-xs-offset-2 stats-card-1">
-                <h4>User Specific Responses</h4>
+                <h4>Question Specific Responses</h4>
                 <hr style="margin-top: 0; margin-bottom: 0">
                 <div class="row chart-row">
                     <div class="col-md-4">
@@ -85,9 +87,9 @@
             </div>
         </div>
 
-        <div class="row stats-container">
+        <div class="row stats-container" ng-show="currentView == 'raw'">
             <div class="col-xs-8 col-xs-offset-2 stats-card-1">
-                <h4>Question Specific Responses</h4>
+                <h4>Overall Response Statistics</h4>
                 <hr style="margin-top: 0; margin-bottom: 0">
                 <div class="row chart-row">
                     <div class="col-md-4">
@@ -113,12 +115,19 @@
             </div>
         </div>
 
-        <div class="row stats-container">
+        <div class="row stats-container" ng-show="currentView == 'scored'">
             <div class="col-xs-8 col-xs-offset-2 stats-card-1">
-                <h4>Question Specific Responses</h4>
+                <h4>Question wise Scored Responses</h4>
                 <hr style="margin-top: 0; margin-bottom: 0">
                 <div class="row chart-row">
-                    <div class="col-md-2">
+                    <div class="col-md-4">
+                        <p>Select Question number</p>
+
+                        <select class="form-control custom-select" name="repeatSelect"
+                                ng-model="selectedQuestionBarScored"
+                                ng-change="prepareBarChartDataScored(selectedQuestionBarScored)">
+                            <option ng-repeat="questionNo in questionNos" value="{{questionNo}}">{{questionNo}}</option>
+                        </select>
                         <div class="row icons-row" style="margin-top: 10px">
                             <div class="col-md-12">
                                 <i class="fa fa-clock-o fa-1.5x"></i><span>&nbsp; &nbsp;3.2 sec</span>
@@ -127,7 +136,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-10 chart-main" id="chart-container-3">
+                    <div class="col-md-8 chart-main" id="chart-container-4">
+                        <canvas id="myChart4" width="400" height="400"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row stats-container" ng-show="currentView == 'scored'">
+            <div class="col-xs-8 col-xs-offset-2 stats-card-1">
+                <h4>Comparison of Reviews</h4>
+                <hr style="margin-top: 0; margin-bottom: 0">
+                <div class="row chart-row">
+                    <div class="col-md-12 chart-main" id="chart-container-3">
                         <canvas id="myChart3" width="800" height="600"></canvas>
                     </div>
                 </div>
