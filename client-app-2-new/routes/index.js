@@ -46,7 +46,9 @@ router.get("/", function (req, res) {
                 if (error) {
                     console.log(error)
                 } else {
+                    console.log(response.body);
                     var data = JSON.parse(response.body);
+                    console.log(data);
                     // Getting all forms in system
                     for (var i = 0; i < data.length; ++i) {
                         formsInSystem.push(data[i]._id);

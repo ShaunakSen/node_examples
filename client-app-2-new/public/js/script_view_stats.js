@@ -406,7 +406,7 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             datasets: []
         };
 
-        for (var i = 0; i < $scope.noOfQuestions; ++i) {
+        for (var i = 0; i < myData.length; ++i) {
             var datasetObject = {
                 label: "Dataset No " + (i + 1),
                 backgroundColor: backgroundColors[i],
@@ -417,11 +417,9 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
                 pointHoverBorderColor: borderColors[i],
                 data: myData[i]
             };
-            console.log(datasetObject)
+            console.log(datasetObject);
             data.datasets.push(datasetObject);
         }
-
-
         var myRadarChart = new Chart(ctx, {
             type: 'radar',
             data: data
