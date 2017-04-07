@@ -377,17 +377,20 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
     };
 
     $scope.prepareRadarChartData = function () {
-        var labels = ["Very Low", "Low", "Ok", "High", "Very High"];
+        var labels = ["Very Low", "Low", "Ok", "High", "Very High", "Overall Rating", "Scaled Credibility Score"];
         var data = [];
         var backgroundColors = ["rgba(179,181,198,0.2)", "rgba(255,99,132,0.2)", "rgba(59, 44, 198, 0.2)",
             "rgba(35, 198, 39, 0.2)", "rgba(198, 116, 43, 0.2)"];
         var borderColors = ["rgba(179,181,198,1)", "rgba(255,99,132,1)", "rgba(59, 44, 198, 1)",
             "rgba(35, 198, 39, 1)", "rgba(198, 116, 43, 1)"];
         $scope.questionScores.forEach(function (questionData) {
-            var questionRatings = [0, 0, 0, 0, 0];
+            // TODO: This array needs to be dynamic
+            var questionRatings = [0, 0, 0, 0, 0, 0, 0];
             for (var i = 0; i < questionData.ratings.length; ++i) {
                 questionRatings[questionData.ratings[i]]++;
             }
+            questionRatings[questionRatings.length - 2] = questionData.averageRating;
+            questionRatings[questionRatings.length - 1] = questionData.averageScore * 10;
             data.push(questionRatings);
         });
 
@@ -408,7 +411,7 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
 
         for (var i = 0; i < myData.length; ++i) {
             var datasetObject = {
-                label: "Dataset No " + (i + 1),
+                label: "Question No " + (i + 1),
                 backgroundColor: backgroundColors[i],
                 borderColor: borderColors[i],
                 pointBackgroundColor: borderColors[i],
