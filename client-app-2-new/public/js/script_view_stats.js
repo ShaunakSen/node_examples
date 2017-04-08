@@ -13,13 +13,14 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
     $scope.questionNos = [];
     $scope.selectedQuestionNo = 1;
     $scope.selectedQuestionNo2 = 1;
-    $scope.selectedQuestionBarScored=1;
+    $scope.selectedQuestionBarScored = 1;
 
     $scope.reviewId = $window.reviewId;
     $scope.adminInfo = $window.adminInfo;
 
     // store question wise score
     $scope.questionScores = [];
+    $scope.filteredQuestionData = [];
 
     $scope.currentView = 'raw';
     $scope.alreadyFiltered = false;
@@ -44,6 +45,16 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         'rgba(255, 159, 64, 1)'
     ];
 
+    $scope.test1 = 'hi';
+    $scope.test2 = '';
+
+    $scope.test = function () {
+        $scope.test2 = $scope.test1;
+        $scope.test2 = 'hey';
+        console.log($scope.test1, $scope.test2);
+    };
+
+    $scope.test();
 
 
     $scope.getResponses = function () {
@@ -70,7 +81,7 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
     $scope.getResponses();
 
     $scope.changeView = function (view) {
-        if(view == 'scored'){
+        if (view == 'scored') {
             $scope.currentView = 'scored';
             $scope.filterResponses();
         } else {
@@ -91,7 +102,7 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         // ================================================
 
 
-        if(!$scope.alreadyFiltered){
+        if (!$scope.alreadyFiltered) {
             $scope.apiResponse.forEach(function (userResponse) {
                 var mcqResponses = userResponse.mcqResponse;
                 mcqResponses.forEach(function (questionResponse) {
@@ -160,7 +171,6 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
                     }
                 });
             });
-            console.log("Question wise data:", $scope.questionScores);
 
             // calculate average rating and average scores
             $scope.questionScores.forEach(function (questionData) {
@@ -170,7 +180,9 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             console.log("Question wise data:", $scope.questionScores);
 
             $scope.alreadyFiltered = true;
+            $scope.filterResponsesBasedOnScore(1, 0.5, 1.5);
         }
+
         $scope.prepareRadarChartData();
         $scope.prepareBarChartDataScored(1);
     };
@@ -271,6 +283,62 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         return total / length;
     }
 
+    $scope.filterResponsesBasedOnScore = function (questionNo, minScore, maxScore) {
+
+
+        // *************WE NEED A DEEP COPY HERE NOT A SHALLOW COPY***************
+        $scope.filteredQuestionData = angular.copy($scope.questionScores);
+        var scores = $scope.filteredQuestionData[questionNo - 1].scores;
+        var ratings = $scope.filteredQuestionData[questionNo - 1].ratings;
+        var indexesToRemove = [];
+        for (var i = 0; i < scores.length; ++i) {
+
+            if (scores[i] < minScore || scores[i] > maxScore) {
+                indexesToRemove.push(i);
+            }
+        }
+
+        console.log(indexesToRemove);
+
+        scores = scores.filter(function (score, index) {
+            return (score < maxScore && score > minScore)
+        });
+
+        console.log(scores);
+        for(var x=0; x<indexesToRemove.length; ++x){
+            ratings[indexesToRemove[x]] = "";
+        }
+        console.log(ratings);
+
+        ratings = ratings.filter(function (rating, index) {
+            return rating !== "";
+        });
+
+        console.log(ratings);
+
+        // console.log(indexesToRemove);
+        //
+        // for (var x = 0; x < indexesToRemove.length; ++x) {
+        //     scores[indexesToRemove[x]] = "";
+        //     ratings[indexesToRemove[x]] = "";
+        // }
+        //
+        // console.log(scores);
+        //
+        // var newScores = scores.filter(function (number, index) {
+        //     return number != "";
+        // });
+        // console.log(newScores);
+
+        // Re calculate ave
+        //
+        // $scope.filteredQuestionData[questionNo - 1].averageRating = averageInArray(ratings);
+        // $scope.filteredQuestionData[questionNo - 1].averageScore = averageInArray(scores);
+        console.log($scope.filteredQuestionData)
+
+    };
+
+
     $scope.prepareChartData = function (questionNo) {
 
         // This function generates the necessary data structures: labels and data for chart generation
@@ -289,19 +357,6 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             var response = requiredQuestion.response;
             labels[response] = requiredQuestion.responseText;
             data[response] += 1;
-            /*if (isInArray(response, labels)) {
-             //increase data value for the response
-             data[response] += 1;
-
-             } else {
-             // initialize data value for that response
-             data[response] = 1;
-
-             // initialize label value
-             labels[response] = response;
-             }*/
-
-
         });
 
         console.log(labels, data);
@@ -479,35 +534,35 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         labels[labels.length - 1] = "Scaled Credibility Score";
         $scope.generateBarChartScored(labels, data);
     };
-        
-        $scope.generateBarChartScored = function (labels, data) {
-            // 1st 2 lines are redundant but necessary for cleaning up DOM for chartjs to work properly
-            document.getElementById('chart-container-4').innerHTML = "";
-            document.getElementById('chart-container-4').innerHTML = '<canvas id="myChart4" width="400" height="400"></canvas>';
-            var ctx = document.getElementById("myChart4");
-            var myChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        label: '# of Reviews',
-                        data: data,
-                        backgroundColor: $scope.backgroundColors,
-                        borderColor: $scope.borderColors,
-                        borderWidth: 1
+
+    $scope.generateBarChartScored = function (labels, data) {
+        // 1st 2 lines are redundant but necessary for cleaning up DOM for chartjs to work properly
+        document.getElementById('chart-container-4').innerHTML = "";
+        document.getElementById('chart-container-4').innerHTML = '<canvas id="myChart4" width="400" height="400"></canvas>';
+        var ctx = document.getElementById("myChart4");
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: '# of Reviews',
+                    data: data,
+                    backgroundColor: $scope.backgroundColors,
+                    borderColor: $scope.borderColors,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
                     }]
-                },
-                options: {
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
-                    }
                 }
-            });
-        };
+            }
+        });
+    };
 }]);
 
 /*
