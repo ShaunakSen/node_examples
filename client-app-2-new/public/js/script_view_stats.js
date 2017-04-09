@@ -45,18 +45,6 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         'rgba(255, 159, 64, 1)'
     ];
 
-    $scope.test1 = 'hi';
-    $scope.test2 = '';
-
-    $scope.test = function () {
-        $scope.test2 = $scope.test1;
-        $scope.test2 = 'hey';
-        console.log($scope.test1, $scope.test2);
-    };
-
-    $scope.test();
-
-
     $scope.getResponses = function () {
         $http.get("http://localhost:3000/responses_new/reviewId/" + $scope.reviewId).then(function (response) {
             $scope.apiResponse = response.data;
@@ -180,7 +168,7 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             console.log("Question wise data:", $scope.questionScores);
 
             $scope.alreadyFiltered = true;
-            $scope.filterResponsesBasedOnScore(1, 0.5, 1.5);
+            $scope.filterResponsesBasedOnScore(2, 0.5, 1.5);
         }
 
         $scope.prepareRadarChartData();
@@ -298,44 +286,34 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             }
         }
 
-        console.log(indexesToRemove);
 
-        scores = scores.filter(function (score, index) {
+        var newScores = scores.filter(function (score, index) {
             return (score < maxScore && score > minScore)
         });
 
-        console.log(scores);
-        for(var x=0; x<indexesToRemove.length; ++x){
+        console.log(newScores);
+        for (var x = 0; x < indexesToRemove.length; ++x) {
             ratings[indexesToRemove[x]] = "";
         }
         console.log(ratings);
 
-        ratings = ratings.filter(function (rating, index) {
+        var newRatings = ratings.filter(function (rating, index) {
             return rating !== "";
         });
 
-        console.log(ratings);
+        console.log(newRatings);
 
-        // console.log(indexesToRemove);
-        //
-        // for (var x = 0; x < indexesToRemove.length; ++x) {
-        //     scores[indexesToRemove[x]] = "";
-        //     ratings[indexesToRemove[x]] = "";
-        // }
-        //
-        // console.log(scores);
-        //
-        // var newScores = scores.filter(function (number, index) {
-        //     return number != "";
-        // });
-        // console.log(newScores);
+        $scope.filteredQuestionData[questionNo-1].ratings = newRatings;
+        $scope.filteredQuestionData[questionNo-1].scores = newScores;
 
-        // Re calculate ave
-        //
-        // $scope.filteredQuestionData[questionNo - 1].averageRating = averageInArray(ratings);
-        // $scope.filteredQuestionData[questionNo - 1].averageScore = averageInArray(scores);
-        console.log($scope.filteredQuestionData)
 
+
+        // Re calculate averages
+        $scope.filteredQuestionData[questionNo - 1].averageRating = averageInArray($scope.filteredQuestionData[questionNo-1].ratings);
+        $scope.filteredQuestionData[questionNo - 1].averageScore = averageInArray($scope.filteredQuestionData[questionNo-1].scores);
+
+
+        console.log($scope.filteredQuestionData);
     };
 
 
