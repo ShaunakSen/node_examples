@@ -24,6 +24,7 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
 
     $scope.currentView = 'raw';
     $scope.alreadyFiltered = false;
+    $scope.minScore = 0;
 
     // Background and border colors to be used by all charts
 
@@ -168,7 +169,6 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             console.log("Question wise data:", $scope.questionScores);
 
             $scope.alreadyFiltered = true;
-            $scope.filterResponsesBasedOnScore(2, 0.5, 1.5);
         }
 
         $scope.prepareRadarChartData();
@@ -275,6 +275,8 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
 
 
         // *************WE NEED A DEEP COPY HERE NOT A SHALLOW COPY***************
+
+        console.log(questionNo, minScore, maxScore)
         $scope.filteredQuestionData = angular.copy($scope.questionScores);
         var scores = $scope.filteredQuestionData[questionNo - 1].scores;
         var ratings = $scope.filteredQuestionData[questionNo - 1].ratings;

@@ -135,6 +135,12 @@
                                 <i class="fa fa-users fa-1.5x"></i><span>&nbsp; &nbsp;120 reviews</span>
                             </div>
                         </div>
+                        <div class="row filter-score-row">
+                            <p>Select Score Limit</p>
+                            <hr>
+                            <input type="number" ng-model="minScore" min="0" max="10" step="0.1" class="custom-input">
+                            <button class="custom-button" ng-click="filterResponsesBasedOnScore(selectedQuestionBarScored, minScore, 10)">Apply</button>
+                        </div>
                     </div>
                     <div class="col-md-8 chart-main" id="chart-container-4">
                         <canvas id="myChart4" width="400" height="400"></canvas>

@@ -114,6 +114,10 @@ a:hover {
         .chart-main{
           border-left: 1px solid $lighter;
         }
+
+        .filter-score-row{
+          padding: 20px;
+        }
       }
     }
   }
@@ -147,4 +151,19 @@ a:hover {
 .custom-button{
   border: none;
   border-radius: 0;
+}
+
+
+.custom-input {
+  padding: 7px;
+  font-family: $font2;
+  border: 2px solid $medium;
+  transition: all 0.5s;
+
+}
+
+.custom-input:focus {
+  outline: none;
+  border: 2px solid $dark;
+
 }

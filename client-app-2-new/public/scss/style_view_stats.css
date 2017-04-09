@@ -66,6 +66,8 @@ a:hover {
           font-size: 20px; }
         .main-content .stats-container .stats-card-1 .chart-row .chart-main {
           border-left: 1px solid #f9efff; }
+        .main-content .stats-container .stats-card-1 .chart-row .filter-score-row {
+          padding: 20px; }
   .main-content .analysis-container {
     color: #3b3555;
     margin-top: 20px; }
@@ -85,5 +87,15 @@ a:hover {
 .custom-button {
   border: none;
   border-radius: 0; }
+
+.custom-input {
+  padding: 7px;
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid #c7b2f6;
+  transition: all 0.5s; }
+
+.custom-input:focus {
+  outline: none;
+  border: 2px solid #3b3555; }
 
 /*# sourceMappingURL=style_view_stats.css.map */
