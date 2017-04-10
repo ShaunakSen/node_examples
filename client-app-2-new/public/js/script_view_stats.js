@@ -7,6 +7,7 @@ myApp.config(function ($httpProvider) {
 myApp.controller('MainController', ['$scope', '$http', '$window', function ($scope, $http, $window) {
 
     $scope.apiResponse = [];
+    $scope.usersData = [];
     $scope.noOfUsers = 0;
     $scope.importantAnalysyis = [];
     $scope.noOfQuestions = 0;
@@ -57,6 +58,7 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             }
 
             $scope.analyzeResponseForLinks();
+            $scope.getFlagData();
             $scope.prepareChartData($scope.selectedQuestionNo);
             $scope.prepareChartData2($scope.selectedQuestionNo2);
 
@@ -68,6 +70,24 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
 
     // get the response from API
     $scope.getResponses();
+
+    $scope.getFlagData = function () {
+        $http.get("http://localhost:3000/users").then(function (response) {
+            console.log("Users Data:", response);
+            $scope.usersData = response.data;
+            $scope.apiResponse.forEach(function (userResponse) {
+                var username = userResponse.postedBy.username;
+                $scope.usersData.forEach(function (userData) {
+                    if(userData.username === username){
+                        userResponse.postedBy.flags = userData.flags;
+                    }
+                })
+            });
+            console.log("Api Response with flags:", $scope.apiResponse);
+        }, function (err) {
+            console.log(err);
+        });
+    };
 
     $scope.changeView = function (view) {
         if (view == 'scored') {
