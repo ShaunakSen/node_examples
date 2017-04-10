@@ -276,19 +276,17 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
 
         // *************WE NEED A DEEP COPY HERE NOT A SHALLOW COPY***************
 
-        console.log(questionNo, minScore, maxScore)
+        console.log(questionNo, minScore, maxScore);
         $scope.filteredQuestionData = angular.copy($scope.questionScores);
         var scores = $scope.filteredQuestionData[questionNo - 1].scores;
         var ratings = $scope.filteredQuestionData[questionNo - 1].ratings;
         var indexesToRemove = [];
         for (var i = 0; i < scores.length; ++i) {
-
             if (scores[i] < minScore || scores[i] > maxScore) {
                 indexesToRemove.push(i);
             }
         }
-
-
+        console.log("Indexes to remove:", indexesToRemove);
         var newScores = scores.filter(function (score, index) {
             return (score < maxScore && score > minScore)
         });
@@ -316,6 +314,8 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
 
 
         console.log($scope.filteredQuestionData);
+
+        $scope.prepareBarChartDataFiltered(questionNo);
     };
 
 
@@ -543,6 +543,26 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             }
         });
     };
+
+    $scope.prepareBarChartDataFiltered = function (questionNo) {
+        var labels = ["", "", "", "", "", ""];
+        var data = [0, 0, 0, 0, 0, 0];
+        $scope.apiResponse.forEach(function (userResponse) {
+            var requiredQuestion = userResponse.mcqResponse[questionNo - 1];
+            var response = requiredQuestion.response;
+            labels[response] = requiredQuestion.responseText;
+        });
+        labels[labels.length - 1] = "Scaled Credibility Score";
+        data[data.length - 1] = $scope.filteredQuestionData[questionNo - 1].averageScore * 10;
+
+        for(var i=0; i<$scope.filteredQuestionData[questionNo - 1].ratings.length; ++i){
+            data[$scope.filteredQuestionData[questionNo - 1].ratings[i]]++;
+        }
+
+        console.log(data, labels);
+        $scope.generateBarChartScored(labels, data);
+    }
+
 }]);
 
 /*
