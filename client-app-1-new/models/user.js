@@ -7,10 +7,6 @@ var UserSchema = new mongoose.Schema({
     password: String,
     roll_number: String,
     full_name: String,
-    flags:{
-        type: Number,
-        default: 0
-    },
     filled_forms: [String]
 });
 

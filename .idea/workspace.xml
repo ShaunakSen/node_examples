@@ -2787,7 +2787,9 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/node_modules/verror/tests/tst.verror.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/node_modules/verror/tests/tst.werror.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js" afterPath="$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-1-new/models/user.js" afterPath="$PROJECT_DIR$/client-app-1-new/models/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-1-new/public/js/script.js" afterPath="$PROJECT_DIR$/client-app-1-new/public/js/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final-project-rest-api/routes/users.js" afterPath="$PROJECT_DIR$/final-project-rest-api/routes/users.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/acorn" afterPath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/acorn" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/cleancss" afterPath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/cleancss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/jade" afterPath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/jade" />
@@ -2823,49 +2825,13 @@
     <favorites_list name="node-examples" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-app-2-new/app.js">
+    <leaf>
+      <file leaf-file-name="users.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/final-project-rest-api/routes/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="846">
-              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+            <state relative-caret-position="305">
+              <caret line="63" column="44" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view-stats.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="151" column="9" selection-start-line="151" selection-start-column="9" selection-end-line="151" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script_view_stats.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="562" column="52" selection-start-line="562" selection-start-column="52" selection-end-line="562" selection-end-column="52" />
-              <folding>
-                <element signature="e#908#1125#0" expanded="false" />
-                <element signature="e#1154#1356#0" expanded="false" />
-                <element signature="e#1397#2132#0" expanded="false" />
-                <element signature="e#2237#2424#0" expanded="false" />
-                <element signature="e#3041#4031#0" expanded="false" />
-                <element signature="e#4140#4519#0" expanded="false" />
-                <element signature="e#6183#6362#0" expanded="false" />
-                <element signature="e#6633#9339#0" expanded="false" />
-                <element signature="e#9384#9970#0" expanded="false" />
-                <element signature="e#10007#10164#0" expanded="false" />
-                <element signature="e#12174#12906#0" expanded="false" />
-                <element signature="e#14623#15579#0" expanded="false" />
-                <element signature="e#15636#16416#0" expanded="false" />
-                <element signature="e#16466#17618#0" expanded="false" />
-                <element signature="e#17711#18841#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -2893,7 +2859,6 @@
         <option value="$PROJECT_DIR$/client-app-1-new/models/User.js" />
         <option value="$PROJECT_DIR$/client-app-1-new/public/css/styles.scss" />
         <option value="$PROJECT_DIR$/client-app-1-new/views/test.ejs" />
-        <option value="$PROJECT_DIR$/final-project-rest-api/models/responses_new.js" />
         <option value="$PROJECT_DIR$/client-app-1-new/package.json" />
         <option value="$PROJECT_DIR$/client-app/data.json" />
         <option value="$PROJECT_DIR$/final-project-rest-api/routes/reviews.js" />
@@ -2929,15 +2894,16 @@
         <option value="$PROJECT_DIR$/final-project-rest-api/app.js" />
         <option value="$PROJECT_DIR$/final-project-rest-api/models/users.js" />
         <option value="$PROJECT_DIR$/client-app-1-new/routes/index.js" />
-        <option value="$PROJECT_DIR$/client-app-1-new/public/js/script.js" />
-        <option value="$PROJECT_DIR$/client-app-1-new/models/user.js" />
-        <option value="$PROJECT_DIR$/final-project-rest-api/routes/users.js" />
         <option value="$PROJECT_DIR$/client-app-2-new/test.scss" />
         <option value="$PROJECT_DIR$/client-app-2-new/routes/index.js" />
         <option value="$PROJECT_DIR$/client-app-1-new/app.js" />
         <option value="$PROJECT_DIR$/client-app-2-new/public/scss/style_view_stats.scss" />
         <option value="$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs" />
         <option value="$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js" />
+        <option value="$PROJECT_DIR$/final-project-rest-api/models/responses_new.js" />
+        <option value="$PROJECT_DIR$/client-app-1-new/public/js/script.js" />
+        <option value="$PROJECT_DIR$/client-app-1-new/models/user.js" />
+        <option value="$PROJECT_DIR$/final-project-rest-api/routes/users.js" />
       </list>
     </option>
   </component>
@@ -3006,7 +2972,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="client-app-2-new" />
+              <option name="myItemId" value="final-project-rest-api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3020,11 +2986,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="client-app-2-new" />
+              <option name="myItemId" value="final-project-rest-api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="routes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3387,14 +3353,8 @@
       <workItem from="1491639985742" duration="2682000" />
       <workItem from="1491712680297" duration="8903000" />
       <workItem from="1491765912098" duration="1075000" />
-      <workItem from="1491801276871" duration="1520000" />
-    </task>
-    <task id="LOCAL-00112" summary="coded route: /users/:userId/filled_forms">
-      <created>1488656892617</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1488656892618</updated>
+      <workItem from="1491801276871" duration="6465000" />
+      <workItem from="1491849143170" duration="579000" />
     </task>
     <task id="LOCAL-00113" summary="db fixes">
       <created>1488658251119</created>
@@ -3732,11 +3692,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491722535183</updated>
     </task>
-    <option name="localTasksCounter" value="161" />
+    <task id="LOCAL-00161" summary="chart filtering done">
+      <created>1491802806837</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1491802806918</updated>
+    </task>
+    <option name="localTasksCounter" value="162" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="750442000" />
+    <option name="totallyTimeSpent" value="755966000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1366" height="739" extended-state="6" />
@@ -3826,13 +3793,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client-app-2-new/js/service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-app-2-new/scss/styles2.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="826">
@@ -4008,13 +3968,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-1-new/views/landing.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="48" column="110" selection-start-line="48" selection-start-column="110" selection-end-line="48" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-app-2-new/scss/style.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -4029,24 +3982,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-1-new/views/feedback_form.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="119" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-app-2-new/public/scss/styles_landing.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/final-project-rest-api/models/responses_new.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -4075,34 +4014,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1242">
           <caret line="69" column="43" selection-start-line="69" selection-start-column="43" selection-end-line="69" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-1-new/models/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/final-project-rest-api/models/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="6" selection-start-line="16" selection-start-column="4" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-1-new/public/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="280" column="46" selection-start-line="280" selection-start-column="46" selection-end-line="280" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/final-project-rest-api/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="110" column="26" selection-start-line="110" selection-start-column="26" selection-end-line="110" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -4148,14 +4059,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-2-new/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-app-2-new/public/scss/style_create_form.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
@@ -4174,31 +4077,78 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="548">
           <caret line="151" column="9" selection-start-line="151" selection-start-column="9" selection-end-line="151" selection-end-column="9" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-app-2-new/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-app-1-new/views/landing.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="48" column="110" selection-start-line="48" selection-start-column="110" selection-end-line="48" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-app-1-new/views/feedback_form.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2070">
+          <caret line="115" column="48" selection-start-line="115" selection-start-column="48" selection-end-line="115" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/final-project-rest-api/models/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="5" selection-start-line="16" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
+        <state relative-caret-position="3733">
           <caret line="562" column="52" selection-start-line="562" selection-start-column="52" selection-end-line="562" selection-end-column="52" />
-          <folding>
-            <element signature="e#908#1125#0" expanded="false" />
-            <element signature="e#1154#1356#0" expanded="false" />
-            <element signature="e#1397#2132#0" expanded="false" />
-            <element signature="e#2237#2424#0" expanded="false" />
-            <element signature="e#3041#4031#0" expanded="false" />
-            <element signature="e#4140#4519#0" expanded="false" />
-            <element signature="e#6183#6362#0" expanded="false" />
-            <element signature="e#6633#9339#0" expanded="false" />
-            <element signature="e#9384#9970#0" expanded="false" />
-            <element signature="e#10007#10164#0" expanded="false" />
-            <element signature="e#12174#12906#0" expanded="false" />
-            <element signature="e#14623#15579#0" expanded="false" />
-            <element signature="e#15636#16416#0" expanded="false" />
-            <element signature="e#16466#17618#0" expanded="false" />
-            <element signature="e#17711#18841#0" expanded="false" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/final-project-rest-api/models/responses_new.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-app-1-new/public/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="253" column="60" selection-start-line="253" selection-start-column="60" selection-end-line="253" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-app-1-new/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/final-project-rest-api/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="63" column="44" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>

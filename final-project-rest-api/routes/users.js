@@ -9,7 +9,7 @@ var router = express.Router();
 
 router.use(bodyParser.json());
 
-// GET ALL RESPONSES
+// GET ALL USERS
 router.get("/users", function (req, res) {
     Users.find({}, function (err, foundUsers) {
         if (err) {
@@ -20,7 +20,7 @@ router.get("/users", function (req, res) {
     })
 });
 
-// POST RESPONSES
+// POST USER
 
 router.post("/users", function (req, res) {
     Users.create(req.body, function (err, createduser) {
@@ -45,6 +45,36 @@ router.get("/users/:id", function (req, res) {
         }
     });
 });
+
+// GET NO OF FLAGS FOR USER BY _id
+
+router.get("/users/:id/flagsbyid", function (req, res) {
+    var id = req.params.id;
+
+    var query = Users.findById(id).select('flags');
+    query.exec(function (err, foundDoc) {
+        if(err){
+            console.log(err)
+        } else {
+            res.json(foundDoc);
+        }
+    })
+});
+
+router.get("/users/:username/flagsbyusername", function (req, res) {
+    var username = req.params.username;
+
+    var query = Users.find({username: username}).select('flags');
+    query.exec(function (err, foundDoc) {
+        if(err){
+            console.log(err)
+        } else {
+            res.json(foundDoc);
+        }
+    })
+});
+
+
 
 // PUT rote for editing filled_forms
 
