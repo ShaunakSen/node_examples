@@ -26,6 +26,7 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
     $scope.currentView = 'raw';
     $scope.alreadyFiltered = false;
     $scope.minScore = 0;
+    $scope.userCredibility = 'high';
 
     // Background and border colors to be used by all charts
 
@@ -80,10 +81,12 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
                 $scope.usersData.forEach(function (userData) {
                     if(userData.username === username){
                         userResponse.postedBy.flags = userData.flags;
+                        userResponse.postedBy.filled_forms = userData.filled_forms;
                     }
                 })
             });
             console.log("Api Response with flags:", $scope.apiResponse);
+            $scope.filterBasedOnFlags();
         }, function (err) {
             console.log(err);
         });
@@ -290,6 +293,41 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         }
         return total / length;
     }
+
+    $scope.filterBasedOnFlags = function (userCredibility) {
+
+        // $scope.currentView = 'flagged';
+        $scope.filteredDataOnFlags = angular.copy($scope.apiResponse);
+        var highFlagRatio = 10;
+        var lowFlagRatio = 4;
+        $scope.filteredDataOnFlags.forEach(function (userResponse, index) {
+            // if(userResponse.postedBy.flags === 0 || userResponse.postedBy.filled_forms.length === 0){
+            //     console.log("Not filtering...");
+            // } else if(userResponse.postedBy.filled_forms/userResponse.postedBy.flags > -1){
+            //     console.log("Needs filtering at " + index + " ratio= " + userResponse.postedBy.filled_forms/userResponse.postedBy.flags);
+            // }
+
+
+
+            if(userResponse.postedBy.flags === 0 || userResponse.postedBy.filled_forms.length === 0){
+                console.log("No filtering required");
+                console.log("Flags:", userResponse.postedBy.flags, "Filled Forms:", userResponse.postedBy.filled_forms);
+                console.log("Ratio", userResponse.postedBy.filled_forms.length/userResponse.postedBy.flags);
+                console.log($scope.filteredDataOnFlags.length);
+            } else if(userResponse.postedBy.filled_forms.length/userResponse.postedBy.flags > 0) {
+                console.log("Needs filtering");
+                console.log("Flags:", userResponse.postedBy.flags, "Filled Forms:", userResponse.postedBy.filled_forms);
+                console.log("Ratio", userResponse.postedBy.filled_forms.length / userResponse.postedBy.flags);
+                $scope.filteredDataOnFlags.splice(index, 1);
+            }
+        });
+        console.log($scope.apiResponse, $scope.filteredDataOnFlags);
+
+        $scope.prepareCharDataFlagged(1, 0);
+
+    };
+
+
 
     $scope.filterResponsesBasedOnScore = function (questionNo, minScore, maxScore) {
 
@@ -580,6 +618,20 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         }
 
         console.log(data, labels);
+        $scope.generateBarChartScored(labels, data);
+    }
+    
+    $scope.prepareCharDataFlagged = function (questionNo, flagRatio) {
+        var labels = ["", "", "", "", "", ""];
+        var data = [0, 0, 0, 0, 0, 0];
+        $scope.filteredDataOnFlags.forEach(function (userResponse) {
+            var requiredQuestion = userResponse.mcqResponse[questionNo - 1];
+            var response = requiredQuestion.response;
+            labels[response] = requiredQuestion.responseText;
+            data[response] += 1;
+        });
+        data[data.length - 1] = flagRatio;
+        labels[labels.length - 1] = "Flag Ratio";
         $scope.generateBarChartScored(labels, data);
     }
 

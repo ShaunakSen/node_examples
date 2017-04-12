@@ -56,7 +56,10 @@
         <p><i class="fa fa-users"></i><span>&nbsp;No of Users Reviewed: {{noOfUsers}}</span></p>
         <p ng-click="changeView('raw')"><i class="fa fa-database"></i><span>&nbsp;View Raw Statistics</span></p>
         <p ng-click="changeView('scored')"><i class="fa fa-filter"></i><span>&nbsp;View Filtered Statistics</span></p>
-
+        <p><i class="fa fa-filter"></i><span>&nbsp;View Trusted User Statistics</span></p>
+        <p ng-click="filterBasedOnFlags('high')"><span>&nbsp;User Credibility: High</span></p>
+        <p ng-click="filterBasedOnFlags('medium')"><span>&nbsp;User Credibility: Medium</span></p>
+        <p ng-click="filterBasedOnFlags('low')"><span>&nbsp;User Credibility: Low</span></p>
     </div>
     <div class="col-sm-8 main-content">
 
@@ -156,6 +159,41 @@
                 <div class="row chart-row">
                     <div class="col-md-12 chart-main" id="chart-container-3">
                         <canvas id="myChart3" width="800" height="600"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row stats-container" ng-show="currentView == 'flagged'">
+            <div class="col-xs-8 col-xs-offset-2 stats-card-1">
+                <h4>Question wise Scored Responses</h4>
+                <hr style="margin-top: 0; margin-bottom: 0">
+                <div class="row chart-row">
+                    <div class="col-md-4">
+                        <p>Select Question number</p>
+
+                        <select class="form-control custom-select" name="repeatSelect"
+                                ng-model="selectedQuestionBarScored"
+                                ng-change="prepareBarChartDataScored(selectedQuestionBarScored)">
+                            <option ng-repeat="questionNo in questionNos" value="{{questionNo}}">{{questionNo}}</option>
+                        </select>
+                        <div class="row icons-row" style="margin-top: 10px">
+                            <div class="col-md-12">
+                                <i class="fa fa-clock-o fa-1.5x"></i><span>&nbsp; &nbsp;3.2 sec</span>
+                                <br><br>
+                                <i class="fa fa-users fa-1.5x"></i><span>&nbsp; &nbsp;120 reviews</span>
+                            </div>
+                        </div>
+                        <div class="row filter-score-row">
+                            <p>Select Score Limit</p>
+                            <hr>
+                            <input type="number" ng-model="minScore" min="0" max="10" step="0.1" class="custom-input">
+                            <button class="custom-button" ng-click="filterResponsesBasedOnScore(selectedQuestionBarScored, minScore, 10)">Apply</button>
+                        </div>
+                    </div>
+                    <div class="col-md-8 chart-main" id="chart-container-5">
+                        <canvas id="myChart5" width="400" height="400"></canvas>
                     </div>
                 </div>
             </div>
