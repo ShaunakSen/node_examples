@@ -2788,7 +2788,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/node_modules/verror/tests/tst.werror.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js" afterPath="$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/test.scss" afterPath="$PROJECT_DIR$/client-app-2-new/test.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs" afterPath="$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/acorn" afterPath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/acorn" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/cleancss" afterPath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/cleancss" />
@@ -2829,9 +2828,15 @@
       <file leaf-file-name="view-stats.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
-              <folding />
+            <state relative-caret-position="646">
+              <caret line="177" column="91" selection-start-line="177" selection-start-column="91" selection-end-line="177" selection-end-column="91" />
+              <folding>
+                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2839,28 +2844,29 @@
       <file leaf-file-name="script_view_stats.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1758">
-              <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+            <state relative-caret-position="300">
+              <caret line="640" column="34" selection-start-line="640" selection-start-column="34" selection-end-line="640" selection-end-column="34" />
               <folding>
                 <element signature="e#1461#2230#0" expanded="false" />
-                <element signature="e#3196#3383#0" expanded="false" />
-                <element signature="e#3428#7540#0" expanded="false" />
-                <element signature="e#4000#4990#0" expanded="false" />
-                <element signature="e#5099#5478#0" expanded="false" />
-                <element signature="e#7142#7321#0" expanded="false" />
-                <element signature="e#7592#10298#0" expanded="false" />
-                <element signature="e#10343#10929#0" expanded="false" />
-                <element signature="e#10966#11123#0" expanded="false" />
-                <element signature="e#11158#11334#0" expanded="false" />
-                <element signature="e#13188#14846#0" expanded="false" />
-                <element signature="e#14902#15634#0" expanded="false" />
-                <element signature="e#15689#17296#0" expanded="false" />
-                <element signature="e#17351#18307#0" expanded="false" />
-                <element signature="e#18364#19144#0" expanded="false" />
-                <element signature="e#19194#20346#0" expanded="false" />
-                <element signature="e#20439#21569#0" expanded="false" />
-                <element signature="e#22295#23307#0" expanded="false" />
-                <element signature="e#23373#24156#0" expanded="false" />
+                <element signature="e#3155#3342#0" expanded="false" />
+                <element signature="e#3387#7499#0" expanded="false" />
+                <element signature="e#3959#4949#0" expanded="false" />
+                <element signature="e#5058#5437#0" expanded="false" />
+                <element signature="e#7101#7280#0" expanded="false" />
+                <element signature="e#7551#10257#0" expanded="false" />
+                <element signature="e#10302#10888#0" expanded="false" />
+                <element signature="e#10925#11082#0" expanded="false" />
+                <element signature="e#11117#11293#0" expanded="false" />
+                <element signature="e#13093#14751#0" expanded="false" />
+                <element signature="e#14807#15539#0" expanded="false" />
+                <element signature="e#15594#17201#0" expanded="false" />
+                <element signature="e#17256#18212#0" expanded="false" />
+                <element signature="e#18269#19049#0" expanded="false" />
+                <element signature="e#19099#20251#0" expanded="false" />
+                <element signature="e#20344#21474#0" expanded="false" />
+                <element signature="e#21539#22170#0" expanded="false" />
+                <element signature="e#22255#23253#0" expanded="false" />
+                <element signature="e#23319#24102#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -2931,9 +2937,9 @@
         <option value="$PROJECT_DIR$/client-app-1-new/public/js/script.js" />
         <option value="$PROJECT_DIR$/client-app-1-new/models/user.js" />
         <option value="$PROJECT_DIR$/final-project-rest-api/routes/users.js" />
+        <option value="$PROJECT_DIR$/client-app-2-new/test.scss" />
         <option value="$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs" />
         <option value="$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js" />
-        <option value="$PROJECT_DIR$/client-app-2-new/test.scss" />
       </list>
     </option>
   </component>
@@ -3369,14 +3375,7 @@
       <workItem from="1491849143170" duration="4692000" />
       <workItem from="1491887017987" duration="5452000" />
       <workItem from="1491904931338" duration="2340000" />
-      <workItem from="1491972490140" duration="1394000" />
-    </task>
-    <task id="LOCAL-00115" summary="rendering forms based on user dept :)">
-      <created>1488663611622</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1488663611622</updated>
+      <workItem from="1491972490140" duration="3129000" />
     </task>
     <task id="LOCAL-00116" summary="filter of forms based on filled_forms data">
       <created>1488914047644</created>
@@ -3714,11 +3713,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491851883244</updated>
     </task>
-    <option name="localTasksCounter" value="164" />
+    <task id="LOCAL-00164" summary="flag filtering function">
+      <created>1491982528301</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1491982528302</updated>
+    </task>
+    <option name="localTasksCounter" value="165" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="769265000" />
+    <option name="totallyTimeSpent" value="771000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1366" height="739" extended-state="6" />
@@ -3728,19 +3734,19 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56935483" sideWeight="0.51785713" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3251634" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53301126" sideWeight="0.48214287" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.85507244" sideWeight="0.48809522" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22767857" sideWeight="0.5147059" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53301126" sideWeight="0.48214287" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -3774,7 +3780,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ui fixes + mixins" />
     <MESSAGE value="finsihed designing admin-created-forms card" />
     <MESSAGE value="bug fixes" />
     <MESSAGE value="new user registration bug fix" />
@@ -3799,7 +3804,8 @@
     <MESSAGE value="chart filtering done" />
     <MESSAGE value="GET flags by _id and username + removed flag data structure from client-app-1" />
     <MESSAGE value="reflecting flag data in $scope.apiResponse" />
-    <option name="LAST_COMMIT_MESSAGE" value="reflecting flag data in $scope.apiResponse" />
+    <MESSAGE value="flag filtering function" />
+    <option name="LAST_COMMIT_MESSAGE" value="flag filtering function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -4154,36 +4160,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
-          <folding />
+        <state relative-caret-position="646">
+          <caret line="177" column="91" selection-start-line="177" selection-start-column="91" selection-end-line="177" selection-end-column="91" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1758">
-          <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+        <state relative-caret-position="300">
+          <caret line="640" column="34" selection-start-line="640" selection-start-column="34" selection-end-line="640" selection-end-column="34" />
           <folding>
             <element signature="e#1461#2230#0" expanded="false" />
-            <element signature="e#3196#3383#0" expanded="false" />
-            <element signature="e#3428#7540#0" expanded="false" />
-            <element signature="e#4000#4990#0" expanded="false" />
-            <element signature="e#5099#5478#0" expanded="false" />
-            <element signature="e#7142#7321#0" expanded="false" />
-            <element signature="e#7592#10298#0" expanded="false" />
-            <element signature="e#10343#10929#0" expanded="false" />
-            <element signature="e#10966#11123#0" expanded="false" />
-            <element signature="e#11158#11334#0" expanded="false" />
-            <element signature="e#13188#14846#0" expanded="false" />
-            <element signature="e#14902#15634#0" expanded="false" />
-            <element signature="e#15689#17296#0" expanded="false" />
-            <element signature="e#17351#18307#0" expanded="false" />
-            <element signature="e#18364#19144#0" expanded="false" />
-            <element signature="e#19194#20346#0" expanded="false" />
-            <element signature="e#20439#21569#0" expanded="false" />
-            <element signature="e#22295#23307#0" expanded="false" />
-            <element signature="e#23373#24156#0" expanded="false" />
+            <element signature="e#3155#3342#0" expanded="false" />
+            <element signature="e#3387#7499#0" expanded="false" />
+            <element signature="e#3959#4949#0" expanded="false" />
+            <element signature="e#5058#5437#0" expanded="false" />
+            <element signature="e#7101#7280#0" expanded="false" />
+            <element signature="e#7551#10257#0" expanded="false" />
+            <element signature="e#10302#10888#0" expanded="false" />
+            <element signature="e#10925#11082#0" expanded="false" />
+            <element signature="e#11117#11293#0" expanded="false" />
+            <element signature="e#13093#14751#0" expanded="false" />
+            <element signature="e#14807#15539#0" expanded="false" />
+            <element signature="e#15594#17201#0" expanded="false" />
+            <element signature="e#17256#18212#0" expanded="false" />
+            <element signature="e#18269#19049#0" expanded="false" />
+            <element signature="e#19099#20251#0" expanded="false" />
+            <element signature="e#20344#21474#0" expanded="false" />
+            <element signature="e#21539#22170#0" expanded="false" />
+            <element signature="e#22255#23253#0" expanded="false" />
+            <element signature="e#23319#24102#0" expanded="false" />
           </folding>
         </state>
       </provider>

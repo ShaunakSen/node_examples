@@ -86,7 +86,6 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
                 })
             });
             console.log("Api Response with flags:", $scope.apiResponse);
-            $scope.filterBasedOnFlags();
         }, function (err) {
             console.log(err);
         });
@@ -296,10 +295,13 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
 
     $scope.filterBasedOnFlags = function (userCredibility) {
 
-        // $scope.currentView = 'flagged';
+        $scope.currentView = 'flagged';
         $scope.filteredDataOnFlags = angular.copy($scope.apiResponse);
         var highFlagRatio = 10;
         var lowFlagRatio = 4;
+
+        var indexesToRemove = [];
+
         $scope.filteredDataOnFlags.forEach(function (userResponse, index) {
             // if(userResponse.postedBy.flags === 0 || userResponse.postedBy.filled_forms.length === 0){
             //     console.log("Not filtering...");
@@ -311,19 +313,25 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
 
             if(userResponse.postedBy.flags === 0 || userResponse.postedBy.filled_forms.length === 0){
                 console.log("No filtering required");
-                console.log("Flags:", userResponse.postedBy.flags, "Filled Forms:", userResponse.postedBy.filled_forms);
                 console.log("Ratio", userResponse.postedBy.filled_forms.length/userResponse.postedBy.flags);
-                console.log($scope.filteredDataOnFlags.length);
             } else if(userResponse.postedBy.filled_forms.length/userResponse.postedBy.flags > 0) {
                 console.log("Needs filtering");
-                console.log("Flags:", userResponse.postedBy.flags, "Filled Forms:", userResponse.postedBy.filled_forms);
                 console.log("Ratio", userResponse.postedBy.filled_forms.length / userResponse.postedBy.flags);
-                $scope.filteredDataOnFlags.splice(index, 1);
+                indexesToRemove.push(index);
+                $scope.filteredDataOnFlags[index] = "";
             }
         });
+        console.log(indexesToRemove);
+
+        $scope.filteredDataOnFlags = $scope.filteredDataOnFlags.filter(function (data, index) {
+            return data !== "";
+        });
+
+
+
         console.log($scope.apiResponse, $scope.filteredDataOnFlags);
 
-        $scope.prepareCharDataFlagged(1, 0);
+        $scope.prepareCharDataFlagged(1);
 
     };
 
@@ -570,14 +578,14 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         });
         data[data.length - 1] = $scope.questionScores[questionNo - 1].averageScore * 10;
         labels[labels.length - 1] = "Scaled Credibility Score";
-        $scope.generateBarChartScored(labels, data);
+        $scope.generateBarChartScored(labels, data, 'chart-container-4', 'myChart4');
     };
 
-    $scope.generateBarChartScored = function (labels, data) {
+    $scope.generateBarChartScored = function (labels, data, containerId, chartId) {
         // 1st 2 lines are redundant but necessary for cleaning up DOM for chartjs to work properly
-        document.getElementById('chart-container-4').innerHTML = "";
-        document.getElementById('chart-container-4').innerHTML = '<canvas id="myChart4" width="400" height="400"></canvas>';
-        var ctx = document.getElementById("myChart4");
+        document.getElementById(containerId).innerHTML = "";
+        document.getElementById(containerId).innerHTML = '<canvas id=' + chartId + ' width="400" height="400"></canvas>';
+        var ctx = document.getElementById(chartId);
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
@@ -621,7 +629,7 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         $scope.generateBarChartScored(labels, data);
     }
     
-    $scope.prepareCharDataFlagged = function (questionNo, flagRatio) {
+    $scope.prepareCharDataFlagged = function (questionNo) {
         var labels = ["", "", "", "", "", ""];
         var data = [0, 0, 0, 0, 0, 0];
         $scope.filteredDataOnFlags.forEach(function (userResponse) {
@@ -630,9 +638,9 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             labels[response] = requiredQuestion.responseText;
             data[response] += 1;
         });
-        data[data.length - 1] = flagRatio;
+        data[data.length - 1] = 10;
         labels[labels.length - 1] = "Flag Ratio";
-        $scope.generateBarChartScored(labels, data);
+        $scope.generateBarChartScored(labels, data, 'chart-container-5', 'myChart5');
     }
 
 }]);
