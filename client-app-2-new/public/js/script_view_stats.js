@@ -583,6 +583,8 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
 
     $scope.generateBarChartScored = function (labels, data, containerId, chartId) {
         // 1st 2 lines are redundant but necessary for cleaning up DOM for chartjs to work properly
+        console.log(document.getElementById(containerId));
+        console.log(document.getElementById(chartId));
         document.getElementById(containerId).innerHTML = "";
         document.getElementById(containerId).innerHTML = '<canvas id=' + chartId + ' width="400" height="400"></canvas>';
         var ctx = document.getElementById(chartId);
@@ -626,8 +628,8 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         }
 
         console.log(data, labels);
-        $scope.generateBarChartScored(labels, data);
-    }
+        $scope.generateBarChartScored(labels, data, 'chart-container-4', 'myChart4');
+    };
     
     $scope.prepareCharDataFlagged = function (questionNo) {
         var labels = ["", "", "", "", "", ""];
@@ -638,22 +640,12 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             labels[response] = requiredQuestion.responseText;
             data[response] += 1;
         });
-        data[data.length - 1] = 10;
+        data[data.length - 1] = 1;
         labels[labels.length - 1] = "Flag Ratio";
         $scope.generateBarChartScored(labels, data, 'chart-container-5', 'myChart5');
     }
 
 }]);
-
-/*
- [
- ["Very Good": 4],
- ["Good": 4],
- ["Very Good": 4],
- ]
- */
-
-
 
 
 
