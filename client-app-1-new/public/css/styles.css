@@ -26,7 +26,7 @@ a:hover {
   border-radius: 0; }
 
 .btn-primary {
-  background-color: #5660ff; }
+  background-color: #cbc6d0; }
 
 .btn-success {
   background-color: #41ac42; }
@@ -38,19 +38,25 @@ a:hover {
   background-color: rgba(0, 183, 255, 0);
   border: none;
   border-radius: 0;
-  color: #343435; }
+  color: #332d46; }
   .custom-navbar .navbar-brand {
-    color: #343435; }
+    color: #332d46; }
+  .custom-navbar .navbar-right span {
+    color: #cbc6d0;
+    font-family: "Montserrat", sans-serif; }
 
 .custom-navbar.scrolled {
   background-color: whitesmoke; }
+  .custom-navbar.scrolled .navbar-right span {
+    color: #3a3958;
+    font-family: "Montserrat", sans-serif; }
 
 .jumbotron {
   background: url("../img/header.jpg") center/cover no-repeat;
   height: 450px;
   padding: 80px 40px; }
   .jumbotron p {
-    color: #343435; }
+    color: #332d46; }
   .jumbotron blockquote {
     border-left: 5px solid #70b458; }
     .jumbotron blockquote p {
@@ -60,8 +66,8 @@ a:hover {
   border-radius: 0;
   font-family: "Montserrat", sans-serif; }
   .custom-modal .modal-header {
-    background-color: #888dff;
-    color: #343435; }
+    background-color: #f9efff;
+    color: #332d46; }
     .custom-modal .modal-header h4 {
       font-family: "Montserrat", sans-serif;
       font-size: 18px; }
@@ -70,22 +76,22 @@ a:hover {
     .custom-modal .modal-body .row input {
       border-radius: 0; }
     .custom-modal .modal-body .row p {
-      color: #4e4d4f;
+      color: #3a3958;
       font-size: 17px;
       margin-top: 4px; }
     .custom-modal .modal-body .row .success-icon {
-      border: 3px solid #7bcb5d;
+      border: 3px solid #8BC34A;
       border-radius: 50%;
       text-align: center;
       padding: 30px 30px; }
       .custom-modal .modal-body .row .success-icon i {
         font-size: 10em;
-        color: #7bcb5d;
+        color: #8BC34A;
         text-align: center; }
 
 .feedback-card {
-  border: 1px solid #7bcb5d;
-  outline: 2px solid #7F2CCB;
+  border: 1px solid #8BC34A;
+  outline: 2px solid #c7b2f6;
   outline-offset: 5px;
   padding: 15px 30px; }
   .feedback-card p {
@@ -94,5 +100,49 @@ a:hover {
 
 .emphasis-text {
   text-decoration: underline; }
+
+.custom-button-login {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3em;
+  color: #332d46;
+  cursor: pointer; }
+  .custom-button-login i {
+    color: #8BC34A; }
+  .custom-button-login span {
+    margin-left: 3px;
+    border-bottom: 3px solid #8BC34A; }
+
+.custom-button-logout {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3em;
+  color: #332d46;
+  cursor: pointer; }
+  .custom-button-logout i {
+    color: #d14e4f; }
+  .custom-button-logout span {
+    margin-left: 3px;
+    border-bottom: 3px solid #d14e4f; }
+
+.custom-button-register {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3em;
+  color: #332d46;
+  cursor: pointer; }
+  .custom-button-register i {
+    color: #1E88E5; }
+  .custom-button-register span {
+    margin-left: 3px;
+    border-bottom: 3px solid #1E88E5; }
+
+.custom-button-edit {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3em;
+  color: #332d46;
+  cursor: pointer; }
+  .custom-button-edit i {
+    color: #ff7a3e; }
+  .custom-button-edit span {
+    margin-left: 3px;
+    border-bottom: 3px solid #ff7a3e; }
 
 /*# sourceMappingURL=styles.css.map */

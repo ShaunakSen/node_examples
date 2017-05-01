@@ -1,18 +1,35 @@
 //Color Schemes
 
-$lighter: #888dff;
-$light: #5660ff;
-$medium: #7F2CCB;
-$dark: #4e4d4f;
-$darker: #343435;
+$lighter: #f9efff;
+$light: #cbc6d0;
+$medium: #c7b2f6;
+$dark: #3a3958;
+$darker: #332d46;
 
-$utility1: #c174cb;
-$utility2: #7bcb5d;
+$utility1: #d14e4f;
+$utility2: #8BC34A;
+$utility3: #1E88E5;
+$utility4: #ff7a3e;
 
 //Font
 
 $font: 'Lato', sans-serif;
 $font2: 'Montserrat', sans-serif;
+
+@mixin generateButton($color, $borderWidth: 3px) {
+  font-family: $font2;
+  font-size: 1.3em;
+  color: $darker;
+  cursor: pointer;
+
+  i {
+    color: $color;
+  }
+  span {
+    margin-left: 3px;
+    border-bottom: $borderWidth solid $color;
+  }
+}
 
 //General Styles
 
@@ -76,10 +93,25 @@ a:hover {
   .navbar-brand{
     color: $darker;
   }
+
+  .navbar-right{
+    span{
+      color: $light;
+      font-family: $font2;
+      //font-weight: bold;
+    }
+  }
 }
 
 .custom-navbar.scrolled{
   background-color: whitesmoke;
+  .navbar-right{
+    span{
+      color: $dark;
+      font-family: $font2;
+      //font-weight: bold;
+    }
+  }
 }
 
 .jumbotron{
@@ -153,4 +185,19 @@ a:hover {
 
 .emphasis-text{
   text-decoration: underline;
+}
+.custom-button-login {
+  @include generateButton($utility2);
+}
+
+.custom-button-logout {
+  @include generateButton($utility1);
+}
+
+.custom-button-register {
+  @include generateButton($utility3);
+}
+
+.custom-button-edit {
+  @include generateButton($utility4);
 }
