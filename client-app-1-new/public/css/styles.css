@@ -25,9 +25,6 @@ a:hover {
   border: none;
   border-radius: 0; }
 
-.btn-primary {
-  background-color: #cbc6d0; }
-
 .btn-success {
   background-color: #41ac42; }
 
@@ -66,7 +63,7 @@ a:hover {
   border-radius: 0;
   font-family: "Montserrat", sans-serif; }
   .custom-modal .modal-header {
-    background-color: #f9efff;
+    background-color: #1E88E5;
     color: #332d46; }
     .custom-modal .modal-header h4 {
       font-family: "Montserrat", sans-serif;
@@ -97,6 +94,25 @@ a:hover {
   .feedback-card p {
     font-size: 16px;
     font-family: "Montserrat", sans-serif; }
+
+.feedback-form-row {
+  border: 2px solid #8BC34A;
+  outline: 2px solid #c7b2f6;
+  outline-offset: 5px; }
+  .feedback-form-row .carousel-inner {
+    overflow: visible; }
+    .feedback-form-row .carousel-inner .question-title-row {
+      padding: 10px 40px; }
+      .feedback-form-row .carousel-inner .question-title-row h3 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.6em;
+        color: #3a3958; }
+    .feedback-form-row .carousel-inner .options-row {
+      padding: 20px 30px;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.3em; }
+      .feedback-form-row .carousel-inner .options-row .radio {
+        margin-left: 25px; }
 
 .emphasis-text {
   text-decoration: underline; }

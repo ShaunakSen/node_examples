@@ -64,13 +64,8 @@ a:hover {
 }
 
 .custom-button{
-
   border:none;
   border-radius: 0;
-}
-
-.btn-primary{
-  background-color: $light;
 }
 
 .btn-success{
@@ -135,7 +130,7 @@ a:hover {
   border-radius: 0;
   font-family: $font2;
   .modal-header{
-    background-color: $lighter;
+    background-color: $utility3;
     color: $darker;
     h4{
       //font-weight: bold;
@@ -180,6 +175,36 @@ a:hover {
   p{
     font-size: 16px;
     font-family: $font2;
+  }
+}
+
+.feedback-form-row{
+  border: 2px solid $utility2;
+  outline: 2px solid $medium;
+  outline-offset: 5px;
+  .carousel-inner{
+    overflow: visible;
+
+    .question-title-row{
+      padding: 10px 40px;
+      h3{
+        font-family: $font2;
+        font-size: 1.6em;
+
+        color: $dark;
+      }
+    }
+
+
+    .options-row{
+      padding: 20px 30px;
+      font-family: $font2;
+      font-size: 1.3em;
+
+      .radio{
+        margin-left: 25px;
+      }
+    }
   }
 }
 
