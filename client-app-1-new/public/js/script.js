@@ -294,7 +294,10 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
                         }
                     }).then(function (response) {
                         console.log("Change reflected in API side as well", response);
-
+                        $scope.displaySuccessModal();
+                        $("#submitted-form-modal").on('hidden.bs.modal', function () {
+                            window.location = "http://localhost:8001";
+                        });
                     }, function (response) {
                         console.log("Not ok on API side", response);
                     })
@@ -310,6 +313,11 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
             }
         );
     };
+    
+    $scope.displaySuccessModal = function () {
+        // display success modal here
+        $("#submitted-form-modal").modal();
+    }
 
 
 

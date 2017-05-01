@@ -73,6 +73,15 @@ a:hover {
       color: #4e4d4f;
       font-size: 17px;
       margin-top: 4px; }
+    .custom-modal .modal-body .row .success-icon {
+      border: 3px solid #7bcb5d;
+      border-radius: 50%;
+      text-align: center;
+      padding: 30px 30px; }
+      .custom-modal .modal-body .row .success-icon i {
+        font-size: 10em;
+        color: #7bcb5d;
+        text-align: center; }
 
 .feedback-card {
   border: 1px solid #7bcb5d;
