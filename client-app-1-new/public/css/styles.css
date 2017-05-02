@@ -96,6 +96,13 @@ a:hover {
   .feedback-card p {
     font-size: 16px;
     font-family: "Montserrat", sans-serif; }
+  .feedback-card .slab {
+    display: inline;
+    background-color: #ff7a3e;
+    border-radius: 15px;
+    padding: 5px 10px;
+    color: #f9efff;
+    margin-top: 5px; }
 
 .feedback-form-row {
   border: 2px solid #8BC34A;

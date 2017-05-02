@@ -22,7 +22,7 @@ myApp.controller('FeedbackController', ['$scope', '$window', '$http', function (
         console.log("error:", response)
     })
 
-    
+
 }]);
 
 myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http', function ($scope, $window, mainFactory, $http) {
@@ -44,7 +44,7 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
     $scope.userInfo = $window.userInfo;
     console.log($scope.userInfo);
 
-    // CLOCK FUNCTIONS -> CHANGE TO FACTORY LATER MAYBE?
+    // CLOCK FUNCTIONS
 
     $scope.startClock = function (questionNo) {
         console.info("Starting clock for question", questionNo);
@@ -282,7 +282,7 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
                     console.log("ok...", response);
 
                     console.log("about to hit api route");
-                    
+
                     // Change the filled form data for this user on API side
 
                     $http({
@@ -301,7 +301,7 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
                     }, function (response) {
                         console.log("Not ok on API side", response);
                     })
-                    
+
                 }, function (response) {
                     console.log("not ok...", response)
                 } );
@@ -313,7 +313,7 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
             }
         );
     };
-    
+
     $scope.displaySuccessModal = function () {
         // display success modal here
         $("#submitted-form-modal").modal();

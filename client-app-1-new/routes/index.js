@@ -44,9 +44,34 @@ router.get("/", function (req, res) {
                         
                     }
                 }
-                
 
-                res.render("landing", {forms: forms});
+                // GET responses data in order to find number of users filled form and ave time
+
+                request('http://localhost:3000/responses_new/', function (error, response, body) {
+
+                    var responses = JSON.parse(body);
+
+                    forms.forEach(function (form) {
+                        var formId = form._id;
+                        form.noOfUsers = 0;
+                        var noOfQuestions = form.mcq.length;
+                        form.estimatedTime = 0;
+                        responses.forEach(function (response) {
+                            if(response.reviewId == formId){
+                                console.log(formId);
+                                form.noOfUsers += 1;
+
+                                response.mcqResponse.forEach(function(singleResponse){
+                                    form.estimatedTime += singleResponse.timeSpent;
+                                })
+                            }
+                        });
+                        form.estimatedTime = (form.estimatedTime/form.noOfUsers)/1000;
+                    });
+
+                    console.log("Forms:", forms);
+                    res.render("landing", {forms: forms});
+                });
             }
         })
     } else {

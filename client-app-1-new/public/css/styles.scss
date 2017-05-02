@@ -179,6 +179,16 @@ a:hover {
     font-size: 16px;
     font-family: $font2;
   }
+  .slab{
+    display: inline;
+    //margin-right: 8px;
+    background-color: $utility4;
+    border-radius: 15px;
+    padding: 5px 10px;
+    //font-weight: bold;
+    color: $lighter;
+    margin-top: 5px;
+  }
 }
 
 .feedback-form-row{
