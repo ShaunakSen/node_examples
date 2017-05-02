@@ -37,20 +37,22 @@ a:hover {
   border-radius: 0;
   color: #332d46; }
   .custom-navbar .navbar-brand {
-    color: #332d46; }
+    color: #bcb8c1; }
   .custom-navbar .navbar-right span {
-    color: #cbc6d0;
+    color: #bcb8c1;
     font-family: "Montserrat", sans-serif; }
 
 .custom-navbar.scrolled {
   background-color: whitesmoke; }
+  .custom-navbar.scrolled .navbar-brand {
+    color: #3a3958; }
   .custom-navbar.scrolled .navbar-right span {
     color: #3a3958;
     font-family: "Montserrat", sans-serif; }
 
 .jumbotron {
-  background: url("../img/header.jpg") center/cover no-repeat;
-  height: 450px;
+  background: url("../img/header-image-3.jpg") center/cover no-repeat;
+  height: 500px;
   padding: 80px 40px; }
   .jumbotron p {
     color: #332d46; }

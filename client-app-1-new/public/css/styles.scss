@@ -1,7 +1,7 @@
 //Color Schemes
 
 $lighter: #f9efff;
-$light: #cbc6d0;
+$light: #bcb8c1;
 $medium: #c7b2f6;
 $dark: #3a3958;
 $darker: #332d46;
@@ -86,7 +86,7 @@ a:hover {
   color: $darker;
 
   .navbar-brand{
-    color: $darker;
+    color: $light;
   }
 
   .navbar-right{
@@ -100,6 +100,9 @@ a:hover {
 
 .custom-navbar.scrolled{
   background-color: whitesmoke;
+  .navbar-brand{
+    color: $dark;
+  }
   .navbar-right{
     span{
       color: $dark;
@@ -110,8 +113,8 @@ a:hover {
 }
 
 .jumbotron{
-  background: url("../img/header.jpg") center/cover no-repeat;
-  height: 450px;
+  background: url("../img/header-image-3.jpg") center/cover no-repeat;
+  height: 500px;
   padding: 80px 40px;
   p{
     //font-weight: bold;
