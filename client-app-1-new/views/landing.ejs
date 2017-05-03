@@ -32,15 +32,18 @@
     <div class="row">
         <h3>Feedback Forms</h3>
         <hr>
-        <h4>Please Login to view Feedback Forms</h4>
+        <% if(!currentUser){ %>
+            <h4>Please Login to view Feedback Forms</h4>
+        <% } %>
+
 
         <% if( forms != null){
         for(var i = 0; i < forms.length; ++i){ %>
-        <div class="col-md-5 col-md-offset-1 feedback-card" style="margin-top: 40px">
+        <div class="col-md-5  feedback-card" style="margin-top: 40px;margin-left: 40px">
             <h4>Feedback Form <%= i+1 %></h4>
             <hr>
             <p><i class="fa fa-check"></i>&nbsp; <span class="emphasis-text"><%= forms[i].noOfUsers %></span> people have filled this form</p>
-            <p><i class="fa fa-clock-o"></i>&nbsp; Estimated time: <span class="emphasis-text"><%= forms[i].estimatedTime %> secs</span></p>
+            <p><i class="fa fa-clock-o"></i>&nbsp; Estimated time: <span class="emphasis-text"><%= Math.round(forms[i].estimatedTime) %> secs</span></p>
             <p><i class="fa fa-users"></i>&nbsp; Departments:</p>
             <div style="margin-top: 10px">
                 <% forms[i].targetedUsers.forEach(function (department) { %>

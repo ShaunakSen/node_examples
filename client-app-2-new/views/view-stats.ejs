@@ -27,6 +27,10 @@
         <p ng-click="filterBasedOnFlags('high')"><span>&nbsp;User Credibility: High</span></p>
         <p ng-click="filterBasedOnFlags('medium')"><span>&nbsp;User Credibility: Medium</span></p>
         <p ng-click="filterBasedOnFlags('low')"><span>&nbsp;User Credibility: Low</span></p>
+        <hr>
+        <p ng-repeat="question in questions track by $index">
+           Question No: {{$index + 1}}: {{question}}
+        </p>
     </div>
     <div class="col-sm-8 main-content">
 
@@ -44,9 +48,9 @@
                         </select>
                         <div class="row icons-row" style="margin-top: 10px">
                             <div class="col-md-12">
-                                <i class="fa fa-clock-o fa-1.5x"></i><span>&nbsp; &nbsp;3.2 sec</span>
+                                <i class="fa fa-clock-o fa-1.5x"></i><span>&nbsp; &nbsp;{{displayTime1}} secs ave time spent</span>
                                 <br><br>
-                                <i class="fa fa-users fa-1.5x"></i><span>&nbsp; &nbsp;120 reviews</span>
+                                <i class="fa fa-users fa-1.5x"></i><span>&nbsp; &nbsp; {{apiResponse.length}} reviews </span>
                             </div>
                         </div>
                     </div>
@@ -72,9 +76,9 @@
                         </select>
                         <div class="row icons-row" style="margin-top: 10px">
                             <div class="col-md-12">
-                                <i class="fa fa-clock-o fa-1.5x"></i><span>&nbsp; &nbsp;3.2 sec</span>
+                                <i class="fa fa-clock-o fa-1.5x"></i><span>&nbsp; &nbsp;{{displayTime1}} secs ave time spent</span>
                                 <br><br>
-                                <i class="fa fa-users fa-1.5x"></i><span>&nbsp; &nbsp;120 reviews</span>
+                                <i class="fa fa-users fa-1.5x"></i><span>&nbsp; &nbsp; {{apiResponse.length}} reviews </span>
                             </div>
                         </div>
                     </div>
@@ -100,9 +104,9 @@
                         </select>
                         <div class="row icons-row" style="margin-top: 10px">
                             <div class="col-md-12">
-                                <i class="fa fa-clock-o fa-1.5x"></i><span>&nbsp; &nbsp;3.2 sec</span>
+                                <i class="fa fa-clock-o fa-1.5x"></i><span>&nbsp; &nbsp;{{displayTime1}} secs ave time spent</span>
                                 <br><br>
-                                <i class="fa fa-users fa-1.5x"></i><span>&nbsp; &nbsp;120 reviews</span>
+                                <i class="fa fa-users fa-1.5x"></i><span>&nbsp; &nbsp; {{apiResponse.length}} reviews </span>
                             </div>
                         </div>
                         <div class="row filter-score-row">

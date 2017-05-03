@@ -7,6 +7,7 @@ myApp.config(function ($httpProvider) {
 myApp.controller('MainController', ['$scope', '$http', '$window', function ($scope, $http, $window) {
 
     $scope.apiResponse = [];
+    $scope.questions = [];
     $scope.usersData = [];
     $scope.noOfUsers = 0;
     $scope.importantAnalysyis = [];
@@ -15,6 +16,9 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
     $scope.selectedQuestionNo = 1;
     $scope.selectedQuestionNo2 = 1;
     $scope.selectedQuestionBarScored = 1;
+    $scope.timesSpent = [{questionNo: 1, title:"", timeSpent: 0}];
+
+    $scope.displayTime1 = 0;
 
     $scope.reviewId = $window.reviewId;
     $scope.adminInfo = $window.adminInfo;
@@ -51,6 +55,9 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
     $scope.getResponses = function () {
         $http.get("http://localhost:3000/responses_new/reviewId/" + $scope.reviewId).then(function (response) {
             $scope.apiResponse = response.data;
+            $scope.apiResponse[0].mcqResponse.forEach(function (userResponse) {
+                $scope.questions.push(userResponse.title);
+            });
             console.log("api response:", $scope.apiResponse);
             $scope.noOfUsers = $scope.apiResponse.length;
             $scope.noOfQuestions = $scope.apiResponse[0].mcqResponse.length;
@@ -58,10 +65,47 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
                 $scope.questionNos.push(i + 1);
             }
 
+            // Time Spent on each question
+            $scope.apiResponse.forEach(function (userResponse) {
+
+                var mcqResponse = userResponse.mcqResponse;
+                mcqResponse.forEach(function (singleResponse) {
+                    var timeSpent = singleResponse.timeSpent;
+                    var questionNo = singleResponse.questionNo;
+                    var updated = false;
+
+                    $scope.timesSpent.forEach(function (timeSpentData) {
+                        if(timeSpentData.questionNo === questionNo){
+                            // Update
+                            timeSpentData.timeSpent += timeSpent;
+                            updated = true;
+                            timeSpentData.title = singleResponse.title;
+                        }
+                    });
+                    if(!updated){
+                        // new
+                        $scope.timesSpent.push({
+                            questionNo:  questionNo,
+                            timeSpent: timeSpent
+                        });
+                    }
+                });
+            });
+
+            $scope.timesSpent.forEach(function (timeSpentData) {
+                timeSpentData.timeSpent = timeSpentData.timeSpent/$scope.noOfUsers;
+            });
+
+            console.log("Time Spent data:", $scope.timesSpent);
+
+
+
             $scope.analyzeResponseForLinks();
             $scope.getFlagData();
             $scope.prepareChartData($scope.selectedQuestionNo);
             $scope.prepareChartData2($scope.selectedQuestionNo2);
+
+            $scope.displayTime1 = Math.round($scope.displayTime(1)/1000);
 
         }, function (err) {
             console.log(err);
@@ -71,6 +115,14 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
 
     // get the response from API
     $scope.getResponses();
+
+    // Display average time for a question
+
+    $scope.displayTime = function (questionNo) {
+      return $scope.timesSpent[questionNo - 1].timeSpent;
+    };
+
+
 
     $scope.getFlagData = function () {
         $http.get("http://localhost:3000/users").then(function (response) {
@@ -313,7 +365,6 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
 
             if(userResponse.postedBy.flags === 0 || userResponse.postedBy.filled_forms.length === 0){
                 console.log("No filtering required");
-                console.log("Ratio", userResponse.postedBy.filled_forms.length/userResponse.postedBy.flags);
             } else if(userResponse.postedBy.filled_forms.length/userResponse.postedBy.flags > 0) {
                 console.log("Needs filtering");
                 console.log("Ratio", userResponse.postedBy.filled_forms.length / userResponse.postedBy.flags);
@@ -393,11 +444,13 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
 
         // labels: 0, 1, 2, 3, 4
         // data: responses corresponding to labels
+
+        // set display time
+        $scope.displayTime1 = Math.round($scope.displayTime(questionNo)/1000);
+
+
         var labels = ["", "", "", "", ""];
         var data = [0, 0, 0, 0, 0];
-
-        console.log("here");
-
         $scope.apiResponse.forEach(function (userResponse) {
             var requiredQuestion = userResponse.mcqResponse[questionNo - 1];
             var response = requiredQuestion.response;
@@ -405,7 +458,7 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             data[response] += 1;
         });
 
-        console.log(labels, data);
+
 
         $scope.generateChart(labels, data);
     };
@@ -494,6 +547,9 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         var labels = ["Good", "Decent", "Poor"];
         var data = [0, 0, 0];
 
+        // set display time
+        $scope.displayTime1 = Math.round($scope.displayTime(questionNo)/1000);
+
 
         $scope.apiResponse.forEach(function (userResponse) {
             var requiredQuestion = userResponse.mcqResponse[questionNo - 1];
@@ -509,13 +565,15 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             data[responseIndex] += 1;
 
         });
-        console.log(data);
         $scope.generateChart2(labels, data);
     };
 
     $scope.prepareRadarChartData = function () {
         var labels = ["Very Low", "Low", "Ok", "High", "Very High", "Overall Rating", "Scaled Credibility Score"];
         var data = [];
+
+
+        
         var backgroundColors = ["rgba(179,181,198,0.2)", "rgba(255,99,132,0.2)", "rgba(59, 44, 198, 0.2)",
             "rgba(35, 198, 39, 0.2)", "rgba(198, 116, 43, 0.2)"];
         var borderColors = ["rgba(179,181,198,1)", "rgba(255,99,132,1)", "rgba(59, 44, 198, 1)",
@@ -530,8 +588,6 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             questionRatings[questionRatings.length - 1] = questionData.averageScore * 10;
             data.push(questionRatings);
         });
-
-        console.log("Radar data:", labels, data);
         $scope.generateRadarChart(labels, data, backgroundColors, borderColors);
     };
 
@@ -557,7 +613,6 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
                 pointHoverBorderColor: borderColors[i],
                 data: myData[i]
             };
-            console.log(datasetObject);
             data.datasets.push(datasetObject);
         }
         var myRadarChart = new Chart(ctx, {
@@ -570,6 +625,9 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
     $scope.prepareBarChartDataScored = function (questionNo) {
         var labels = ["", "", "", "", "", ""];
         var data = [0, 0, 0, 0, 0, 0];
+
+        // set display time
+        $scope.displayTime1 = Math.round($scope.displayTime(questionNo)/1000);
         $scope.apiResponse.forEach(function (userResponse) {
             var requiredQuestion = userResponse.mcqResponse[questionNo - 1];
             var response = requiredQuestion.response;
@@ -583,8 +641,6 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
 
     $scope.generateBarChartScored = function (labels, data, containerId, chartId) {
         // 1st 2 lines are redundant but necessary for cleaning up DOM for chartjs to work properly
-        console.log(document.getElementById(containerId));
-        console.log(document.getElementById(chartId));
         document.getElementById(containerId).innerHTML = "";
         document.getElementById(containerId).innerHTML = '<canvas id=' + chartId + ' width="400" height="400"></canvas>';
         var ctx = document.getElementById(chartId);

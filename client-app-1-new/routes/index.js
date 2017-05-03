@@ -30,7 +30,7 @@ router.get("/", function (req, res) {
 
 
                 
-                // TODO: filter forms based on filled_forms data
+                // filter forms based on filled_forms data
                 
                 var filledFormIds = req.user.filled_forms;
 
