@@ -2786,35 +2786,8 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/node_modules/verror/tests/tst.inherit.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/node_modules/verror/tests/tst.verror.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/node_modules/verror/tests/tst.werror.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/create-form.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/css/bootstrap.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/js/angular.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/js/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/js/script.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/js/script2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/js/service.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/scss/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/scss/style.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/scss/style.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/scss/styles2.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/scss/styles2.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/scss/styles2.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/test.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-app-2-new/view-stats.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-1-new/routes/index.js" afterPath="$PROJECT_DIR$/client-app-1-new/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-1-new/views/feedback_form.ejs" afterPath="$PROJECT_DIR$/client-app-1-new/views/feedback_form.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-1-new/views/landing.ejs" afterPath="$PROJECT_DIR$/client-app-1-new/views/landing.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js" afterPath="$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs" afterPath="$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/acorn" afterPath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/acorn" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/cleancss" afterPath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/cleancss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/jade" afterPath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/jade" />
@@ -2866,11 +2839,11 @@
       <file leaf-file-name="script_view_stats.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="629" column="78" selection-start-line="629" selection-start-column="78" selection-end-line="629" selection-end-column="78" />
+            <state relative-caret-position="296">
+              <caret line="736" column="0" selection-start-line="736" selection-start-column="0" selection-end-line="736" selection-end-column="0" />
               <folding>
-                <element signature="e#1096#1313#0" expanded="false" />
-                <element signature="e#1342#1544#0" expanded="false" />
+                <element signature="e#1097#1314#0" expanded="false" />
+                <element signature="e#1343#1545#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -3362,14 +3335,7 @@
       <workItem from="1493724589173" duration="1367000" />
       <workItem from="1493732500799" duration="3965000" />
       <workItem from="1493744892830" duration="3345000" />
-      <workItem from="1493775676308" duration="5213000" />
-    </task>
-    <task id="LOCAL-00123" summary="working on ui">
-      <created>1489469890778</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1489469890778</updated>
+      <workItem from="1493775676308" duration="8134000" />
     </task>
     <task id="LOCAL-00124" summary="working with dom">
       <created>1489477585198</created>
@@ -3707,11 +3673,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493735795602</updated>
     </task>
-    <option name="localTasksCounter" value="172" />
+    <task id="LOCAL-00172" summary="ui fixes">
+      <created>1493783995263</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1493783995282</updated>
+    </task>
+    <option name="localTasksCounter" value="173" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="808878000" />
+    <option name="totallyTimeSpent" value="811799000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1366" height="739" extended-state="6" />
@@ -3767,7 +3740,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="pie chart fix + users endpoint on rest api started" />
     <MESSAGE value="new user registration reflected back to API" />
     <MESSAGE value="reflecting user data change in API side" />
     <MESSAGE value="route to handle increasing flag data" />
@@ -3792,7 +3764,8 @@
     <MESSAGE value="ui fix: feedback forms" />
     <MESSAGE value="ui fix: header" />
     <MESSAGE value="feedback card: estimated time + no of users filled form" />
-    <option name="LAST_COMMIT_MESSAGE" value="feedback card: estimated time + no of users filled form" />
+    <MESSAGE value="ui fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -4052,6 +4025,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -4059,6 +4033,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
           <caret line="41" column="86" selection-start-line="41" selection-start-column="86" selection-end-line="41" selection-end-column="86" />
+          <folding>
+            <element signature="e#1812#1854#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -4080,6 +4057,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-234">
           <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
+          <folding>
+            <element signature="e#2763#2793#0" expanded="false" />
+            <element signature="e#2839#2869#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -4103,11 +4084,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="629" column="78" selection-start-line="629" selection-start-column="78" selection-end-line="629" selection-end-column="78" />
+        <state relative-caret-position="296">
+          <caret line="736" column="0" selection-start-line="736" selection-start-column="0" selection-end-line="736" selection-end-column="0" />
           <folding>
-            <element signature="e#1096#1313#0" expanded="false" />
-            <element signature="e#1342#1544#0" expanded="false" />
+            <element signature="e#1097#1314#0" expanded="false" />
+            <element signature="e#1343#1545#0" expanded="false" />
           </folding>
         </state>
       </provider>

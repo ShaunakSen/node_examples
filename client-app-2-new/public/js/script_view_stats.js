@@ -16,7 +16,7 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
     $scope.selectedQuestionNo = 1;
     $scope.selectedQuestionNo2 = 1;
     $scope.selectedQuestionBarScored = 1;
-    $scope.timesSpent = [{questionNo: 1, title:"", timeSpent: 0}];
+    $scope.timesSpent = [{questionNo: 1, title: "", timeSpent: 0}];
 
     $scope.displayTime1 = 0;
 
@@ -52,6 +52,10 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         'rgba(255, 159, 64, 1)'
     ];
 
+
+    $scope.generatedSuggestionMessages = [];
+
+
     $scope.getResponses = function () {
         $http.get("http://localhost:3000/responses_new/reviewId/" + $scope.reviewId).then(function (response) {
             $scope.apiResponse = response.data;
@@ -75,17 +79,17 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
                     var updated = false;
 
                     $scope.timesSpent.forEach(function (timeSpentData) {
-                        if(timeSpentData.questionNo === questionNo){
+                        if (timeSpentData.questionNo === questionNo) {
                             // Update
                             timeSpentData.timeSpent += timeSpent;
                             updated = true;
                             timeSpentData.title = singleResponse.title;
                         }
                     });
-                    if(!updated){
+                    if (!updated) {
                         // new
                         $scope.timesSpent.push({
-                            questionNo:  questionNo,
+                            questionNo: questionNo,
                             timeSpent: timeSpent
                         });
                     }
@@ -93,11 +97,10 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             });
 
             $scope.timesSpent.forEach(function (timeSpentData) {
-                timeSpentData.timeSpent = timeSpentData.timeSpent/$scope.noOfUsers;
+                timeSpentData.timeSpent = timeSpentData.timeSpent / $scope.noOfUsers;
             });
 
             console.log("Time Spent data:", $scope.timesSpent);
-
 
 
             $scope.analyzeResponseForLinks();
@@ -105,7 +108,7 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             $scope.prepareChartData($scope.selectedQuestionNo);
             $scope.prepareChartData2($scope.selectedQuestionNo2);
 
-            $scope.displayTime1 = Math.round($scope.displayTime(1)/1000);
+            $scope.displayTime1 = Math.round($scope.displayTime(1) / 1000);
 
         }, function (err) {
             console.log(err);
@@ -119,9 +122,8 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
     // Display average time for a question
 
     $scope.displayTime = function (questionNo) {
-      return $scope.timesSpent[questionNo - 1].timeSpent;
+        return $scope.timesSpent[questionNo - 1].timeSpent;
     };
-
 
 
     $scope.getFlagData = function () {
@@ -131,7 +133,7 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             $scope.apiResponse.forEach(function (userResponse) {
                 var username = userResponse.postedBy.username;
                 $scope.usersData.forEach(function (userData) {
-                    if(userData.username === username){
+                    if (userData.username === username) {
                         userResponse.postedBy.flags = userData.flags;
                         userResponse.postedBy.filled_forms = userData.filled_forms;
                     }
@@ -247,6 +249,8 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
 
         $scope.prepareRadarChartData();
         $scope.prepareBarChartDataScored(1);
+
+        $scope.generateSuggestion();
     };
 
     $scope.analyzeResponseForLinks = function () {
@@ -362,10 +366,9 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             // }
 
 
-
-            if(userResponse.postedBy.flags === 0 || userResponse.postedBy.filled_forms.length === 0){
+            if (userResponse.postedBy.flags === 0 || userResponse.postedBy.filled_forms.length === 0) {
                 console.log("No filtering required");
-            } else if(userResponse.postedBy.filled_forms.length/userResponse.postedBy.flags > 0) {
+            } else if (userResponse.postedBy.filled_forms.length / userResponse.postedBy.flags > 0) {
                 console.log("Needs filtering");
                 console.log("Ratio", userResponse.postedBy.filled_forms.length / userResponse.postedBy.flags);
                 indexesToRemove.push(index);
@@ -379,13 +382,11 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         });
 
 
-
         console.log($scope.apiResponse, $scope.filteredDataOnFlags);
 
         $scope.prepareCharDataFlagged(1);
 
     };
-
 
 
     $scope.filterResponsesBasedOnScore = function (questionNo, minScore, maxScore) {
@@ -420,14 +421,13 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
 
         console.log(newRatings);
 
-        $scope.filteredQuestionData[questionNo-1].ratings = newRatings;
-        $scope.filteredQuestionData[questionNo-1].scores = newScores;
-
+        $scope.filteredQuestionData[questionNo - 1].ratings = newRatings;
+        $scope.filteredQuestionData[questionNo - 1].scores = newScores;
 
 
         // Re calculate averages
-        $scope.filteredQuestionData[questionNo - 1].averageRating = averageInArray($scope.filteredQuestionData[questionNo-1].ratings);
-        $scope.filteredQuestionData[questionNo - 1].averageScore = averageInArray($scope.filteredQuestionData[questionNo-1].scores);
+        $scope.filteredQuestionData[questionNo - 1].averageRating = averageInArray($scope.filteredQuestionData[questionNo - 1].ratings);
+        $scope.filteredQuestionData[questionNo - 1].averageScore = averageInArray($scope.filteredQuestionData[questionNo - 1].scores);
 
 
         console.log($scope.filteredQuestionData);
@@ -446,7 +446,7 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         // data: responses corresponding to labels
 
         // set display time
-        $scope.displayTime1 = Math.round($scope.displayTime(questionNo)/1000);
+        $scope.displayTime1 = Math.round($scope.displayTime(questionNo) / 1000);
 
 
         var labels = ["", "", "", "", ""];
@@ -457,7 +457,6 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             labels[response] = requiredQuestion.responseText;
             data[response] += 1;
         });
-
 
 
         $scope.generateChart(labels, data);
@@ -548,7 +547,7 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         var data = [0, 0, 0];
 
         // set display time
-        $scope.displayTime1 = Math.round($scope.displayTime(questionNo)/1000);
+        $scope.displayTime1 = Math.round($scope.displayTime(questionNo) / 1000);
 
 
         $scope.apiResponse.forEach(function (userResponse) {
@@ -573,7 +572,6 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         var data = [];
 
 
-        
         var backgroundColors = ["rgba(179,181,198,0.2)", "rgba(255,99,132,0.2)", "rgba(59, 44, 198, 0.2)",
             "rgba(35, 198, 39, 0.2)", "rgba(198, 116, 43, 0.2)"];
         var borderColors = ["rgba(179,181,198,1)", "rgba(255,99,132,1)", "rgba(59, 44, 198, 1)",
@@ -627,7 +625,7 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         var data = [0, 0, 0, 0, 0, 0];
 
         // set display time
-        $scope.displayTime1 = Math.round($scope.displayTime(questionNo)/1000);
+        $scope.displayTime1 = Math.round($scope.displayTime(questionNo) / 1000);
         $scope.apiResponse.forEach(function (userResponse) {
             var requiredQuestion = userResponse.mcqResponse[questionNo - 1];
             var response = requiredQuestion.response;
@@ -679,14 +677,14 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         labels[labels.length - 1] = "Scaled Credibility Score";
         data[data.length - 1] = $scope.filteredQuestionData[questionNo - 1].averageScore * 10;
 
-        for(var i=0; i<$scope.filteredQuestionData[questionNo - 1].ratings.length; ++i){
+        for (var i = 0; i < $scope.filteredQuestionData[questionNo - 1].ratings.length; ++i) {
             data[$scope.filteredQuestionData[questionNo - 1].ratings[i]]++;
         }
 
         console.log(data, labels);
         $scope.generateBarChartScored(labels, data, 'chart-container-4', 'myChart4');
     };
-    
+
     $scope.prepareCharDataFlagged = function (questionNo) {
         var labels = ["", "", "", "", "", ""];
         var data = [0, 0, 0, 0, 0, 0];
@@ -699,7 +697,52 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         data[data.length - 1] = 1;
         labels[labels.length - 1] = "Flag Ratio";
         $scope.generateBarChartScored(labels, data, 'chart-container-5', 'myChart5');
+    };
+
+
+    $scope.generateSuggestion = function () {
+
+        var dataSet = ["low", "low", "decent", "good", "good"];
+
+        var message = "good response on question 1... On an average students have marked more than decent.. The average score of the students on this " +
+            "question is relatively high";
+
+        $scope.questionScores.forEach(function (questionData) {
+            var averageRating = questionData.averageRating;
+            var averageScore = questionData.averageScore;
+            var scoreText = "high";
+
+            if (averageScore >= 0.4) {
+                scoreText = "relatively high";
+            } else {
+                scoreText = "however relatively low";
+            }
+
+            var averageRatingRounded = Math.round(averageRating);
+            var difference = averageRating - averageRatingRounded;
+
+            var studentsOpinion = dataSet[averageRatingRounded];
+
+            if (difference < 0) {
+                // less than
+                studentsOpinion = "less than " + studentsOpinion;
+            } else {
+                studentsOpinion = "more than " + studentsOpinion;
+            }
+
+            var generalResponse = averageRatingRounded >= 2 ? "Good" : "Poor";
+
+            message = generalResponse + " response on question no: " + questionData.questionNo + "... On an average students have marked " + studentsOpinion
+                + "... The average score of the students on this question is " + scoreText;
+
+            $scope.generatedSuggestionMessages.push(message);
+        });
+
+
+        console.log("Suggestions: ", $scope.generatedSuggestionMessages);
+
     }
+
 
 }]);
 
