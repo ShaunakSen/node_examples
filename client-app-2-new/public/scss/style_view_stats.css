@@ -44,10 +44,34 @@ a:hover {
     color: #3b3555; }
   .sidebar span {
     font-size: 1.3em; }
+  .sidebar .questions {
+    font-weight: bold;
+    color: #3b3555; }
+  .sidebar .action-paragraph {
+    border: 2px solid #332d46;
+    padding: 10px;
+    background-color: #332d46;
+    color: #f9efff;
+    cursor: pointer;
+    transition: all 0.3s; }
+    .sidebar .action-paragraph i {
+      color: #f9efff; }
+  .sidebar .action-paragraph:hover {
+    background-color: #f9efff;
+    color: #332d46; }
+    .sidebar .action-paragraph:hover i {
+      color: #332d46; }
 
 .main-content {
   height: auto;
   background-color: #f9efff; }
+  .main-content .steps-container {
+    padding: 10px 5px;
+    color: #3b3555;
+    margin-top: 20px; }
+    .main-content .steps-container .steps-card {
+      background: #f9efff;
+      border: 2px solid #c7b2f6; }
   .main-content .stats-container {
     padding: 10px 5px;
     color: #3b3555;

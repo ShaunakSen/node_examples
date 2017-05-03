@@ -2788,6 +2788,9 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/node_modules/verror/tests/tst.werror.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js" afterPath="$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/public/scss/style_view_stats.css" afterPath="$PROJECT_DIR$/client-app-2-new/public/scss/style_view_stats.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/public/scss/style_view_stats.scss" afterPath="$PROJECT_DIR$/client-app-2-new/public/scss/style_view_stats.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs" afterPath="$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/acorn" afterPath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/acorn" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/cleancss" afterPath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/cleancss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/jade" afterPath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/jade" />
@@ -2823,33 +2826,7 @@
     <favorites_list name="node-examples" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="view-stats.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="108" column="125" selection-start-line="108" selection-start-column="125" selection-end-line="108" selection-end-column="125" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script_view_stats.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="736" column="0" selection-start-line="736" selection-start-column="0" selection-end-line="736" selection-end-column="0" />
-              <folding>
-                <element signature="e#1097#1314#0" expanded="false" />
-                <element signature="e#1343#1545#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -2899,7 +2876,6 @@
         <option value="$PROJECT_DIR$/final-project-rest-api/models/users.js" />
         <option value="$PROJECT_DIR$/client-app-2-new/routes/index.js" />
         <option value="$PROJECT_DIR$/client-app-1-new/app.js" />
-        <option value="$PROJECT_DIR$/client-app-2-new/public/scss/style_view_stats.scss" />
         <option value="$PROJECT_DIR$/final-project-rest-api/models/responses_new.js" />
         <option value="$PROJECT_DIR$/client-app-1-new/models/user.js" />
         <option value="$PROJECT_DIR$/final-project-rest-api/routes/users.js" />
@@ -2915,6 +2891,7 @@
         <option value="$PROJECT_DIR$/client-app-1-new/views/landing.ejs" />
         <option value="$PROJECT_DIR$/client-app-1-new/views/feedback_form.ejs" />
         <option value="$PROJECT_DIR$/client-app-1-new/routes/index.js" />
+        <option value="$PROJECT_DIR$/client-app-2-new/public/scss/style_view_stats.scss" />
         <option value="$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs" />
         <option value="$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js" />
       </list>
@@ -2956,10 +2933,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
     </panes>
   </component>
@@ -3335,14 +3319,7 @@
       <workItem from="1493724589173" duration="1367000" />
       <workItem from="1493732500799" duration="3965000" />
       <workItem from="1493744892830" duration="3345000" />
-      <workItem from="1493775676308" duration="8134000" />
-    </task>
-    <task id="LOCAL-00124" summary="working with dom">
-      <created>1489477585198</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1489477585198</updated>
+      <workItem from="1493775676308" duration="10402000" />
     </task>
     <task id="LOCAL-00125" summary="hiding/displaying related fields info">
       <created>1489513860014</created>
@@ -3680,17 +3657,24 @@
       <option name="project" value="LOCAL" />
       <updated>1493783995282</updated>
     </task>
-    <option name="localTasksCounter" value="173" />
+    <task id="LOCAL-00173" summary="generating suggestions">
+      <created>1493786882303</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1493786882303</updated>
+    </task>
+    <option name="localTasksCounter" value="174" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="811799000" />
+    <option name="totallyTimeSpent" value="814067000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1366" height="739" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19717261" sideWeight="0.4852941" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19717261" sideWeight="0.4852941" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56935483" sideWeight="0.51785713" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3251634" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -3740,7 +3724,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new user registration reflected back to API" />
     <MESSAGE value="reflecting user data change in API side" />
     <MESSAGE value="route to handle increasing flag data" />
     <MESSAGE value="admin can now flag a user" />
@@ -3765,7 +3748,8 @@
     <MESSAGE value="ui fix: header" />
     <MESSAGE value="feedback card: estimated time + no of users filled form" />
     <MESSAGE value="ui fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="ui fixes" />
+    <MESSAGE value="generating suggestions" />
+    <option name="LAST_COMMIT_MESSAGE" value="generating suggestions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3881,13 +3865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
           <caret line="201" column="1" selection-start-line="189" selection-start-column="0" selection-end-line="201" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-2-new/public/scss/style_view_stats.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="165" column="16" selection-start-line="165" selection-start-column="16" selection-end-line="165" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -4074,22 +4051,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="108" column="125" selection-start-line="108" selection-start-column="125" selection-end-line="108" selection-end-column="125" />
+        <state relative-caret-position="270">
+          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="736" column="0" selection-start-line="736" selection-start-column="0" selection-end-line="736" selection-end-column="0" />
+        <state relative-caret-position="217">
+          <caret line="252" column="8" selection-start-line="252" selection-start-column="8" selection-end-line="252" selection-end-column="8" />
           <folding>
             <element signature="e#1097#1314#0" expanded="false" />
             <element signature="e#1343#1545#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-app-2-new/public/scss/style_view_stats.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="119" column="32" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>

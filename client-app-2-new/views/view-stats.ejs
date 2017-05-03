@@ -21,18 +21,25 @@
         <p>Current View: {{currentView}}</p>
         <hr>
         <p><i class="fa fa-users"></i><span>&nbsp;No of Users Reviewed: {{noOfUsers}}</span></p>
-        <p ng-click="changeView('raw')"><i class="fa fa-database"></i><span>&nbsp;View Raw Statistics</span></p>
-        <p ng-click="changeView('scored')"><i class="fa fa-filter"></i><span>&nbsp;View Filtered Statistics</span></p>
-        <p><i class="fa fa-filter"></i><span>&nbsp;View Trusted User Statistics</span></p>
-        <p ng-click="filterBasedOnFlags('high')"><span>&nbsp;User Credibility: High</span></p>
-        <p ng-click="filterBasedOnFlags('medium')"><span>&nbsp;User Credibility: Medium</span></p>
-        <p ng-click="filterBasedOnFlags('low')"><span>&nbsp;User Credibility: Low</span></p>
+        <p ng-click="changeView('raw')" class="action-paragraph"><i class="fa fa-database"></i><span>&nbsp;View Raw Statistics</span></p>
+        <p ng-click="changeView('scored')"  class="action-paragraph"><i class="fa fa-filter"></i><span>&nbsp;View Filtered Statistics</span></p>
+        <p ng-click="filterBasedOnFlags('high')"  class="action-paragraph"><i class="fa fa-filter"></i><span>&nbsp;View Trusted User Statistics</span></p>
         <hr>
-        <p ng-repeat="question in questions track by $index">
+        <p class="questions" ng-repeat="question in questions track by $index">
            Question No: {{$index + 1}}: {{question}}
         </p>
+        <hr>
+        <p ng-if="alreadyFiltered" ng-click="generateSuggestion()"  class="action-paragraph"><i class="fa fa-wrench"></i><span>&nbsp;System Generated Suggestions</span></p>
     </div>
     <div class="col-sm-8 main-content">
+
+
+        <div class="row steps-container">
+            <div class="col-xs-8 col-xs-offset-2 steps-card">
+                <span class="step-number">1</span>
+                <p></p>
+            </div>
+        </div>
 
         <div class="row stats-container" ng-show="currentView == 'raw'">
             <div class="col-xs-8 col-xs-offset-2 stats-card-1">

@@ -79,12 +79,47 @@ a:hover {
   span{
     font-size: 1.3em;
   }
+
+  .questions{
+    font-weight: bold;
+    color: $dark;
+  }
+
+  .action-paragraph{
+    border: 2px solid $darker;
+    padding: 10px;
+    background-color: $darker;
+    color: $lighter;
+    cursor: pointer;
+    i{
+      color: $lighter;
+    }
+    transition: all 0.3s;
+  }
+  .action-paragraph:hover{
+    background-color: $lighter;
+    color: $darker;
+    i{
+      color: $darker;
+    }
+  }
 }
 
 .main-content {
   height: auto;
   background-color: $lighter;
 
+
+  .steps-container{
+    padding: 10px 5px;
+    color: $dark;
+    margin-top: 20px;
+
+    .steps-card{
+      background: $lighter;
+      border: 2px solid $medium;
+    }
+  }
 
   .stats-container{
     padding: 10px 5px;

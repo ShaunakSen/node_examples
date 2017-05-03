@@ -250,7 +250,7 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         $scope.prepareRadarChartData();
         $scope.prepareBarChartDataScored(1);
 
-        $scope.generateSuggestion();
+        
     };
 
     $scope.analyzeResponseForLinks = function () {
@@ -706,6 +706,7 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
 
         var message = "good response on question 1... On an average students have marked more than decent.. The average score of the students on this " +
             "question is relatively high";
+
 
         $scope.questionScores.forEach(function (questionData) {
             var averageRating = questionData.averageRating;
