@@ -2,11 +2,941 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3bd2106-c361-42e4-aee7-a432b6aa92f6" name="Default" comment="radar chart for all questions">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-account-billing-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-account-billing.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-account-drive-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-account-drive.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-account-messages-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-account-messages.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-account-profile-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-account-profile.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-account-reminders-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-account-reminders.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-account-settings-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-account-settings.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-activities-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-activities.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-chart-chartjs-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-chart-chartjs.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-chart-flot-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-chart-flot.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-chart-inline-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-chart-inline.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-chart-morris-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-chart-morris.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-dashboard-1-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-dashboard-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-dashboard-2-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-dashboard-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-dashboard-3-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-dashboard-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-dashboard-4-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-dashboard-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-discussion-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-discussion.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-discussions-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-discussions.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-inbox-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-inbox.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-member-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-member.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-members-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-members.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-pricing-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-pricing.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-project-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-project.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-projects-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-projects.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-tickets-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-tickets.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-timeline-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-timeline.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-widgets-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/appkit-widgets.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/author-profile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/elegant-icon-font.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/fontawesome-icons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/theme-atom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/theme-college-green.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/theme-decibel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/theme-delta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/theme-devaid.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/theme-developer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/theme-devstudio.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/theme-epicure.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/theme-matrimony.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/theme-onboard.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/theme-tempo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/theme-trades.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/demo/theme-velocity.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/images/empty.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/css/fonts/ElegantIcons.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/css/fonts/ElegantIcons.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/css/fonts/ElegantIcons.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow-up-down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_back.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-2down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-2down_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-2dwnn_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-2left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-2left_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-2left_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-2right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-2right_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-2right_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-2up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-2up_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-2up_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-down_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-down_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-left_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-left_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-right_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-right_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot-up_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_carrot_up_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_condense.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_condense_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_down_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_expand.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_expand_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_expand_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_expand_alt3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_left-down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_left-down_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_left-right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_left-right_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_left-up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_left-up_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_left_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_move.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_right-down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_right-down_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_right-up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_right-up_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_right_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_triangle-down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_triangle-down_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_triangle-down_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_triangle-left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_triangle-left_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_triangle-left_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_triangle-right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_triangle-right_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_triangle-right_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_triangle-up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_triangle-up_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_triangle-up_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_up-down_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/arrow_up_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_adjust-horiz.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_adjust-vert.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_archive.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_archive_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_bag.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_bag_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_balance.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_blocked.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_book.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_book_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_box-checked.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_box-empty.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_box-selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_briefcase.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_briefcase_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_building.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_building_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_calculator_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_calendar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_calulator.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_camera.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_camera_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_cart_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_chat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_chat_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_check.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_check_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_check_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_circle-empty.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_circle-slelected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_clipboard.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_clock.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_clock_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_close.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_close_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_close_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_cloud-download.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_cloud-download_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_cloud-upload.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_cloud-upload_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_cloud.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_cloud_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_cog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_cogs.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_comment.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_comment_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_compass.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_compass_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_cone.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_cone_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_contacts.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_contacts_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_creditcard.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_currency.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_currency_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_cursor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_cursor_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_datareport.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_datareport_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_desktop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_dislike.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_dislike_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_document.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_document_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_documents.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_documents_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_download.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_drawer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_drawer_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_drive.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_drive_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_easel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_easel_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_error-circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_error-circle_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_error-oct.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_error-oct_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_error-triangle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_error-triangle_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_film.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_floppy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_floppy_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_flowchart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_flowchart_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_folder-add.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_folder-add_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_folder-alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_folder-open.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_folder-open_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_folder.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_folder_download.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_folder_upload.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_genius.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_gift.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_gift_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_globe-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_globe.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_globe_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_grid-2x2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_grid-3x3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_group.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_headphones.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_heart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_heart_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_hourglass.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_house.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_house_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_id-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_id-2_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_id.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_id_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_images.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_info.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_info_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_key.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_key_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_laptop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_lifesaver.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_lightbulb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_lightbulb_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_like.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_like_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_link.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_link_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_loading.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_lock-open.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_lock-open_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_lock.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_lock_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_mail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_mail_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_map.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_map_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_menu-circle_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_menu-circle_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_menu-square_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_menu-square_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_menu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_mic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_mic_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_minus-06.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_minus-box.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_minus_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_minus_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_mobile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_mug.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_mug_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_music.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_ol.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_paperclip.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_pause.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_pause_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_pause_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_pencil-edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_pencil-edit_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_pencil.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_pencil_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_pens.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_pens_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_percent.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_percent_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_phone.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_piechart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_pin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_pin_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_plus-box.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_plus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_plus_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_plus_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_printer-alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_printer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_profile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_pushpin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_pushpin_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_puzzle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_puzzle_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_question.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_question_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_question_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_quotations.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_quotations_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_quotations_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_refresh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_ribbon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_ribbon_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_rook.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_search2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_search_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_shield.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_shield_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_star-half.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_star-half_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_star.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_star_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_stop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_stop_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_stop_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_table.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_tablet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_tag.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_tag_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_tags.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_tags_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_target.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_tool.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_toolbox.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_toolbox_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_tools.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_trash.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_trash_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_ul.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_upload.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_vol-mute.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_vol-mute_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_volume-high.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_volume-high_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_volume-low.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_volume-low_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_wallet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_wallet_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_zoom-in.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_zoom-in_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_zoom-out.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/icon_zoom-out_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_blogger.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_blogger_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_blogger_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_delicious.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_delicious_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_delicious_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_deviantart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_deviantart_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_deviantart_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_dribbble.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_dribbble_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_dribbble_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_facebook.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_facebook_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_facebook_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_flickr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_flickr_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_flickr_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_googledrive.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_googledrive_alt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_googledrive_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_googleplus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_googleplus_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_googleplus_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_instagram.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_instagram_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_instagram_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_linkedin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_linkedin_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_linkedin_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_myspace.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_myspace_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_myspace_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_picassa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_picassa_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_picassa_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_pinterest.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_pinterest_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_pinterest_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_rss.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_rss_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_rss_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_share.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_share_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_share_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_skype.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_skype_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_skype_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_spotify.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_spotify_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_spotify_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_stumbleupon_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_stumbleupon_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_tumbleupon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_tumblr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_tumblr_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_tumblr_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_twitter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_twitter_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_twitter_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_vimeo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_vimeo_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_vimeo_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_wordpress.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_wordpress_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_wordpress_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_youtube.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_youtube_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/PNG/social_youtube_square.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/fonts/FontAwesome.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/fonts/fontawesome-webfont.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/favicon.ico" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/node_modules/boom/images/boom.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/node_modules/hawk/images/hawk.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/node_modules/hawk/images/logo.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/node_modules/hoek/images/hoek.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/node_modules/mongoose/mongodb-cert.key" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/REST.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/ReadMe.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/admin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/css/custom.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/css/styles.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/js/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/less/base.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/less/doc.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/less/landing.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/less/mixins.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/less/styles.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/less/theme-default.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/bootstrap/.editorconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/bootstrap/.gitattributes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/bootstrap/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/bootstrap/.hound.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/bootstrap/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/bootstrap/css/bootstrap-theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/bootstrap/css/bootstrap-theme.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/bootstrap/css/bootstrap-theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/bootstrap/css/bootstrap-theme.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/bootstrap/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/bootstrap/css/bootstrap.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/bootstrap/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/bootstrap/css/bootstrap.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/bootstrap/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/bootstrap/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/bootstrap/js/npm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/Licensing/gpl_license.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/Licensing/mit_license.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/css/fonts/ElegantIcons.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/css/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/css/lte-ie7.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow-up-down.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_back.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-2down.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-2down_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-2dwnn_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-2left.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-2left_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-2left_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-2right.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-2right_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-2right_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-2up.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-2up_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-2up_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-down.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-down_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-down_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-left.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-left_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-left_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-right.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-right_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-right_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-up.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot-up_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_carrot_up_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_condense.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_condense_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_down.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_down_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_expand.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_expand_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_expand_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_expand_alt3.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_left-down.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_left-down_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_left-right.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_left-right_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_left-up.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_left-up_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_left.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_left_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_move.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_right-down.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_right-down_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_right-up.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_right-up_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_right.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_right_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_triangle-down.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_triangle-down_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_triangle-down_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_triangle-left.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_triangle-left_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_triangle-left_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_triangle-right.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_triangle-right_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_triangle-right_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_triangle-up.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_triangle-up_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_triangle-up_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_up-down_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_up.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/arrow_up_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_adjust-horiz.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_adjust-vert.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_archive.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_archive_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_bag.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_bag_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_balance.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_blocked.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_book.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_book_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_box-checked.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_box-empty.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_box-selected.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_briefcase.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_briefcase_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_building.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_building_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_calculator_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_calendar.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_calulator.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_camera.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_camera_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_cart.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_cart_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_chat.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_chat_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_check.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_check_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_check_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_circle-empty.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_circle-slelected.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_clipboard.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_clock.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_clock_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_close.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_close_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_close_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_cloud-download.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_cloud-download_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_cloud-upload.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_cloud-upload_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_cloud.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_cloud_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_cog.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_cogs.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_comment.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_comment_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_compass.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_compass_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_cone.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_cone_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_contacts.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_contacts_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_creditcard.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_currency.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_currency_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_cursor.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_cursor_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_datareport.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_datareport_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_desktop.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_dislike.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_dislike_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_document.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_document_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_documents.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_documents_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_download.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_drawer.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_drawer_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_drive.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_drive_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_easel.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_easel_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_error-circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_error-circle_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_error-oct.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_error-oct_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_error-triangle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_error-triangle_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_film.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_floppy.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_floppy_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_flowchart.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_flowchart_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_folder-add.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_folder-add_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_folder-alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_folder-open.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_folder-open_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_folder.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_folder_download.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_folder_upload.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_genius.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_gift.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_gift_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_globe-2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_globe.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_globe_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_grid-2x2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_grid-3x3.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_group.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_headphones.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_heart.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_heart_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_hourglass.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_house.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_house_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_id-2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_id-2_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_id.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_id_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_image.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_images.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_info.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_info_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_key.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_key_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_laptop.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_lifesaver.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_lightbulb.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_lightbulb_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_like.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_like_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_link.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_link_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_loading.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_lock-open.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_lock-open_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_lock.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_lock_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_mail.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_mail_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_map.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_map_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_menu-circle_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_menu-circle_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_menu-square_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_menu-square_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_menu.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_mic.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_mic_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_minus-06.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_minus-box.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_minus_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_minus_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_mobile.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_mug.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_mug_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_music.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_ol.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_paperclip.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_pause.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_pause_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_pause_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_pencil-edit.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_pencil-edit_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_pencil.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_pencil_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_pens.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_pens_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_percent.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_percent_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_phone.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_piechart.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_pin.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_pin_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_plus-box.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_plus.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_plus_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_plus_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_printer-alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_printer.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_profile.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_pushpin.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_pushpin_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_puzzle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_puzzle_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_question.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_question_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_question_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_quotations.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_quotations_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_quotations_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_refresh.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_ribbon.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_ribbon_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_rook.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_search.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_search2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_search_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_shield.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_shield_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_star-half.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_star-half_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_star.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_star_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_stop.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_stop_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_stop_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_table.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_tablet.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_tag.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_tag_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_tags.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_tags_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_target.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_tool.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_toolbox.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_toolbox_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_tools.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_trash.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_trash_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_ul.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_upload.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_vol-mute.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_vol-mute_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_volume-high.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_volume-high_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_volume-low.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_volume-low_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_wallet.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_wallet_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_zoom-in.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_zoom-in_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_zoom-out.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/icon_zoom-out_alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_blogger.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_blogger_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_blogger_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_delicious.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_delicious_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_delicious_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_deviantart.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_deviantart_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_deviantart_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_dribbble.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_dribbble_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_dribbble_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_facebook.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_facebook_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_facebook_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_flickr.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_flickr_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_flickr_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_googledrive.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_googledrive_alt2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_googledrive_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_googleplus.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_googleplus_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_googleplus_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_instagram.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_instagram_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_instagram_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_linkedin.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_linkedin_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_linkedin_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_myspace.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_myspace_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_myspace_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_picassa.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_picassa_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_picassa_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_pinterest.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_pinterest_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_pinterest_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_rss.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_rss_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_rss_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_share.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_share_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_share_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_skype.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_skype_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_skype_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_spotify.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_spotify_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_spotify_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_stumbleupon_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_stumbleupon_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_tumbleupon.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_tumblr.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_tumblr_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_tumblr_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_twitter.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_twitter_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_twitter_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_vimeo.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_vimeo_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_vimeo_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_wordpress.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_wordpress_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_wordpress_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_youtube.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_youtube_circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/elegant_font/images/SVG/social_youtube_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/HELP-US-OUT.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/css/font-awesome.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/css/font-awesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/fonts/fontawesome-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/less/animated.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/less/bordered-pulled.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/less/core.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/less/fixed-width.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/less/font-awesome.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/less/icons.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/less/larger.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/less/list.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/less/mixins.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/less/path.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/less/rotated-flipped.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/less/screen-reader.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/less/stacked.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/less/variables.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/scss/_animated.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/scss/_bordered-pulled.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/scss/_core.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/scss/_fixed-width.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/scss/_icons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/scss/_larger.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/scss/_list.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/scss/_mixins.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/scss/_path.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/scss/_rotated-flipped.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/scss/_screen-reader.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/scss/_stacked.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/scss/_variables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/font-awesome/scss/font-awesome.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-1.12.3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-match-height/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-match-height/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-match-height/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-match-height/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-match-height/jquery.matchHeight-min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-match-height/jquery.matchHeight.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-match-height/matchHeight.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-match-height/test.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-match-height/test.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-match-height/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/.jscsrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/CHANGELOG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/demo/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/demo/css/style.old.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/demo/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/demo/index.old.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/jquery.scrollTo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/tests/ElemMaxY-compat.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/tests/ElemMaxY-quirks.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/tests/WinMaxY-compat.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/tests/WinMaxY-quirks.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/tests/WinMaxY-to-iframe-compat.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/tests/WinMaxY-to-iframe-quirks.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/tests/WinMaxY-with-iframe-compat.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/tests/WinMaxY-with-iframe-quirks.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/tests/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/jquery-scrollTo/tests/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/lightbox/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/lightbox/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/lightbox/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/lightbox/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/lightbox/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/lightbox/dist/ekko-lightbox.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/lightbox/dist/ekko-lightbox.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/lightbox/dist/ekko-lightbox.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/lightbox/dist/ekko-lightbox.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/lightbox/ekko-lightbox.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/lightbox/ekko-lightbox.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/lightbox/examples/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/lightbox/examples/remote/page1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/lightbox/examples/remote/page2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/lightbox/examples/remote/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/lightbox/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/prism/min/prism-min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/prism/prism.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/assets/plugins/prism/prism.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/client.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/debug.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/license.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/showcase.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-1-new/public/Documentation/start.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/node_modules/.bin/mime" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/node_modules/.bin/mime.cmd" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/node_modules/.bin/semver" />
@@ -2787,10 +3717,11 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/node_modules/verror/tests/tst.verror.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-app-2-new/node_modules/verror/tests/tst.werror.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js" afterPath="$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/public/scss/style_view_stats.css" afterPath="$PROJECT_DIR$/client-app-2-new/public/scss/style_view_stats.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/public/scss/style_view_stats.scss" afterPath="$PROJECT_DIR$/client-app-2-new/public/scss/style_view_stats.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-1-new/views/landing.ejs" afterPath="$PROJECT_DIR$/client-app-1-new/views/landing.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-1-new/views/partials/header.ejs" afterPath="$PROJECT_DIR$/client-app-1-new/views/partials/header.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/views/landing.ejs" afterPath="$PROJECT_DIR$/client-app-2-new/views/landing.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs" afterPath="$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final-project-rest-api/app.js" afterPath="$PROJECT_DIR$/final-project-rest-api/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/acorn" afterPath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/acorn" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/cleancss" afterPath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/cleancss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/jade" afterPath="$PROJECT_DIR$/node-express-gen/node_modules/.bin/jade" />
@@ -2826,7 +3757,18 @@
     <favorites_list name="node-examples" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="view-stats.ejs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="41" column="18" selection-start-line="36" selection-start-column="12" selection-end-line="41" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -2870,7 +3812,6 @@
         <option value="$PROJECT_DIR$/client-app-2-new/package.json" />
         <option value="$PROJECT_DIR$/client-app-2-new/app.js" />
         <option value="$PROJECT_DIR$/final-project-rest-api/routes/responses_new.js" />
-        <option value="$PROJECT_DIR$/client-app-2-new/views/landing.ejs" />
         <option value="$PROJECT_DIR$/final-project-rest-api/models/users_api.js" />
         <option value="$PROJECT_DIR$/final-project-rest-api/app.js" />
         <option value="$PROJECT_DIR$/final-project-rest-api/models/users.js" />
@@ -2885,15 +3826,16 @@
         <option value="$PROJECT_DIR$/client-app-1-new/views/partials/login-modal.ejs" />
         <option value="$PROJECT_DIR$/client-app-1-new/views/partials/registration-modal.ejs" />
         <option value="$PROJECT_DIR$/client-app-1-new/views/partials/submitted-form-modal.ejs" />
-        <option value="$PROJECT_DIR$/client-app-1-new/views/partials/header.ejs" />
         <option value="$PROJECT_DIR$/client-app-2-new/public/scss/styles_landing.scss" />
         <option value="$PROJECT_DIR$/client-app-1-new/public/css/styles.scss" />
-        <option value="$PROJECT_DIR$/client-app-1-new/views/landing.ejs" />
         <option value="$PROJECT_DIR$/client-app-1-new/views/feedback_form.ejs" />
         <option value="$PROJECT_DIR$/client-app-1-new/routes/index.js" />
         <option value="$PROJECT_DIR$/client-app-2-new/public/scss/style_view_stats.scss" />
-        <option value="$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs" />
         <option value="$PROJECT_DIR$/client-app-2-new/public/js/script_view_stats.js" />
+        <option value="$PROJECT_DIR$/client-app-1-new/views/partials/header.ejs" />
+        <option value="$PROJECT_DIR$/client-app-1-new/views/landing.ejs" />
+        <option value="$PROJECT_DIR$/client-app-2-new/views/landing.ejs" />
+        <option value="$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs" />
       </list>
     </option>
   </component>
@@ -2933,8 +3875,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2943,8 +3883,52 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client-app-2-new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client-app-2-new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2978,19 +3962,19 @@
     <property name="jsx.switch.disabled" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/client-app-1-new/public/img" />
-      <recent name="$PROJECT_DIR$/client-app-1-new/views/partials" />
-      <recent name="$PROJECT_DIR$/client-app-1-new/public/css" />
-      <recent name="E:\my_projects\node-examples\client-app-2-new\public\img" />
-      <recent name="E:\my_projects\node-examples\client-app-2-new" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client-app-1-new/public/img" />
       <recent name="E:\my_projects\node-examples\client-app-2-new\public" />
       <recent name="E:\my_projects\node-examples\client-app-2-new\public\scss" />
       <recent name="$PROJECT_DIR$/client-app/img" />
       <recent name="$PROJECT_DIR$/node-express" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client-app-1-new/public" />
+      <recent name="$PROJECT_DIR$/client-app-2-new/public" />
+      <recent name="$PROJECT_DIR$/client-app-1-new/public/img" />
+      <recent name="$PROJECT_DIR$/client-app-1-new/views/partials" />
+      <recent name="$PROJECT_DIR$/client-app-1-new/public/css" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.app.js (3)">
@@ -3319,14 +4303,10 @@
       <workItem from="1493724589173" duration="1367000" />
       <workItem from="1493732500799" duration="3965000" />
       <workItem from="1493744892830" duration="3345000" />
-      <workItem from="1493775676308" duration="10402000" />
-    </task>
-    <task id="LOCAL-00125" summary="hiding/displaying related fields info">
-      <created>1489513860014</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1489513860014</updated>
+      <workItem from="1493775676308" duration="11554000" />
+      <workItem from="1493800633692" duration="1209000" />
+      <workItem from="1493809140905" duration="1459000" />
+      <workItem from="1494099267383" duration="365000" />
     </task>
     <task id="LOCAL-00126" summary="cleaning up data + data type fixes">
       <created>1489517040038</created>
@@ -3664,11 +4644,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493786882303</updated>
     </task>
-    <option name="localTasksCounter" value="174" />
+    <task id="LOCAL-00174" summary="generating suggestions + ui fixes">
+      <created>1493789914647</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1493789914647</updated>
+    </task>
+    <option name="localTasksCounter" value="175" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="814067000" />
+    <option name="totallyTimeSpent" value="818252000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1366" height="739" extended-state="6" />
@@ -3678,19 +4665,19 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56935483" sideWeight="0.51785713" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3251634" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53301126" sideWeight="0.48214287" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.85507244" sideWeight="0.48809522" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22767857" sideWeight="0.5147059" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53301126" sideWeight="0.48214287" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -3724,7 +4711,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reflecting user data change in API side" />
     <MESSAGE value="route to handle increasing flag data" />
     <MESSAGE value="admin can now flag a user" />
     <MESSAGE value="question wise analysis" />
@@ -3749,7 +4735,8 @@
     <MESSAGE value="feedback card: estimated time + no of users filled form" />
     <MESSAGE value="ui fixes" />
     <MESSAGE value="generating suggestions" />
-    <option name="LAST_COMMIT_MESSAGE" value="generating suggestions" />
+    <MESSAGE value="generating suggestions + ui fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="generating suggestions + ui fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3758,14 +4745,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client-app-2-new/views/partials/login-modal.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="5" column="64" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-2-new/js/script2.js" />
     <entry file="file://$PROJECT_DIR$/client-app-2-new/public/js/service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -3991,35 +4970,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-2-new/views/landing.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-app-1-new/views/feedback_form.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-1-new/views/landing.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="41" column="86" selection-start-line="41" selection-start-column="86" selection-end-line="41" selection-end-column="86" />
-          <folding>
-            <element signature="e#1812#1854#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-1-new/views/partials/header.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -4034,10 +4988,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-234">
           <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
-          <folding>
-            <element signature="e#2763#2793#0" expanded="false" />
-            <element signature="e#2839#2869#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4045,17 +4995,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4063,10 +5002,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="252" column="8" selection-start-line="252" selection-start-column="8" selection-end-line="252" selection-end-column="8" />
-          <folding>
-            <element signature="e#1097#1314#0" expanded="false" />
-            <element signature="e#1343#1545#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4074,6 +5009,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="119" column="32" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-app-2-new/public/Documentation/.idea/modules.xml" />
+    <entry file="file://$PROJECT_DIR$/client-app-1-new/public/Documentation/.idea/modules.xml" />
+    <entry file="file://$PROJECT_DIR$/client-app-1-new/views/partials/header.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="37" column="80" selection-start-line="37" selection-start-column="80" selection-end-line="37" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-app-1-new/views/landing.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-app-2-new/views/landing.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="14" selection-start-line="5" selection-start-column="8" selection-end-line="27" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-app-2-new/views/view-stats.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="41" column="18" selection-start-line="36" selection-start-column="12" selection-end-line="41" selection-end-column="18" />
           <folding />
         </state>
       </provider>

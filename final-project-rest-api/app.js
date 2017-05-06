@@ -1,3 +1,4 @@
+// require dependencies
 var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
@@ -12,14 +13,13 @@ var userRoute = require('./routes/users');
 
 var app = express();
 
-// mongoose.connect("mongodb://localhost:27017/conFusion");
+// Connect to database
 mongoose.connect('localhost/conFusion');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error: '));
 db.once('open', function () {
     console.log('Connected correctly to server');
 });
-
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -34,7 +34,6 @@ app.use(newResponseRoute);
 app.use(userRoute);
 
 // Start server
-
 app.listen(3000, function () {
     console.log("REST API has Started!!");
 });
