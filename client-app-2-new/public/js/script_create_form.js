@@ -14,7 +14,6 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
     $scope.selectedDepartments = [];
     $scope.allSelected = false;
 
-
     $scope.dummyQuestion = {
         "questionNo": 1,
         "title": "",
@@ -37,7 +36,13 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
             4
         ]
     };
+
+    $scope.dummyTextQuestion = {
+        questionNo: "",
+        title: ""
+    };
     $scope.questions = [$scope.dummyQuestion];
+    $scope.textQuestions = [];
 
     $scope.finalObject = {
         "targetedUsers": [],
@@ -47,7 +52,8 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
             department: "",
             email: "",
             full_name: ""
-        }
+        },
+        "text": []
     };
 
 
@@ -208,9 +214,31 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
     };
 
 
+    $scope.saveTextQuestion = function (questionNo) {
+        var title = document.getElementById('text-question-title-' + questionNo).value;
+        // var realQuestionNo = $scope.questions.length + questionNo;
+
+
+        $scope.textQuestions[questionNo - 1] = {
+            title: title
+        };
+        console.log($scope.textQuestions);
+
+        document.getElementById('text-question-title-' + questionNo).disabled = true;
+    };
+
+    $scope.editTextQuestion = function (questionNo) {
+        document.getElementById('text-question-title-' + questionNo).disabled = false;
+    };
+
+
     $scope.addQuestion = function () {
         $scope.questions.push($scope.dummyQuestion);
         console.log($scope.questions);
+    };
+
+    $scope.addTextQuestion = function () {
+        $scope.textQuestions.push($scope.dummyTextQuestion);
     };
 
 
@@ -228,6 +256,7 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
 
         $scope.finalObject.targetedUsers = $scope.selectedDepartments;
         $scope.finalObject.mcq = $scope.questions;
+        $scope.finalObject.text = $scope.textQuestions;
         $scope.finalObject.postedBy.username = $window.userInfo.username;
         $scope.finalObject.postedBy.department = $window.userInfo.department;
         $scope.finalObject.postedBy.email = $window.userInfo.email;

@@ -7,6 +7,25 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+
+var textResponseSchema = new Schema({
+    questionNo: {
+        type: Number,
+        required: true
+    },
+    title: {
+        type: String
+    },
+    response: {
+        type: String
+    },
+    correct: {type: Boolean},
+    timeSpent: {
+        type: Number,
+        required: true
+    }
+}, {timestamps: true});
+
 var mcqResponseSchema = new Schema({
     questionNo: {
         type: Number,
@@ -51,6 +70,7 @@ var responseSchema = new Schema({
     overallScore: {type: Number},
     filtered: {type: Boolean},
     mcqResponse: [mcqResponseSchema],
+    textResponse : [textResponseSchema],
     postedBy: {
         full_name: String,
         roll_number: String,

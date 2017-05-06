@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>REST API</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <!--<link rel="shortcut icon" href="favicon.ico">  -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/lightbox/dist/ekko-lightbox.min.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head> 
+
+<body class="body-pink">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">Documentation</span>
+                        </a>
+                    </h1>
+                </div><!--//branding-->
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">REST API</li>
+                </ol>
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="fa fa-server" style="color: #EA5395;font-size: 30px" aria-hidden="true"></i>
+                        REST API</h1>
+                </div><!--//doc-header-->
+                <div class="doc-body">
+                    <div class="doc-content">
+                        <div class="content-inner">
+                            <section id="intro" class="doc-section">
+                                <h2 class="section-title">What Is REST?</h2>
+                                <div class="section-block">
+                                    <p>The REST architectural style describes six constraints. These constraints, applied to the architecture, were originally communicated by Roy Fielding in his doctoral dissertation (<a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm" target="_blank">see here</a>) and defines the basis of RESTful-style. </p>
+                                </div><!--//section-block-->
+                                <!--<div class="section-block">-->
+                                    <!--<div class="row">-->
+                                        <!--<div class="col-md-6 col-sm-12 col-sm-12">-->
+                                            <!--<h6>Use Case 1</h6>-->
+                                            <!--<p>Project management</p>-->
+                                            <!--<div class="screenshot-holder">-->
+                                                <!--<a href="assets/images/demo/appkit-dashboard-1.jpg" data-title="Dashboard - Project Management" data-toggle="lightbox"><img class="img-responsive" src="assets/images/demo/appkit-dashboard-1-thumb.jpg" alt="screenshot" /></a>-->
+                                                <!--<a class="mask" href="assets/images/demo/appkit-dashboard-1.jpg" data-title="Dashboard - Project Management" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>-->
+                                            <!--</div> -->
+                                        <!--</div>-->
+                                         <!--<div class="col-md-6 col-sm-12 col-sm-12">-->
+                                            <!--<h6>Use Case 2</h6>-->
+                                            <!--<p>Web analytics</p>-->
+                                            <!--<div class="screenshot-holder">-->
+                                                <!--<a href="assets/images/demo/appkit-dashboard-2.jpg" data-title="Dashboard - Web Analytics" data-toggle="lightbox"><img class="img-responsive" src="assets/images/demo/appkit-dashboard-2-thumb.jpg" alt="screenshot" /></a>-->
+                                                <!--<a class="mask" href="assets/images/demo/appkit-dashboard-2.jpg" data-title="Dashboard - Web Analytics" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>-->
+                                            <!--</div> -->
+                                        <!--</div>-->
+                                        <!--<div class="clearfix"></div>-->
+                                         <!--<div class="col-md-6 col-sm-12 col-sm-12">-->
+                                            <!--<h6>Use Case 3</h6>-->
+                                            <!--<p>Health/Fitness app</p>-->
+                                            <!--<div class="screenshot-holder">-->
+                                                <!--<a href="assets/images/demo/appkit-dashboard-3.jpg" data-title="Dashboard - Health/Fitness" data-toggle="lightbox"><img class="img-responsive" src="assets/images/demo/appkit-dashboard-3-thumb.jpg" alt="screenshot" /></a>-->
+                                                <!--<a class="mask" href="assets/images/demo/appkit-dashboard-3.jpg" data-title="Dashboard - Health/Fitness" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>-->
+                                            <!--</div> -->
+                                        <!--</div>-->
+                                         <!--<div class="col-md-6 col-sm-12 col-sm-12">-->
+                                            <!--<h6>Use Case 4</h6>-->
+                                            <!--<p>Web hosting</p>-->
+                                            <!--<div class="screenshot-holder">-->
+                                                <!--<a href="assets/images/demo/appkit-dashboard-4.jpg" data-title="Dashboard - Web Hosting" data-toggle="lightbox"><img class="img-responsive" src="assets/images/demo/appkit-dashboard-4-thumb.jpg" alt="screenshot" /></a>-->
+                                                <!--<a class="mask" href="assets/images/demo/appkit-dashboard-4.jpg" data-title="Dashboard - Web Hosting" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>-->
+                                            <!--</div> -->
+                                        <!--</div>-->
+                                    <!--</div>&lt;!&ndash;//row&ndash;&gt;-->
+                                    <!--<div class="callout-block callout-info">-->
+                                        <!--<div class="icon-holder">-->
+                                            <!--<i class="fa fa-bullhorn"></i>-->
+                                        <!--</div>&lt;!&ndash;//icon-holder&ndash;&gt;-->
+                                        <!--<div class="content">-->
+                                            <!--<h4 class="callout-title">Lightbox Example</h4>-->
+                                            <!--<p>Click the screenshot images to trigger the image modal.</p>-->
+                                        <!--</div>&lt;!&ndash;//content&ndash;&gt;-->
+                                    <!--</div>&lt;!&ndash;//callout&ndash;&gt;-->
+                                <!--</div>&lt;!&ndash;//section-block&ndash;&gt;-->
+                                <!---->
+                            <!--</section>&lt;!&ndash;//doc-section&ndash;&gt;-->
+                            
+                            <section id="constraints" class="doc-section">
+                                <h2 class="section-title">Constraints</h2>
+                                <div class="section-block">
+                                <p>The six constraints are:</p>
+                                    </div>
+                                <div id="uniforminterface" class="section-block">
+                                    <h3 class="block-title">Uniform Interface</h3>
+                                    <p>The uniform interface constraint defines the interface between clients and servers. It simplifies and decouples the architecture, which enables each part to evolve independently. The four guiding principles of the uniform interface are:</p>
+
+                                        <h6>Resource-Based</h6>
+                                            <div>
+                                                <p>Individual resources are identified in requests using URIs as resource identifiers. The resources themselves are conceptually separate from the representations that are returned to the client. For example, the server does not send its database, but rather, some HTML, XML or JSON that represents some database records expressed, for instance, in Finnish and encoded in UTF-8, depending on the details of the request and the server implementation.</p>
+                                            </div>
+                                    <!--<div class="row">-->
+                                    <!--<div class="col-md-6 col-sm-6 col-xs-12">-->
+                                        <h6>Manipulation of Resources Through Representations</h6>
+                                            <div>
+                                                <P>When a client holds a representation of a resource, including any metadata attached, it has enough information to modify or delete the resource on the server, provided it has permission to do so.</P>
+                                            </div>
+
+                                        <h6>Self-descriptive Messages</h6>
+                                        <div>
+                                        <p>Each message includes enough information to describe how to process the message. For example, which parser to invoke may be specified by an Internet media type (previously known as a MIME type). Responses also explicitly indicate their cache-ability.</p>
+                                        </div>
+
+                                    <h6>Hypermedia as the Engine of Application State (HATEOAS)</h6>
+                                    <div>
+                                        <p>Clients deliver state via body contents, query-string parameters, request headers and the requested URI (the resource name). Services deliver state to clients via body content, response codes, and response headers. This is technically referred-to as hypermedia (or hyperlinks within hypertext).</p>
+                                        <p>Aside from the description above, HATEOS also means that, where necessary, links are contained in the returned body (or headers) to supply the URI for retrieval of the object itself or related objects. We'll talk about this in more detail later.</p>
+                                        <p>The uniform interface that any REST services must provide is fundamental to its design.</p>
+                                    </div>
+                                    <!--</div>-->
+                                    <!--</div>-->
+                                    </div><!--//section-block-->
+                                <div id="stateless" class="section-block">
+                                    <h3 class="block-title">Stateless</h3>
+                                            <p>As REST is an acronym for REpresentational State Transfer, statelessness is key. Essentially, what this means is that the necessary state to handle the request is contained within the request itself, whether as part of the URI, query-string parameters, body, or headers. The URI uniquely identifies the resource and the body contains the state (or state change) of that resource. Then after the server does it's processing, the appropriate state, or the piece(s) of state that matter, are communicated back to the client via headers, status and response body.</p>
+                                            <p>Most of us who have been in the industry for a while are accustomed to programming within a container which provides us with the concept of “session” which maintains state across multiple HTTP requests. In REST, the client must include all information for the server to fulfill the request, resending state as necessary if that state must span multiple requests. Statelessness enables greater scalability since the server does not have to maintain, update or communicate that session state. Additionally, load balancers don't have to worry about session affinity for stateless systems.</p>
+                                            <p>So what's the difference between state and a resource? State, or application state, is that which the server cares about to fulfill a request—data necessary for the current session or request. A resource, or resource state, is the data that defines the resource representation—the data stored in the database, for instance. Consider application state to be data that could vary by client, and per request. Resource state, on the other hand, is constant across every client who requests it.</p>
+                                            <p>Ever had back-button issues with a web application where it went AWOL at a certain point because it expected you to do things in a certain order? That's because it violated the statelessness principle. There are cases that don't honor the statelessness principle, such as three-legged OAuth, API call rate limiting, etc. However, make every effort to ensure that application state doesn't span multiple requests of your service(s).</p>
+                                </div><!--//section-block-->
+                                
+                                <div id="cacheable" class="section-block">
+                                    <h3 class="block-title">Cacheable</h3>
+                                    <p>As on the World Wide Web, clients can cache responses. Responses must therefore, implicitly or explicitly, define themselves as cacheable, or not, to prevent clients reusing stale or inappropriate data in response to further requests. Well-managed caching partially or completely eliminates some client–server interactions, further improving scalability and performance.</p>
+                                </div><!--//section-block-->
+                                
+                                <div id="clientserver" class="section-block">
+                                    <h3 class="block-title">Client-Server</h3>
+                                    <p>The uniform interface separates clients from servers. This separation of concerns means that, for example, clients are not concerned with data storage, which remains internal to each server, so that the portability of client code is improved. Servers are not concerned with the user interface or user state, so that servers can be simpler and more scalable. Servers and clients may also be replaced and developed independently, as long as the interface is not altered.</p>
+                                </div><!--//section-block-->
+                                
+                                 <div id="layeredsystem" class="section-block">
+                                    <h3 class="block-title">Layered System</h3>
+                                     <p>A client cannot ordinarily tell whether it is connected directly to the end server, or to an intermediary along the way. Intermediary servers may improve system scalability by enabling load-balancing and by providing shared caches. Layers may also enforce security policies.</p>
+                                 </div><!--//section-block-->
+
+                                <div id="codeondemand" class="section-block">
+                                    <h3 class="block-title">Code on Demand (optional)</h3>
+                                    <p>Servers are able to temporarily extend or customize the functionality of a client by transferring logic to it that it can execute. Examples of this may include compiled components such as Java applets and client-side scripts such as JavaScript.</p>
+                                    <p>Complying with these constraints, and thus conforming to the REST architectural style, will enable any kind of distributed hypermedia system to have desirable emergent properties, such as performance, scalability, simplicity, modifiability, visibility, portability and reliability.</p>
+                                    <p><b>NOTE</b>: The only optional constraint of REST architecture is code on demand. If a service violates any other constraint, it cannot strictly be referred to as RESTful.</p>
+                                </div>
+                            </section><!--//doc-section-->
+                            <!--<section id="ui-components" class="doc-section">-->
+                                <!--<h2 class="section-title">UI Components</h2>-->
+                                <!--<div class="section-block">-->
+                                    <!--<p>Appkit is packed with building blocks. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. </p>-->
+                                    <!--<div class="row">-->
+                                        <!--<div class="col-md-4 col-sm-5 col-xs-12">-->
+                                            <!--<h6>Components List</h6>-->
+                                            <!--<ul class="list list-unstyled">-->
+                                                <!--<li><a href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><i class="fa fa-check"></i> Typography</a></li>-->
+                                                <!--<li><a href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><i class="fa fa-check"></i> Icons</a></li>-->
+                                                <!--<li><a href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><i class="fa fa-check"></i> Buttons</a></li>-->
+                                                <!--<li><a href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><i class="fa fa-check"></i> Panels</a></li>-->
+                                                <!--<li><a href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><i class="fa fa-check"></i> Tabs</a></li>-->
+                                                <!--<li><a href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><i class="fa fa-check"></i> Accordions</a></li>-->
+                                                <!--<li><a href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><i class="fa fa-check"></i> Maps</a></li>-->
+                                                <!--<li><a href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><i class="fa fa-check"></i> Todo</a></li>-->
+                                                <!--<li><a href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><i class="fa fa-check"></i> Carousels</a></li>-->
+                                                <!--<li><a href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><i class="fa fa-check"></i> Notification</a></li>-->
+                                                <!--<li><a href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><i class="fa fa-check"></i> Draggable</a></li>-->
+                                                <!--<li><a href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><i class="fa fa-check"></i> Sortable</a></li>-->
+                                                <!--<li><a href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><i class="fa fa-check"></i> Nestable</a></li>-->
+                                                <!--<li><a href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><i class="fa fa-check"></i> Tree</a></li>-->
+                                                <!--<li><a href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><i class="fa fa-check"></i> Loaders</a></li>-->
+                                                <!--<li><a href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><i class="fa fa-check"></i> Many More...</a></li>-->
+                                            <!--</ul>-->
+                                        <!--</div>-->
+                                        <!--<div class="col-md-8 col-sm-5 col-xs-12">-->
+                                            <!--<h6>Screenshot</h6>-->
+                                            <!--<div class="screenshot-holder">-->
+                                                <!--<a href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><img class="img-responsive" src="assets/images/demo/appkit-widgets-thumb.jpg" alt="screenshot" /></a>-->
+                                                <!--<a class="mask" href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><i class="icon fa fa-link"></i></a>-->
+                                                <!--</div> -->
+                                        <!--</div>-->
+                                    <!--</div>&lt;!&ndash;//row&ndash;&gt;-->
+                                <!--</div>&lt;!&ndash;//section-block&ndash;&gt;-->
+                            <!--</section>&lt;!&ndash;//doc-section&ndash;&gt;-->
+                            
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar">
+                        <nav id="doc-nav">
+                            <ul id="doc-menu" class="nav doc-menu hidden-xs" data-spy="affix">
+                                <li><a class="scrollto" href="#intro">REST</a></li>
+                                <li>
+                                    <a class="scrollto" href="#constraints">Constraints</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class="scrollto" href="#uniforminterface">Uniform Interface</a></li>
+                                        <li><a class="scrollto" href="#stateless">Stateless</a></li>
+                                        <li><a class="scrollto" href="#cacheable">Cacheable</a></li>
+                                        <li><a class="scrollto" href="#clientserver">Client-Server</a></li>
+                                        <li><a class="scrollto" href="#layeredsystem">Layered System</a></li>
+                                        <li><a class="scrollto" href="#codeondemand">Code on Demand</a></li>
+                                    </ul><!--//nav-->
+                                </li>
+                                <!--<li><a class="scrollto" href="#ui-components">UI Components</a></li>-->
+                            </ul><!--//doc-menu-->
+                        </nav>
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->              
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+        
+        <!--<div id="promo-block" class="promo-block promo-block-2">-->
+            <!--<div class="container">-->
+                <!--<div class="promo-block-inner">-->
+                    <!--<h3 class="promo-title text-center"><i class="fa fa-heart"></i> <a href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank">AppKit - Bootstrap Angular Admin Theme for Developers</a></h3>-->
+                    <!--<div class="row">-->
+                        <!--<div class="figure-holder col-md-5 col-sm-6 col-xs-12">-->
+                            <!--<div class="figure-holder-inner">-->
+                                <!--<a href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><img class="img-responsive" src="assets/images/demo/appkit-dashboard-1-thumb.jpg" alt="AppKit Theme" /></a>-->
+                                <!--<a class="mask" href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><i class="icon fa fa-heart pink"></i></a>-->
+                            <!--</div>-->
+                        <!--</div>&lt;!&ndash;//figure-holder&ndash;&gt;-->
+                        <!--<div class="content-holder col-md-7 col-sm-6 col-xs-12">-->
+                            <!--<div class="content-holder-inner">-->
+                                <!--<div class="desc">-->
+                                    <!--<h4 class="content-title"><strong>Love this free documentation theme?</strong></h4>-->
+                                    <!--<p>Check out AppKit - an Angular admin theme I created with my developer friend <a href="https://twitter.com/tnajdek">Tom Najdek</a> for developers. AppKit uses modern front-end technologies and is packed with useful components and widgets to speed up your app development.</p>-->
+                                    <!--<p><strong class="highlight">[Tip for developers]:</strong> If your project is Open Source, you can use this area to promote your other projects or hold third party adverts like Bootstrap and FontAwesome do!</p>-->
+                                    <!--<a class="btn btn-cta" href="https://wrapbootstrap.com/theme/appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank">View Demo</a>-->
+                                <!--</div>&lt;!&ndash;//desc&ndash;&gt;-->
+                                <!--<div class="author"><a href="http://themes.3rdwavemedia.com">Xiaoying Riley</a></div>-->
+                            <!--</div>&lt;!&ndash;//content-holder-inner&ndash;&gt;-->
+                        <!--</div>&lt;!&ndash;//content-holder&ndash;&gt;-->
+                    <!--</div>&lt;!&ndash;//row&ndash;&gt;-->
+                <!--</div>&lt;!&ndash;//promo-block-inner&ndash;&gt;  -->
+            <!--</div>&lt;!&ndash;//container&ndash;&gt;-->
+        <!--</div>&lt;!&ndash;//promo-block&ndash;&gt;-->
+        <!---->
+    <!--</div>&lt;!&ndash;//page-wrapper&ndash;&gt;-->
+    <!---->
+    <!--<footer id="footer" class="footer text-center">-->
+        <!--<div class="container">-->
+            <!--&lt;!&ndash;/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */&ndash;&gt;-->
+            <!--&lt;!&ndash;<small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>&ndash;&gt;-->
+
+        <!--</div>&lt;!&ndash;//container&ndash;&gt;-->
+    <!--</footer>&lt;!&ndash;//footer&ndash;&gt;-->
+    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>  
+    <script type="text/javascript" src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>                                                                 
+    <script type="text/javascript" src="assets/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+</body>
+</html> 
+

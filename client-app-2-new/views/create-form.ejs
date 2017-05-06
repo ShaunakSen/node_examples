@@ -195,6 +195,31 @@
             </div>
 
         </div>
+        <div class="row" style="margin-top: 30px" ng-repeat="textQuestion in textQuestions track by $index">
+            <div class="col-xs-9 create-question-container">
+                <br><br>
+                <div class="row create-question">
+                    <div class="col-xs-4">
+                        <p>Text Question Title</p>
+                    </div>
+                    <div class="col-xs-8">
+                        <input type="text" id="text-question-title-{{$index+1}}" class="custom-input" style="width: 85%"
+                               placeholder="ENTER QUESTION TITLE">
+                    </div>
+                </div>
+                <hr>
+                <div class="row related-row">
+                    <div class="col-xs-4 custom-button-done" ng-click="saveTextQuestion($index+1)">
+                        <i class="fa fa-floppy-o"></i><span>Done</span>
+                    </div>
+                    <div class="col-xs-4 custom-button-edit" ng-click="editTextQuestion($index + 1)">
+                        <i class="fa fa-pencil-square-o"></i><span>Edit</span>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+        </div>
         <div class="row" style="margin-top: 30px">
             <div class="col-xs-6 add-question">
                 <div class="row">
@@ -206,7 +231,18 @@
                     </div>
                 </div>
             </div>
+            <div class="col-xs-6 add-question">
+                <div class="row">
+                    <div class="col-xs-9">
+                        <h4>Add A Text Question</h4>
+                    </div>
+                    <div class="col-xs-3">
+                        <button class="btn btn-primary custom-button-add" ng-click="addTextQuestion()">+</button>
+                    </div>
+                </div>
+            </div>
         </div>
+
         <div class="row" style="margin-top: 30px">
             <div class="col-xs-4 custom-button-select-all" ng-click="submitForm()">
                 <i class="fa fa-paper-plane"></i><span>Submit Form</span>

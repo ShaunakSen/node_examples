@@ -2,6 +2,14 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 
+var textSchema = new Schema({
+    title: {
+        type: String,
+        required: true
+    }
+}, {timestamps: true});
+
+
 var mcqSchema = new Schema({
     questionNo: {
         type: Number,
@@ -41,6 +49,7 @@ var reviewSchema = new Schema({
         type: String,
         default: ["it","cse","ch","ce","ece","bt","me","mme","ch"]
     }],
+    text: [textSchema],
     postedBy: {
         username: String,
         department: String,
