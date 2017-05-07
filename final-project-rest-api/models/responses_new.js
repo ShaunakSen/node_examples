@@ -9,21 +9,13 @@ var Schema = mongoose.Schema;
 
 
 var textResponseSchema = new Schema({
-    questionNo: {
-        type: Number,
-        required: true
-    },
     title: {
         type: String
     },
     response: {
         type: String
     },
-    correct: {type: Boolean},
-    timeSpent: {
-        type: Number,
-        required: true
-    }
+    correct: {type: Boolean}
 }, {timestamps: true});
 
 var mcqResponseSchema = new Schema({

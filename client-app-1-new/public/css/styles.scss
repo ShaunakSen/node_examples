@@ -63,34 +63,33 @@ a:hover {
   color: inherit;
 }
 
-.custom-button{
-  border:none;
+.custom-button {
+  border: none;
   border-radius: 0;
 }
 
-.btn-success{
+.btn-success {
   background-color: #41ac42;
 }
 
-.bold-text{
+.bold-text {
   font-weight: bold;
 }
 
-
 //NAVBAR STYLES
 
-.custom-navbar{
+.custom-navbar {
   background-color: rgba(0, 183, 255, 0);
   border: none;
   border-radius: 0;
   color: $darker;
 
-  .navbar-brand{
+  .navbar-brand {
     color: $light;
   }
 
-  .navbar-right{
-    span{
+  .navbar-right {
+    span {
       color: $light;
       font-family: $font2;
       //font-weight: bold;
@@ -98,13 +97,13 @@ a:hover {
   }
 }
 
-.custom-navbar.scrolled{
+.custom-navbar.scrolled {
   background-color: whitesmoke;
-  .navbar-brand{
+  .navbar-brand {
     color: $dark;
   }
-  .navbar-right{
-    span{
+  .navbar-right {
+    span {
       color: $dark;
       font-family: $font2;
       //font-weight: bold;
@@ -112,54 +111,53 @@ a:hover {
   }
 }
 
-.jumbotron{
+.jumbotron {
   background: url("../img/header-image-3.jpg") center/cover no-repeat;
   height: 500px;
   padding: 80px 40px;
-  p{
+  p {
     //font-weight: bold;
     color: $darker;
   }
-  blockquote{
+  blockquote {
     border-left: 5px solid #70b458;
-    p{
+    p {
       font-family: $font2;
     }
   }
 }
 
-
-.custom-modal{
+.custom-modal {
   border-radius: 0;
   font-family: $font2;
-  .modal-header{
+  .modal-header {
     background-color: $utility3;
     color: $darker;
-    h4{
+    h4 {
       //font-weight: bold;
       font-family: $font2;
       font-size: 18px;
     }
 
   }
-  .modal-body{
-    .row{
+  .modal-body {
+    .row {
       margin-top: 10px;
-      input{
+      input {
         border-radius: 0;
       }
-      p{
+      p {
         //font-weight: bold;
         color: $dark;
         font-size: 17px;
         margin-top: 4px;
       }
-      .success-icon{
+      .success-icon {
         border: 3px solid $utility2;
         border-radius: 50%;
         text-align: center;
         padding: 30px 30px;
-        i{
+        i {
           font-size: 10em;
           color: $utility2;
           text-align: center;
@@ -169,17 +167,17 @@ a:hover {
   }
 }
 
-.feedback-card{
+.feedback-card {
   //margin: 20px;
   border: 1px solid $utility2;
   outline: 2px solid $medium;
   outline-offset: 5px;
   padding: 15px 30px;
-  p{
+  p {
     font-size: 16px;
     font-family: $font2;
   }
-  .slab{
+  .slab {
     display: inline;
     //margin-right: 8px;
     background-color: $utility4;
@@ -191,16 +189,16 @@ a:hover {
   }
 }
 
-.feedback-form-row{
+.feedback-form-row {
   border: 2px solid $utility2;
   outline: 2px solid $medium;
   outline-offset: 5px;
-  .carousel-inner{
+  .carousel-inner {
     overflow: visible;
 
-    .question-title-row{
+    .question-title-row {
       padding: 10px 40px;
-      h3{
+      h3 {
         font-family: $font2;
         font-size: 1.6em;
 
@@ -208,22 +206,35 @@ a:hover {
       }
     }
 
-
-    .options-row{
+    .options-row {
       padding: 20px 30px;
       font-family: $font2;
       font-size: 1.3em;
 
-      .radio{
+      .radio {
         margin-left: 25px;
       }
     }
   }
 }
 
-.emphasis-text{
+.custom-textarea {
+  border: 1px solid $utility4;
+  padding: 20px;
+  font-family: $font2;
+  transition: all 0.3s;
+}
+
+.custom-textarea:focus {
+  border: 1px solid #a2512d;
+  padding: 20px;
+  font-family: $font2;
+}
+
+.emphasis-text {
   text-decoration: underline;
 }
+
 .custom-button-login {
   @include generateButton($utility2);
 }

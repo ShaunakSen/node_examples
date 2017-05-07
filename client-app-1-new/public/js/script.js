@@ -40,6 +40,9 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
     $scope.visualFeedback = [];
     $scope.timeAnalyzer = [];
 
+    $scope.textQuestions = [];
+    $scope.textResponses = [];
+
 
     $scope.userInfo = $window.userInfo;
     console.log($scope.userInfo);
@@ -67,6 +70,10 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
             // $scope.questions = response;
             console.log(response);
             $scope.noOfQuestions = response.data.mcq.length;
+            if(response.data.hasOwnProperty("text")){
+                $scope.textQuestions = response.data.text;
+            }
+            console.log($scope.textQuestions);
             for (var i = 0; i < $scope.noOfQuestions; ++i) {
                 $scope.recordedTimes.push(0);
                 $scope.startTime.push(0);
@@ -193,11 +200,36 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
 
     };
 
+    $scope.submitButtonClickedText = function () {
+        // store the last response
+        $scope.storeResponse($scope.questions.length);
+        if($scope.textQuestions.length != 0){
+
+            // display modal
+
+            $('#text-questions-modal').modal();
+
+        } else {
+            $scope.submitButtonClicked();
+        }
+    };
+
 
     $scope.submitButtonClicked = function () {
 
-        // store the last response
-        $scope.storeResponse($scope.questions.length);
+        if($scope.textQuestions.length != 0){
+            for(var x = 0; x<$scope.textQuestions.length; ++x){
+                $scope.textResponses.push({
+                    title: $scope.textQuestions[x].title,
+                    response: document.getElementById('textarea-' + x).value
+                });
+            }
+            // close modal
+            $('#text-questions-modal').modal('toggle');
+        }
+        console.log("Text responses", $scope.textResponses);
+
+
 
         console.log("Data we have...");
         console.log($scope.responses);
@@ -205,113 +237,115 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
 
         // add the recorded times data to main responses data
 
-        for (var i = 0; i < $scope.recordedTimes.length; ++i) {
-            $scope.responses[i].timeSpent = $scope.recordedTimes[i];
-        }
-        console.log($scope.responses);
-        var responseData = {
-            reviewId: $scope.reviewId,
-            mcqResponse: [],
-            postedBy: {}
-        };
-
-        // EVALUATE RELATIONSHIP
-
-        for(var k=0; k<$scope.responses.length; ++k){
-            if ($scope.responses[k].relatedTo.length > 0) {
-                var relatedQuestionNo = $scope.responses[k].relatedTo[0].questionNo;
-                var relatedHow = $scope.responses[k].relatedTo[0].relatedHow;
-                var thisQuestionResponse = $scope.responses[k].response;
-                var relatedQuestionResponse = $scope.responses[relatedQuestionNo - 1].response;
-
-                var diff = thisQuestionResponse - relatedQuestionResponse;
-                if (diff < 0) {
-                    diff = -diff;
-                }
-
-                if (relatedHow == "direct") {
-                    $scope.responses[k].correct = diff <= 2;
-                } else {
-                    $scope.responses[k].correct = diff >= 2;
-                }
-            }
-        }
-
-        // EVALUATE RELATIONSHIP ENDS
-
-        console.log("After evaluating relationships:", $scope.responses);
-
-        for (var x = 0; x < $scope.responses.length; ++x) {
-            responseData.mcqResponse.push($scope.responses[x]);
-        }
-        console.log(responseData);
-
-        // Fill in user data
-
-        responseData.postedBy.full_name = $scope.userInfo.full_name;
-        responseData.postedBy.roll_number = $scope.userInfo.roll_number;
-        responseData.postedBy.username = $scope.userInfo.username;
-        responseData.postedBy.email = $scope.userInfo.email;
-
-        // POST the response
-
-        var postReq = {
-            method: 'POST',
-            url: 'http://localhost:3000/responses_new/',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            data: responseData
-        };
-
-        $http(postReq).then(
-            function (response) {
-                console.log("Ok..", response);
-
-                // user has posted the response..we have user info and id of form he filled
-                // store the filled form id in users collection so that he can no longer fill it again
-                console.log("Review id is:" + $scope.reviewId);
-                $http({
-                    method : "PUT",
-                    url : 'http://localhost:8001/users/' + $scope.userInfo._id + '/filled_forms',
-                    data : {review_id: $scope.reviewId},
-                    headers : {
-                        'Content-Type' : 'application/json'
-                    }
-                }).then( function (response) {
-                    console.log("ok...", response);
-
-                    console.log("about to hit api route");
-
-                    // Change the filled form data for this user on API side
-
-                    $http({
-                        method: "PUT",
-                        url: "http://localhost:3000/users/" + $scope.userInfo.username + "/filled_forms",
-                        data: {review_id: $scope.reviewId},
-                        headers : {
-                            'Content-Type' : 'application/json'
-                        }
-                    }).then(function (response) {
-                        console.log("Change reflected in API side as well", response);
-                        $scope.displaySuccessModal();
-                        $("#submitted-form-modal").on('hidden.bs.modal', function () {
-                            window.location = "http://localhost:8001";
-                        });
-                    }, function (response) {
-                        console.log("Not ok on API side", response);
-                    })
-
-                }, function (response) {
-                    console.log("not ok...", response)
-                } );
-
-
-            },
-            function (response) {
-                console.log("Not Ok..", response);
-            }
-        );
+        // for (var i = 0; i < $scope.recordedTimes.length; ++i) {
+        //     $scope.responses[i].timeSpent = $scope.recordedTimes[i];
+        // }
+        // console.log($scope.responses);
+        // var responseData = {
+        //     reviewId: $scope.reviewId,
+        //     mcqResponse: [],
+        //     postedBy: {},
+        //     textResponse: []
+        // };
+        //
+        // // EVALUATE RELATIONSHIP
+        //
+        // for(var k=0; k<$scope.responses.length; ++k){
+        //     if ($scope.responses[k].relatedTo.length > 0) {
+        //         var relatedQuestionNo = $scope.responses[k].relatedTo[0].questionNo;
+        //         var relatedHow = $scope.responses[k].relatedTo[0].relatedHow;
+        //         var thisQuestionResponse = $scope.responses[k].response;
+        //         var relatedQuestionResponse = $scope.responses[relatedQuestionNo - 1].response;
+        //
+        //         var diff = thisQuestionResponse - relatedQuestionResponse;
+        //         if (diff < 0) {
+        //             diff = -diff;
+        //         }
+        //
+        //         if (relatedHow == "direct") {
+        //             $scope.responses[k].correct = diff <= 2;
+        //         } else {
+        //             $scope.responses[k].correct = diff >= 2;
+        //         }
+        //     }
+        // }
+        //
+        // // EVALUATE RELATIONSHIP ENDS
+        //
+        // console.log("After evaluating relationships:", $scope.responses);
+        //
+        // for (var x = 0; x < $scope.responses.length; ++x) {
+        //     responseData.mcqResponse.push($scope.responses[x]);
+        // }
+        // console.log(responseData);
+        //
+        // // Fill in user data
+        //
+        // responseData.postedBy.full_name = $scope.userInfo.full_name;
+        // responseData.postedBy.roll_number = $scope.userInfo.roll_number;
+        // responseData.postedBy.username = $scope.userInfo.username;
+        // responseData.postedBy.email = $scope.userInfo.email;
+        // responseData.textResponse = $scope.textResponses;
+        //
+        // // POST the response
+        //
+        // var postReq = {
+        //     method: 'POST',
+        //     url: 'http://localhost:3000/responses_new/',
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     },
+        //     data: responseData
+        // };
+        //
+        // $http(postReq).then(
+        //     function (response) {
+        //         console.log("Ok..", response);
+        //
+        //         // user has posted the response..we have user info and id of form he filled
+        //         // store the filled form id in users collection so that he can no longer fill it again
+        //         console.log("Review id is:" + $scope.reviewId);
+        //         $http({
+        //             method : "PUT",
+        //             url : 'http://localhost:8001/users/' + $scope.userInfo._id + '/filled_forms',
+        //             data : {review_id: $scope.reviewId},
+        //             headers : {
+        //                 'Content-Type' : 'application/json'
+        //             }
+        //         }).then( function (response) {
+        //             console.log("ok...", response);
+        //
+        //             console.log("about to hit api route");
+        //
+        //             // Change the filled form data for this user on API side
+        //
+        //             $http({
+        //                 method: "PUT",
+        //                 url: "http://localhost:3000/users/" + $scope.userInfo.username + "/filled_forms",
+        //                 data: {review_id: $scope.reviewId},
+        //                 headers : {
+        //                     'Content-Type' : 'application/json'
+        //                 }
+        //             }).then(function (response) {
+        //                 console.log("Change reflected in API side as well", response);
+        //                 $scope.displaySuccessModal();
+        //                 $("#submitted-form-modal").on('hidden.bs.modal', function () {
+        //                     window.location = "http://localhost:8001";
+        //                 });
+        //             }, function (response) {
+        //                 console.log("Not ok on API side", response);
+        //             })
+        //
+        //         }, function (response) {
+        //             console.log("not ok...", response)
+        //         } );
+        //
+        //
+        //     },
+        //     function (response) {
+        //         console.log("Not Ok..", response);
+        //     }
+        // );
     };
 
     $scope.displaySuccessModal = function () {

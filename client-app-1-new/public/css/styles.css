@@ -123,6 +123,17 @@ a:hover {
       .feedback-form-row .carousel-inner .options-row .radio {
         margin-left: 25px; }
 
+.custom-textarea {
+  border: 1px solid #ff7a3e;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s; }
+
+.custom-textarea:focus {
+  border: 1px solid #a2512d;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif; }
+
 .emphasis-text {
   text-decoration: underline; }
 

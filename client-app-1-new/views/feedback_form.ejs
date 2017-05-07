@@ -107,7 +107,7 @@
                             <div class="btn custom-button btn-primary next-button"
                                  id="next-button" role="button"  ng-if="!$last" ng-disabled="nextButtonDisabled"
                                  ng-click="nextButtonDisabled || storeResponse(question.questionNo)" disabled>Next</div>
-                            <div class="btn custom-button btn-primary submit-button" ng-if="$last" ng-disabled="nextButtonDisabled" ng-click="submitButtonClicked()">Submit</div>
+                            <div class="btn custom-button btn-primary submit-button" ng-if="$last" ng-disabled="nextButtonDisabled" ng-click="submitButtonClickedText()">Submit</div>
                         </div>
                         <hr>
                     </div>
@@ -148,6 +148,32 @@
 
 
 
+<div class="modal fade submitted-form-modal" id="text-questions-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content custom-modal">
+            <div class="modal-header" style="background: #ff7a3e">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Fill Questions</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row" ng-repeat="textQuestion in textQuestions track by $index">
+                    <div class="col-xs-8 col-xs-offset-3">
+                        <h4>{{textQuestion.title}}</h4>
+                        <textarea id="textarea-{{$index}}" class="custom-textarea"></textarea>
+                    </div>
+                    <hr>
+                </div>
+
+                <button type="button" class="btn btn-default custom-button" ng-click="submitButtonClicked()">Submit</button>
+            </div>
+            <div class="modal-footer">
+                <a href="#">
+                    <button type="button" class="btn btn-default custom-button" data-dismiss="modal">Close</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
