@@ -93,10 +93,12 @@ a:hover {
         .main-content .stats-container .stats-card-1 .chart-row .filter-score-row {
           padding: 20px; }
   .main-content .analysis-container {
+    padding: 10px 5px;
     color: #3b3555;
     margin-top: 20px; }
     .main-content .analysis-container .analysis-card {
-      background: #f9efff; }
+      background: #f9efff;
+      border: 2px solid #c7b2f6; }
       .main-content .analysis-container .analysis-card .inner-analysis-card {
         padding: 20px;
         border: 1px solid #f9efff;
