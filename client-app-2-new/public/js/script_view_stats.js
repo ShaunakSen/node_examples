@@ -11,6 +11,7 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
     $scope.usersData = [];
     $scope.noOfUsers = 0;
     $scope.importantAnalysyis = [];
+    $scope.importantTextQuestionAnalysis = [];
     $scope.noOfQuestions = 0;
     $scope.questionNos = [];
     $scope.selectedQuestionNo = 1;
@@ -299,13 +300,32 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
                             related_question_response: relatedQuestionResponse,
                             related_question_text: relatedQuestionText,
                             text: text,
-                            postedBy: postedBy
+                            postedBy: postedBy,
+                            textResponse: []
                         }
                     );
                 }
-            })
+            });
+
+            if($scope.apiResponse[i].hasOwnProperty('textResponse')){
+                if($scope.apiResponse[i].textResponse.length > 0){
+                    $scope.apiResponse[i].textResponse.forEach(function (textResponse) {
+                        if(textResponse.correct == false){
+                            $scope.importantTextQuestionAnalysis.push({
+                                question_title: textResponse.title,
+                                postedBy: postedBy,
+                                response: textResponse.response
+                            })
+                        }
+                    })
+                }
+            }
+
+
+
         }
         console.log("Important Analysis Data:", $scope.importantAnalysyis);
+        console.log("Important Text Analysis Data:", $scope.importantTextQuestionAnalysis);
     };
 
     $scope.flagUser = function (username) {
