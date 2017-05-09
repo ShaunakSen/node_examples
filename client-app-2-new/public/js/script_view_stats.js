@@ -773,6 +773,13 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             message = generalResponse + " response on question no: " + questionData.questionNo + "... On an average students have marked " + studentsOpinion
                 + "... The average score of the students on this question is " + scoreText;
 
+            if(generalResponse == "Good"){
+                message += ". The quality of review titled: " + questionTitle + " is quite high.. So you should try to maintain the standard";
+            } else {
+                message += ". Review titled: " + questionTitle + " needs improvement";
+            }
+
+
             if(generalResponse === "Poor"){
                 message += "<span class='bold-text'> " + questionTitle + "</span> Needs improvement";
             }
