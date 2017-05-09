@@ -10,7 +10,7 @@ myApp.controller('FeedbackController', ['$scope', '$window', '$http', function (
     // MAYBE MOVE ALL THIS CODE TO BACK END USING request API and display using ejs?
 
     $scope.userInfo = $window.userInfo;
-    console.log($scope.userInfo);
+    console.log("User info is", $scope.userInfo);
     var roll = $scope.userInfo.roll_number;
     $scope.department = roll.slice(3, 5).toLowerCase();
 
@@ -47,7 +47,7 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
 
 
     $scope.userInfo = $window.userInfo;
-    console.log($scope.userInfo);
+
 
     // CLOCK FUNCTIONS
 
@@ -70,12 +70,11 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
     mainFactory.getQuestions().then(
         function (response) {
             // $scope.questions = response;
-            console.log(response);
             $scope.noOfQuestions = response.data.mcq.length;
             if (response.data.hasOwnProperty("text")) {
                 $scope.textQuestions = response.data.text;
+                console.log("Text questions are:", $scope.textQuestions);
             }
-            console.log($scope.textQuestions);
             for (var i = 0; i < $scope.noOfQuestions; ++i) {
                 $scope.recordedTimes.push(0);
                 $scope.startTime.push(0);
@@ -95,14 +94,14 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
         // $scope.noOfQuestions = data.data.mcq.length;
         console.log("No of questions:", $scope.noOfQuestions);
         $scope.questions = data.data.mcq;
+        console.log("MCQ questions are:", $scope.questions);
         $scope.reviewId = data.data._id;
         console.log("The id is", $scope.reviewId);
-        console.log("Questions are:", $scope.questions);
     };
 
     $scope.getIdsOfRadioButtons = function (questionNo) {
         var ids = [];
-        for (var i = 0; i < $scope.noOfQuestions; ++i) {
+        for (var i = 0; i < 5; ++i) {
             ids.push('option-' + questionNo + i);
         }
         return ids
@@ -123,7 +122,7 @@ myApp.controller('MainController', ['$scope', '$window', 'mainFactory', '$http',
         console.log("ids of radio buttons are", ids);
         // check if any one of them is selected
         for (var i = 0; i < ids.length; ++i) {
-            // console.log(document.getElementById(ids[i]).checked);
+            console.log(document.getElementById(ids[i]).checked);
             if (document.getElementById(ids[i]).checked) {
                 var selectedRadioButton = document.getElementById(ids[i]);
                 // console.log("Value: ", selectedRadioButton.value, "Text:", selectedRadioButton.getAttribute('data-text'));

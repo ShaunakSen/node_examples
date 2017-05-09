@@ -18,7 +18,6 @@ router.get("/reviews", function (req, res) {
 });
 
 // POST REVIEW
-
 router.post("/reviews", function (req, res) {
     Reviews.create(req.body, function (err, createdReview) {
         if(err){
@@ -31,7 +30,6 @@ router.post("/reviews", function (req, res) {
 });
 
 // GET REVIEW BY ID
-
 router.get("/reviews/:id", function (req, res) {
     var id = req.params.id;
     Reviews.findById(id, function (err, foundReview) {
@@ -42,10 +40,7 @@ router.get("/reviews/:id", function (req, res) {
         }
     });
 });
-
-
 // GET REVIEW BY TARGETED USERS
-
 router.get("/reviews/target/:target", function (req, res) {
     var target = req.params.target;
     if(target === "all"){
@@ -60,6 +55,7 @@ router.get("/reviews/target/:target", function (req, res) {
     })
 });
 
+
 // POST mcq question
 
 router.post("/reviews/:id/mcq", function (req, res) {
@@ -68,7 +64,7 @@ router.post("/reviews/:id/mcq", function (req, res) {
             console.log(err);
         } else {
             foundReview.mcq.push(req.body);
-            
+
             foundReview.save(function (err, review) {
                 if(err){
                     console.log(err);

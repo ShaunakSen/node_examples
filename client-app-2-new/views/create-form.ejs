@@ -110,31 +110,31 @@
                     <div class="row" style="padding: 0 10px;">
                         <div class="col-xs-6">
                             <input type="text" id="question-option-{{$index+1}}-0" class="custom-input"
-                                   placeholder="VERY POOR" data-value="0">
+                                   placeholder="VERY POOR" data-value="0" value="Very Poor">
                             <span>Value: 0</span>
                         </div>
                         <div class="col-xs-6">
                             <input type="text" id="question-option-{{$index+1}}-1" class="custom-input"
-                                   placeholder="POOR" data-value="1">
+                                   placeholder="POOR" data-value="1" value="Poor">
                             <span>Value: 1</span>
                         </div>
                     </div>
                     <div class="row" style="padding: 0 10px;">
                         <div class="col-xs-6">
                             <input type="text" id="question-option-{{$index+1}}-2" class="custom-input" placeholder="OK"
-                                   data-value="2">
+                                   data-value="2" value="Ok">
                             <span>Value: 2</span>
                         </div>
                         <div class="col-xs-6">
                             <input type="text" id="question-option-{{$index+1}}-3" class="custom-input"
-                                   placeholder="GOOD" data-value="3">
+                                   placeholder="GOOD" data-value="3" value="Good">
                             <span>Value: 3</span>
                         </div>
                     </div>
                     <div class="row" style="padding: 0 10px;">
                         <div class="col-xs-6">
                             <input type="text" id="question-option-{{$index+1}}-4" class="custom-input"
-                                   placeholder="VERY GOOD" data-value="4">
+                                   placeholder="VERY GOOD" data-value="4" value="Very Good">
                             <span>Value: 4</span>
                         </div>
                     </div>
@@ -250,6 +250,34 @@
         </div>
     </div>
 </div>
+
+
+<!--SUCCESS MODAL-->
+<div class="modal fade submitted-form-modal" id="submitted-form-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content custom-modal">
+            <div class="modal-header" style="background: #70bb6f">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Feedback Form Successfully Published</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-6 col-xs-offset-3">
+                        <div class="success-icon">
+                            <i class="fa fa-check"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#">
+                    <button type="button" class="btn btn-default custom-button" data-dismiss="modal">Close</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>

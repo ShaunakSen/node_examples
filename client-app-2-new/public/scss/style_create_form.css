@@ -146,6 +146,33 @@ a:hover {
 .custom-button-add:hover {
   background-color: #1E88E5; }
 
+.custom-modal {
+  border-radius: 0;
+  font-family: "Montserrat", sans-serif; }
+  .custom-modal .modal-header {
+    background-color: #1E88E5;
+    color: #332d46; }
+    .custom-modal .modal-header h4 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 18px; }
+  .custom-modal .modal-body .row {
+    margin-top: 10px; }
+    .custom-modal .modal-body .row input {
+      border-radius: 0; }
+    .custom-modal .modal-body .row p {
+      color: #3a3958;
+      font-size: 17px;
+      margin-top: 4px; }
+    .custom-modal .modal-body .row .success-icon {
+      border: 3px solid #8BC34A;
+      border-radius: 50%;
+      text-align: center;
+      padding: 30px 30px; }
+      .custom-modal .modal-body .row .success-icon i {
+        font-size: 10em;
+        color: #8BC34A;
+        text-align: center; }
+
 .custom-button-select-all {
   font-family: "Montserrat", sans-serif;
   font-size: 1.3em;
@@ -190,4 +217,4 @@ a:hover {
     margin-left: 3px;
     border-bottom: 3px solid #ff7a3e; }
 
-/*# sourceMappingURL=styles2.css.map */
+/*# sourceMappingURL=style_create_form.css.map */

@@ -237,6 +237,47 @@ a:hover {
   background-color: $utility3;
 }
 
+
+.custom-modal {
+  border-radius: 0;
+  font-family: $font2;
+  .modal-header {
+    background-color: $utility3;
+    color: $darker;
+    h4 {
+      //font-weight: bold;
+      font-family: $font2;
+      font-size: 18px;
+    }
+
+  }
+  .modal-body {
+    .row {
+      margin-top: 10px;
+      input {
+        border-radius: 0;
+      }
+      p {
+        //font-weight: bold;
+        color: $dark;
+        font-size: 17px;
+        margin-top: 4px;
+      }
+      .success-icon {
+        border: 3px solid $utility2;
+        border-radius: 50%;
+        text-align: center;
+        padding: 30px 30px;
+        i {
+          font-size: 10em;
+          color: $utility2;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
 .custom-button-select-all {
   @include generateButton($utility2);
 }

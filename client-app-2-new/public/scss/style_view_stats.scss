@@ -165,10 +165,10 @@ a:hover {
 
     .analysis-card{
       background: $lighter;
-      border: 2px solid $medium;
+
       .inner-analysis-card{
+        border: 2px solid $medium;
         padding: 20px;
-        border: 1px solid #f9efff;
         border-radius: 5px;
         margin: 10px 0;
         .bold-text{
@@ -202,4 +202,45 @@ a:hover {
   outline: none;
   border: 2px solid $dark;
 
+}
+
+
+.custom-modal {
+  border-radius: 0;
+  font-family: $font2;
+  .modal-header {
+    background-color: $utility3;
+    color: $darker;
+    h4 {
+      //font-weight: bold;
+      font-family: $font2;
+      font-size: 18px;
+    }
+
+  }
+  .modal-body {
+    .row {
+      margin-top: 10px;
+      input {
+        border-radius: 0;
+      }
+      p {
+        //font-weight: bold;
+        color: $dark;
+        font-size: 17px;
+        margin-top: 4px;
+      }
+      .success-icon {
+        border: 3px solid $utility2;
+        border-radius: 50%;
+        text-align: center;
+        padding: 30px 30px;
+        i {
+          font-size: 10em;
+          color: $utility2;
+          text-align: center;
+        }
+      }
+    }
+  }
 }

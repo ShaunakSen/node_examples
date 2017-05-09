@@ -205,9 +205,9 @@
             <div class="col-xs-8 col-xs-offset-2 analysis-card">
                 <h4>Important Text Response Analysis</h4>
                 <div class="row inner-analysis-card" ng-repeat="textAnalysis in importantTextQuestionAnalysis">
-                    <p>{{textAnalysis.question_title}}
+                    <p><span class="bold-text">Question</span>: {{textAnalysis.question_title}}
                     </p>
-                    <p>{{textAnalysis.response}}</p>
+                    <p><span class="bold-text">Response</span>: {{textAnalysis.response}}</p>
                     <div class="row">
                         <div class="col-xs-2 col-xs-offset-9">
                             <button class="btn btn-sm btn-success custom-button" ng-click="flagUser(textAnalysis.postedBy.username)">
@@ -220,13 +220,69 @@
 
             </div>
         </div>
-
-        <div class="row text-center">
-            <div class="btn btn-primary" ng-click="filterResponses()">Filter</div>
-        </div>
-
     </div>
 </div>
+
+
+<!--SUCCESS MODAL-->
+
+
+<div class="modal fade submitted-form-modal" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content custom-modal">
+            <div class="modal-header" style="background: #70bb6f">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">{{modalMessage}}</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-6 col-xs-offset-3">
+                        <div class="success-icon">
+                            <i class="fa fa-check"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <a href="#">
+                    <button type="button" class="btn btn-default custom-button" data-dismiss="modal">Close</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--SUGGESTIONS MODAL-->
+
+<div class="modal fade submitted-form-modal" id="suggestion-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content custom-modal">
+            <div class="modal-header" style="background: #70bb6f">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Suggestions</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12" ng-repeat="generatedSuggestionMessage in generatedSuggestionMessages">
+                        <p>{{generatedSuggestionMessage}}</p>
+                        <hr>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <a href="#">
+                    <button type="button" class="btn btn-default custom-button" data-dismiss="modal">Close</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>

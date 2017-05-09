@@ -178,6 +178,9 @@ router.put("/admins/:adminId/created_forms", function (req, res) {
         }
         admin.save(function (err, admin) {
             if (err) throw err;
+            else{
+                res.json({message: "ok"});  
+            }
         });
     });
 });

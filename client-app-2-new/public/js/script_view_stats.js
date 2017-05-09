@@ -33,6 +33,8 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
     $scope.minScore = 0;
     $scope.userCredibility = 'high';
 
+    $scope.modalMessage = ""
+
     // Background and border colors to be used by all charts
 
     $scope.backgroundColors = [
@@ -152,6 +154,8 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             $scope.filterResponses();
         } else {
             $scope.currentView = 'raw';
+            $scope.prepareChartData(1);
+            $scope.prepareChartData2(1);
         }
     };
 
@@ -246,7 +250,13 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             console.log("Question wise data:", $scope.questionScores);
 
             $scope.alreadyFiltered = true;
+            // display modal
+
+            $scope.modalMessage = "Successfully filtered data!";
+            $('#success-modal').modal();
         }
+
+
 
         $scope.prepareRadarChartData();
         $scope.prepareBarChartDataScored(1);
@@ -345,6 +355,11 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             }
         }).then(function (response) {
             console.log("Flagged User:", response);
+
+            // show success modal
+            $scope.modalMessage = "Successfully Flagged User"
+            $('#success-modal').modal();
+
         }, function (response) {
             console.log("Could not Flag User:", response);
         })
@@ -731,6 +746,8 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
         $scope.questionScores.forEach(function (questionData) {
             var averageRating = questionData.averageRating;
             var averageScore = questionData.averageScore;
+            var questionNo = questionData.questionNo;
+            var questionTitle = $scope.questions[questionNo - 1];
             var scoreText = "high";
 
             if (averageScore >= 0.4) {
@@ -756,11 +773,17 @@ myApp.controller('MainController', ['$scope', '$http', '$window', function ($sco
             message = generalResponse + " response on question no: " + questionData.questionNo + "... On an average students have marked " + studentsOpinion
                 + "... The average score of the students on this question is " + scoreText;
 
+            if(generalResponse === "Poor"){
+                message += "<span class='bold-text'> " + questionTitle + "</span> Needs improvement";
+            }
+
             $scope.generatedSuggestionMessages.push(message);
         });
 
 
         console.log("Suggestions: ", $scope.generatedSuggestionMessages);
+
+        $('#suggestion-modal').modal();
 
     }
 

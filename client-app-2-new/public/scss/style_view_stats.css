@@ -97,11 +97,10 @@ a:hover {
     color: #3b3555;
     margin-top: 20px; }
     .main-content .analysis-container .analysis-card {
-      background: #f9efff;
-      border: 2px solid #c7b2f6; }
+      background: #f9efff; }
       .main-content .analysis-container .analysis-card .inner-analysis-card {
+        border: 2px solid #c7b2f6;
         padding: 20px;
-        border: 1px solid #f9efff;
         border-radius: 5px;
         margin: 10px 0; }
         .main-content .analysis-container .analysis-card .inner-analysis-card .bold-text {
@@ -123,5 +122,32 @@ a:hover {
 .custom-input:focus {
   outline: none;
   border: 2px solid #3b3555; }
+
+.custom-modal {
+  border-radius: 0;
+  font-family: "Montserrat", sans-serif; }
+  .custom-modal .modal-header {
+    background-color: #1E88E5;
+    color: #332d46; }
+    .custom-modal .modal-header h4 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 18px; }
+  .custom-modal .modal-body .row {
+    margin-top: 10px; }
+    .custom-modal .modal-body .row input {
+      border-radius: 0; }
+    .custom-modal .modal-body .row p {
+      color: #3b3555;
+      font-size: 17px;
+      margin-top: 4px; }
+    .custom-modal .modal-body .row .success-icon {
+      border: 3px solid #8BC34A;
+      border-radius: 50%;
+      text-align: center;
+      padding: 30px 30px; }
+      .custom-modal .modal-body .row .success-icon i {
+        font-size: 10em;
+        color: #8BC34A;
+        text-align: center; }
 
 /*# sourceMappingURL=style_view_stats.css.map */

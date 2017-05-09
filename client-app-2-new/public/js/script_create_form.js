@@ -241,6 +241,11 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
         $scope.textQuestions.push($scope.dummyTextQuestion);
     };
 
+    $scope.displaySuccessModal = function () {
+        // display success modal here
+        $("#submitted-form-modal").modal();
+    };
+
 
     $scope.submitForm = function () {
 
@@ -293,7 +298,13 @@ myApp.controller('AdminController', ['$scope', '$window', '$http', function ($sc
                         'Content-Type' : 'application/json'
                     }
                 }).then( function (response) {
-                    console.log("ok...", response)
+                    console.log("ok...", response);
+
+                    $scope.displaySuccessModal();
+                    $("#submitted-form-modal").on('hidden.bs.modal', function () {
+                        window.location = "http://localhost:8000";
+                    });
+                    
                 }, function (response) {
                     console.log("not ok...", response)
                 } );
